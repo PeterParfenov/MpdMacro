@@ -13,11 +13,12 @@
 #include <TStyle.h>
 #include <TCanvas.h>
 
-int main(){
+int main()
+{
   MpdCentralityTreeReader *cent = new MpdCentralityTreeReader();
-  cent -> Loop();
-  
+  cent->Loop();
+
   delete cent;
-  
+
   return 0;
 }

@@ -8,42 +8,42 @@ const Int_t marker_res_color[]={1,2,4};
 const Float_t res_range[2][2]        ={{0.21,1.2},{0.01,0.96}};
 const Int_t   centrality_range[]     ={0,79};
 const std::string particle_name [] = {"All", "Pions", "Protons", "Kaons"};
-const std::pair<double, double>   eta_spectreY [] ={{0.9e5,0.9e7},{5e4,0.6e7},{2e4,0.5e6},{5e3,0.5e6}};
+const std::pair<double, double>   eta_spectreY [] ={{0.9e5,0.3e8},{5e4,0.1e8},{2e4,0.2e7},{5e3,0.2e7}};
 const std::pair<double, double>   pt_spectreY [] ={{2e1,5e8},{1e1,0.9e8},{1e2,0.9e8},{1e1,0.9e7}};
 
 void DrawAnaNote(){
   
   gROOT->ForceStyle();
   
-  //TStyle* style = new TStyle("Default","Default style");
-  //style->SetTitleSize(0.05,"X");
-  //style->SetTitleSize(0.05,"Y");
-  //style->SetTitleOffset(0.9,"Y");
-  //style->SetTitleOffset(0.9,"X");
-  //style->SetFrameLineWidth(2);
-  //style->SetFrameFillColor(0);
-  //style->SetPadColor(0);
-  //style->SetLabelSize(0.03,"X");
-  //style->SetLabelSize(0.03,"Y");
-  //style->SetPadTopMargin(0.1);
-  //style->SetPadBottomMargin(0.15);
-  //style->SetPadLeftMargin(0.15);
-  //style->SetPadTopMargin(0.02);
-  //style->SetPadRightMargin(0.02);
-  //style->SetMarkerSize(1.2);
-  //style->SetErrorX(0);
-  //style->SetOptStat(0);
-  //style->SetCanvasColor(0);
-  //style->SetTitleFillColor(0);
-  //style->SetTitleBorderSize(0);
-  //style->SetCanvasBorderMode(0);
-  //style->SetLegendBorderSize(0);
-  //style->SetPadBorderMode(0);
-  //style->SetLineWidth(2);
+  TStyle* style = new TStyle("Default","Default style");
+  style->SetTitleSize(0.05,"X");
+  style->SetTitleSize(0.05,"Y");
+  style->SetTitleOffset(0.9,"Y");
+  style->SetTitleOffset(0.9,"X");
+  style->SetFrameLineWidth(2);
+  style->SetFrameFillColor(0);
+  style->SetPadColor(0);
+  style->SetLabelSize(0.03,"X");
+  style->SetLabelSize(0.03,"Y");
+  style->SetPadTopMargin(0.1);
+  style->SetPadBottomMargin(0.15);
+  style->SetPadLeftMargin(0.15);
+  style->SetPadTopMargin(0.02);
+  style->SetPadRightMargin(0.02);
+  style->SetMarkerSize(1.2);
+  style->SetErrorX(0);
+  style->SetOptStat(0);
+  style->SetCanvasColor(0);
+  style->SetTitleFillColor(0);
+  style->SetTitleBorderSize(0);
+  style->SetCanvasBorderMode(0);
+  style->SetLegendBorderSize(0);
+  style->SetPadBorderMode(0);
+  style->SetLineWidth(2);
   
-  TFile* inStyle = new TFile("/home/peter/Documents/WorkLocal/MPD/RootFiles/TDR/my_style.root","READ");
+  //TFile* inStyle = new TFile("/home/peter/Documents/WorkLocal/MPD/RootFiles/TDR/my_style.root","READ");
 
-  TStyle* style = (TStyle*) inStyle->Get("style");
+  //TStyle* style = (TStyle*) inStyle->Get("style");
 
   style->cd();
   
@@ -82,11 +82,11 @@ void DrawAnaNote(){
   TH1F*     h_n_hits_before[n_energy];
   TH1F*     h_n_hits_after[n_energy];
   
-  in_res_true_file[0] = new TFile("/home/peter/res_hist-11gev-4M.root","read");
-  in_res_reco_file[0] = new TFile("/home/peter/res-fit-11gev-4M.root","read");
-  in_flow_file[0][0] = new TFile("/home/peter/flow-11gev-protons4M.root","read");
-  in_flow_file[0][1] = new TFile("/home/peter/flow-11gev-kaons4M.root","read");
-  in_flow_file[0][2] = new TFile("/home/peter/flow-11gev-pions4M.root","read");
+  in_res_true_file[0] = new TFile("/home/peter/Documents/WorkLocal/MPD/RootFiles/TDR/res_hist-11gev-4MPDG.root","read");
+  in_res_reco_file[0] = new TFile("/home/peter/Documents/WorkLocal/MPD/RootFiles/TDR/res-fit-11gev-4MPDG.root","read");
+  in_flow_file[0][0] = new TFile("/home/peter/Documents/WorkLocal/MPD/RootFiles/TDR/flow-11gev-protons4M.root","read");
+  in_flow_file[0][1] = new TFile("/home/peter/Documents/WorkLocal/MPD/RootFiles/TDR/flow-11gev-kaons4M.root","read");
+  in_flow_file[0][2] = new TFile("/home/peter/Documents/WorkLocal/MPD/RootFiles/TDR/flow-11gev-pions4M.root","read");
   
   for (Int_t i_energy=0;i_energy<n_energy;i_energy++){
     h_n_hits_before[i_energy] = (TH1F*) in_res_true_file[i_energy]->Get(Form("h_nhits_TPC"));
@@ -465,7 +465,7 @@ void DrawAnaNote(){
   for (int i_sort=0; i_sort<n_sorts+1;i_sort++){
     c_eta_spectre_after[i_sort] -> cd();
     c_eta_spectre_after[i_sort] -> SetLogy();
-    h_eta_true_after[0][i_sort]->GetXaxis()->SetRangeUser(-2.,2.);
+    h_eta_true_after[0][i_sort]->GetXaxis()->SetRangeUser(-2.2,2.2);
     h_eta_true_after[0][i_sort]->GetYaxis()->SetRangeUser(eta_spectreY[i_sort].first,eta_spectreY[i_sort].second);
     h_eta_true_after[0][i_sort]->SetMarkerStyle(marker_flow_stl[0][0]);
     h_eta_reco_after[0][i_sort]->SetMarkerStyle(marker_flow_stl[1][0]);

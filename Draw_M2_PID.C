@@ -30,36 +30,36 @@ void Draw_M2_PID(TString inFileName)
   
   gROOT -> ForceStyle();
   
-  //TStyle* style = new TStyle("Default","Default style");
-  //style->SetTitleSize(0.05,"X");
-  //style->SetTitleSize(0.05,"Y");
-  //style->SetTitleOffset(1.15,"Y");
-  //style->SetTitleOffset(0.9,"X");
-  //style->SetFrameLineWidth(2);
-  //style->SetFrameFillColor(0);
-  //style->SetPadColor(0);
-  //style->SetLabelSize(0.04,"X");
-  //style->SetLabelSize(0.04,"Y");
-  //style->SetPadTopMargin(0.1);
-  //style->SetPadBottomMargin(0.12);
-  //style->SetPadLeftMargin(0.12);
-  //style->SetPadTopMargin(0.02);
-  //style->SetPadRightMargin(0.03);
-  //style->SetMarkerSize(1.2);
-  //style->SetErrorX(0);
-  //style->SetOptStat(0);
-  //style->SetCanvasColor(0);
-  //style->SetTitleFillColor(0);
-  //style->SetTitleBorderSize(0);
-  //style->SetCanvasBorderMode(0);
-  //style->SetLegendBorderSize(0);
-  //style->SetPadBorderMode(0);
-  //style->SetLineWidth(2);
-  //style->SetHistLineWidth(2);
+  TStyle* style = new TStyle("Default","Default style");
+  style->SetTitleSize(0.05,"X");
+  style->SetTitleSize(0.05,"Y");
+  style->SetTitleOffset(1.15,"Y");
+  style->SetTitleOffset(0.9,"X");
+  style->SetFrameLineWidth(2);
+  style->SetFrameFillColor(0);
+  style->SetPadColor(0);
+  style->SetLabelSize(0.04,"X");
+  style->SetLabelSize(0.04,"Y");
+  style->SetPadTopMargin(0.1);
+  style->SetPadBottomMargin(0.12);
+  style->SetPadLeftMargin(0.12);
+  style->SetPadTopMargin(0.02);
+  style->SetPadRightMargin(0.03);
+  style->SetMarkerSize(1.2);
+  style->SetErrorX(0);
+  style->SetOptStat(0);
+  style->SetCanvasColor(0);
+  style->SetTitleFillColor(0);
+  style->SetTitleBorderSize(0);
+  style->SetCanvasBorderMode(0);
+  style->SetLegendBorderSize(0);
+  style->SetPadBorderMode(0);
+  style->SetLineWidth(2);
+  style->SetHistLineWidth(2);
   
-  TFile* inStyle = new TFile("/home/peter/Documents/WorkLocal/MPD/RootFiles/TDR/my_style.root","READ");
+  //TFile* inStyle = new TFile("/home/peter/Documents/WorkLocal/MPD/RootFiles/TDR/my_style.root","READ");
     
-  TStyle* style = (TStyle*) inStyle->Get("style");
+  //TStyle* style = (TStyle*) inStyle->Get("style");
   
   style -> cd();
   
