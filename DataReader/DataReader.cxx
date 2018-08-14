@@ -22,6 +22,10 @@ Bool_t DataReader::InitInputFile(TString _name)
   if (_name.Contains(".root"))
   {
     fFileType.isROOT = true;
+    if (_name.Contains("UNIGEN") || _name.Contains("PHQMD"))
+    {
+      fModelType.isPHQMD = true;
+    }
   }
   if (fFileType.isASCII && fFileType.isROOT)
     std::cerr << "DataReader::InitInputFile: Incopetent file type." << std::endl;
@@ -239,6 +243,7 @@ void DataReader::WriteHist()
 void DataReader::InitPlotter()
 {
   fPlotter = new DataReaderPlotter();
+  fPlotter -> InitYild();
 }
 
 ClassImp(DataReader);

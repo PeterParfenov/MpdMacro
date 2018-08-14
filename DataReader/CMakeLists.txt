@@ -13,7 +13,13 @@ find_package(ROOT REQUIRED COMPONENTS MathCore RIO Hist Tree Net)
 #---Define useful ROOT functions and macros (e.g. ROOT_GENERATE_DICTIONARY)
 include(${ROOT_USE_FILE})
 
-include_directories(${CMAKE_SOURCE_DIR} ${ROOT_INCLUDE_DIRS})
+#---Link UniGen library
+set(UNIGEN_INCLUDE $ENV{UNIGEN}/base/include)
+set(UNIGEN_LIB $ENV{UNIGEN}/lib)
+set(UNIGEN libUniGen.so)
+link_directories(${UNIGEN_LIB})
+
+include_directories(${CMAKE_SOURCE_DIR} ${ROOT_INCLUDE_DIRS} ${UNIGEN_INCLUDE})
 add_definitions(${ROOT_CXX_FLAGS})
 
 set(CMAKE_BUILD_TYPE Debug)
@@ -46,8 +52,11 @@ add_library(DataReaderPlotter SHARED DataReaderPlotter.cxx DataReaderEvent.cxx G
 target_link_libraries(DataReaderPlotter DataReaderEvent ${ROOT_LIBRARIES})
 
 #---Create a shared library with geneated dictionary for DataReader class
-add_library(DataReader SHARED DataReader.cxx DataReaderEvent.cxx DataReaderPlotter.cxx G__DataReader.cxx)
-target_link_libraries(DataReader DataReaderPlotter DataReaderEvent ${ROOT_LIBRARIES})
+add_library(DataReader SHARED DataReader.cxx
+DataReaderEvent.cxx
+DataReaderPlotter.cxx
+G__DataReader.cxx)
+target_link_libraries(DataReader DataReaderPlotter DataReaderEvent ${UNIGEN} ${ROOT_LIBRARIES})
 
 #---Create  a main program using the library
 add_executable(Main DataReaderMain.cxx)

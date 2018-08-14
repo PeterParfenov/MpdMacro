@@ -15,6 +15,9 @@
 #include "DataReaderEvent.h"
 #include "DataReaderPlotter.h"
 
+#include "UEvent.h"
+#include "UParticle.h"
+
 #include "ListOfPDG.h"
 
 struct FileType

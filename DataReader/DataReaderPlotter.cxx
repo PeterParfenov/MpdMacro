@@ -2,13 +2,13 @@
 
 DataReaderPlotter::DataReaderPlotter()
 {
-  Init();
+  isYildInitialized = false;
 }
 DataReaderPlotter::~DataReaderPlotter()
 {
 }
 
-void DataReaderPlotter::Init()
+void DataReaderPlotter::InitYild()
 {
   std::cout << "DataReaderPlotter::Init: Processing." << std::endl;
   Int_t NumberOfVariables = NumberOfEventVariables + NumberOfTrackVariables;
@@ -45,6 +45,7 @@ void DataReaderPlotter::Init()
   {
     printf("%20s Nbins = %4d Xmin = %+3.2f Xmax = %+3.2f\n", it->second->GetName(), it->second->GetNbinsX(), it->second->GetXaxis()->GetXmin(), it->second->GetXaxis()->GetXmax());
   }
+  isYildInitialized = true;
 }
 
 void DataReaderPlotter::Fill(DataReaderEvent *_event, Double_t _weight = 1.)

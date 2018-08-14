@@ -42,13 +42,14 @@ public:
   void Write(TFile* _file);
   void ScaleAllHist(Double_t _scale);
   void ScaleYildsForAllDataset(Double_t _scale);
+  void InitYild();
 
 private:
-  void Init();
   std::map<TString, TH1D *> fHistogramYild;
   std::map<TString, std::pair<Double_t, Double_t>> ValueRange;
   std::map<TString, Int_t> NumberOfBins;
   ClassDef(DataReaderPlotter, 0);
+  Bool_t isYildInitialized;
 };
 
 #endif
