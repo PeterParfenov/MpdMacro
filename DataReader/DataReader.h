@@ -29,7 +29,7 @@ struct FileType
 
 struct InputFile
 {
-  TFile ROOT;
+  TFile *ROOT;
   std::ifstream ASCII;
   ClassDef(InputFile, 0);
 };

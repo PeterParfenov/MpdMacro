@@ -88,7 +88,7 @@ void DataReaderPlotter::ScaleYildsForAllDataset(Double_t _NumberOfFiles)
   Double_t scaleModifier;
   for (Int_t iVariables = 0; iVariables < NumberOfTrackVariables; iVariables++)
   {
-    scaleModifier = _NumberOfFiles*(fHistogramYild["hYildB"]->Integral())*TMath::Abs(ValueRange[VariablesName[iVariables]].second - ValueRange[VariablesName[iVariables]].first)/(NumberOfBins[VariablesName[iVariables]]);
+    scaleModifier = _NumberOfFiles*(fHistogramYild["hYildB"]->Integral("width"))*TMath::Abs(ValueRange[VariablesName[iVariables]].second - ValueRange[VariablesName[iVariables]].first)/(NumberOfBins[VariablesName[iVariables]]);
     for (Int_t iPID = 0; iPID < NumberOfParticles; iPID++)
     {
       fHistogramYild[TString("hYild" + VariablesName[iVariables] + ParticleName[iPID])] -> Scale(1./scaleModifier);
