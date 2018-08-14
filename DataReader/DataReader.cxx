@@ -34,8 +34,7 @@ Bool_t DataReader::InitInputFile(TString _name)
   }
   if (!iFile.ASCII.is_open())
   {
-    std::cerr << "DataReader::InitInputFile: Attached file "
-              << _name.Data() << " was not opened." << std::endl;
+    std::cerr << "DataReader::InitInputFile: Attached file " << _name.Data() << " was not opened." << std::endl;
     return false;
   }
 
@@ -44,8 +43,10 @@ Bool_t DataReader::InitInputFile(TString _name)
 void DataReader::InitOutputFile(TString _name)
 {
   std::cout << "DataReader::InitOutputFile: Processing." << std::endl;
-  oTreeFile = new TFile(_name.Data(), "recreate");
+  oTreeFile = new TFile((_name+"_tree.root").Data(), "recreate");
   isOutputTreeFileInitialized = true;
+  oHistFile = new TFile((_name+"_hist.root").Data(), "recreate");
+  isOutputHistFileInitialized = true;
 }
 
 Bool_t DataReader::ReadFile(TString _name)
@@ -53,6 +54,8 @@ Bool_t DataReader::ReadFile(TString _name)
   std::cout << "DataReader::ReadFile: Processing." << std::endl;
   if (!InitInputFile(_name))
     return false;
+
+  InitPlotter();
 
   if (fFileType.isASCII && fModelType.isURQMD)
     ReadUrQMD();
@@ -74,8 +77,7 @@ void DataReader::ReadUrQMD()
     getline(iFile.ASCII, str);
     if (str.empty())
     {
-      std::cerr << "DataReader::ReadUrQMD: [WARNING] line is empty. Skipping."
-                << std::endl;
+      std::cerr << "DataReader::ReadUrQMD: [WARNING] line is empty. Skipping." << std::endl;
       break;
     }
     fEvent->CleanEvent();
@@ -122,17 +124,23 @@ void DataReader::ReadUrQMD()
         getline(iFile.ASCII, str);
         ss << str;
         ss >> fEvent->r0[j] >> fEvent->rX[j] >> fEvent->rY[j] >> fEvent->rZ[j] >> fEvent->E[j] >> fEvent->Px[j] >> fEvent->Py[j] >> fEvent->Pz[j] >> fEvent->M[j] >> itype >> i3 >> fEvent->Charge[j] >> lcl >> ncl >> orr;
-        fEvent->PID[j] = (particleURQMD.find(itype) != particleURQMD.end()) ? particleURQMD.at(itype) : -999.;
+        fEvent->PID[j] = (particleURQMD.find(TMath::Abs(itype)) != particleURQMD.end()) ? TMath::Sign(particleURQMD.at(TMath::Abs(itype)), fEvent->Charge[j]) : -999.;
         if (fEvent->PID[j] > 3122 || fEvent->Charge[j] > 10)
           std::cout << "PID: " << fEvent->PID[j] << " Charge: " << fEvent->Charge[j] << std::endl;
       }
       FillTree();
+      fPlotter->Fill(fEvent,1.);
     }
     if (iFile.ASCII.eof())
     {
       break;
     }
   }
+}
+
+void DataReader::ReadUNIGEN()
+{
+
 }
 
 void DataReader::InitTree(TString _treeName, TString _treeTitle = "")
@@ -147,6 +155,7 @@ void DataReader::InitTree(TString _treeName, TString _treeTitle = "")
     fTree->Branch("fEvent.PsiRP", &fEvent->PsiRP);
     fTree->Branch("fEvent.Nevent", &fEvent->Nevent);
     fTree->Branch("fEvent.Nparticles", &fEvent->Nparticles);
+    fTree->Branch("fEvent.Time", &fEvent->Time);
 
     fTree->Branch("fEvent.E", fEvent->E, "fEvent.E[fEvent.Nparticles]/D");
     fTree->Branch("fEvent.Px", fEvent->Px, "fEvent.Px[fEvent.Nparticles]/D");
@@ -198,20 +207,38 @@ void DataReader::WriteTree()
   std::cout << "DataReader::WriteTree: Processing." << std::endl;
   if (isTreeInitialized && isOutputTreeFileInitialized)
   {
-    std::cout << "DataReader::WriteTree: TTree has "
-              << fTree->GetEntriesFast() << " entries." << std::endl;
+    std::cout << "\nDataReader::WriteTree: TTree has " << fTree->GetEntriesFast() << " entries." << std::endl;
     oTreeFile->cd();
     fTree->Write();
     fTree->Print();
   }
   if (isDRETreeInitialized && isOutputTreeFileInitialized)
   {
-    std::cout << "DataReader::WriteTree: (DataReaderEvent) TTree has "
-              << fTree->GetEntriesFast() << " entries." << std::endl;
+    std::cout << "\nDataReader::WriteTree: (DataReaderEvent) TTree has " << fTree->GetEntriesFast() << " entries." << std::endl;
     oTreeFile->cd();
     fDRETree->Write();
     fDRETree->Print();
   }
+}
+
+void DataReader::ScaleYildHists(Double_t _NumberOfFiles)
+{
+  fPlotter->ScaleYildsForAllDataset(_NumberOfFiles);
+}
+
+void DataReader::WriteHist()
+{
+  if (isOutputHistFileInitialized)
+  {
+    std::cout << "\nDataReader::WriteHist: Processing." << std::endl;
+    oHistFile->cd();
+    fPlotter->Write(oHistFile);
+  }
+}
+
+void DataReader::InitPlotter()
+{
+  fPlotter = new DataReaderPlotter();
 }
 
 ClassImp(DataReader);

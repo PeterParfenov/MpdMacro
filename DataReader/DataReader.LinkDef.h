@@ -5,7 +5,6 @@
 #pragma link off all functions;
 
 #pragma link C++ class DataReader+;
-//#pragma link C++ class DataReaderEvent+;
 #pragma link C++ struct FileType+;
 #pragma link C++ struct ModelType+;
 #pragma link C++ struct InputFile+;

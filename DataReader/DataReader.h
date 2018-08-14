@@ -13,6 +13,7 @@
 #include "TTree.h"
 
 #include "DataReaderEvent.h"
+#include "DataReaderPlotter.h"
 
 #include "ListOfPDG.h"
 
@@ -49,18 +50,24 @@ public:
   void InitOutputFile(TString _name);
   Bool_t ReadFile(TString _name);
   void ReadUrQMD();
+  void ReadUNIGEN();
   void InitTree(TString _treeName, TString _treeTitle);
   void InitDRETree(TString _treeName, TString _treeTitle);
+  void ScaleYildHists(Double_t _NumberOfFiles);
   void WriteTree();
+  void WriteHist();
 
 private:
   void FillTree();
   std::map<Int_t, Int_t> InitPDGDictionary();
+  void InitPlotter();
   TFile *oTreeFile = {nullptr};
+  TFile *oHistFile = {nullptr};
   InputFile iFile;
   TString outputFileName = "";
   TTree *fTree = {nullptr};
   TTree *fDRETree = {nullptr};
+  DataReaderPlotter *fPlotter = {nullptr};
 
 protected:
   FileType fFileType;
@@ -69,6 +76,7 @@ protected:
   Bool_t isTreeInitialized = false;
   Bool_t isDRETreeInitialized = false;
   Bool_t isOutputTreeFileInitialized = false;
+  Bool_t isOutputHistFileInitialized = false;
 
   ClassDef(DataReader, 0);
 };
