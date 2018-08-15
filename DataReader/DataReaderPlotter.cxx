@@ -101,12 +101,22 @@ void DataReaderPlotter::InitFlow()
   {
     NumberOfBinsFlow[FlowVariablesName[i]] = 100;
   }
-
+  // For uniformly distributed binning
   ValueRangeFlow[FlowVariablesName[0]] = {0., 3.};                    //Pt
   ValueRangeFlow[FlowVariablesName[1]] = {-5., 5.};                   //Eta
   ValueRangeFlow[FlowVariablesName[2]] = {-5., 5.};                   //Rapidity
-  ValueRangeFlow[FlowVariablesName[3]] = {-TMath::Pi(), TMath::Pi()}; //Phi
-  ValueRangeFlow[FlowVariablesName[4]] = {0., 17.};                   //B
+  ValueRangeFlow[FlowVariablesName[3]] = {0., 17.};                   //B
+  // For custom made binning
+  ValueRangeFlowArray[FlowVariablesName[0]] = (Double_t*) FlowPtBinning;          //Pt
+  ValueRangeFlowArray[FlowVariablesName[1]] = (Double_t*) FlowEtaBinning;         //Eta
+  ValueRangeFlowArray[FlowVariablesName[2]] = (Double_t*) FlowRapidityBinning;    //Rapidity
+  ValueRangeFlowArray[FlowVariablesName[3]] = (Double_t*) FlowBBinning;           //B
+
+  NumberOfBinsFlowArray[FlowVariablesName[0]] = FlowNPtBins;
+  NumberOfBinsFlowArray[FlowVariablesName[1]] = FlowNEtaBins;
+  NumberOfBinsFlowArray[FlowVariablesName[2]] = FlowNRapidityBins;
+  NumberOfBinsFlowArray[FlowVariablesName[3]] = FlowNBBins;
+
 
   for (Int_t iCentrality = 0; iCentrality < NumberOfBRegions; iCentrality++)
   {
@@ -117,7 +127,7 @@ void DataReaderPlotter::InitFlow()
       {
         for (Int_t iHarm = 0; iHarm < FlowNumberOfHarmonic; iHarm++)
         {
-          flowHists[TString("hv" + std::to_string(iHarm + 1) + FlowCentralityName[iCentrality] + FlowVariablesName[iVariables] + ParticleName[iPID])] = new TProfile(Form("hv%i%s%s%s", iHarm + 1, FlowCentralityName[iCentrality].Data(), FlowVariablesName[iVariables].Data(), ParticleName[iPID].Data()), Form("hv%i%s%s%s;%s;%s", iHarm + 1, FlowCentralityName[iCentrality].Data(), FlowVariablesName[iVariables].Data(), ParticleName[iPID].Data(), AxisFlowName[iVariables].first.Data(), AxisFlowName[iVariables].second.Data()), NumberOfBinsKinematics[FlowVariablesName[iVariables]], ValueRangeKinematics[FlowVariablesName[iVariables]].first, ValueRangeKinematics[FlowVariablesName[iVariables]].second);
+          flowHists[TString("hv" + std::to_string(iHarm + 1) + FlowCentralityName[iCentrality] + FlowVariablesName[iVariables] + ParticleName[iPID])] = new TProfile(Form("hv%i%s%s%s", iHarm + 1, FlowCentralityName[iCentrality].Data(), FlowVariablesName[iVariables].Data(), ParticleName[iPID].Data()), Form("hv%i%s%s%s;%s;%s_{%i}", iHarm + 1, FlowCentralityName[iCentrality].Data(), FlowVariablesName[iVariables].Data(), ParticleName[iPID].Data(), AxisFlowName[iVariables].first.Data(), AxisFlowName[iVariables].second.Data(), iHarm + 1), NumberOfBinsFlowArray[FlowVariablesName[iVariables]], ValueRangeFlowArray[FlowVariablesName[iVariables]]);
           flowHists[TString("hv" + std::to_string(iHarm + 1) + FlowCentralityName[iCentrality] + FlowVariablesName[iVariables] + ParticleName[iPID])]->Sumw2();
         }
       }

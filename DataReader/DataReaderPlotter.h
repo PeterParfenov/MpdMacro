@@ -18,6 +18,8 @@
 
 #include "DataReaderEvent.h"
 
+#ifndef DATAPLOTTER_NAMESPACE
+#define DATAPLOTTER_NAMESPACE
 namespace dataplotter{
   const Int_t NumberOfParticles = 3;
   const TString ParticleName[] = {TString("Pion"), TString("Kaon"), TString("Proton")};
@@ -31,10 +33,10 @@ namespace dataplotter{
                                                   {TString("B, [fm]"),TString("N_{counts}")},
                                                   {TString("N_{particles}"),TString("N_{counts}")},
                                                   {TString("#Psi_{RP}, [rad]"),TString("N_{counts}")}};
-  const std::pair<TString, TString> AxisFlowName [] = {{TString("p_{T}, [GeV/c]"),TString("v_{n}")},
-                                                  {TString("#eta"),TString("v_{n}")},
-                                                  {TString("y"),TString("v_{n}")},
-                                                  {TString("B, [fm]"),TString("v_{n}")}};
+  const std::pair<TString, TString> AxisFlowName [] = {{TString("p_{T}, [GeV/c]"),TString("v")},
+                                                  {TString("#eta"),TString("v")},
+                                                  {TString("y"),TString("v")},
+                                                  {TString("B, [fm]"),TString("v")}};
   const Int_t NumberOfEventVariables = 3;
   const Int_t NumberOfTrackVariables = 4;
   const Int_t NumberOfFlowEventVariables = 1;
@@ -49,7 +51,18 @@ namespace dataplotter{
   const std::pair <Double_t, Double_t> FlowPtcut = {0.2,2.};
   const Double_t FlowMidRapidityCutForPt = 0.2;
   const Int_t FlowNumberOfHarmonic = 2;
+
+  const Int_t FlowNPtBins = 12;
+  const Int_t FlowNEtaBins = 15;
+  const Int_t FlowNRapidityBins = 15;
+  const Int_t FlowNBBins = 12;
+
+  const Double_t FlowPtBinning [] = {0.2,0.3,0.4,0.5,0.6,0.7,0.8,1.,1.2,1.4,1.6,1.8,2.};
+  const Double_t FlowEtaBinning [] = {-1.5,-1.3,-1.1,-0.9,-0.7,-0.5,-0.3,-0.1,0.1,0.3,0.5,0.7,0.9,1.1,1.3,1.5};
+  const Double_t FlowRapidityBinning [] = {-1.5,-1.3,-1.1,-0.9,-0.7,-0.5,-0.3,-0.1,0.1,0.3,0.5,0.7,0.9,1.1,1.3,1.5};
+  const Double_t FlowBBinning [] = {0.,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.,11.,12};
 }
+#endif
 
 using namespace dataplotter;
 
@@ -75,9 +88,11 @@ private:
   std::map<TString, std::pair<Double_t, Double_t>> ValueRangeYild;
   std::map<TString, std::pair<Double_t, Double_t>> ValueRangeKinematics;
   std::map<TString, std::pair<Double_t, Double_t>> ValueRangeFlow;
+  std::map<TString, Double_t*> ValueRangeFlowArray;
   std::map<TString, Int_t> NumberOfBinsYild;
   std::map<TString, Int_t> NumberOfBinsKinematics;
   std::map<TString, Int_t> NumberOfBinsFlow;
+  std::map<TString, Int_t> NumberOfBinsFlowArray;
   ClassDef(DataReaderPlotter, 0);
   Bool_t isYildInitialized;
   Bool_t isKinematicsInitialized;

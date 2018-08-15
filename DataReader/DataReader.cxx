@@ -210,6 +210,7 @@ void DataReader::ReadUNIGEN()
     }
 
     FillTree();
+    // Reweightning impact parameter
     fPlotter->Fill(fEvent, 2 * TMath::Pi() * fEvent->B * 0.025);
   }
   delete uEvent;
