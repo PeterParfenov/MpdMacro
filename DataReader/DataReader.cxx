@@ -313,6 +313,8 @@ void DataReader::InitPlotter()
 {
   fPlotter = new DataReaderPlotter();
   fPlotter->InitYild();
+  fPlotter->InitKinematics();
+  fPlotter->InitFlow();
 }
 
 ClassImp(DataReader);
