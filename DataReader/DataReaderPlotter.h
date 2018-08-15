@@ -18,8 +18,6 @@
 
 #include "DataReaderEvent.h"
 
-#ifndef DATAPLOTTER_NAMESPACE
-#define DATAPLOTTER_NAMESPACE
 namespace dataplotter{
   const Int_t NumberOfParticles = 3;
   const TString ParticleName[] = {TString("Pion"), TString("Kaon"), TString("Proton")};
@@ -47,6 +45,7 @@ namespace dataplotter{
 
   const TString FlowCentralityName[]= {TString("Central"), TString("Midcentral"), TString("Peripheral")};
   const std::pair<Double_t, Double_t> FlowBRegion[] ={{0.,3.5},{5.,7.},{10.,12.}};
+  const std::pair <Double_t, Double_t> FlowEtacut = {-1.5,1.5};
   const std::pair <Double_t, Double_t> FlowYcut = {-1.5,1.5};
   const std::pair <Double_t, Double_t> FlowPtcut = {0.2,2.};
   const Double_t FlowMidRapidityCutForPt = 0.2;
@@ -62,7 +61,6 @@ namespace dataplotter{
   const Double_t FlowRapidityBinning [] = {-1.5,-1.3,-1.1,-0.9,-0.7,-0.5,-0.3,-0.1,0.1,0.3,0.5,0.7,0.9,1.1,1.3,1.5};
   const Double_t FlowBBinning [] = {0.,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.,11.,12};
 }
-#endif
 
 using namespace dataplotter;
 
@@ -78,6 +76,7 @@ public:
   void ScaleYildsForAllDataset(Double_t _scale);
   void InitYild();
   void InitKinematics();
+  void InitCuts();
   void InitFlow();
 
 private:
@@ -88,9 +87,11 @@ private:
   std::map<TString, std::pair<Double_t, Double_t>> ValueRangeYild;
   std::map<TString, std::pair<Double_t, Double_t>> ValueRangeKinematics;
   std::map<TString, std::pair<Double_t, Double_t>> ValueRangeFlow;
+  std::map<TString, std::pair<Double_t, Double_t>> ValueRangeCuts;
   std::map<TString, Double_t*> ValueRangeFlowArray;
   std::map<TString, Int_t> NumberOfBinsYild;
   std::map<TString, Int_t> NumberOfBinsKinematics;
+  std::map<TString, Int_t> NumberOfBinsCuts;
   std::map<TString, Int_t> NumberOfBinsFlow;
   std::map<TString, Int_t> NumberOfBinsFlowArray;
   ClassDef(DataReaderPlotter, 0);
