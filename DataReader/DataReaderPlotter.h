@@ -39,12 +39,13 @@ namespace dataplotter{
   const Int_t NumberOfTrackVariables = 4;
   const Int_t NumberOfFlowEventVariables = 1;
   const Int_t NumberOfFlowTrackVariables = 3;
-  const Int_t NumberOfBRegions = 3;
 
   const std::pair <Double_t, Double_t> BcutInYild = {0.,3.5};
 
-  const TString FlowCentralityName[]= {TString("Central"), TString("Midcentral"), TString("Peripheral")};
-  const std::pair<Double_t, Double_t> FlowBRegion[] ={{0.,3.5},{5.,7.},{10.,12.}};
+  const TString FlowCentralityName[]= {TString("All"), TString("Central"), TString("Midcentral"), TString("Peripheral")};
+  const std::pair<Double_t, Double_t> FlowBRegion[] ={{0.,17.},{0.,3.5},{5.,7.},{10.,12.}};
+  const Int_t NumberOfBRegions = 4;
+
   const std::pair <Double_t, Double_t> FlowEtacut = {-1.5,1.5};
   const std::pair <Double_t, Double_t> FlowYcut = {-1.5,1.5};
   const std::pair <Double_t, Double_t> FlowPtcut = {0.2,2.};
@@ -81,8 +82,8 @@ public:
 
 private:
   std::map<TString, TH1D *> fHistogramYild;
-  std::map<TString, TH1D *> fHistogramKinematics;
-  std::map<TString, TH1D *> fHistogramCuts;
+  std::vector<std::map<TString, TH1D *>> fHistogramKinematics;
+  std::vector<std::map<TString, TH1D *>> fHistogramCuts;
   std::vector<std::map<TString, TProfile *>> fHistogramFlow;
   std::map<TString, std::pair<Double_t, Double_t>> ValueRangeYild;
   std::map<TString, std::pair<Double_t, Double_t>> ValueRangeKinematics;
