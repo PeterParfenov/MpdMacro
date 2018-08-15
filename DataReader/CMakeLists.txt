@@ -25,17 +25,6 @@ add_definitions(${ROOT_CXX_FLAGS})
 set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_C_FLAGS "-O2")
 
-#---Generate dictionary for DataReaderEvent
-ROOT_GENERATE_DICTIONARY(G__DataReaderEvent
-DataReaderEvent.h
-LINKDEF DataReaderEvent.LinkDef.h)
-
-#---Generate dictionary for DataReaderPlotter
-ROOT_GENERATE_DICTIONARY(G__DataReaderPlotter
-DataReaderPlotter.h
-DataReaderEvent.h
-LINKDEF DataReaderPlotter.LinkDef.h)
-
 #---Generate dictionary for DataReader
 ROOT_GENERATE_DICTIONARY(G__DataReader
 DataReader.h
@@ -43,21 +32,13 @@ DataReaderPlotter.h
 DataReaderEvent.h
 LINKDEF DataReader.LinkDef.h)
 
-#---Create a shared library with geneated dictionary for DataReaderEvent class
-add_library(DataReaderEvent SHARED DataReaderEvent.cxx G__DataReaderEvent.cxx)
-target_link_libraries(DataReaderEvent ${ROOT_LIBRARIES})
-
-#---Create a shared library with geneated dictionary for DataReaderPlotter class
-add_library(DataReaderPlotter SHARED DataReaderPlotter.cxx DataReaderEvent.cxx G__DataReaderPlotter.cxx)
-target_link_libraries(DataReaderPlotter DataReaderEvent ${ROOT_LIBRARIES})
-
 #---Create a shared library with geneated dictionary for DataReader class
 add_library(DataReader SHARED DataReader.cxx
 DataReaderEvent.cxx
 DataReaderPlotter.cxx
 G__DataReader.cxx)
-target_link_libraries(DataReader DataReaderPlotter DataReaderEvent ${UNIGEN} ${ROOT_LIBRARIES})
+target_link_libraries(DataReader ${UNIGEN} ${ROOT_LIBRARIES})
 
 #---Create  a main program using the library
 add_executable(Main DataReaderMain.cxx)
-target_link_libraries(Main DataReader DataReaderPlotter DataReaderEvent)
+target_link_libraries(Main DataReader)

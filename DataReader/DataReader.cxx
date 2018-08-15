@@ -9,6 +9,8 @@ DataReader::~DataReader()
 {
   if (isOutputTreeFileInitialized)
     oTreeFile->Close();
+  if (isOutputHistFileInitialized)
+    oHistFile->Close();
 }
 
 Bool_t DataReader::InitInputFile(TString _name)
@@ -60,12 +62,21 @@ Bool_t DataReader::InitInputFile(TString _name)
   return true;
 }
 
-void DataReader::InitOutputFile(TString _name)
+void DataReader::InitOutputTreeFile(TString _name)
 {
-  std::cout << "DataReader::InitOutputFile: Processing." << std::endl;
-  oTreeFile = new TFile((_name + "_tree.root").Data(), "recreate");
+  TString name;
+  name = _name + "_tree.root";
+  std::cout << "DataReader::InitOutputTreeFile: Processing." << std::endl;
+  oTreeFile = new TFile(name.Data(), "recreate");
   isOutputTreeFileInitialized = true;
-  oHistFile = new TFile((_name + "_hist.root").Data(), "recreate");
+}
+
+void DataReader::InitOutputHistFile(TString _name)
+{
+  TString name;
+  name = _name + "_hist.root";
+  std::cout << "DataReader::InitOutputHistFile: Processing." << std::endl;
+  oHistFile = new TFile(name.Data(), "recreate");
   isOutputHistFileInitialized = true;
 }
 
@@ -164,12 +175,12 @@ void DataReader::ReadUNIGEN()
 {
   TTree *tree;
   UEvent *uEvent = new UEvent();
-  UParticle * uParticle;
+  UParticle *uParticle;
   int TimeStep = 4;
   iFile.ROOT->cd();
   tree = (TTree *)iFile.ROOT->Get("events");
   // Timestep taken into account
-  Long_t nentries = tree->GetEntriesFast()/TimeStep;
+  Long_t nentries = tree->GetEntriesFast() / TimeStep;
 
   std::cout << nentries << std::endl;
   tree->SetBranchAddress("event", &uEvent);
@@ -184,10 +195,10 @@ void DataReader::ReadUNIGEN()
     fEvent->Time = uEvent->GetStepT();
 
     std::cout << "DataReader::ReadPHQMD: Event " << fEvent->Nevent
-                << "\n\tImpact parameter: " << fEvent->B << " fm."
-                << "\n\tNparticles: " << fEvent->Nparticles
-                << "\n\tTime: " << fEvent->Time << std::endl;
-    for (Int_t iTrack=0; iTrack<fEvent->Nparticles; iTrack++)
+              << "\n\tImpact parameter: " << fEvent->B << " fm."
+              << "\n\tNparticles: " << fEvent->Nparticles
+              << "\n\tTime: " << fEvent->Time << std::endl;
+    for (Int_t iTrack = 0; iTrack < fEvent->Nparticles; iTrack++)
     {
       uParticle = uEvent->GetParticle(iTrack);
       fEvent->E[iTrack] = uParticle->E();
@@ -195,11 +206,11 @@ void DataReader::ReadUNIGEN()
       fEvent->Py[iTrack] = uParticle->Py();
       fEvent->Pz[iTrack] = uParticle->Pz();
       fEvent->PID[iTrack] = uParticle->GetPdg();
-      fEvent->M[iTrack] = TMath::Sqrt(fEvent->E[iTrack]*fEvent->E[iTrack] - fEvent->Px[iTrack]*fEvent->Px[iTrack] - fEvent->Py[iTrack]*fEvent->Py[iTrack] - fEvent->Pz[iTrack]*fEvent->Pz[iTrack]);
+      fEvent->M[iTrack] = TMath::Sqrt(fEvent->E[iTrack] * fEvent->E[iTrack] - fEvent->Px[iTrack] * fEvent->Px[iTrack] - fEvent->Py[iTrack] * fEvent->Py[iTrack] - fEvent->Pz[iTrack] * fEvent->Pz[iTrack]);
     }
 
     FillTree();
-    fPlotter->Fill(fEvent, 2*TMath::Pi()*fEvent->B*0.025);
+    fPlotter->Fill(fEvent, 2 * TMath::Pi() * fEvent->B * 0.025);
   }
   delete uEvent;
   delete tree;

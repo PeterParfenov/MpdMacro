@@ -50,7 +50,8 @@ public:
   ~DataReader();
 
   Bool_t InitInputFile(TString _name);
-  void InitOutputFile(TString _name);
+  void InitOutputTreeFile(TString _name);
+  void InitOutputHistFile(TString _name);
   Bool_t ReadFile(TString _name);
   void ReadUrQMD();
   void ReadUNIGEN();
