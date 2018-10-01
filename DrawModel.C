@@ -3,506 +3,506 @@
 #include "TGraphAsymmErrors.h"
 #include "TMultiGraph.h"
 
-// STAR published results
-//--------------------------------------------------------------------------------------------------------------
-// Proton v1 data:
-std::vector<TGraphAsymmErrors *> GetSTARv1CentralProton11GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const int N = 8;
-  double Rapidity[N] = {-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7};
-  double Rapidity_Error[N] = {
-      0.0,
-  };
-  //11.5 GeV Proton
-  //0-10%
-  double y1[N] = {-0.0129386, -0.00227438, 0.00295323, -0.00056542, 0.00234785, 0.000163196, 0.00632508, 0.0132673};
-  double ey1[N] = {0.00296635, 0.00183477, 0.00159732, 0.00166788, 0.00165045, 0.00158545, 0.00183829, 0.00304869};
-
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
-
-  gr1->SetMarkerStyle(29);
-  gr1->SetMarkerSize(2.2);
-  gr1->SetFillColor(1);
-  gr1->SetFillStyle(3001);
-
-  vect.push_back(gr1);
-
-  return vect;
-}
-
-std::vector<TGraphAsymmErrors *> GetSTARv1MidcentralProton11GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const int N = 8;
-  double Rapidity[N] = {-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7};
-  double Rapidity_Error[N] = {
-      0.0,
-  };
-  //10-40%
-  double y1[N] = {-0.00341595, 0.0009747036, 0.001212443, 0.0007160479, -0.0006701253, -0.00119874, -0.001219269, 0.003111589};
-  double ey1[N] = {0.000953644, 0.000578296, 0.000499372, 0.00052311, 0.000518108, 0.000494702, 0.000575027, 0.00096231};
-
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
-
-  gr1->SetMarkerStyle(29);
-  gr1->SetMarkerSize(2.2);
-  gr1->SetFillColor(1);
-  gr1->SetFillStyle(3001);
-
-  vect.push_back(gr1);
-
-  return vect;
-}
-
-std::vector<TGraphAsymmErrors *> GetSTARv1PeripheralProton11GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const int N = 8;
-  double Rapidity[N] = {-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7};
-  double Rapidity_Error[N] = {
-      0.0,
-  };
-  //40-80%
-  double y1[N] = {0.0305119, 0.0239105, 0.0162317, 0.00540334, -0.00330357, -0.0149603, -0.0209334, -0.0318336};
-  double ey1[N] = {0.00206919, 0.00121088, 0.00102956, 0.00108504, 0.00107436, 0.00101757, 0.00119847, 0.00207222};
-
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
-
-  gr1->SetMarkerStyle(29);
-  gr1->SetMarkerSize(2.2);
-  gr1->SetFillColor(1);
-  gr1->SetFillStyle(3001);
-
-  vect.push_back(gr1);
-
-  return vect;
-}
-
-std::vector<TGraphAsymmErrors *> GetSTARv1CentralProton7GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const int N = 8;
-  double Rapidity[N] = {-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7};
-  double Rapidity_Error[N] = {
-      0.0,
-  };
-  //7.7 GeV Proton
-  //0-10%
-  double y1[N] = {-0.0203452, -0.00738625, -0.00433286, -0.00195176, 0.000685336, 0.00694344, 0.00878699, 0.0283179};
-  double ey1[N] = {0.00543306, 0.00321989, 0.00273916, 0.00281952, 0.0027888, 0.00270132, 0.00320329, 0.00545943};
-
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
-
-  gr1->SetMarkerStyle(29);
-  gr1->SetMarkerSize(2.2);
-  gr1->SetFillColor(1);
-  gr1->SetFillStyle(3001);
-
-  vect.push_back(gr1);
-
-  return vect;
-}
-
-std::vector<TGraphAsymmErrors *> GetSTARv1MidcentralProton7GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const int N = 8;
-  double Rapidity[N] = {-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7};
-  double Rapidity_Error[N] = {
-      0.0,
-  };
-  //10-40%
-  double y1[N] = {-0.0218351, -0.00944496, -0.00447499, -0.00132103, 0.001304121, 0.004387375, 0.0093865102, 0.02143059};
-  double ey1[N] = {0.0006705, 0.0006228, 0.0005701, 0.0005629, 0.0005672, 0.000569, 0.0005728, 0.0006806};
-
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
-
-  gr1->SetMarkerStyle(29);
-  gr1->SetMarkerSize(2.2);
-  gr1->SetFillColor(1);
-  gr1->SetFillStyle(3001);
-
-  vect.push_back(gr1);
-
-  return vect;
-}
-
-std::vector<TGraphAsymmErrors *> GetSTARv1PeripheralProton7GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const int N = 8;
-  double Rapidity[N] = {-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7};
-  double Rapidity_Error[N] = {
-      0.0,
-  };
-  //40-80%
-  double y1[N] = {0.0246792, 0.0240645, 0.0134543, 0.00284927, -0.00644522, -0.0140354, -0.0192329, -0.0228843};
-  double ey1[N] = {0.00328052, 0.00187255, 0.00156262, 0.0016295, 0.00161519, 0.00152971, 0.00182294, 0.00319493};
-
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
-
-  gr1->SetMarkerStyle(29);
-  gr1->SetMarkerSize(2.2);
-  gr1->SetFillColor(1);
-  gr1->SetFillStyle(3001);
-
-  vect.push_back(gr1);
-
-  return vect;
-}
-
-std::vector<TGraphAsymmErrors *> GetSTARv1CentralPion11GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  // Pion v1 data:
-  const int N2 = 10;
-  double Rapidity[N2] = {-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9};
-  double Rapidity_Error[N2] = {
-      0.0,
-  };
-  //0-10%
-  double y1[N2] = {0.00916816, 0.00508237, 0.00269664, 0.00194594, 0.000126252, -0.00273391, -0.0004427, -0.00433598, -0.00213611, -0.00493046};
-  double ey1[N2] = {0.00194924, 0.00112243, 0.00101313, 0.000995277, 0.00102804, 0.00102633, 0.000999545, 0.00101835, 0.00114069, 0.0020668};
-
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N2, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
-
-  gr1->SetMarkerStyle(29);
-  gr1->SetMarkerSize(2.2);
-  gr1->SetFillColor(1);
-  gr1->SetFillStyle(3001);
-
-  vect.push_back(gr1);
-
-  return vect;
-}
-
-std::vector<TGraphAsymmErrors *> GetSTARv1MidcentralPion11GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const int N2 = 10;
-  double Rapidity[N2] = {-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9};
-  double Rapidity_Error[N2] = {
-      0.0,
-  };
-  //10-40%
-  double y1[N2] = {0.0181201, 0.013824, 0.00859977, 0.00512448, 0.00230668, -0.00191981, -0.00558514, -0.00975232, -0.0137853, -0.0176957};
-  double ey1[N2] = {0.000599337, 0.000344096, 0.000310679, 0.000306777, 0.000316692, 0.000316232, 0.00030756, 0.000311395, 0.000346585, 0.000616744};
-
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N2, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
-
-  gr1->SetMarkerStyle(29);
-  gr1->SetMarkerSize(2.2);
-  gr1->SetFillColor(1);
-  gr1->SetFillStyle(3001);
-
-  vect.push_back(gr1);
-
-  return vect;
-}
-
-std::vector<TGraphAsymmErrors *> GetSTARv1PeripheralPion11GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const int N2 = 10;
-  double Rapidity[N2] = {-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9};
-  double Rapidity_Error[N2] = {
-      0.0,
-  };
-  //40-80%
-  double y1[N2] = {0.0403169, 0.0282246, 0.0196425, 0.0111353, 0.00281105, -0.00397749, -0.011127, -0.0202217, -0.0284867, -0.0389162};
-  double ey1[N2] = {0.00116482, 0.000669188, 0.000606475, 0.000601291, 0.000620558, 0.000619358, 0.000601131, 0.000605408, 0.000670804, 0.00118378};
-
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N2, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
-
-  gr1->SetMarkerStyle(29);
-  gr1->SetMarkerSize(2.2);
-  gr1->SetFillColor(1);
-  gr1->SetFillStyle(3001);
-
-  vect.push_back(gr1);
-
-  return vect;
-}
-//7.7 GeV
-std::vector<TGraphAsymmErrors *> GetSTARv1CentralPion7GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const int N2 = 10;
-  double Rapidity[N2] = {-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9};
-  double Rapidity_Error[N2] = {
-      0.0,
-  };
-  //0-10%
-  double y1[N2] = {0.000441316, 0.00182928, -0.000142038, -0.00089236, 0.000221004, -0.00526669, -0.00246784, -0.00131499, 0.000838314, -0.00750076};
-  double
-      ey1[N2] = {0.00435667, 0.00256068, 0.00221022, 0.00216492, 0.00218349, 0.00217873, 0.00215614, 0.00220043, 0.00258115, 0.00451173};
-
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N2, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
-
-  gr1->SetMarkerStyle(29);
-  gr1->SetMarkerSize(2.2);
-  gr1->SetFillColor(1);
-  gr1->SetFillStyle(3001);
-
-  vect.push_back(gr1);
-
-  return vect;
-}
-
-std::vector<TGraphAsymmErrors *> GetSTARv1MidcentralPion7GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const int N2 = 10;
-  double Rapidity[N2] = {-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9};
-  double Rapidity_Error[N2] = {
-      0.0,
-  };
-  //10-40%
-  double y1[N2] = {0.0180309, 0.0146537, 0.00902703, 0.00496062, 0.00290686, -0.00131913, -0.00603065, -0.00875126, -0.0123064, -0.0198444};
-  double
-      ey1[N2] = {0.00121468, 0.000716108, 0.000617812, 0.000609072, 0.000614311, 0.000612473, 0.000605817, 0.000612917, 0.000710979, 0.00121395};
-
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N2, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
-
-  gr1->SetMarkerStyle(29);
-  gr1->SetMarkerSize(2.2);
-  gr1->SetFillColor(1);
-  gr1->SetFillStyle(3001);
-
-  vect.push_back(gr1);
-
-  return vect;
-}
-
-std::vector<TGraphAsymmErrors *> GetSTARv1PeripheralPion7GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const int N2 = 10;
-  double Rapidity[N2] = {-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9};
-  double Rapidity_Error[N2] = {
-      0.0,
-  };
-  //40-80%
-  double y1[N2] = {0.051107, 0.0363774, 0.0267159, 0.0184652, 0.00620654, -0.0041068, -0.0167095, -0.0267019, -0.0376915, -0.0526559};
-  double ey1[N2] = {0.00227639, 0.00134638, 0.0011662, 0.00115529, 0.0011687, 0.00116132, 0.00114483, 0.00115022, 0.00132452, 0.0022337};
-
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N2, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
-
-  gr1->SetMarkerStyle(29);
-  gr1->SetMarkerSize(2.2);
-  gr1->SetFillColor(1);
-  gr1->SetFillStyle(3001);
-
-  vect.push_back(gr1);
-
-  return vect;
-}
-//-----------------------------------------------------------------------------------------
-// centrality: 0-10%
-// beam energy: 7.7 GeV
-// Event plane method: eta-sub
-// ---------------- Particle species: Proton ----------------
-std::vector<TGraphAsymmErrors *> GetSTARv2CentralProton7GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const Int_t N = 11;
-  const Double_t pt_bin = 0.02;
-  Double_t pt_bin_center[N] = {0.315, 0.495, 0.705, 0.885, 1.095, 1.275, 1.485, 1.695, 1.875, 2.145, 2.625};
-  Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
-  Double_t v2_values[N] = {-0.000269201, 0.00292256, 0.0126519, 0.0210576, 0.0261742, 0.0307903, 0.0367998, 0.0400284, 0.0387608, 0.0421431, 0.0208087};
-  Double_t v2_stat_error[N] = {0.00686715, 0.00260173, 0.00219494, 0.00224465, 0.00258058, 0.00317244, 0.0040983, 0.00551364, 0.00762922, 0.0085211, 0.017097};
-  Double_t v2_syst_low_error[N] = {0.00583895, 0.00052618, 0.000210269, 0.000191756, 0.000115667, 0.00059384, 0.00111632, 0.000975622, 0.000495427, 0.00170409, 0.00815863};
-  Double_t v2_syst_high_error[N] = {0.00207739, 0.000790032, 0.000111652, 0.000260565, 0.00021992, 0.000542486, 0.00203055, 0.000537239, 0.000971274, 0.00250967, 0.00413821};
-  Double_t v2_syst_global_error[N] = {0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223};
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
-  TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
-  TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
-
-  gr3->SetMarkerStyle(29);
-  gr3->SetMarkerSize(2.2);
-  gr2->SetFillColor(1);
-  gr2->SetFillStyle(3001);
-  gr3->SetFillColor(4);
-  gr3->SetFillStyle(3002);
-
-  vect.push_back(gr1);
-  vect.push_back(gr2);
-  vect.push_back(gr3);
-
-  return vect;
-}
-
-// beam energy: 11.5 GeV
-// Event plane method: eta-sub
-// ---------------- Particle species: Proton ----------------
-std::vector<TGraphAsymmErrors *> GetSTARv2CentralProton11GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const Int_t N = 12;
-  const Double_t pt_bin = 0.02;
-  Double_t pt_bin_center[N] = {0.315, 0.495, 0.705, 0.885, 1.095, 1.275, 1.485, 1.695, 1.875, 2.085, 2.355, 2.805};
-  Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
-  Double_t v2_values[N] = {-0.000427349, 0.0028464, 0.0147849, 0.0237616, 0.0342703, 0.0427704, 0.0535675, 0.0600192, 0.0590241, 0.0636355, 0.0752996, 0.0746523};
-  Double_t v2_stat_error[N] = {0.00352098, 0.00131852, 0.00110456, 0.00111843, 0.00126779, 0.00153667, 0.00195472, 0.00258985, 0.00351736, 0.00471402, 0.0053951, 0.0107001};
-  Double_t v2_syst_low_error[N] = {0.00102177, 0.000316422, 0.000591555, 0.000377762, 0.000407647, 0.000312728, 0.0004822, 0.000577082, 0.000413772, 0.00195227, 0.0012802, 0.0012538};
-  Double_t v2_syst_high_error[N] = {0.00288907, 0.000213613, 0.00119536, 0.000313941, 0.000796177, 0.00043402, 0.000260929, 0.00110637, 0.000755729, 0.00103925, 0.000693547, 0.00124311};
-  Double_t v2_syst_global_error[N] = {0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635};
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
-  TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
-  TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
-
-  gr3->SetMarkerStyle(29);
-  gr3->SetMarkerSize(2.2);
-  gr2->SetFillColor(1);
-  gr2->SetFillStyle(3001);
-  gr3->SetFillColor(4);
-  gr3->SetFillStyle(3002);
-
-  vect.push_back(gr1);
-  vect.push_back(gr2);
-  vect.push_back(gr3);
-
-  return vect;
-}
-
-//-----------------------------------------------------------------------------------------
-// centrality: 10-40%
-
-// beam energy: 7.7 GeV
-// Event plane method: eta-sub
-// ---------------- Particle species: Proton ----------------
-std::vector<TGraphAsymmErrors *> GetSTARv2MidcentralProton7GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const Int_t N = 12;
-  const Double_t pt_bin = 0.02;
-  Double_t pt_bin_center[N] = {0.315, 0.495, 0.705, 0.885, 1.095, 1.275, 1.485, 1.695, 1.875, 2.085, 2.265, 2.625};
-  Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
-  Double_t v2_values[N] = {0.00643856, 0.0196543, 0.0362226, 0.0541206, 0.0781074, 0.090889, 0.10682, 0.121606, 0.131171, 0.13338, 0.14221, 0.152974};
-  Double_t v2_stat_error[N] = {0.0028076, 0.00108471, 0.00093993, 0.000987168, 0.00115896, 0.00144923, 0.00189495, 0.00257513, 0.00358486, 0.00494914, 0.0070575, 0.00820795};
-  Double_t v2_syst_low_error[N] = {0.00276658, 0.000576754, 0.00109959, 0.000118159, 0.000515559, 0.000388675, 0.000212473, 0.000415654, 0.000904369, 0.000963559, 0.00125468, 0.00391717};
-  Double_t v2_syst_high_error[N] = {0.000944912, 0.000311883, 0.000503305, 0.000107656, 0.000468809, 0.000749411, 0.00011288, 0.000274677, 0.000484163, 0.000938662, 0.000643771, 0.00192167};
-  Double_t v2_syst_global_error[N] = {0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189};
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
-  TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
-  TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
-
-  gr3->SetMarkerStyle(29);
-  gr3->SetMarkerSize(2.2);
-  gr2->SetFillColor(1);
-  gr2->SetFillStyle(3001);
-  gr3->SetFillColor(4);
-  gr3->SetFillStyle(3002);
-
-  vect.push_back(gr1);
-  vect.push_back(gr2);
-  vect.push_back(gr3);
-
-  return vect;
-}
-
-// beam energy: 11.5 GeV
-// Event plane method: eta-sub
-// ---------------- Particle species: Proton ----------------
-std::vector<TGraphAsymmErrors *> GetSTARv2MidcentralProton11GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const Int_t N = 14;
-  const Double_t pt_bin = 0.02;
-  Double_t pt_bin_center[N] = {0.315, 0.495, 0.705, 0.885, 1.095, 1.275, 1.485, 1.695, 1.875, 2.085, 2.265, 2.475, 2.685, 3.045};
-  Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
-  Double_t v2_values[N] = {0.0120472, 0.02022, 0.0387996, 0.0595139, 0.0827635, 0.102705, 0.12077, 0.135948, 0.149776, 0.157411, 0.166608, 0.174031, 0.180611, 0.199118};
-  Double_t v2_stat_error[N] = {0.00170825, 0.000652142, 0.00056097, 0.000582846, 0.000674855, 0.000830744, 0.00106771, 0.00142295, 0.00194179, 0.00259974, 0.00362094, 0.005181, 0.00762002, 0.00926275};
-  Double_t v2_syst_low_error[N] = {0.000277053, 0.000100436, 0.000576341, 0.000550148, 0.000266684, 0.000233713, 0.00012465, 0.000734831, 0.00043031, 0.000235896, 0.000832163, 0.0005678, 0.00128688, 0.00285366};
-  Double_t v2_syst_high_error[N] = {0.000196377, 6.61454e-05, 0.000269464, 0.000262287, 0.000141673, 0.000116366, 0.00015917, 0.000395063, 0.000229589, 0.000280736, 0.000508944, 0.000327624, 0.00216592, 0.00275877};
-  Double_t v2_syst_global_error[N] = {0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502};
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
-  TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
-  TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
-
-  gr3->SetMarkerStyle(29);
-  gr3->SetMarkerSize(2.2);
-  gr2->SetFillColor(1);
-  gr2->SetFillStyle(3001);
-  gr3->SetFillColor(4);
-  gr3->SetFillStyle(3002);
-
-  vect.push_back(gr1);
-  vect.push_back(gr2);
-  vect.push_back(gr3);
-
-  return vect;
-}
-
-//-----------------------------------------------------------------------------------------
-// centrality: 40-80%
-
-// beam energy: 7.7 GeV
-// Event plane method: eta-sub
-// ---------------- Particle species: Proton ----------------
-std::vector<TGraphAsymmErrors *> GetSTARv2PeripheralProton7GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const Int_t N = 9;
-  const Double_t pt_bin = 0.02;
-  Double_t pt_bin_center[N] = {0.315, 0.495, 0.705, 0.885, 1.095, 1.275, 1.485, 1.755, 2.175};
-  Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
-  Double_t v2_values[N] = {0.0193443, 0.0292042, 0.0538348, 0.0808153, 0.0949687, 0.107889, 0.129731, 0.156801, 0.181197};
-  Double_t v2_stat_error[N] = {0.0100635, 0.00405841, 0.00373599, 0.00414954, 0.00513363, 0.00670999, 0.00912322, 0.0105659, 0.0203899};
-  Double_t v2_syst_low_error[N] = {0.00263558, 0.00341316, 0.000169805, 0.000530466, 0.000194844, 0.00143701, 0.000571208, 0.00137547, 0.00355183};
-  Double_t v2_syst_high_error[N] = {0.000911431, 0.00143416, 0.000304894, 0.00083213, 0.000140493, 0.00271086, 0.00109541, 0.00253741, 0.0035047};
-  Double_t v2_syst_global_error[N] = {0.00111216, 0.00111216, 0.00111216, 0.00111216, 0.00111216, 0.00111216, 0.00111216, 0.00111216, 0.00111216};
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
-  TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
-  TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
-
-  gr3->SetMarkerStyle(29);
-  gr3->SetMarkerSize(2.2);
-  gr2->SetFillColor(1);
-  gr2->SetFillStyle(3001);
-  gr3->SetFillColor(4);
-  gr3->SetFillStyle(3002);
-
-  vect.push_back(gr1);
-  vect.push_back(gr2);
-  vect.push_back(gr3);
-
-  return vect;
-}
-
-// beam energy: 11.5 GeV
-// Event plane method: eta-sub
-// ---------------- Particle species: Proton ----------------
-std::vector<TGraphAsymmErrors *> GetSTARv2PeripheralProton11GeV()
-{
-  std::vector<TGraphAsymmErrors *> vect;
-  const Int_t N = 12;
-  const Double_t pt_bin = 0.02;
-  Double_t pt_bin_center[N] = {0.315, 0.495, 0.705, 0.885, 1.095, 1.275, 1.485, 1.695, 1.875, 2.085, 2.265, 2.535};
-  Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
-  Double_t v2_values[N] = {0.0328812, 0.0253787, 0.056364, 0.0806939, 0.114027, 0.131065, 0.151693, 0.182512, 0.202355, 0.218501, 0.236059, 0.230715};
-  Double_t v2_stat_error[N] = {0.00578687, 0.00230746, 0.00210492, 0.00231838, 0.00282459, 0.00363044, 0.00481897, 0.00662249, 0.00933959, 0.0125801, 0.017797, 0.0219193};
-  Double_t v2_syst_low_error[N] = {0.000762082, 0.00068486, 0.000365329, 0.000634961, 0.000164804, 0.00148524, 0.00258468, 0.000767835, 0.00129096, 0.00192597, 0.00630743, 0.00224027};
-  Double_t v2_syst_high_error[N] = {0.000651224, 0.000376137, 0.000356328, 0.00030269, 0.000276107, 0.000745533, 0.00131316, 0.0013338, 0.00243509, 0.000986827, 0.00375222, 0.00403218};
-  Double_t v2_syst_global_error[N] = {0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031};
-  TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
-  TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
-  TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
-
-  gr3->SetMarkerStyle(29);
-  gr3->SetMarkerSize(2.2);
-  gr2->SetFillColor(1);
-  gr2->SetFillStyle(3001);
-  gr3->SetFillColor(4);
-  gr3->SetFillStyle(3002);
-
-  vect.push_back(gr1);
-  vect.push_back(gr2);
-  vect.push_back(gr3);
-
-  return vect;
-}
+  // STAR published results
+  //--------------------------------------------------------------------------------------------------------------
+  // Proton v1 data:
+  std::vector<TGraphAsymmErrors *> GetSTARv1CentralProton11GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const int N = 8;
+    double Rapidity[N] = {-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7};
+    double Rapidity_Error[N] = {
+        0.0,
+    };
+    //11.5 GeV Proton
+    //0-10%
+    double y1[N] = {-0.0129386, -0.00227438, 0.00295323, -0.00056542, 0.00234785, 0.000163196, 0.00632508, 0.0132673};
+    double ey1[N] = {0.00296635, 0.00183477, 0.00159732, 0.00166788, 0.00165045, 0.00158545, 0.00183829, 0.00304869};
+
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
+
+    gr1->SetMarkerStyle(29);
+    gr1->SetMarkerSize(2.2);
+    gr1->SetFillColor(1);
+    gr1->SetFillStyle(3001);
+
+    vect.push_back(gr1);
+
+    return vect;
+  }
+
+  std::vector<TGraphAsymmErrors *> GetSTARv1MidcentralProton11GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const int N = 8;
+    double Rapidity[N] = {-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7};
+    double Rapidity_Error[N] = {
+        0.0,
+    };
+    //10-40%
+    double y1[N] = {-0.00341595, 0.0009747036, 0.001212443, 0.0007160479, -0.0006701253, -0.00119874, -0.001219269, 0.003111589};
+    double ey1[N] = {0.000953644, 0.000578296, 0.000499372, 0.00052311, 0.000518108, 0.000494702, 0.000575027, 0.00096231};
+
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
+
+    gr1->SetMarkerStyle(29);
+    gr1->SetMarkerSize(2.2);
+    gr1->SetFillColor(1);
+    gr1->SetFillStyle(3001);
+
+    vect.push_back(gr1);
+
+    return vect;
+  }
+
+  std::vector<TGraphAsymmErrors *> GetSTARv1PeripheralProton11GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const int N = 8;
+    double Rapidity[N] = {-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7};
+    double Rapidity_Error[N] = {
+        0.0,
+    };
+    //40-80%
+    double y1[N] = {0.0305119, 0.0239105, 0.0162317, 0.00540334, -0.00330357, -0.0149603, -0.0209334, -0.0318336};
+    double ey1[N] = {0.00206919, 0.00121088, 0.00102956, 0.00108504, 0.00107436, 0.00101757, 0.00119847, 0.00207222};
+
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
+
+    gr1->SetMarkerStyle(29);
+    gr1->SetMarkerSize(2.2);
+    gr1->SetFillColor(1);
+    gr1->SetFillStyle(3001);
+
+    vect.push_back(gr1);
+
+    return vect;
+  }
+
+  std::vector<TGraphAsymmErrors *> GetSTARv1CentralProton7GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const int N = 8;
+    double Rapidity[N] = {-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7};
+    double Rapidity_Error[N] = {
+        0.0,
+    };
+    //7.7 GeV Proton
+    //0-10%
+    double y1[N] = {-0.0203452, -0.00738625, -0.00433286, -0.00195176, 0.000685336, 0.00694344, 0.00878699, 0.0283179};
+    double ey1[N] = {0.00543306, 0.00321989, 0.00273916, 0.00281952, 0.0027888, 0.00270132, 0.00320329, 0.00545943};
+
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
+
+    gr1->SetMarkerStyle(29);
+    gr1->SetMarkerSize(2.2);
+    gr1->SetFillColor(1);
+    gr1->SetFillStyle(3001);
+
+    vect.push_back(gr1);
+
+    return vect;
+  }
+
+  std::vector<TGraphAsymmErrors *> GetSTARv1MidcentralProton7GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const int N = 8;
+    double Rapidity[N] = {-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7};
+    double Rapidity_Error[N] = {
+        0.0,
+    };
+    //10-40%
+    double y1[N] = {-0.0218351, -0.00944496, -0.00447499, -0.00132103, 0.001304121, 0.004387375, 0.0093865102, 0.02143059};
+    double ey1[N] = {0.0006705, 0.0006228, 0.0005701, 0.0005629, 0.0005672, 0.000569, 0.0005728, 0.0006806};
+
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
+
+    gr1->SetMarkerStyle(29);
+    gr1->SetMarkerSize(2.2);
+    gr1->SetFillColor(1);
+    gr1->SetFillStyle(3001);
+
+    vect.push_back(gr1);
+
+    return vect;
+  }
+
+  std::vector<TGraphAsymmErrors *> GetSTARv1PeripheralProton7GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const int N = 8;
+    double Rapidity[N] = {-0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7};
+    double Rapidity_Error[N] = {
+        0.0,
+    };
+    //40-80%
+    double y1[N] = {0.0246792, 0.0240645, 0.0134543, 0.00284927, -0.00644522, -0.0140354, -0.0192329, -0.0228843};
+    double ey1[N] = {0.00328052, 0.00187255, 0.00156262, 0.0016295, 0.00161519, 0.00152971, 0.00182294, 0.00319493};
+
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
+
+    gr1->SetMarkerStyle(29);
+    gr1->SetMarkerSize(2.2);
+    gr1->SetFillColor(1);
+    gr1->SetFillStyle(3001);
+
+    vect.push_back(gr1);
+
+    return vect;
+  }
+
+  std::vector<TGraphAsymmErrors *> GetSTARv1CentralPion11GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    // Pion v1 data:
+    const int N2 = 10;
+    double Rapidity[N2] = {-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9};
+    double Rapidity_Error[N2] = {
+        0.0,
+    };
+    //0-10%
+    double y1[N2] = {0.00916816, 0.00508237, 0.00269664, 0.00194594, 0.000126252, -0.00273391, -0.0004427, -0.00433598, -0.00213611, -0.00493046};
+    double ey1[N2] = {0.00194924, 0.00112243, 0.00101313, 0.000995277, 0.00102804, 0.00102633, 0.000999545, 0.00101835, 0.00114069, 0.0020668};
+
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N2, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
+
+    gr1->SetMarkerStyle(29);
+    gr1->SetMarkerSize(2.2);
+    gr1->SetFillColor(1);
+    gr1->SetFillStyle(3001);
+
+    vect.push_back(gr1);
+
+    return vect;
+  }
+
+  std::vector<TGraphAsymmErrors *> GetSTARv1MidcentralPion11GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const int N2 = 10;
+    double Rapidity[N2] = {-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9};
+    double Rapidity_Error[N2] = {
+        0.0,
+    };
+    //10-40%
+    double y1[N2] = {0.0181201, 0.013824, 0.00859977, 0.00512448, 0.00230668, -0.00191981, -0.00558514, -0.00975232, -0.0137853, -0.0176957};
+    double ey1[N2] = {0.000599337, 0.000344096, 0.000310679, 0.000306777, 0.000316692, 0.000316232, 0.00030756, 0.000311395, 0.000346585, 0.000616744};
+
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N2, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
+
+    gr1->SetMarkerStyle(29);
+    gr1->SetMarkerSize(2.2);
+    gr1->SetFillColor(1);
+    gr1->SetFillStyle(3001);
+
+    vect.push_back(gr1);
+
+    return vect;
+  }
+
+  std::vector<TGraphAsymmErrors *> GetSTARv1PeripheralPion11GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const int N2 = 10;
+    double Rapidity[N2] = {-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9};
+    double Rapidity_Error[N2] = {
+        0.0,
+    };
+    //40-80%
+    double y1[N2] = {0.0403169, 0.0282246, 0.0196425, 0.0111353, 0.00281105, -0.00397749, -0.011127, -0.0202217, -0.0284867, -0.0389162};
+    double ey1[N2] = {0.00116482, 0.000669188, 0.000606475, 0.000601291, 0.000620558, 0.000619358, 0.000601131, 0.000605408, 0.000670804, 0.00118378};
+
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N2, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
+
+    gr1->SetMarkerStyle(29);
+    gr1->SetMarkerSize(2.2);
+    gr1->SetFillColor(1);
+    gr1->SetFillStyle(3001);
+
+    vect.push_back(gr1);
+
+    return vect;
+  }
+  //7.7 GeV
+  std::vector<TGraphAsymmErrors *> GetSTARv1CentralPion7GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const int N2 = 10;
+    double Rapidity[N2] = {-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9};
+    double Rapidity_Error[N2] = {
+        0.0,
+    };
+    //0-10%
+    double y1[N2] = {0.000441316, 0.00182928, -0.000142038, -0.00089236, 0.000221004, -0.00526669, -0.00246784, -0.00131499, 0.000838314, -0.00750076};
+    double
+        ey1[N2] = {0.00435667, 0.00256068, 0.00221022, 0.00216492, 0.00218349, 0.00217873, 0.00215614, 0.00220043, 0.00258115, 0.00451173};
+
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N2, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
+
+    gr1->SetMarkerStyle(29);
+    gr1->SetMarkerSize(2.2);
+    gr1->SetFillColor(1);
+    gr1->SetFillStyle(3001);
+
+    vect.push_back(gr1);
+
+    return vect;
+  }
+
+  std::vector<TGraphAsymmErrors *> GetSTARv1MidcentralPion7GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const int N2 = 10;
+    double Rapidity[N2] = {-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9};
+    double Rapidity_Error[N2] = {
+        0.0,
+    };
+    //10-40%
+    double y1[N2] = {0.0180309, 0.0146537, 0.00902703, 0.00496062, 0.00290686, -0.00131913, -0.00603065, -0.00875126, -0.0123064, -0.0198444};
+    double
+        ey1[N2] = {0.00121468, 0.000716108, 0.000617812, 0.000609072, 0.000614311, 0.000612473, 0.000605817, 0.000612917, 0.000710979, 0.00121395};
+
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N2, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
+
+    gr1->SetMarkerStyle(29);
+    gr1->SetMarkerSize(2.2);
+    gr1->SetFillColor(1);
+    gr1->SetFillStyle(3001);
+
+    vect.push_back(gr1);
+
+    return vect;
+  }
+
+  std::vector<TGraphAsymmErrors *> GetSTARv1PeripheralPion7GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const int N2 = 10;
+    double Rapidity[N2] = {-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9};
+    double Rapidity_Error[N2] = {
+        0.0,
+    };
+    //40-80%
+    double y1[N2] = {0.051107, 0.0363774, 0.0267159, 0.0184652, 0.00620654, -0.0041068, -0.0167095, -0.0267019, -0.0376915, -0.0526559};
+    double ey1[N2] = {0.00227639, 0.00134638, 0.0011662, 0.00115529, 0.0011687, 0.00116132, 0.00114483, 0.00115022, 0.00132452, 0.0022337};
+
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N2, Rapidity, y1, Rapidity_Error, Rapidity_Error, ey1, ey1);
+
+    gr1->SetMarkerStyle(29);
+    gr1->SetMarkerSize(2.2);
+    gr1->SetFillColor(1);
+    gr1->SetFillStyle(3001);
+
+    vect.push_back(gr1);
+
+    return vect;
+  }
+  //-----------------------------------------------------------------------------------------
+  // centrality: 0-10%
+  // beam energy: 7.7 GeV
+  // Event plane method: eta-sub
+  // ---------------- Particle species: Proton ----------------
+  std::vector<TGraphAsymmErrors *> GetSTARv2CentralProton7GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const Int_t N = 11;
+    const Double_t pt_bin = 0.02;
+    Double_t pt_bin_center[N] = {0.315, 0.495, 0.705, 0.885, 1.095, 1.275, 1.485, 1.695, 1.875, 2.145, 2.625};
+    Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
+    Double_t v2_values[N] = {-0.000269201, 0.00292256, 0.0126519, 0.0210576, 0.0261742, 0.0307903, 0.0367998, 0.0400284, 0.0387608, 0.0421431, 0.0208087};
+    Double_t v2_stat_error[N] = {0.00686715, 0.00260173, 0.00219494, 0.00224465, 0.00258058, 0.00317244, 0.0040983, 0.00551364, 0.00762922, 0.0085211, 0.017097};
+    Double_t v2_syst_low_error[N] = {0.00583895, 0.00052618, 0.000210269, 0.000191756, 0.000115667, 0.00059384, 0.00111632, 0.000975622, 0.000495427, 0.00170409, 0.00815863};
+    Double_t v2_syst_high_error[N] = {0.00207739, 0.000790032, 0.000111652, 0.000260565, 0.00021992, 0.000542486, 0.00203055, 0.000537239, 0.000971274, 0.00250967, 0.00413821};
+    Double_t v2_syst_global_error[N] = {0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223, 0.00116223};
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
+    TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
+    TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
+
+    gr3->SetMarkerStyle(29);
+    gr3->SetMarkerSize(2.2);
+    gr2->SetFillColor(1);
+    gr2->SetFillStyle(3001);
+    gr3->SetFillColor(4);
+    gr3->SetFillStyle(3002);
+
+    vect.push_back(gr1);
+    vect.push_back(gr2);
+    vect.push_back(gr3);
+
+    return vect;
+  }
+
+  // beam energy: 11.5 GeV
+  // Event plane method: eta-sub
+  // ---------------- Particle species: Proton ----------------
+  std::vector<TGraphAsymmErrors *> GetSTARv2CentralProton11GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const Int_t N = 12;
+    const Double_t pt_bin = 0.02;
+    Double_t pt_bin_center[N] = {0.315, 0.495, 0.705, 0.885, 1.095, 1.275, 1.485, 1.695, 1.875, 2.085, 2.355, 2.805};
+    Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
+    Double_t v2_values[N] = {-0.000427349, 0.0028464, 0.0147849, 0.0237616, 0.0342703, 0.0427704, 0.0535675, 0.0600192, 0.0590241, 0.0636355, 0.0752996, 0.0746523};
+    Double_t v2_stat_error[N] = {0.00352098, 0.00131852, 0.00110456, 0.00111843, 0.00126779, 0.00153667, 0.00195472, 0.00258985, 0.00351736, 0.00471402, 0.0053951, 0.0107001};
+    Double_t v2_syst_low_error[N] = {0.00102177, 0.000316422, 0.000591555, 0.000377762, 0.000407647, 0.000312728, 0.0004822, 0.000577082, 0.000413772, 0.00195227, 0.0012802, 0.0012538};
+    Double_t v2_syst_high_error[N] = {0.00288907, 0.000213613, 0.00119536, 0.000313941, 0.000796177, 0.00043402, 0.000260929, 0.00110637, 0.000755729, 0.00103925, 0.000693547, 0.00124311};
+    Double_t v2_syst_global_error[N] = {0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635, 0.000955635};
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
+    TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
+    TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
+
+    gr3->SetMarkerStyle(29);
+    gr3->SetMarkerSize(2.2);
+    gr2->SetFillColor(1);
+    gr2->SetFillStyle(3001);
+    gr3->SetFillColor(4);
+    gr3->SetFillStyle(3002);
+
+    vect.push_back(gr1);
+    vect.push_back(gr2);
+    vect.push_back(gr3);
+
+    return vect;
+  }
+
+  //-----------------------------------------------------------------------------------------
+  // centrality: 10-40%
+
+  // beam energy: 7.7 GeV
+  // Event plane method: eta-sub
+  // ---------------- Particle species: Proton ----------------
+  std::vector<TGraphAsymmErrors *> GetSTARv2MidcentralProton7GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const Int_t N = 12;
+    const Double_t pt_bin = 0.02;
+    Double_t pt_bin_center[N] = {0.315, 0.495, 0.705, 0.885, 1.095, 1.275, 1.485, 1.695, 1.875, 2.085, 2.265, 2.625};
+    Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
+    Double_t v2_values[N] = {0.00643856, 0.0196543, 0.0362226, 0.0541206, 0.0781074, 0.090889, 0.10682, 0.121606, 0.131171, 0.13338, 0.14221, 0.152974};
+    Double_t v2_stat_error[N] = {0.0028076, 0.00108471, 0.00093993, 0.000987168, 0.00115896, 0.00144923, 0.00189495, 0.00257513, 0.00358486, 0.00494914, 0.0070575, 0.00820795};
+    Double_t v2_syst_low_error[N] = {0.00276658, 0.000576754, 0.00109959, 0.000118159, 0.000515559, 0.000388675, 0.000212473, 0.000415654, 0.000904369, 0.000963559, 0.00125468, 0.00391717};
+    Double_t v2_syst_high_error[N] = {0.000944912, 0.000311883, 0.000503305, 0.000107656, 0.000468809, 0.000749411, 0.00011288, 0.000274677, 0.000484163, 0.000938662, 0.000643771, 0.00192167};
+    Double_t v2_syst_global_error[N] = {0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189, 0.000889189};
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
+    TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
+    TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
+
+    gr3->SetMarkerStyle(29);
+    gr3->SetMarkerSize(2.2);
+    gr2->SetFillColor(1);
+    gr2->SetFillStyle(3001);
+    gr3->SetFillColor(4);
+    gr3->SetFillStyle(3002);
+
+    vect.push_back(gr1);
+    vect.push_back(gr2);
+    vect.push_back(gr3);
+
+    return vect;
+  }
+
+  // beam energy: 11.5 GeV
+  // Event plane method: eta-sub
+  // ---------------- Particle species: Proton ----------------
+  std::vector<TGraphAsymmErrors *> GetSTARv2MidcentralProton11GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const Int_t N = 14;
+    const Double_t pt_bin = 0.02;
+    Double_t pt_bin_center[N] = {0.315, 0.495, 0.705, 0.885, 1.095, 1.275, 1.485, 1.695, 1.875, 2.085, 2.265, 2.475, 2.685, 3.045};
+    Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
+    Double_t v2_values[N] = {0.0120472, 0.02022, 0.0387996, 0.0595139, 0.0827635, 0.102705, 0.12077, 0.135948, 0.149776, 0.157411, 0.166608, 0.174031, 0.180611, 0.199118};
+    Double_t v2_stat_error[N] = {0.00170825, 0.000652142, 0.00056097, 0.000582846, 0.000674855, 0.000830744, 0.00106771, 0.00142295, 0.00194179, 0.00259974, 0.00362094, 0.005181, 0.00762002, 0.00926275};
+    Double_t v2_syst_low_error[N] = {0.000277053, 0.000100436, 0.000576341, 0.000550148, 0.000266684, 0.000233713, 0.00012465, 0.000734831, 0.00043031, 0.000235896, 0.000832163, 0.0005678, 0.00128688, 0.00285366};
+    Double_t v2_syst_high_error[N] = {0.000196377, 6.61454e-05, 0.000269464, 0.000262287, 0.000141673, 0.000116366, 0.00015917, 0.000395063, 0.000229589, 0.000280736, 0.000508944, 0.000327624, 0.00216592, 0.00275877};
+    Double_t v2_syst_global_error[N] = {0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502, 0.000939502};
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
+    TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
+    TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
+
+    gr3->SetMarkerStyle(29);
+    gr3->SetMarkerSize(2.2);
+    gr2->SetFillColor(1);
+    gr2->SetFillStyle(3001);
+    gr3->SetFillColor(4);
+    gr3->SetFillStyle(3002);
+
+    vect.push_back(gr1);
+    vect.push_back(gr2);
+    vect.push_back(gr3);
+
+    return vect;
+  }
+
+  //-----------------------------------------------------------------------------------------
+  // centrality: 40-80%
+
+  // beam energy: 7.7 GeV
+  // Event plane method: eta-sub
+  // ---------------- Particle species: Proton ----------------
+  std::vector<TGraphAsymmErrors *> GetSTARv2PeripheralProton7GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const Int_t N = 9;
+    const Double_t pt_bin = 0.02;
+    Double_t pt_bin_center[N] = {0.315, 0.495, 0.705, 0.885, 1.095, 1.275, 1.485, 1.755, 2.175};
+    Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
+    Double_t v2_values[N] = {0.0193443, 0.0292042, 0.0538348, 0.0808153, 0.0949687, 0.107889, 0.129731, 0.156801, 0.181197};
+    Double_t v2_stat_error[N] = {0.0100635, 0.00405841, 0.00373599, 0.00414954, 0.00513363, 0.00670999, 0.00912322, 0.0105659, 0.0203899};
+    Double_t v2_syst_low_error[N] = {0.00263558, 0.00341316, 0.000169805, 0.000530466, 0.000194844, 0.00143701, 0.000571208, 0.00137547, 0.00355183};
+    Double_t v2_syst_high_error[N] = {0.000911431, 0.00143416, 0.000304894, 0.00083213, 0.000140493, 0.00271086, 0.00109541, 0.00253741, 0.0035047};
+    Double_t v2_syst_global_error[N] = {0.00111216, 0.00111216, 0.00111216, 0.00111216, 0.00111216, 0.00111216, 0.00111216, 0.00111216, 0.00111216};
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
+    TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
+    TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
+
+    gr3->SetMarkerStyle(29);
+    gr3->SetMarkerSize(2.2);
+    gr2->SetFillColor(1);
+    gr2->SetFillStyle(3001);
+    gr3->SetFillColor(4);
+    gr3->SetFillStyle(3002);
+
+    vect.push_back(gr1);
+    vect.push_back(gr2);
+    vect.push_back(gr3);
+
+    return vect;
+  }
+
+  // beam energy: 11.5 GeV
+  // Event plane method: eta-sub
+  // ---------------- Particle species: Proton ----------------
+  std::vector<TGraphAsymmErrors *> GetSTARv2PeripheralProton11GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const Int_t N = 12;
+    const Double_t pt_bin = 0.02;
+    Double_t pt_bin_center[N] = {0.315, 0.495, 0.705, 0.885, 1.095, 1.275, 1.485, 1.695, 1.875, 2.085, 2.265, 2.535};
+    Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
+    Double_t v2_values[N] = {0.0328812, 0.0253787, 0.056364, 0.0806939, 0.114027, 0.131065, 0.151693, 0.182512, 0.202355, 0.218501, 0.236059, 0.230715};
+    Double_t v2_stat_error[N] = {0.00578687, 0.00230746, 0.00210492, 0.00231838, 0.00282459, 0.00363044, 0.00481897, 0.00662249, 0.00933959, 0.0125801, 0.017797, 0.0219193};
+    Double_t v2_syst_low_error[N] = {0.000762082, 0.00068486, 0.000365329, 0.000634961, 0.000164804, 0.00148524, 0.00258468, 0.000767835, 0.00129096, 0.00192597, 0.00630743, 0.00224027};
+    Double_t v2_syst_high_error[N] = {0.000651224, 0.000376137, 0.000356328, 0.00030269, 0.000276107, 0.000745533, 0.00131316, 0.0013338, 0.00243509, 0.000986827, 0.00375222, 0.00403218};
+    Double_t v2_syst_global_error[N] = {0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031, 0.000806031};
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
+    TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
+    TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
+
+    gr3->SetMarkerStyle(29);
+    gr3->SetMarkerSize(2.2);
+    gr2->SetFillColor(1);
+    gr2->SetFillStyle(3001);
+    gr3->SetFillColor(4);
+    gr3->SetFillStyle(3002);
+
+    vect.push_back(gr1);
+    vect.push_back(gr2);
+    vect.push_back(gr3);
+
+    return vect;
+  }
 //--------------------------------------------------------------------------------------------------------------
 
 void DrawModel()
@@ -513,9 +513,16 @@ void DrawModel()
   line.SetLineStyle(2);
   line.SetLineWidth(2);
   TFile *styleFile = new TFile("~/Documents/WorkLocal/MPD/RootFiles/TDR/my_style.root", "read");
-  TFile *modelFileUrQMD7GeV = new TFile("~/modelQA_UrQMD_7.7GeV_1M_hist.root", "read");
-  TFile *modelFileLAQGSM11GeV = new TFile("~/laqgsm_hist.root", "read");
-  TFile *modelFilePHSD11GeV = new TFile("~/modelQA_PHSD_11GeV_5M_hist.root","read");
+  TFile *modelFileURQMD7GeV = new TFile("~/Documents/Dataset/modelQA_UrQMD_7.7GeV_1M_hist.root", "read");
+  TFile *modelFileURQMD11GeV = new TFile("~/Documents/Dataset/modelQA_UrQMD_11GeV_1M_hist.root", "read");
+  TFile *modelFileLAQGSM11GeV = new TFile("~/Documents/Dataset/modelQA_LAQGSM_11GeV_100k_hist.root", "read");
+  TFile *modelFileLAQGSM7GeV = new TFile("~/Documents/Dataset/modelQA_LAQGSM_7GeV_100k_hist.root", "read");
+  TFile *modelFilePHSD11GeV = new TFile("~/Documents/Dataset/modelQA_PHSD_11GeV_5M_hist.root", "read");
+  TFile *modelFilePHSD7GeV = new TFile("~/Documents/Dataset/modelQA_PHSD_11GeV_5M_hist.root", "read");
+  TFile *modelFilePHQMD11GeV = new TFile("~/Documents/Dataset/modelQA_PHQMD_11GeV_1M_hist.root", "read");
+  TFile *modelFilePHQMD7GeV = new TFile("~/Documents/Dataset/modelQA_PHQMD_11GeV_1M_hist.root", "read");
+  TFile *modelFileDCMQGSM11GeV = new TFile("~/Documents/Dataset/modelQA_DCQMD_7GeV_100k_hist.root", "read");
+  TFile *modelFileDCMQGSM7GeV = new TFile("~/Documents/Dataset/modelQA_DCQMD_7GeV_100k_hist.root", "read");
 
   std::vector<TLegend *> legend;
   std::pair<double, double> legCoordX = {0.2, 0.85};
@@ -530,84 +537,2313 @@ void DrawModel()
 
   gROOT->ForceStyle();
   style->cd();
+  gStyle->SetPalette(kDarkRainBow);
 
-  TProfile *v1CentralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv1CentralPtProton");
-  TProfile *v1MidcentralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv1MidcentralPtProton");
-  TProfile *v1PeripheralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv1PeripheralPtProton");
+  TProfile *v1PHSDCentralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv1CentralPtProton");
+  TProfile *v1PHSDMidcentralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv1MidcentralPtProton");
+  TProfile *v1PHSDPeripheralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv1PeripheralPtProton");
 
-  TProfile *v1CentralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv1CentralPtPion");
-  TProfile *v1MidcentralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv1MidcentralPtPion");
-  TProfile *v1PeripheralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv1PeripheralPtPion");
+  TProfile *v1PHSDCentralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv1CentralPtPion");
+  TProfile *v1PHSDMidcentralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv1MidcentralPtPion");
+  TProfile *v1PHSDPeripheralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv1PeripheralPtPion");
 
-  TProfile *v1CentralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv1CentralPtKaon");
-  TProfile *v1MidcentralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv1MidcentralPtKaon");
-  TProfile *v1PeripheralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv1PeripheralPtKaon");
+  TProfile *v1PHSDCentralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv1CentralPtKaon");
+  TProfile *v1PHSDMidcentralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv1MidcentralPtKaon");
+  TProfile *v1PHSDPeripheralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv1PeripheralPtKaon");
 
-  TProfile *v1CentralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv1CentralRapidityProton");
-  TProfile *v1MidcentralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityProton");
-  TProfile *v1PeripheralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityProton");
+  TProfile *v1PHSDCentralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv1CentralRapidityProton");
+  TProfile *v1PHSDMidcentralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityProton");
+  TProfile *v1PHSDPeripheralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityProton");
 
-  TProfile *v1CentralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv1CentralRapidityPion");
-  TProfile *v1MidcentralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityPion");
-  TProfile *v1PeripheralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityPion");
+  TProfile *v1PHSDCentralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv1CentralRapidityPion");
+  TProfile *v1PHSDMidcentralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityPion");
+  TProfile *v1PHSDPeripheralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityPion");
 
-  TProfile *v1CentralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv1CentralRapidityKaon");
-  TProfile *v1MidcentralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityKaon");
-  TProfile *v1PeripheralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityKaon");
+  TProfile *v1PHSDCentralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv1CentralRapidityKaon");
+  TProfile *v1PHSDMidcentralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityKaon");
+  TProfile *v1PHSDPeripheralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityKaon");
 
-  TProfile *v2CentralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv2CentralPtProton");
-  TProfile *v2MidcentralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv2MidcentralPtProton");
-  TProfile *v2PeripheralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv2PeripheralPtProton");
+  TProfile *v2PHSDCentralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv2CentralPtProton");
+  TProfile *v2PHSDMidcentralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv2MidcentralPtProton");
+  TProfile *v2PHSDPeripheralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv2PeripheralPtProton");
 
-  TProfile *v2CentralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv2CentralPtPion");
-  TProfile *v2MidcentralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv2MidcentralPtPion");
-  TProfile *v2PeripheralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv2PeripheralPtPion");
+  TProfile *v2PHSDCentralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv2CentralPtPion");
+  TProfile *v2PHSDMidcentralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv2MidcentralPtPion");
+  TProfile *v2PHSDPeripheralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv2PeripheralPtPion");
 
-  TProfile *v2CentralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv2CentralPtKaon");
-  TProfile *v2MidcentralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv2MidcentralPtKaon");
-  TProfile *v2PeripheralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv2PeripheralPtKaon");
+  TProfile *v2PHSDCentralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv2CentralPtKaon");
+  TProfile *v2PHSDMidcentralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv2MidcentralPtKaon");
+  TProfile *v2PHSDPeripheralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv2PeripheralPtKaon");
 
-  TProfile *v2CentralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv2CentralRapidityProton");
-  TProfile *v2MidcentralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityProton");
-  TProfile *v2PeripheralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityProton");
+  TProfile *v2PHSDCentralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv2CentralRapidityProton");
+  TProfile *v2PHSDMidcentralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityProton");
+  TProfile *v2PHSDPeripheralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityProton");
 
-  TProfile *v2CentralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv2CentralRapidityPion");
-  TProfile *v2MidcentralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityPion");
-  TProfile *v2PeripheralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityPion");
+  TProfile *v2PHSDCentralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv2CentralRapidityPion");
+  TProfile *v2PHSDMidcentralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityPion");
+  TProfile *v2PHSDPeripheralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityPion");
 
-  TProfile *v2CentralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv2CentralRapidityKaon");
-  TProfile *v2MidcentralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityKaon");
-  TProfile *v2PeripheralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityKaon");
+  TProfile *v2PHSDCentralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv2CentralRapidityKaon");
+  TProfile *v2PHSDMidcentralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityKaon");
+  TProfile *v2PHSDPeripheralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityKaon");
 
-  v1CentralPtProton->SetTitle("PHSD");
-  v1MidcentralPtProton->SetTitle("PHSD");
-  v1PeripheralPtProton->SetTitle("PHSD");
-  v1CentralPtPion->SetTitle("PHSD");
-  v1MidcentralPtPion->SetTitle("PHSD");
-  v1PeripheralPtPion->SetTitle("PHSD");
-  v1CentralPtKaon->SetTitle("PHSD");
-  v1MidcentralPtKaon->SetTitle("PHSD");
-  v1PeripheralPtKaon->SetTitle("PHSD");
+  TProfile *v3PHSDCentralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv3CentralPtProton");
+  TProfile *v3PHSDMidcentralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv3MidcentralPtProton");
+  TProfile *v3PHSDPeripheralPtProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv3PeripheralPtProton");
 
-  v1CentralRapidityProton->SetTitle("PHSD");
-  v1MidcentralRapidityProton->SetTitle("PHSD");
-  v1PeripheralRapidityProton->SetTitle("PHSD");
-  v1CentralRapidityPion->SetTitle("PHSD");
-  v1MidcentralRapidityPion->SetTitle("PHSD");
-  v1PeripheralRapidityPion->SetTitle("PHSD");
-  v1CentralRapidityKaon->SetTitle("PHSD");
-  v1MidcentralRapidityKaon->SetTitle("PHSD");
-  v1PeripheralRapidityKaon->SetTitle("PHSD");
+  TProfile *v3PHSDCentralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv3CentralPtPion");
+  TProfile *v3PHSDMidcentralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv3MidcentralPtPion");
+  TProfile *v3PHSDPeripheralPtPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv3PeripheralPtPion");
 
-  v2CentralPtProton->SetTitle("PHSD");
-  v2MidcentralPtProton->SetTitle("PHSD");
-  v2PeripheralPtProton->SetTitle("PHSD");
-  v2CentralPtPion->SetTitle("PHSD");
-  v2MidcentralPtPion->SetTitle("PHSD");
-  v2PeripheralPtPion->SetTitle("PHSD");
-  v2CentralPtKaon->SetTitle("PHSD");
-  v2MidcentralPtKaon->SetTitle("PHSD");
-  v2PeripheralPtKaon->SetTitle("PHSD");
+  TProfile *v3PHSDCentralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv3CentralPtKaon");
+  TProfile *v3PHSDMidcentralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv3MidcentralPtKaon");
+  TProfile *v3PHSDPeripheralPtKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv3PeripheralPtKaon");
+
+  TProfile *v3PHSDCentralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv3CentralRapidityProton");
+  TProfile *v3PHSDMidcentralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityProton");
+  TProfile *v3PHSDPeripheralRapidityProton = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityProton");
+
+  TProfile *v3PHSDCentralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv3CentralRapidityPion");
+  TProfile *v3PHSDMidcentralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityPion");
+  TProfile *v3PHSDPeripheralRapidityPion = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityPion");
+
+  TProfile *v3PHSDCentralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Central/hv3CentralRapidityKaon");
+  TProfile *v3PHSDMidcentralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityKaon");
+  TProfile *v3PHSDPeripheralRapidityKaon = (TProfile *)modelFilePHSD11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityKaon");
+
+  TH1D *hPHSDKinematicsAllEtaProton = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicsAllEtaProton");
+  TH1D *hPHSDKinematicsAllEtaPion = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicsAllEtaPion");
+  TH1D *hPHSDKinematicsAllEtaKaon = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicsAllEtaKaon");
+  TH1D *hPHSDKinematicsAllRapidityProton = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicsAllRapidityProton");
+  TH1D *hPHSDKinematicsAllRapidityPion = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicsAllRapidityPion");
+  TH1D *hPHSDKinematicsAllRapidityKaon = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicsAllRapidityKaon");
+  TH1D *hPHSDKinematicsAllPtProton = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicsAllPtProton");
+  TH1D *hPHSDKinematicsAllPtPion = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicsAllPtPion");
+  TH1D *hPHSDKinematicsAllPtKaon = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicsAllPtKaon");
+
+  TH1D *hPHSDCutsAllEtaProton = (TH1D *)modelFilePHSD11GeV->Get("Cuts/All/hCutsAllEtaProton");
+  TH1D *hPHSDCutsAllEtaPion = (TH1D *)modelFilePHSD11GeV->Get("Cuts/All/hCutsAllEtaPion");
+  TH1D *hPHSDCutsAllEtaKaon = (TH1D *)modelFilePHSD11GeV->Get("Cuts/All/hCutsAllEtaKaon");
+  TH1D *hPHSDCutsAllRapidityProton = (TH1D *)modelFilePHSD11GeV->Get("Cuts/All/hCutsAllRapidityProton");
+  TH1D *hPHSDCutsAllRapidityPion = (TH1D *)modelFilePHSD11GeV->Get("Cuts/All/hCutsAllRapidityPion");
+  TH1D *hPHSDCutsAllRapidityKaon = (TH1D *)modelFilePHSD11GeV->Get("Cuts/All/hCutsAllRapidityKaon");
+  TH1D *hPHSDCutsAllPtProton = (TH1D *)modelFilePHSD11GeV->Get("Cuts/All/hCutsAllPtProton");
+  TH1D *hPHSDCutsAllPtPion = (TH1D *)modelFilePHSD11GeV->Get("Cuts/All/hCutsAllPtPion");
+  TH1D *hPHSDCutsAllPtKaon = (TH1D *)modelFilePHSD11GeV->Get("Cuts/All/hCutsAllPtKaon");
+
+  TH2D *hPHSDKinematicsAllBMULT = (TH2D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicAllBMULT");
+  TH2D *hPHSDKinematicsAllEMULT = (TH2D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicAllEMULT");
+  TH2D *hPHSDKinematicsAllBE = (TH2D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicAllBE");
+  TH1D *hPHSDKinematicsAllB = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/All/hKinematicAllB");
+  TH1D *hPHSDKinematicsCentralB = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/Central/hKinematicCentralB");
+  TH1D *hPHSDKinematicsMidcentralB = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/Midcentral/hKinematicMidcentralB");
+  TH1D *hPHSDKinematicsPeripheralB = (TH1D *)modelFilePHSD11GeV->Get("Kinematics/Peripheral/hKinematicPeripheralB");
+
+  // ----------------------------------------------------------------------------------------------------------------------------
+
+  TProfile *v1PHSDCentralPtProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv1CentralPtProton");
+  TProfile *v1PHSDMidcentralPtProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv1MidcentralPtProton");
+  TProfile *v1PHSDPeripheralPtProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv1PeripheralPtProton");
+
+  TProfile *v1PHSDCentralPtPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv1CentralPtPion");
+  TProfile *v1PHSDMidcentralPtPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv1MidcentralPtPion");
+  TProfile *v1PHSDPeripheralPtPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv1PeripheralPtPion");
+
+  TProfile *v1PHSDCentralPtKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv1CentralPtKaon");
+  TProfile *v1PHSDMidcentralPtKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv1MidcentralPtKaon");
+  TProfile *v1PHSDPeripheralPtKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv1PeripheralPtKaon");
+
+  TProfile *v1PHSDCentralRapidityProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv1CentralRapidityProton");
+  TProfile *v1PHSDMidcentralRapidityProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityProton");
+  TProfile *v1PHSDPeripheralRapidityProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityProton");
+
+  TProfile *v1PHSDCentralRapidityPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv1CentralRapidityPion");
+  TProfile *v1PHSDMidcentralRapidityPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityPion");
+  TProfile *v1PHSDPeripheralRapidityPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityPion");
+
+  TProfile *v1PHSDCentralRapidityKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv1CentralRapidityKaon");
+  TProfile *v1PHSDMidcentralRapidityKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityKaon");
+  TProfile *v1PHSDPeripheralRapidityKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityKaon");
+
+  TProfile *v2PHSDCentralPtProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv2CentralPtProton");
+  TProfile *v2PHSDMidcentralPtProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv2MidcentralPtProton");
+  TProfile *v2PHSDPeripheralPtProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv2PeripheralPtProton");
+
+  TProfile *v2PHSDCentralPtPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv2CentralPtPion");
+  TProfile *v2PHSDMidcentralPtPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv2MidcentralPtPion");
+  TProfile *v2PHSDPeripheralPtPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv2PeripheralPtPion");
+
+  TProfile *v2PHSDCentralPtKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv2CentralPtKaon");
+  TProfile *v2PHSDMidcentralPtKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv2MidcentralPtKaon");
+  TProfile *v2PHSDPeripheralPtKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv2PeripheralPtKaon");
+
+  TProfile *v2PHSDCentralRapidityProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv2CentralRapidityProton");
+  TProfile *v2PHSDMidcentralRapidityProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityProton");
+  TProfile *v2PHSDPeripheralRapidityProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityProton");
+
+  TProfile *v2PHSDCentralRapidityPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv2CentralRapidityPion");
+  TProfile *v2PHSDMidcentralRapidityPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityPion");
+  TProfile *v2PHSDPeripheralRapidityPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityPion");
+
+  TProfile *v2PHSDCentralRapidityKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv2CentralRapidityKaon");
+  TProfile *v2PHSDMidcentralRapidityKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityKaon");
+  TProfile *v2PHSDPeripheralRapidityKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityKaon");
+
+  TProfile *v3PHSDCentralPtProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv3CentralPtProton");
+  TProfile *v3PHSDMidcentralPtProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv3MidcentralPtProton");
+  TProfile *v3PHSDPeripheralPtProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv3PeripheralPtProton");
+
+  TProfile *v3PHSDCentralPtPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv3CentralPtPion");
+  TProfile *v3PHSDMidcentralPtPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv3MidcentralPtPion");
+  TProfile *v3PHSDPeripheralPtPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv3PeripheralPtPion");
+
+  TProfile *v3PHSDCentralPtKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv3CentralPtKaon");
+  TProfile *v3PHSDMidcentralPtKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv3MidcentralPtKaon");
+  TProfile *v3PHSDPeripheralPtKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv3PeripheralPtKaon");
+
+  TProfile *v3PHSDCentralRapidityProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv3CentralRapidityProton");
+  TProfile *v3PHSDMidcentralRapidityProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityProton");
+  TProfile *v3PHSDPeripheralRapidityProton7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityProton");
+
+  TProfile *v3PHSDCentralRapidityPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv3CentralRapidityPion");
+  TProfile *v3PHSDMidcentralRapidityPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityPion");
+  TProfile *v3PHSDPeripheralRapidityPion7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityPion");
+
+  TProfile *v3PHSDCentralRapidityKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Central/hv3CentralRapidityKaon");
+  TProfile *v3PHSDMidcentralRapidityKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityKaon");
+  TProfile *v3PHSDPeripheralRapidityKaon7GeV = (TProfile *)modelFilePHSD7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityKaon");
+
+  TH1D *hPHSDKinematicsAllEtaProton7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicsAllEtaProton");
+  TH1D *hPHSDKinematicsAllEtaPion7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicsAllEtaPion");
+  TH1D *hPHSDKinematicsAllEtaKaon7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicsAllEtaKaon");
+  TH1D *hPHSDKinematicsAllRapidityProton7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicsAllRapidityProton");
+  TH1D *hPHSDKinematicsAllRapidityPion7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicsAllRapidityPion");
+  TH1D *hPHSDKinematicsAllRapidityKaon7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicsAllRapidityKaon");
+  TH1D *hPHSDKinematicsAllPtProton7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicsAllPtProton");
+  TH1D *hPHSDKinematicsAllPtPion7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicsAllPtPion");
+  TH1D *hPHSDKinematicsAllPtKaon7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicsAllPtKaon");
+
+  TH1D *hPHSDCutsAllEtaProton7GeV = (TH1D *)modelFilePHSD7GeV->Get("Cuts/All/hCutsAllEtaProton");
+  TH1D *hPHSDCutsAllEtaPion7GeV = (TH1D *)modelFilePHSD7GeV->Get("Cuts/All/hCutsAllEtaPion");
+  TH1D *hPHSDCutsAllEtaKaon7GeV = (TH1D *)modelFilePHSD7GeV->Get("Cuts/All/hCutsAllEtaKaon");
+  TH1D *hPHSDCutsAllRapidityProton7GeV = (TH1D *)modelFilePHSD7GeV->Get("Cuts/All/hCutsAllRapidityProton");
+  TH1D *hPHSDCutsAllRapidityPion7GeV = (TH1D *)modelFilePHSD7GeV->Get("Cuts/All/hCutsAllRapidityPion");
+  TH1D *hPHSDCutsAllRapidityKaon7GeV = (TH1D *)modelFilePHSD7GeV->Get("Cuts/All/hCutsAllRapidityKaon");
+  TH1D *hPHSDCutsAllPtProton7GeV = (TH1D *)modelFilePHSD7GeV->Get("Cuts/All/hCutsAllPtProton");
+  TH1D *hPHSDCutsAllPtPion7GeV = (TH1D *)modelFilePHSD7GeV->Get("Cuts/All/hCutsAllPtPion");
+  TH1D *hPHSDCutsAllPtKaon7GeV = (TH1D *)modelFilePHSD7GeV->Get("Cuts/All/hCutsAllPtKaon");
+
+  TH2D *hPHSDKinematicsAllBMULT7GeV = (TH2D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicAllBMULT");
+  TH2D *hPHSDKinematicsAllEMULT7GeV = (TH2D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicAllEMULT");
+  TH2D *hPHSDKinematicsAllBE7GeV = (TH2D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicAllBE");
+  TH1D *hPHSDKinematicsAllB7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/All/hKinematicAllB");
+  TH1D *hPHSDKinematicsCentralB7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/Central/hKinematicCentralB");
+  TH1D *hPHSDKinematicsMidcentralB7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/Midcentral/hKinematicMidcentralB");
+  TH1D *hPHSDKinematicsPeripheralB7GeV = (TH1D *)modelFilePHSD7GeV->Get("Kinematics/Peripheral/hKinematicPeripheralB");
+
+  // ----------------------------------------------------------------------------------------------------------------------------
+
+  TProfile *v1URQMDCentralPtProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv1CentralPtProton");
+  TProfile *v1URQMDMidcentralPtProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv1MidcentralPtProton");
+  TProfile *v1URQMDPeripheralPtProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv1PeripheralPtProton");
+
+  TProfile *v1URQMDCentralPtPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv1CentralPtPion");
+  TProfile *v1URQMDMidcentralPtPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv1MidcentralPtPion");
+  TProfile *v1URQMDPeripheralPtPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv1PeripheralPtPion");
+
+  TProfile *v1URQMDCentralPtKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv1CentralPtKaon");
+  TProfile *v1URQMDMidcentralPtKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv1MidcentralPtKaon");
+  TProfile *v1URQMDPeripheralPtKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv1PeripheralPtKaon");
+
+  TProfile *v1URQMDCentralRapidityProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv1CentralRapidityProton");
+  TProfile *v1URQMDMidcentralRapidityProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityProton");
+  TProfile *v1URQMDPeripheralRapidityProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityProton");
+
+  TProfile *v1URQMDCentralRapidityPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv1CentralRapidityPion");
+  TProfile *v1URQMDMidcentralRapidityPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityPion");
+  TProfile *v1URQMDPeripheralRapidityPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityPion");
+
+  TProfile *v1URQMDCentralRapidityKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv1CentralRapidityKaon");
+  TProfile *v1URQMDMidcentralRapidityKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityKaon");
+  TProfile *v1URQMDPeripheralRapidityKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityKaon");
+
+  TProfile *v2URQMDCentralPtProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv2CentralPtProton");
+  TProfile *v2URQMDMidcentralPtProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv2MidcentralPtProton");
+  TProfile *v2URQMDPeripheralPtProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv2PeripheralPtProton");
+
+  TProfile *v2URQMDCentralPtPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv2CentralPtPion");
+  TProfile *v2URQMDMidcentralPtPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv2MidcentralPtPion");
+  TProfile *v2URQMDPeripheralPtPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv2PeripheralPtPion");
+
+  TProfile *v2URQMDCentralPtKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv2CentralPtKaon");
+  TProfile *v2URQMDMidcentralPtKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv2MidcentralPtKaon");
+  TProfile *v2URQMDPeripheralPtKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv2PeripheralPtKaon");
+
+  TProfile *v2URQMDCentralRapidityProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv2CentralRapidityProton");
+  TProfile *v2URQMDMidcentralRapidityProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityProton");
+  TProfile *v2URQMDPeripheralRapidityProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityProton");
+
+  TProfile *v2URQMDCentralRapidityPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv2CentralRapidityPion");
+  TProfile *v2URQMDMidcentralRapidityPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityPion");
+  TProfile *v2URQMDPeripheralRapidityPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityPion");
+
+  TProfile *v2URQMDCentralRapidityKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv2CentralRapidityKaon");
+  TProfile *v2URQMDMidcentralRapidityKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityKaon");
+  TProfile *v2URQMDPeripheralRapidityKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityKaon");
+
+  TProfile *v3URQMDCentralPtProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv3CentralPtProton");
+  TProfile *v3URQMDMidcentralPtProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv3MidcentralPtProton");
+  TProfile *v3URQMDPeripheralPtProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv3PeripheralPtProton");
+
+  TProfile *v3URQMDCentralPtPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv3CentralPtPion");
+  TProfile *v3URQMDMidcentralPtPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv3MidcentralPtPion");
+  TProfile *v3URQMDPeripheralPtPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv3PeripheralPtPion");
+
+  TProfile *v3URQMDCentralPtKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv3CentralPtKaon");
+  TProfile *v3URQMDMidcentralPtKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv3MidcentralPtKaon");
+  TProfile *v3URQMDPeripheralPtKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv3PeripheralPtKaon");
+
+  TProfile *v3URQMDCentralRapidityProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv3CentralRapidityProton");
+  TProfile *v3URQMDMidcentralRapidityProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityProton");
+  TProfile *v3URQMDPeripheralRapidityProton = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityProton");
+
+  TProfile *v3URQMDCentralRapidityPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv3CentralRapidityPion");
+  TProfile *v3URQMDMidcentralRapidityPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityPion");
+  TProfile *v3URQMDPeripheralRapidityPion = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityPion");
+
+  TProfile *v3URQMDCentralRapidityKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Central/hv3CentralRapidityKaon");
+  TProfile *v3URQMDMidcentralRapidityKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityKaon");
+  TProfile *v3URQMDPeripheralRapidityKaon = (TProfile *)modelFileURQMD11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityKaon");
+
+  TH1D *hURQMDKinematicsAllEtaProton = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicsAllEtaProton");
+  TH1D *hURQMDKinematicsAllEtaPion = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicsAllEtaPion");
+  TH1D *hURQMDKinematicsAllEtaKaon = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicsAllEtaKaon");
+  TH1D *hURQMDKinematicsAllRapidityProton = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicsAllRapidityProton");
+  TH1D *hURQMDKinematicsAllRapidityPion = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicsAllRapidityPion");
+  TH1D *hURQMDKinematicsAllRapidityKaon = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicsAllRapidityKaon");
+  TH1D *hURQMDKinematicsAllPtProton = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicsAllPtProton");
+  TH1D *hURQMDKinematicsAllPtPion = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicsAllPtPion");
+  TH1D *hURQMDKinematicsAllPtKaon = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicsAllPtKaon");
+
+  TH1D *hURQMDCutsAllEtaProton = (TH1D *)modelFileURQMD11GeV->Get("Cuts/All/hCutsAllEtaProton");
+  TH1D *hURQMDCutsAllEtaPion = (TH1D *)modelFileURQMD11GeV->Get("Cuts/All/hCutsAllEtaPion");
+  TH1D *hURQMDCutsAllEtaKaon = (TH1D *)modelFileURQMD11GeV->Get("Cuts/All/hCutsAllEtaKaon");
+  TH1D *hURQMDCutsAllRapidityProton = (TH1D *)modelFileURQMD11GeV->Get("Cuts/All/hCutsAllRapidityProton");
+  TH1D *hURQMDCutsAllRapidityPion = (TH1D *)modelFileURQMD11GeV->Get("Cuts/All/hCutsAllRapidityPion");
+  TH1D *hURQMDCutsAllRapidityKaon = (TH1D *)modelFileURQMD11GeV->Get("Cuts/All/hCutsAllRapidityKaon");
+  TH1D *hURQMDCutsAllPtProton = (TH1D *)modelFileURQMD11GeV->Get("Cuts/All/hCutsAllPtProton");
+  TH1D *hURQMDCutsAllPtPion = (TH1D *)modelFileURQMD11GeV->Get("Cuts/All/hCutsAllPtPion");
+  TH1D *hURQMDCutsAllPtKaon = (TH1D *)modelFileURQMD11GeV->Get("Cuts/All/hCutsAllPtKaon");
+
+  TH2D *hURQMDKinematicsAllBMULT = (TH2D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicAllBMULT");
+  TH2D *hURQMDKinematicsAllEMULT = (TH2D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicAllEMULT");
+  TH2D *hURQMDKinematicsAllBE = (TH2D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicAllBE");
+  TH1D *hURQMDKinematicsAllB = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/All/hKinematicAllB");
+  TH1D *hURQMDKinematicsCentralB = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/Central/hKinematicCentralB");
+  TH1D *hURQMDKinematicsMidcentralB = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/Midcentral/hKinematicMidcentralB");
+  TH1D *hURQMDKinematicsPeripheralB = (TH1D *)modelFileURQMD11GeV->Get("Kinematics/Peripheral/hKinematicPeripheralB");
+
+  // ----------------------------------------------------------------------------------------------------------------------------
+
+  TProfile *v1URQMDCentralPtProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv1CentralPtProton");
+  TProfile *v1URQMDMidcentralPtProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv1MidcentralPtProton");
+  TProfile *v1URQMDPeripheralPtProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv1PeripheralPtProton");
+
+  TProfile *v1URQMDCentralPtPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv1CentralPtPion");
+  TProfile *v1URQMDMidcentralPtPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv1MidcentralPtPion");
+  TProfile *v1URQMDPeripheralPtPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv1PeripheralPtPion");
+
+  TProfile *v1URQMDCentralPtKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv1CentralPtKaon");
+  TProfile *v1URQMDMidcentralPtKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv1MidcentralPtKaon");
+  TProfile *v1URQMDPeripheralPtKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv1PeripheralPtKaon");
+
+  TProfile *v1URQMDCentralRapidityProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv1CentralRapidityProton");
+  TProfile *v1URQMDMidcentralRapidityProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityProton");
+  TProfile *v1URQMDPeripheralRapidityProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityProton");
+
+  TProfile *v1URQMDCentralRapidityPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv1CentralRapidityPion");
+  TProfile *v1URQMDMidcentralRapidityPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityPion");
+  TProfile *v1URQMDPeripheralRapidityPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityPion");
+
+  TProfile *v1URQMDCentralRapidityKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv1CentralRapidityKaon");
+  TProfile *v1URQMDMidcentralRapidityKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityKaon");
+  TProfile *v1URQMDPeripheralRapidityKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityKaon");
+
+  TProfile *v2URQMDCentralPtProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv2CentralPtProton");
+  TProfile *v2URQMDMidcentralPtProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv2MidcentralPtProton");
+  TProfile *v2URQMDPeripheralPtProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv2PeripheralPtProton");
+
+  TProfile *v2URQMDCentralPtPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv2CentralPtPion");
+  TProfile *v2URQMDMidcentralPtPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv2MidcentralPtPion");
+  TProfile *v2URQMDPeripheralPtPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv2PeripheralPtPion");
+
+  TProfile *v2URQMDCentralPtKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv2CentralPtKaon");
+  TProfile *v2URQMDMidcentralPtKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv2MidcentralPtKaon");
+  TProfile *v2URQMDPeripheralPtKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv2PeripheralPtKaon");
+
+  TProfile *v2URQMDCentralRapidityProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv2CentralRapidityProton");
+  TProfile *v2URQMDMidcentralRapidityProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityProton");
+  TProfile *v2URQMDPeripheralRapidityProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityProton");
+
+  TProfile *v2URQMDCentralRapidityPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv2CentralRapidityPion");
+  TProfile *v2URQMDMidcentralRapidityPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityPion");
+  TProfile *v2URQMDPeripheralRapidityPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityPion");
+
+  TProfile *v2URQMDCentralRapidityKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv2CentralRapidityKaon");
+  TProfile *v2URQMDMidcentralRapidityKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityKaon");
+  TProfile *v2URQMDPeripheralRapidityKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityKaon");
+
+  TProfile *v3URQMDCentralPtProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv3CentralPtProton");
+  TProfile *v3URQMDMidcentralPtProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv3MidcentralPtProton");
+  TProfile *v3URQMDPeripheralPtProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv3PeripheralPtProton");
+
+  TProfile *v3URQMDCentralPtPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv3CentralPtPion");
+  TProfile *v3URQMDMidcentralPtPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv3MidcentralPtPion");
+  TProfile *v3URQMDPeripheralPtPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv3PeripheralPtPion");
+
+  TProfile *v3URQMDCentralPtKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv3CentralPtKaon");
+  TProfile *v3URQMDMidcentralPtKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv3MidcentralPtKaon");
+  TProfile *v3URQMDPeripheralPtKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv3PeripheralPtKaon");
+
+  TProfile *v3URQMDCentralRapidityProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv3CentralRapidityProton");
+  TProfile *v3URQMDMidcentralRapidityProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityProton");
+  TProfile *v3URQMDPeripheralRapidityProton7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityProton");
+
+  TProfile *v3URQMDCentralRapidityPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv3CentralRapidityPion");
+  TProfile *v3URQMDMidcentralRapidityPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityPion");
+  TProfile *v3URQMDPeripheralRapidityPion7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityPion");
+
+  TProfile *v3URQMDCentralRapidityKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Central/hv3CentralRapidityKaon");
+  TProfile *v3URQMDMidcentralRapidityKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityKaon");
+  TProfile *v3URQMDPeripheralRapidityKaon7GeV = (TProfile *)modelFileURQMD7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityKaon");
+
+  TH1D *hURQMDKinematicsAllEtaProton7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicsAllEtaProton");
+  TH1D *hURQMDKinematicsAllEtaPion7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicsAllEtaPion");
+  TH1D *hURQMDKinematicsAllEtaKaon7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicsAllEtaKaon");
+  TH1D *hURQMDKinematicsAllRapidityProton7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicsAllRapidityProton");
+  TH1D *hURQMDKinematicsAllRapidityPion7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicsAllRapidityPion");
+  TH1D *hURQMDKinematicsAllRapidityKaon7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicsAllRapidityKaon");
+  TH1D *hURQMDKinematicsAllPtProton7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicsAllPtProton");
+  TH1D *hURQMDKinematicsAllPtPion7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicsAllPtPion");
+  TH1D *hURQMDKinematicsAllPtKaon7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicsAllPtKaon");
+
+  TH1D *hURQMDCutsAllEtaProton7GeV = (TH1D *)modelFileURQMD7GeV->Get("Cuts/All/hCutsAllEtaProton");
+  TH1D *hURQMDCutsAllEtaPion7GeV = (TH1D *)modelFileURQMD7GeV->Get("Cuts/All/hCutsAllEtaPion");
+  TH1D *hURQMDCutsAllEtaKaon7GeV = (TH1D *)modelFileURQMD7GeV->Get("Cuts/All/hCutsAllEtaKaon");
+  TH1D *hURQMDCutsAllRapidityProton7GeV = (TH1D *)modelFileURQMD7GeV->Get("Cuts/All/hCutsAllRapidityProton");
+  TH1D *hURQMDCutsAllRapidityPion7GeV = (TH1D *)modelFileURQMD7GeV->Get("Cuts/All/hCutsAllRapidityPion");
+  TH1D *hURQMDCutsAllRapidityKaon7GeV = (TH1D *)modelFileURQMD7GeV->Get("Cuts/All/hCutsAllRapidityKaon");
+  TH1D *hURQMDCutsAllPtProton7GeV = (TH1D *)modelFileURQMD7GeV->Get("Cuts/All/hCutsAllPtProton");
+  TH1D *hURQMDCutsAllPtPion7GeV = (TH1D *)modelFileURQMD7GeV->Get("Cuts/All/hCutsAllPtPion");
+  TH1D *hURQMDCutsAllPtKaon7GeV = (TH1D *)modelFileURQMD7GeV->Get("Cuts/All/hCutsAllPtKaon");
+
+  TH2D *hURQMDKinematicsAllBMULT7GeV = (TH2D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicAllBMULT");
+  TH2D *hURQMDKinematicsAllEMULT7GeV = (TH2D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicAllEMULT");
+  TH2D *hURQMDKinematicsAllBE7GeV = (TH2D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicAllBE");
+  TH1D *hURQMDKinematicsAllB7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/All/hKinematicAllB");
+  TH1D *hURQMDKinematicsCentralB7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/Central/hKinematicCentralB");
+  TH1D *hURQMDKinematicsMidcentralB7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/Midcentral/hKinematicMidcentralB");
+  TH1D *hURQMDKinematicsPeripheralB7GeV = (TH1D *)modelFileURQMD7GeV->Get("Kinematics/Peripheral/hKinematicPeripheralB");
+
+  // ----------------------------------------------------------------------------------------------------------------------------
+
+  TProfile *v1LAQGSMCentralPtProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv1CentralPtProton");
+  TProfile *v1LAQGSMMidcentralPtProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv1MidcentralPtProton");
+  TProfile *v1LAQGSMPeripheralPtProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv1PeripheralPtProton");
+
+  TProfile *v1LAQGSMCentralPtPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv1CentralPtPion");
+  TProfile *v1LAQGSMMidcentralPtPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv1MidcentralPtPion");
+  TProfile *v1LAQGSMPeripheralPtPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv1PeripheralPtPion");
+
+  TProfile *v1LAQGSMCentralPtKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv1CentralPtKaon");
+  TProfile *v1LAQGSMMidcentralPtKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv1MidcentralPtKaon");
+  TProfile *v1LAQGSMPeripheralPtKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv1PeripheralPtKaon");
+
+  TProfile *v1LAQGSMCentralRapidityProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv1CentralRapidityProton");
+  TProfile *v1LAQGSMMidcentralRapidityProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityProton");
+  TProfile *v1LAQGSMPeripheralRapidityProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityProton");
+
+  TProfile *v1LAQGSMCentralRapidityPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv1CentralRapidityPion");
+  TProfile *v1LAQGSMMidcentralRapidityPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityPion");
+  TProfile *v1LAQGSMPeripheralRapidityPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityPion");
+
+  TProfile *v1LAQGSMCentralRapidityKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv1CentralRapidityKaon");
+  TProfile *v1LAQGSMMidcentralRapidityKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityKaon");
+  TProfile *v1LAQGSMPeripheralRapidityKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityKaon");
+
+  TProfile *v2LAQGSMCentralPtProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv2CentralPtProton");
+  TProfile *v2LAQGSMMidcentralPtProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv2MidcentralPtProton");
+  TProfile *v2LAQGSMPeripheralPtProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv2PeripheralPtProton");
+
+  TProfile *v2LAQGSMCentralPtPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv2CentralPtPion");
+  TProfile *v2LAQGSMMidcentralPtPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv2MidcentralPtPion");
+  TProfile *v2LAQGSMPeripheralPtPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv2PeripheralPtPion");
+
+  TProfile *v2LAQGSMCentralPtKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv2CentralPtKaon");
+  TProfile *v2LAQGSMMidcentralPtKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv2MidcentralPtKaon");
+  TProfile *v2LAQGSMPeripheralPtKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv2PeripheralPtKaon");
+
+  TProfile *v2LAQGSMCentralRapidityProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv2CentralRapidityProton");
+  TProfile *v2LAQGSMMidcentralRapidityProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityProton");
+  TProfile *v2LAQGSMPeripheralRapidityProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityProton");
+
+  TProfile *v2LAQGSMCentralRapidityPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv2CentralRapidityPion");
+  TProfile *v2LAQGSMMidcentralRapidityPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityPion");
+  TProfile *v2LAQGSMPeripheralRapidityPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityPion");
+
+  TProfile *v2LAQGSMCentralRapidityKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv2CentralRapidityKaon");
+  TProfile *v2LAQGSMMidcentralRapidityKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityKaon");
+  TProfile *v2LAQGSMPeripheralRapidityKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityKaon");
+
+  TProfile *v3LAQGSMCentralPtProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv3CentralPtProton");
+  TProfile *v3LAQGSMMidcentralPtProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv3MidcentralPtProton");
+  TProfile *v3LAQGSMPeripheralPtProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv3PeripheralPtProton");
+
+  TProfile *v3LAQGSMCentralPtPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv3CentralPtPion");
+  TProfile *v3LAQGSMMidcentralPtPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv3MidcentralPtPion");
+  TProfile *v3LAQGSMPeripheralPtPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv3PeripheralPtPion");
+
+  TProfile *v3LAQGSMCentralPtKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv3CentralPtKaon");
+  TProfile *v3LAQGSMMidcentralPtKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv3MidcentralPtKaon");
+  TProfile *v3LAQGSMPeripheralPtKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv3PeripheralPtKaon");
+
+  TProfile *v3LAQGSMCentralRapidityProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv3CentralRapidityProton");
+  TProfile *v3LAQGSMMidcentralRapidityProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityProton");
+  TProfile *v3LAQGSMPeripheralRapidityProton = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityProton");
+
+  TProfile *v3LAQGSMCentralRapidityPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv3CentralRapidityPion");
+  TProfile *v3LAQGSMMidcentralRapidityPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityPion");
+  TProfile *v3LAQGSMPeripheralRapidityPion = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityPion");
+
+  TProfile *v3LAQGSMCentralRapidityKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Central/hv3CentralRapidityKaon");
+  TProfile *v3LAQGSMMidcentralRapidityKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityKaon");
+  TProfile *v3LAQGSMPeripheralRapidityKaon = (TProfile *)modelFileLAQGSM11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityKaon");
+
+  TH1D *hLAQGSMKinematicsAllEtaProton = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicsAllEtaProton");
+  TH1D *hLAQGSMKinematicsAllEtaPion = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicsAllEtaPion");
+  TH1D *hLAQGSMKinematicsAllEtaKaon = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicsAllEtaKaon");
+  TH1D *hLAQGSMKinematicsAllRapidityProton = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicsAllRapidityProton");
+  TH1D *hLAQGSMKinematicsAllRapidityPion = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicsAllRapidityPion");
+  TH1D *hLAQGSMKinematicsAllRapidityKaon = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicsAllRapidityKaon");
+  TH1D *hLAQGSMKinematicsAllPtProton = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicsAllPtProton");
+  TH1D *hLAQGSMKinematicsAllPtPion = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicsAllPtPion");
+  TH1D *hLAQGSMKinematicsAllPtKaon = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicsAllPtKaon");
+
+  TH1D *hLAQGSMCutsAllEtaProton = (TH1D *)modelFileLAQGSM11GeV->Get("Cuts/All/hCutsAllEtaProton");
+  TH1D *hLAQGSMCutsAllEtaPion = (TH1D *)modelFileLAQGSM11GeV->Get("Cuts/All/hCutsAllEtaPion");
+  TH1D *hLAQGSMCutsAllEtaKaon = (TH1D *)modelFileLAQGSM11GeV->Get("Cuts/All/hCutsAllEtaKaon");
+  TH1D *hLAQGSMCutsAllRapidityProton = (TH1D *)modelFileLAQGSM11GeV->Get("Cuts/All/hCutsAllRapidityProton");
+  TH1D *hLAQGSMCutsAllRapidityPion = (TH1D *)modelFileLAQGSM11GeV->Get("Cuts/All/hCutsAllRapidityPion");
+  TH1D *hLAQGSMCutsAllRapidityKaon = (TH1D *)modelFileLAQGSM11GeV->Get("Cuts/All/hCutsAllRapidityKaon");
+  TH1D *hLAQGSMCutsAllPtProton = (TH1D *)modelFileLAQGSM11GeV->Get("Cuts/All/hCutsAllPtProton");
+  TH1D *hLAQGSMCutsAllPtPion = (TH1D *)modelFileLAQGSM11GeV->Get("Cuts/All/hCutsAllPtPion");
+  TH1D *hLAQGSMCutsAllPtKaon = (TH1D *)modelFileLAQGSM11GeV->Get("Cuts/All/hCutsAllPtKaon");
+
+  TH2D *hLAQGSMKinematicsAllBMULT = (TH2D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicAllBMULT");
+  TH2D *hLAQGSMKinematicsAllEMULT = (TH2D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicAllEMULT");
+  TH2D *hLAQGSMKinematicsAllBE = (TH2D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicAllBE");
+  TH1D *hLAQGSMKinematicsAllB = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/All/hKinematicAllB");
+  TH1D *hLAQGSMKinematicsCentralB = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/Central/hKinematicCentralB");
+  TH1D *hLAQGSMKinematicsMidcentralB = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/Midcentral/hKinematicMidcentralB");
+  TH1D *hLAQGSMKinematicsPeripheralB = (TH1D *)modelFileLAQGSM11GeV->Get("Kinematics/Peripheral/hKinematicPeripheralB");
+
+
+
+  // ----------------------------------------------------------------------------------------------------------------------------
+
+  TProfile *v1LAQGSMCentralPtProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv1CentralPtProton");
+  TProfile *v1LAQGSMMidcentralPtProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv1MidcentralPtProton");
+  TProfile *v1LAQGSMPeripheralPtProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv1PeripheralPtProton");
+
+  TProfile *v1LAQGSMCentralPtPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv1CentralPtPion");
+  TProfile *v1LAQGSMMidcentralPtPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv1MidcentralPtPion");
+  TProfile *v1LAQGSMPeripheralPtPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv1PeripheralPtPion");
+
+  TProfile *v1LAQGSMCentralPtKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv1CentralPtKaon");
+  TProfile *v1LAQGSMMidcentralPtKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv1MidcentralPtKaon");
+  TProfile *v1LAQGSMPeripheralPtKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv1PeripheralPtKaon");
+
+  TProfile *v1LAQGSMCentralRapidityProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv1CentralRapidityProton");
+  TProfile *v1LAQGSMMidcentralRapidityProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityProton");
+  TProfile *v1LAQGSMPeripheralRapidityProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityProton");
+
+  TProfile *v1LAQGSMCentralRapidityPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv1CentralRapidityPion");
+  TProfile *v1LAQGSMMidcentralRapidityPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityPion");
+  TProfile *v1LAQGSMPeripheralRapidityPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityPion");
+
+  TProfile *v1LAQGSMCentralRapidityKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv1CentralRapidityKaon");
+  TProfile *v1LAQGSMMidcentralRapidityKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityKaon");
+  TProfile *v1LAQGSMPeripheralRapidityKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityKaon");
+
+  TProfile *v2LAQGSMCentralPtProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv2CentralPtProton");
+  TProfile *v2LAQGSMMidcentralPtProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv2MidcentralPtProton");
+  TProfile *v2LAQGSMPeripheralPtProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv2PeripheralPtProton");
+
+  TProfile *v2LAQGSMCentralPtPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv2CentralPtPion");
+  TProfile *v2LAQGSMMidcentralPtPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv2MidcentralPtPion");
+  TProfile *v2LAQGSMPeripheralPtPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv2PeripheralPtPion");
+
+  TProfile *v2LAQGSMCentralPtKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv2CentralPtKaon");
+  TProfile *v2LAQGSMMidcentralPtKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv2MidcentralPtKaon");
+  TProfile *v2LAQGSMPeripheralPtKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv2PeripheralPtKaon");
+
+  TProfile *v2LAQGSMCentralRapidityProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv2CentralRapidityProton");
+  TProfile *v2LAQGSMMidcentralRapidityProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityProton");
+  TProfile *v2LAQGSMPeripheralRapidityProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityProton");
+
+  TProfile *v2LAQGSMCentralRapidityPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv2CentralRapidityPion");
+  TProfile *v2LAQGSMMidcentralRapidityPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityPion");
+  TProfile *v2LAQGSMPeripheralRapidityPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityPion");
+
+  TProfile *v2LAQGSMCentralRapidityKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv2CentralRapidityKaon");
+  TProfile *v2LAQGSMMidcentralRapidityKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityKaon");
+  TProfile *v2LAQGSMPeripheralRapidityKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityKaon");
+
+  TProfile *v3LAQGSMCentralPtProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv3CentralPtProton");
+  TProfile *v3LAQGSMMidcentralPtProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv3MidcentralPtProton");
+  TProfile *v3LAQGSMPeripheralPtProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv3PeripheralPtProton");
+
+  TProfile *v3LAQGSMCentralPtPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv3CentralPtPion");
+  TProfile *v3LAQGSMMidcentralPtPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv3MidcentralPtPion");
+  TProfile *v3LAQGSMPeripheralPtPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv3PeripheralPtPion");
+
+  TProfile *v3LAQGSMCentralPtKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv3CentralPtKaon");
+  TProfile *v3LAQGSMMidcentralPtKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv3MidcentralPtKaon");
+  TProfile *v3LAQGSMPeripheralPtKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv3PeripheralPtKaon");
+
+  TProfile *v3LAQGSMCentralRapidityProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv3CentralRapidityProton");
+  TProfile *v3LAQGSMMidcentralRapidityProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityProton");
+  TProfile *v3LAQGSMPeripheralRapidityProton7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityProton");
+
+  TProfile *v3LAQGSMCentralRapidityPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv3CentralRapidityPion");
+  TProfile *v3LAQGSMMidcentralRapidityPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityPion");
+  TProfile *v3LAQGSMPeripheralRapidityPion7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityPion");
+
+  TProfile *v3LAQGSMCentralRapidityKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Central/hv3CentralRapidityKaon");
+  TProfile *v3LAQGSMMidcentralRapidityKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityKaon");
+  TProfile *v3LAQGSMPeripheralRapidityKaon7GeV = (TProfile *)modelFileLAQGSM7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityKaon");
+
+  TH1D *hLAQGSMKinematicsAllEtaProton7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicsAllEtaProton");
+  TH1D *hLAQGSMKinematicsAllEtaPion7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicsAllEtaPion");
+  TH1D *hLAQGSMKinematicsAllEtaKaon7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicsAllEtaKaon");
+  TH1D *hLAQGSMKinematicsAllRapidityProton7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicsAllRapidityProton");
+  TH1D *hLAQGSMKinematicsAllRapidityPion7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicsAllRapidityPion");
+  TH1D *hLAQGSMKinematicsAllRapidityKaon7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicsAllRapidityKaon");
+  TH1D *hLAQGSMKinematicsAllPtProton7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicsAllPtProton");
+  TH1D *hLAQGSMKinematicsAllPtPion7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicsAllPtPion");
+  TH1D *hLAQGSMKinematicsAllPtKaon7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicsAllPtKaon");
+
+  TH1D *hLAQGSMCutsAllEtaProton7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Cuts/All/hCutsAllEtaProton");
+  TH1D *hLAQGSMCutsAllEtaPion7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Cuts/All/hCutsAllEtaPion");
+  TH1D *hLAQGSMCutsAllEtaKaon7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Cuts/All/hCutsAllEtaKaon");
+  TH1D *hLAQGSMCutsAllRapidityProton7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Cuts/All/hCutsAllRapidityProton");
+  TH1D *hLAQGSMCutsAllRapidityPion7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Cuts/All/hCutsAllRapidityPion");
+  TH1D *hLAQGSMCutsAllRapidityKaon7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Cuts/All/hCutsAllRapidityKaon");
+  TH1D *hLAQGSMCutsAllPtProton7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Cuts/All/hCutsAllPtProton");
+  TH1D *hLAQGSMCutsAllPtPion7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Cuts/All/hCutsAllPtPion");
+  TH1D *hLAQGSMCutsAllPtKaon7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Cuts/All/hCutsAllPtKaon");
+
+  TH2D *hLAQGSMKinematicsAllBMULT7GeV = (TH2D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicAllBMULT");
+  TH2D *hLAQGSMKinematicsAllEMULT7GeV = (TH2D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicAllEMULT");
+  TH2D *hLAQGSMKinematicsAllBE7GeV = (TH2D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicAllBE");
+  TH1D *hLAQGSMKinematicsAllB7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/All/hKinematicAllB");
+  TH1D *hLAQGSMKinematicsCentralB7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/Central/hKinematicCentralB");
+  TH1D *hLAQGSMKinematicsMidcentralB7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/Midcentral/hKinematicMidcentralB");
+  TH1D *hLAQGSMKinematicsPeripheralB7GeV = (TH1D *)modelFileLAQGSM7GeV->Get("Kinematics/Peripheral/hKinematicPeripheralB");
+
+  // ----------------------------------------------------------------------------------------------------------------------------
+
+  TProfile *v1PHQMDCentralPtProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv1CentralPtProton");
+  TProfile *v1PHQMDMidcentralPtProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv1MidcentralPtProton");
+  TProfile *v1PHQMDPeripheralPtProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv1PeripheralPtProton");
+
+  TProfile *v1PHQMDCentralPtPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv1CentralPtPion");
+  TProfile *v1PHQMDMidcentralPtPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv1MidcentralPtPion");
+  TProfile *v1PHQMDPeripheralPtPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv1PeripheralPtPion");
+
+  TProfile *v1PHQMDCentralPtKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv1CentralPtKaon");
+  TProfile *v1PHQMDMidcentralPtKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv1MidcentralPtKaon");
+  TProfile *v1PHQMDPeripheralPtKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv1PeripheralPtKaon");
+
+  TProfile *v1PHQMDCentralRapidityProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv1CentralRapidityProton");
+  TProfile *v1PHQMDMidcentralRapidityProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityProton");
+  TProfile *v1PHQMDPeripheralRapidityProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityProton");
+
+  TProfile *v1PHQMDCentralRapidityPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv1CentralRapidityPion");
+  TProfile *v1PHQMDMidcentralRapidityPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityPion");
+  TProfile *v1PHQMDPeripheralRapidityPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityPion");
+
+  TProfile *v1PHQMDCentralRapidityKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv1CentralRapidityKaon");
+  TProfile *v1PHQMDMidcentralRapidityKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityKaon");
+  TProfile *v1PHQMDPeripheralRapidityKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityKaon");
+
+  TProfile *v2PHQMDCentralPtProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv2CentralPtProton");
+  TProfile *v2PHQMDMidcentralPtProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv2MidcentralPtProton");
+  TProfile *v2PHQMDPeripheralPtProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv2PeripheralPtProton");
+
+  TProfile *v2PHQMDCentralPtPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv2CentralPtPion");
+  TProfile *v2PHQMDMidcentralPtPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv2MidcentralPtPion");
+  TProfile *v2PHQMDPeripheralPtPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv2PeripheralPtPion");
+
+  TProfile *v2PHQMDCentralPtKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv2CentralPtKaon");
+  TProfile *v2PHQMDMidcentralPtKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv2MidcentralPtKaon");
+  TProfile *v2PHQMDPeripheralPtKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv2PeripheralPtKaon");
+
+  TProfile *v2PHQMDCentralRapidityProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv2CentralRapidityProton");
+  TProfile *v2PHQMDMidcentralRapidityProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityProton");
+  TProfile *v2PHQMDPeripheralRapidityProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityProton");
+
+  TProfile *v2PHQMDCentralRapidityPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv2CentralRapidityPion");
+  TProfile *v2PHQMDMidcentralRapidityPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityPion");
+  TProfile *v2PHQMDPeripheralRapidityPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityPion");
+
+  TProfile *v2PHQMDCentralRapidityKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv2CentralRapidityKaon");
+  TProfile *v2PHQMDMidcentralRapidityKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityKaon");
+  TProfile *v2PHQMDPeripheralRapidityKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityKaon");
+
+  TProfile *v3PHQMDCentralPtProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv3CentralPtProton");
+  TProfile *v3PHQMDMidcentralPtProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv3MidcentralPtProton");
+  TProfile *v3PHQMDPeripheralPtProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv3PeripheralPtProton");
+
+  TProfile *v3PHQMDCentralPtPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv3CentralPtPion");
+  TProfile *v3PHQMDMidcentralPtPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv3MidcentralPtPion");
+  TProfile *v3PHQMDPeripheralPtPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv3PeripheralPtPion");
+
+  TProfile *v3PHQMDCentralPtKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv3CentralPtKaon");
+  TProfile *v3PHQMDMidcentralPtKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv3MidcentralPtKaon");
+  TProfile *v3PHQMDPeripheralPtKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv3PeripheralPtKaon");
+
+  TProfile *v3PHQMDCentralRapidityProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv3CentralRapidityProton");
+  TProfile *v3PHQMDMidcentralRapidityProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityProton");
+  TProfile *v3PHQMDPeripheralRapidityProton = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityProton");
+
+  TProfile *v3PHQMDCentralRapidityPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv3CentralRapidityPion");
+  TProfile *v3PHQMDMidcentralRapidityPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityPion");
+  TProfile *v3PHQMDPeripheralRapidityPion = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityPion");
+
+  TProfile *v3PHQMDCentralRapidityKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Central/hv3CentralRapidityKaon");
+  TProfile *v3PHQMDMidcentralRapidityKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityKaon");
+  TProfile *v3PHQMDPeripheralRapidityKaon = (TProfile *)modelFilePHQMD11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityKaon");
+
+  TH1D *hPHQMDKinematicsAllEtaProton = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicsAllEtaProton");
+  TH1D *hPHQMDKinematicsAllEtaPion = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicsAllEtaPion");
+  TH1D *hPHQMDKinematicsAllEtaKaon = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicsAllEtaKaon");
+  TH1D *hPHQMDKinematicsAllRapidityProton = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicsAllRapidityProton");
+  TH1D *hPHQMDKinematicsAllRapidityPion = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicsAllRapidityPion");
+  TH1D *hPHQMDKinematicsAllRapidityKaon = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicsAllRapidityKaon");
+  TH1D *hPHQMDKinematicsAllPtProton = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicsAllPtProton");
+  TH1D *hPHQMDKinematicsAllPtPion = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicsAllPtPion");
+  TH1D *hPHQMDKinematicsAllPtKaon = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicsAllPtKaon");
+
+  TH1D *hPHQMDCutsAllEtaProton = (TH1D *)modelFilePHQMD11GeV->Get("Cuts/All/hCutsAllEtaProton");
+  TH1D *hPHQMDCutsAllEtaPion = (TH1D *)modelFilePHQMD11GeV->Get("Cuts/All/hCutsAllEtaPion");
+  TH1D *hPHQMDCutsAllEtaKaon = (TH1D *)modelFilePHQMD11GeV->Get("Cuts/All/hCutsAllEtaKaon");
+  TH1D *hPHQMDCutsAllRapidityProton = (TH1D *)modelFilePHQMD11GeV->Get("Cuts/All/hCutsAllRapidityProton");
+  TH1D *hPHQMDCutsAllRapidityPion = (TH1D *)modelFilePHQMD11GeV->Get("Cuts/All/hCutsAllRapidityPion");
+  TH1D *hPHQMDCutsAllRapidityKaon = (TH1D *)modelFilePHQMD11GeV->Get("Cuts/All/hCutsAllRapidityKaon");
+  TH1D *hPHQMDCutsAllPtProton = (TH1D *)modelFilePHQMD11GeV->Get("Cuts/All/hCutsAllPtProton");
+  TH1D *hPHQMDCutsAllPtPion = (TH1D *)modelFilePHQMD11GeV->Get("Cuts/All/hCutsAllPtPion");
+  TH1D *hPHQMDCutsAllPtKaon = (TH1D *)modelFilePHQMD11GeV->Get("Cuts/All/hCutsAllPtKaon");
+
+  TH2D *hPHQMDKinematicsAllBMULT = (TH2D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicAllBMULT");
+  TH2D *hPHQMDKinematicsAllEMULT = (TH2D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicAllEMULT");
+  TH2D *hPHQMDKinematicsAllBE = (TH2D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicAllBE");
+  TH1D *hPHQMDKinematicsAllB = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/All/hKinematicAllB");
+  TH1D *hPHQMDKinematicsCentralB = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/Central/hKinematicCentralB");
+  TH1D *hPHQMDKinematicsMidcentralB = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/Midcentral/hKinematicMidcentralB");
+  TH1D *hPHQMDKinematicsPeripheralB = (TH1D *)modelFilePHQMD11GeV->Get("Kinematics/Peripheral/hKinematicPeripheralB");
+
+
+  // ----------------------------------------------------------------------------------------------------------------------------
+
+  TProfile *v1PHQMDCentralPtProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv1CentralPtProton");
+  TProfile *v1PHQMDMidcentralPtProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv1MidcentralPtProton");
+  TProfile *v1PHQMDPeripheralPtProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv1PeripheralPtProton");
+
+  TProfile *v1PHQMDCentralPtPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv1CentralPtPion");
+  TProfile *v1PHQMDMidcentralPtPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv1MidcentralPtPion");
+  TProfile *v1PHQMDPeripheralPtPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv1PeripheralPtPion");
+
+  TProfile *v1PHQMDCentralPtKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv1CentralPtKaon");
+  TProfile *v1PHQMDMidcentralPtKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv1MidcentralPtKaon");
+  TProfile *v1PHQMDPeripheralPtKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv1PeripheralPtKaon");
+
+  TProfile *v1PHQMDCentralRapidityProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv1CentralRapidityProton");
+  TProfile *v1PHQMDMidcentralRapidityProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityProton");
+  TProfile *v1PHQMDPeripheralRapidityProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityProton");
+
+  TProfile *v1PHQMDCentralRapidityPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv1CentralRapidityPion");
+  TProfile *v1PHQMDMidcentralRapidityPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityPion");
+  TProfile *v1PHQMDPeripheralRapidityPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityPion");
+
+  TProfile *v1PHQMDCentralRapidityKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv1CentralRapidityKaon");
+  TProfile *v1PHQMDMidcentralRapidityKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityKaon");
+  TProfile *v1PHQMDPeripheralRapidityKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityKaon");
+
+  TProfile *v2PHQMDCentralPtProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv2CentralPtProton");
+  TProfile *v2PHQMDMidcentralPtProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv2MidcentralPtProton");
+  TProfile *v2PHQMDPeripheralPtProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv2PeripheralPtProton");
+
+  TProfile *v2PHQMDCentralPtPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv2CentralPtPion");
+  TProfile *v2PHQMDMidcentralPtPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv2MidcentralPtPion");
+  TProfile *v2PHQMDPeripheralPtPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv2PeripheralPtPion");
+
+  TProfile *v2PHQMDCentralPtKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv2CentralPtKaon");
+  TProfile *v2PHQMDMidcentralPtKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv2MidcentralPtKaon");
+  TProfile *v2PHQMDPeripheralPtKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv2PeripheralPtKaon");
+
+  TProfile *v2PHQMDCentralRapidityProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv2CentralRapidityProton");
+  TProfile *v2PHQMDMidcentralRapidityProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityProton");
+  TProfile *v2PHQMDPeripheralRapidityProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityProton");
+
+  TProfile *v2PHQMDCentralRapidityPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv2CentralRapidityPion");
+  TProfile *v2PHQMDMidcentralRapidityPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityPion");
+  TProfile *v2PHQMDPeripheralRapidityPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityPion");
+
+  TProfile *v2PHQMDCentralRapidityKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv2CentralRapidityKaon");
+  TProfile *v2PHQMDMidcentralRapidityKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityKaon");
+  TProfile *v2PHQMDPeripheralRapidityKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityKaon");
+
+  TProfile *v3PHQMDCentralPtProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv3CentralPtProton");
+  TProfile *v3PHQMDMidcentralPtProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv3MidcentralPtProton");
+  TProfile *v3PHQMDPeripheralPtProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv3PeripheralPtProton");
+
+  TProfile *v3PHQMDCentralPtPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv3CentralPtPion");
+  TProfile *v3PHQMDMidcentralPtPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv3MidcentralPtPion");
+  TProfile *v3PHQMDPeripheralPtPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv3PeripheralPtPion");
+
+  TProfile *v3PHQMDCentralPtKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv3CentralPtKaon");
+  TProfile *v3PHQMDMidcentralPtKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv3MidcentralPtKaon");
+  TProfile *v3PHQMDPeripheralPtKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv3PeripheralPtKaon");
+
+  TProfile *v3PHQMDCentralRapidityProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv3CentralRapidityProton");
+  TProfile *v3PHQMDMidcentralRapidityProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityProton");
+  TProfile *v3PHQMDPeripheralRapidityProton7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityProton");
+
+  TProfile *v3PHQMDCentralRapidityPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv3CentralRapidityPion");
+  TProfile *v3PHQMDMidcentralRapidityPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityPion");
+  TProfile *v3PHQMDPeripheralRapidityPion7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityPion");
+
+  TProfile *v3PHQMDCentralRapidityKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Central/hv3CentralRapidityKaon");
+  TProfile *v3PHQMDMidcentralRapidityKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityKaon");
+  TProfile *v3PHQMDPeripheralRapidityKaon7GeV = (TProfile *)modelFilePHQMD7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityKaon");
+
+  TH1D *hPHQMDKinematicsAllEtaProton7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicsAllEtaProton");
+  TH1D *hPHQMDKinematicsAllEtaPion7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicsAllEtaPion");
+  TH1D *hPHQMDKinematicsAllEtaKaon7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicsAllEtaKaon");
+  TH1D *hPHQMDKinematicsAllRapidityProton7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicsAllRapidityProton");
+  TH1D *hPHQMDKinematicsAllRapidityPion7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicsAllRapidityPion");
+  TH1D *hPHQMDKinematicsAllRapidityKaon7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicsAllRapidityKaon");
+  TH1D *hPHQMDKinematicsAllPtProton7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicsAllPtProton");
+  TH1D *hPHQMDKinematicsAllPtPion7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicsAllPtPion");
+  TH1D *hPHQMDKinematicsAllPtKaon7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicsAllPtKaon");
+
+  TH1D *hPHQMDCutsAllEtaProton7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Cuts/All/hCutsAllEtaProton");
+  TH1D *hPHQMDCutsAllEtaPion7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Cuts/All/hCutsAllEtaPion");
+  TH1D *hPHQMDCutsAllEtaKaon7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Cuts/All/hCutsAllEtaKaon");
+  TH1D *hPHQMDCutsAllRapidityProton7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Cuts/All/hCutsAllRapidityProton");
+  TH1D *hPHQMDCutsAllRapidityPion7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Cuts/All/hCutsAllRapidityPion");
+  TH1D *hPHQMDCutsAllRapidityKaon7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Cuts/All/hCutsAllRapidityKaon");
+  TH1D *hPHQMDCutsAllPtProton7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Cuts/All/hCutsAllPtProton");
+  TH1D *hPHQMDCutsAllPtPion7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Cuts/All/hCutsAllPtPion");
+  TH1D *hPHQMDCutsAllPtKaon7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Cuts/All/hCutsAllPtKaon");
+
+  TH2D *hPHQMDKinematicsAllBMULT7GeV = (TH2D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicAllBMULT");
+  TH2D *hPHQMDKinematicsAllEMULT7GeV = (TH2D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicAllEMULT");
+  TH2D *hPHQMDKinematicsAllBE7GeV = (TH2D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicAllBE");
+  TH1D *hPHQMDKinematicsAllB7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/All/hKinematicAllB");
+  TH1D *hPHQMDKinematicsCentralB7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/Central/hKinematicCentralB");
+  TH1D *hPHQMDKinematicsMidcentralB7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/Midcentral/hKinematicMidcentralB");
+  TH1D *hPHQMDKinematicsPeripheralB7GeV = (TH1D *)modelFilePHQMD7GeV->Get("Kinematics/Peripheral/hKinematicPeripheralB");
+
+  // ----------------------------------------------------------------------------------------------------------------------------
+
+  TProfile *v1DCMQGSMCentralPtProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv1CentralPtProton");
+  TProfile *v1DCMQGSMMidcentralPtProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv1MidcentralPtProton");
+  TProfile *v1DCMQGSMPeripheralPtProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv1PeripheralPtProton");
+
+  TProfile *v1DCMQGSMCentralPtPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv1CentralPtPion");
+  TProfile *v1DCMQGSMMidcentralPtPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv1MidcentralPtPion");
+  TProfile *v1DCMQGSMPeripheralPtPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv1PeripheralPtPion");
+
+  TProfile *v1DCMQGSMCentralPtKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv1CentralPtKaon");
+  TProfile *v1DCMQGSMMidcentralPtKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv1MidcentralPtKaon");
+  TProfile *v1DCMQGSMPeripheralPtKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv1PeripheralPtKaon");
+
+  TProfile *v1DCMQGSMCentralRapidityProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv1CentralRapidityProton");
+  TProfile *v1DCMQGSMMidcentralRapidityProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityProton");
+  TProfile *v1DCMQGSMPeripheralRapidityProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityProton");
+
+  TProfile *v1DCMQGSMCentralRapidityPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv1CentralRapidityPion");
+  TProfile *v1DCMQGSMMidcentralRapidityPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityPion");
+  TProfile *v1DCMQGSMPeripheralRapidityPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityPion");
+
+  TProfile *v1DCMQGSMCentralRapidityKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv1CentralRapidityKaon");
+  TProfile *v1DCMQGSMMidcentralRapidityKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv1MidcentralRapidityKaon");
+  TProfile *v1DCMQGSMPeripheralRapidityKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv1PeripheralRapidityKaon");
+
+  TProfile *v2DCMQGSMCentralPtProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv2CentralPtProton");
+  TProfile *v2DCMQGSMMidcentralPtProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv2MidcentralPtProton");
+  TProfile *v2DCMQGSMPeripheralPtProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv2PeripheralPtProton");
+
+  TProfile *v2DCMQGSMCentralPtPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv2CentralPtPion");
+  TProfile *v2DCMQGSMMidcentralPtPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv2MidcentralPtPion");
+  TProfile *v2DCMQGSMPeripheralPtPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv2PeripheralPtPion");
+
+  TProfile *v2DCMQGSMCentralPtKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv2CentralPtKaon");
+  TProfile *v2DCMQGSMMidcentralPtKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv2MidcentralPtKaon");
+  TProfile *v2DCMQGSMPeripheralPtKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv2PeripheralPtKaon");
+
+  TProfile *v2DCMQGSMCentralRapidityProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv2CentralRapidityProton");
+  TProfile *v2DCMQGSMMidcentralRapidityProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityProton");
+  TProfile *v2DCMQGSMPeripheralRapidityProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityProton");
+
+  TProfile *v2DCMQGSMCentralRapidityPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv2CentralRapidityPion");
+  TProfile *v2DCMQGSMMidcentralRapidityPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityPion");
+  TProfile *v2DCMQGSMPeripheralRapidityPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityPion");
+
+  TProfile *v2DCMQGSMCentralRapidityKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv2CentralRapidityKaon");
+  TProfile *v2DCMQGSMMidcentralRapidityKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv2MidcentralRapidityKaon");
+  TProfile *v2DCMQGSMPeripheralRapidityKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv2PeripheralRapidityKaon");
+
+  TProfile *v3DCMQGSMCentralPtProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv3CentralPtProton");
+  TProfile *v3DCMQGSMMidcentralPtProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv3MidcentralPtProton");
+  TProfile *v3DCMQGSMPeripheralPtProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv3PeripheralPtProton");
+
+  TProfile *v3DCMQGSMCentralPtPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv3CentralPtPion");
+  TProfile *v3DCMQGSMMidcentralPtPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv3MidcentralPtPion");
+  TProfile *v3DCMQGSMPeripheralPtPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv3PeripheralPtPion");
+
+  TProfile *v3DCMQGSMCentralPtKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv3CentralPtKaon");
+  TProfile *v3DCMQGSMMidcentralPtKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv3MidcentralPtKaon");
+  TProfile *v3DCMQGSMPeripheralPtKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv3PeripheralPtKaon");
+
+  TProfile *v3DCMQGSMCentralRapidityProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv3CentralRapidityProton");
+  TProfile *v3DCMQGSMMidcentralRapidityProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityProton");
+  TProfile *v3DCMQGSMPeripheralRapidityProton = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityProton");
+
+  TProfile *v3DCMQGSMCentralRapidityPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv3CentralRapidityPion");
+  TProfile *v3DCMQGSMMidcentralRapidityPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityPion");
+  TProfile *v3DCMQGSMPeripheralRapidityPion = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityPion");
+
+  TProfile *v3DCMQGSMCentralRapidityKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Central/hv3CentralRapidityKaon");
+  TProfile *v3DCMQGSMMidcentralRapidityKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Midcentral/hv3MidcentralRapidityKaon");
+  TProfile *v3DCMQGSMPeripheralRapidityKaon = (TProfile *)modelFileDCMQGSM11GeV->Get("Flow/Peripheral/hv3PeripheralRapidityKaon");
+
+  TH1D *hDCMQGSMKinematicsAllEtaProton = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicsAllEtaProton");
+  TH1D *hDCMQGSMKinematicsAllEtaPion = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicsAllEtaPion");
+  TH1D *hDCMQGSMKinematicsAllEtaKaon = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicsAllEtaKaon");
+  TH1D *hDCMQGSMKinematicsAllRapidityProton = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicsAllRapidityProton");
+  TH1D *hDCMQGSMKinematicsAllRapidityPion = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicsAllRapidityPion");
+  TH1D *hDCMQGSMKinematicsAllRapidityKaon = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicsAllRapidityKaon");
+  TH1D *hDCMQGSMKinematicsAllPtProton = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicsAllPtProton");
+  TH1D *hDCMQGSMKinematicsAllPtPion = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicsAllPtPion");
+  TH1D *hDCMQGSMKinematicsAllPtKaon = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicsAllPtKaon");
+
+  TH1D *hDCMQGSMCutsAllEtaProton = (TH1D *)modelFileDCMQGSM11GeV->Get("Cuts/All/hCutsAllEtaProton");
+  TH1D *hDCMQGSMCutsAllEtaPion = (TH1D *)modelFileDCMQGSM11GeV->Get("Cuts/All/hCutsAllEtaPion");
+  TH1D *hDCMQGSMCutsAllEtaKaon = (TH1D *)modelFileDCMQGSM11GeV->Get("Cuts/All/hCutsAllEtaKaon");
+  TH1D *hDCMQGSMCutsAllRapidityProton = (TH1D *)modelFileDCMQGSM11GeV->Get("Cuts/All/hCutsAllRapidityProton");
+  TH1D *hDCMQGSMCutsAllRapidityPion = (TH1D *)modelFileDCMQGSM11GeV->Get("Cuts/All/hCutsAllRapidityPion");
+  TH1D *hDCMQGSMCutsAllRapidityKaon = (TH1D *)modelFileDCMQGSM11GeV->Get("Cuts/All/hCutsAllRapidityKaon");
+  TH1D *hDCMQGSMCutsAllPtProton = (TH1D *)modelFileDCMQGSM11GeV->Get("Cuts/All/hCutsAllPtProton");
+  TH1D *hDCMQGSMCutsAllPtPion = (TH1D *)modelFileDCMQGSM11GeV->Get("Cuts/All/hCutsAllPtPion");
+  TH1D *hDCMQGSMCutsAllPtKaon = (TH1D *)modelFileDCMQGSM11GeV->Get("Cuts/All/hCutsAllPtKaon");
+
+  TH2D *hDCMQGSMKinematicsAllBMULT = (TH2D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicAllBMULT");
+  TH2D *hDCMQGSMKinematicsAllEMULT = (TH2D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicAllEMULT");
+  TH2D *hDCMQGSMKinematicsAllBE = (TH2D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicAllBE");
+  TH1D *hDCMQGSMKinematicsAllB = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/All/hKinematicAllB");
+  TH1D *hDCMQGSMKinematicsCentralB = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/Central/hKinematicCentralB");
+  TH1D *hDCMQGSMKinematicsMidcentralB = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/Midcentral/hKinematicMidcentralB");
+  TH1D *hDCMQGSMKinematicsPeripheralB = (TH1D *)modelFileDCMQGSM11GeV->Get("Kinematics/Peripheral/hKinematicPeripheralB");
+
+
+  // ----------------------------------------------------------------------------------------------------------------------------
+
+  TProfile *v1DCMQGSMCentralPtProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv1CentralPtProton");
+  TProfile *v1DCMQGSMMidcentralPtProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv1MidcentralPtProton");
+  TProfile *v1DCMQGSMPeripheralPtProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv1PeripheralPtProton");
+
+  TProfile *v1DCMQGSMCentralPtPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv1CentralPtPion");
+  TProfile *v1DCMQGSMMidcentralPtPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv1MidcentralPtPion");
+  TProfile *v1DCMQGSMPeripheralPtPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv1PeripheralPtPion");
+
+  TProfile *v1DCMQGSMCentralPtKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv1CentralPtKaon");
+  TProfile *v1DCMQGSMMidcentralPtKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv1MidcentralPtKaon");
+  TProfile *v1DCMQGSMPeripheralPtKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv1PeripheralPtKaon");
+
+  TProfile *v1DCMQGSMCentralRapidityProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv1CentralRapidityProton");
+  TProfile *v1DCMQGSMMidcentralRapidityProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityProton");
+  TProfile *v1DCMQGSMPeripheralRapidityProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityProton");
+
+  TProfile *v1DCMQGSMCentralRapidityPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv1CentralRapidityPion");
+  TProfile *v1DCMQGSMMidcentralRapidityPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityPion");
+  TProfile *v1DCMQGSMPeripheralRapidityPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityPion");
+
+  TProfile *v1DCMQGSMCentralRapidityKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv1CentralRapidityKaon");
+  TProfile *v1DCMQGSMMidcentralRapidityKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv1MidcentralRapidityKaon");
+  TProfile *v1DCMQGSMPeripheralRapidityKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv1PeripheralRapidityKaon");
+
+  TProfile *v2DCMQGSMCentralPtProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv2CentralPtProton");
+  TProfile *v2DCMQGSMMidcentralPtProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv2MidcentralPtProton");
+  TProfile *v2DCMQGSMPeripheralPtProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv2PeripheralPtProton");
+
+  TProfile *v2DCMQGSMCentralPtPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv2CentralPtPion");
+  TProfile *v2DCMQGSMMidcentralPtPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv2MidcentralPtPion");
+  TProfile *v2DCMQGSMPeripheralPtPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv2PeripheralPtPion");
+
+  TProfile *v2DCMQGSMCentralPtKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv2CentralPtKaon");
+  TProfile *v2DCMQGSMMidcentralPtKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv2MidcentralPtKaon");
+  TProfile *v2DCMQGSMPeripheralPtKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv2PeripheralPtKaon");
+
+  TProfile *v2DCMQGSMCentralRapidityProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv2CentralRapidityProton");
+  TProfile *v2DCMQGSMMidcentralRapidityProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityProton");
+  TProfile *v2DCMQGSMPeripheralRapidityProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityProton");
+
+  TProfile *v2DCMQGSMCentralRapidityPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv2CentralRapidityPion");
+  TProfile *v2DCMQGSMMidcentralRapidityPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityPion");
+  TProfile *v2DCMQGSMPeripheralRapidityPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityPion");
+
+  TProfile *v2DCMQGSMCentralRapidityKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv2CentralRapidityKaon");
+  TProfile *v2DCMQGSMMidcentralRapidityKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv2MidcentralRapidityKaon");
+  TProfile *v2DCMQGSMPeripheralRapidityKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv2PeripheralRapidityKaon");
+
+  TProfile *v3DCMQGSMCentralPtProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv3CentralPtProton");
+  TProfile *v3DCMQGSMMidcentralPtProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv3MidcentralPtProton");
+  TProfile *v3DCMQGSMPeripheralPtProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv3PeripheralPtProton");
+
+  TProfile *v3DCMQGSMCentralPtPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv3CentralPtPion");
+  TProfile *v3DCMQGSMMidcentralPtPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv3MidcentralPtPion");
+  TProfile *v3DCMQGSMPeripheralPtPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv3PeripheralPtPion");
+
+  TProfile *v3DCMQGSMCentralPtKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv3CentralPtKaon");
+  TProfile *v3DCMQGSMMidcentralPtKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv3MidcentralPtKaon");
+  TProfile *v3DCMQGSMPeripheralPtKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv3PeripheralPtKaon");
+
+  TProfile *v3DCMQGSMCentralRapidityProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv3CentralRapidityProton");
+  TProfile *v3DCMQGSMMidcentralRapidityProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityProton");
+  TProfile *v3DCMQGSMPeripheralRapidityProton7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityProton");
+
+  TProfile *v3DCMQGSMCentralRapidityPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv3CentralRapidityPion");
+  TProfile *v3DCMQGSMMidcentralRapidityPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityPion");
+  TProfile *v3DCMQGSMPeripheralRapidityPion7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityPion");
+
+  TProfile *v3DCMQGSMCentralRapidityKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Central/hv3CentralRapidityKaon");
+  TProfile *v3DCMQGSMMidcentralRapidityKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Midcentral/hv3MidcentralRapidityKaon");
+  TProfile *v3DCMQGSMPeripheralRapidityKaon7GeV = (TProfile *)modelFileDCMQGSM7GeV->Get("Flow/Peripheral/hv3PeripheralRapidityKaon");
+
+  TH1D *hDCMQGSMKinematicsAllEtaProton7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicsAllEtaProton");
+  TH1D *hDCMQGSMKinematicsAllEtaPion7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicsAllEtaPion");
+  TH1D *hDCMQGSMKinematicsAllEtaKaon7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicsAllEtaKaon");
+  TH1D *hDCMQGSMKinematicsAllRapidityProton7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicsAllRapidityProton");
+  TH1D *hDCMQGSMKinematicsAllRapidityPion7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicsAllRapidityPion");
+  TH1D *hDCMQGSMKinematicsAllRapidityKaon7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicsAllRapidityKaon");
+  TH1D *hDCMQGSMKinematicsAllPtProton7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicsAllPtProton");
+  TH1D *hDCMQGSMKinematicsAllPtPion7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicsAllPtPion");
+  TH1D *hDCMQGSMKinematicsAllPtKaon7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicsAllPtKaon");
+
+  TH1D *hDCMQGSMCutsAllEtaProton7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Cuts/All/hCutsAllEtaProton");
+  TH1D *hDCMQGSMCutsAllEtaPion7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Cuts/All/hCutsAllEtaPion");
+  TH1D *hDCMQGSMCutsAllEtaKaon7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Cuts/All/hCutsAllEtaKaon");
+  TH1D *hDCMQGSMCutsAllRapidityProton7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Cuts/All/hCutsAllRapidityProton");
+  TH1D *hDCMQGSMCutsAllRapidityPion7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Cuts/All/hCutsAllRapidityPion");
+  TH1D *hDCMQGSMCutsAllRapidityKaon7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Cuts/All/hCutsAllRapidityKaon");
+  TH1D *hDCMQGSMCutsAllPtProton7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Cuts/All/hCutsAllPtProton");
+  TH1D *hDCMQGSMCutsAllPtPion7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Cuts/All/hCutsAllPtPion");
+  TH1D *hDCMQGSMCutsAllPtKaon7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Cuts/All/hCutsAllPtKaon");
+
+  TH2D *hDCMQGSMKinematicsAllBMULT7GeV = (TH2D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicAllBMULT");
+  TH2D *hDCMQGSMKinematicsAllEMULT7GeV = (TH2D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicAllEMULT");
+  TH2D *hDCMQGSMKinematicsAllBE7GeV = (TH2D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicAllBE");
+  TH1D *hDCMQGSMKinematicsAllB7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/All/hKinematicAllB");
+  TH1D *hDCMQGSMKinematicsCentralB7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/Central/hKinematicCentralB");
+  TH1D *hDCMQGSMKinematicsMidcentralB7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/Midcentral/hKinematicMidcentralB");
+  TH1D *hDCMQGSMKinematicsPeripheralB7GeV = (TH1D *)modelFileDCMQGSM7GeV->Get("Kinematics/Peripheral/hKinematicPeripheralB");
+
+  // ----------------------------------------------------------------------------------------------------------------------------
+
+  v1PHSDCentralPtProton->SetTitle("PHSD");
+  v1PHSDMidcentralPtProton->SetTitle("PHSD");
+  v1PHSDPeripheralPtProton->SetTitle("PHSD");
+  v1PHSDCentralPtPion->SetTitle("PHSD");
+  v1PHSDMidcentralPtPion->SetTitle("PHSD");
+  v1PHSDPeripheralPtPion->SetTitle("PHSD");
+  v1PHSDCentralPtKaon->SetTitle("PHSD");
+  v1PHSDMidcentralPtKaon->SetTitle("PHSD");
+  v1PHSDPeripheralPtKaon->SetTitle("PHSD");
+
+  v1PHSDCentralRapidityProton->SetTitle("PHSD");
+  v1PHSDMidcentralRapidityProton->SetTitle("PHSD");
+  v1PHSDPeripheralRapidityProton->SetTitle("PHSD");
+  v1PHSDCentralRapidityPion->SetTitle("PHSD");
+  v1PHSDMidcentralRapidityPion->SetTitle("PHSD");
+  v1PHSDPeripheralRapidityPion->SetTitle("PHSD");
+  v1PHSDCentralRapidityKaon->SetTitle("PHSD");
+  v1PHSDMidcentralRapidityKaon->SetTitle("PHSD");
+  v1PHSDPeripheralRapidityKaon->SetTitle("PHSD");
+
+  v2PHSDCentralPtProton->SetTitle("PHSD");
+  v2PHSDMidcentralPtProton->SetTitle("PHSD");
+  v2PHSDPeripheralPtProton->SetTitle("PHSD");
+  v2PHSDCentralPtPion->SetTitle("PHSD");
+  v2PHSDMidcentralPtPion->SetTitle("PHSD");
+  v2PHSDPeripheralPtPion->SetTitle("PHSD");
+  v2PHSDCentralPtKaon->SetTitle("PHSD");
+  v2PHSDMidcentralPtKaon->SetTitle("PHSD");
+  v2PHSDPeripheralPtKaon->SetTitle("PHSD");
+
+  v3PHSDCentralPtProton->SetTitle("PHSD");
+  v3PHSDMidcentralPtProton->SetTitle("PHSD");
+  v3PHSDPeripheralPtProton->SetTitle("PHSD");
+  v3PHSDCentralPtPion->SetTitle("PHSD");
+  v3PHSDMidcentralPtPion->SetTitle("PHSD");
+  v3PHSDPeripheralPtPion->SetTitle("PHSD");
+  v3PHSDCentralPtKaon->SetTitle("PHSD");
+  v3PHSDMidcentralPtKaon->SetTitle("PHSD");
+  v3PHSDPeripheralPtKaon->SetTitle("PHSD");
+
+  v3PHSDCentralRapidityProton->SetTitle("PHSD");
+  v3PHSDMidcentralRapidityProton->SetTitle("PHSD");
+  v3PHSDPeripheralRapidityProton->SetTitle("PHSD");
+  v3PHSDCentralRapidityPion->SetTitle("PHSD");
+  v3PHSDMidcentralRapidityPion->SetTitle("PHSD");
+  v3PHSDPeripheralRapidityPion->SetTitle("PHSD");
+  v3PHSDCentralRapidityKaon->SetTitle("PHSD");
+  v3PHSDMidcentralRapidityKaon->SetTitle("PHSD");
+  v3PHSDPeripheralRapidityKaon->SetTitle("PHSD");
+
+  v1URQMDCentralPtProton->SetTitle("URQMD");
+  v1URQMDMidcentralPtProton->SetTitle("URQMD");
+  v1URQMDPeripheralPtProton->SetTitle("URQMD");
+  v1URQMDCentralPtPion->SetTitle("URQMD");
+  v1URQMDMidcentralPtPion->SetTitle("URQMD");
+  v1URQMDPeripheralPtPion->SetTitle("URQMD");
+  v1URQMDCentralPtKaon->SetTitle("URQMD");
+  v1URQMDMidcentralPtKaon->SetTitle("URQMD");
+  v1URQMDPeripheralPtKaon->SetTitle("URQMD");
+
+  v1URQMDCentralRapidityProton->SetTitle("URQMD");
+  v1URQMDMidcentralRapidityProton->SetTitle("URQMD");
+  v1URQMDPeripheralRapidityProton->SetTitle("URQMD");
+  v1URQMDCentralRapidityPion->SetTitle("URQMD");
+  v1URQMDMidcentralRapidityPion->SetTitle("URQMD");
+  v1URQMDPeripheralRapidityPion->SetTitle("URQMD");
+  v1URQMDCentralRapidityKaon->SetTitle("URQMD");
+  v1URQMDMidcentralRapidityKaon->SetTitle("URQMD");
+  v1URQMDPeripheralRapidityKaon->SetTitle("URQMD");
+
+  v2URQMDCentralPtProton->SetTitle("URQMD");
+  v2URQMDMidcentralPtProton->SetTitle("URQMD");
+  v2URQMDPeripheralPtProton->SetTitle("URQMD");
+  v2URQMDCentralPtPion->SetTitle("URQMD");
+  v2URQMDMidcentralPtPion->SetTitle("URQMD");
+  v2URQMDPeripheralPtPion->SetTitle("URQMD");
+  v2URQMDCentralPtKaon->SetTitle("URQMD");
+  v2URQMDMidcentralPtKaon->SetTitle("URQMD");
+  v2URQMDPeripheralPtKaon->SetTitle("URQMD");
+
+  v3URQMDCentralPtProton->SetTitle("URQMD");
+  v3URQMDMidcentralPtProton->SetTitle("URQMD");
+  v3URQMDPeripheralPtProton->SetTitle("URQMD");
+  v3URQMDCentralPtPion->SetTitle("URQMD");
+  v3URQMDMidcentralPtPion->SetTitle("URQMD");
+  v3URQMDPeripheralPtPion->SetTitle("URQMD");
+  v3URQMDCentralPtKaon->SetTitle("URQMD");
+  v3URQMDMidcentralPtKaon->SetTitle("URQMD");
+  v3URQMDPeripheralPtKaon->SetTitle("URQMD");
+
+  v3URQMDCentralRapidityProton->SetTitle("URQMD");
+  v3URQMDMidcentralRapidityProton->SetTitle("URQMD");
+  v3URQMDPeripheralRapidityProton->SetTitle("URQMD");
+  v3URQMDCentralRapidityPion->SetTitle("URQMD");
+  v3URQMDMidcentralRapidityPion->SetTitle("URQMD");
+  v3URQMDPeripheralRapidityPion->SetTitle("URQMD");
+  v3URQMDCentralRapidityKaon->SetTitle("URQMD");
+  v3URQMDMidcentralRapidityKaon->SetTitle("URQMD");
+  v3URQMDPeripheralRapidityKaon->SetTitle("URQMD");
+
+  v1LAQGSMCentralPtProton->SetTitle("LAQGSM");
+  v1LAQGSMMidcentralPtProton->SetTitle("LAQGSM");
+  v1LAQGSMPeripheralPtProton->SetTitle("LAQGSM");
+  v1LAQGSMCentralPtPion->SetTitle("LAQGSM");
+  v1LAQGSMMidcentralPtPion->SetTitle("LAQGSM");
+  v1LAQGSMPeripheralPtPion->SetTitle("LAQGSM");
+  v1LAQGSMCentralPtKaon->SetTitle("LAQGSM");
+  v1LAQGSMMidcentralPtKaon->SetTitle("LAQGSM");
+  v1LAQGSMPeripheralPtKaon->SetTitle("LAQGSM");
+
+  v1LAQGSMCentralRapidityProton->SetTitle("LAQGSM");
+  v1LAQGSMMidcentralRapidityProton->SetTitle("LAQGSM");
+  v1LAQGSMPeripheralRapidityProton->SetTitle("LAQGSM");
+  v1LAQGSMCentralRapidityPion->SetTitle("LAQGSM");
+  v1LAQGSMMidcentralRapidityPion->SetTitle("LAQGSM");
+  v1LAQGSMPeripheralRapidityPion->SetTitle("LAQGSM");
+  v1LAQGSMCentralRapidityKaon->SetTitle("LAQGSM");
+  v1LAQGSMMidcentralRapidityKaon->SetTitle("LAQGSM");
+  v1LAQGSMPeripheralRapidityKaon->SetTitle("LAQGSM");
+
+  v2LAQGSMCentralPtProton->SetTitle("LAQGSM");
+  v2LAQGSMMidcentralPtProton->SetTitle("LAQGSM");
+  v2LAQGSMPeripheralPtProton->SetTitle("LAQGSM");
+  v2LAQGSMCentralPtPion->SetTitle("LAQGSM");
+  v2LAQGSMMidcentralPtPion->SetTitle("LAQGSM");
+  v2LAQGSMPeripheralPtPion->SetTitle("LAQGSM");
+  v2LAQGSMCentralPtKaon->SetTitle("LAQGSM");
+  v2LAQGSMMidcentralPtKaon->SetTitle("LAQGSM");
+  v2LAQGSMPeripheralPtKaon->SetTitle("LAQGSM");
+
+  v3LAQGSMCentralPtProton->SetTitle("LAQGSM");
+  v3LAQGSMMidcentralPtProton->SetTitle("LAQGSM");
+  v3LAQGSMPeripheralPtProton->SetTitle("LAQGSM");
+  v3LAQGSMCentralPtPion->SetTitle("LAQGSM");
+  v3LAQGSMMidcentralPtPion->SetTitle("LAQGSM");
+  v3LAQGSMPeripheralPtPion->SetTitle("LAQGSM");
+  v3LAQGSMCentralPtKaon->SetTitle("LAQGSM");
+  v3LAQGSMMidcentralPtKaon->SetTitle("LAQGSM");
+  v3LAQGSMPeripheralPtKaon->SetTitle("LAQGSM");
+
+  v3LAQGSMCentralRapidityProton->SetTitle("LAQGSM");
+  v3LAQGSMMidcentralRapidityProton->SetTitle("LAQGSM");
+  v3LAQGSMPeripheralRapidityProton->SetTitle("LAQGSM");
+  v3LAQGSMCentralRapidityPion->SetTitle("LAQGSM");
+  v3LAQGSMMidcentralRapidityPion->SetTitle("LAQGSM");
+  v3LAQGSMPeripheralRapidityPion->SetTitle("LAQGSM");
+  v3LAQGSMCentralRapidityKaon->SetTitle("LAQGSM");
+  v3LAQGSMMidcentralRapidityKaon->SetTitle("LAQGSM");
+  v3LAQGSMPeripheralRapidityKaon->SetTitle("LAQGSM");
+
+  v1PHQMDCentralPtProton->SetTitle("PHQMD");
+  v1PHQMDMidcentralPtProton->SetTitle("PHQMD");
+  v1PHQMDPeripheralPtProton->SetTitle("PHQMD");
+  v1PHQMDCentralPtPion->SetTitle("PHQMD");
+  v1PHQMDMidcentralPtPion->SetTitle("PHQMD");
+  v1PHQMDPeripheralPtPion->SetTitle("PHQMD");
+  v1PHQMDCentralPtKaon->SetTitle("PHQMD");
+  v1PHQMDMidcentralPtKaon->SetTitle("PHQMD");
+  v1PHQMDPeripheralPtKaon->SetTitle("PHQMD");
+
+  v1PHQMDCentralRapidityProton->SetTitle("PHQMD");
+  v1PHQMDMidcentralRapidityProton->SetTitle("PHQMD");
+  v1PHQMDPeripheralRapidityProton->SetTitle("PHQMD");
+  v1PHQMDCentralRapidityPion->SetTitle("PHQMD");
+  v1PHQMDMidcentralRapidityPion->SetTitle("PHQMD");
+  v1PHQMDPeripheralRapidityPion->SetTitle("PHQMD");
+  v1PHQMDCentralRapidityKaon->SetTitle("PHQMD");
+  v1PHQMDMidcentralRapidityKaon->SetTitle("PHQMD");
+  v1PHQMDPeripheralRapidityKaon->SetTitle("PHQMD");
+
+  v2PHQMDCentralPtProton->SetTitle("PHQMD");
+  v2PHQMDMidcentralPtProton->SetTitle("PHQMD");
+  v2PHQMDPeripheralPtProton->SetTitle("PHQMD");
+  v2PHQMDCentralPtPion->SetTitle("PHQMD");
+  v2PHQMDMidcentralPtPion->SetTitle("PHQMD");
+  v2PHQMDPeripheralPtPion->SetTitle("PHQMD");
+  v2PHQMDCentralPtKaon->SetTitle("PHQMD");
+  v2PHQMDMidcentralPtKaon->SetTitle("PHQMD");
+  v2PHQMDPeripheralPtKaon->SetTitle("PHQMD");
+
+  v3PHQMDCentralPtProton->SetTitle("PHQMD");
+  v3PHQMDMidcentralPtProton->SetTitle("PHQMD");
+  v3PHQMDPeripheralPtProton->SetTitle("PHQMD");
+  v3PHQMDCentralPtPion->SetTitle("PHQMD");
+  v3PHQMDMidcentralPtPion->SetTitle("PHQMD");
+  v3PHQMDPeripheralPtPion->SetTitle("PHQMD");
+  v3PHQMDCentralPtKaon->SetTitle("PHQMD");
+  v3PHQMDMidcentralPtKaon->SetTitle("PHQMD");
+  v3PHQMDPeripheralPtKaon->SetTitle("PHQMD");
+
+  v3PHQMDCentralRapidityProton->SetTitle("PHQMD");
+  v3PHQMDMidcentralRapidityProton->SetTitle("PHQMD");
+  v3PHQMDPeripheralRapidityProton->SetTitle("PHQMD");
+  v3PHQMDCentralRapidityPion->SetTitle("PHQMD");
+  v3PHQMDMidcentralRapidityPion->SetTitle("PHQMD");
+  v3PHQMDPeripheralRapidityPion->SetTitle("PHQMD");
+  v3PHQMDCentralRapidityKaon->SetTitle("PHQMD");
+  v3PHQMDMidcentralRapidityKaon->SetTitle("PHQMD");
+  v3PHQMDPeripheralRapidityKaon->SetTitle("PHQMD");
+
+  v1DCMQGSMCentralPtProton->SetTitle("DCMQGSM");
+  v1DCMQGSMMidcentralPtProton->SetTitle("DCMQGSM");
+  v1DCMQGSMPeripheralPtProton->SetTitle("DCMQGSM");
+  v1DCMQGSMCentralPtPion->SetTitle("DCMQGSM");
+  v1DCMQGSMMidcentralPtPion->SetTitle("DCMQGSM");
+  v1DCMQGSMPeripheralPtPion->SetTitle("DCMQGSM");
+  v1DCMQGSMCentralPtKaon->SetTitle("DCMQGSM");
+  v1DCMQGSMMidcentralPtKaon->SetTitle("DCMQGSM");
+  v1DCMQGSMPeripheralPtKaon->SetTitle("DCMQGSM");
+
+  v1DCMQGSMCentralRapidityProton->SetTitle("DCMQGSM");
+  v1DCMQGSMMidcentralRapidityProton->SetTitle("DCMQGSM");
+  v1DCMQGSMPeripheralRapidityProton->SetTitle("DCMQGSM");
+  v1DCMQGSMCentralRapidityPion->SetTitle("DCMQGSM");
+  v1DCMQGSMMidcentralRapidityPion->SetTitle("DCMQGSM");
+  v1DCMQGSMPeripheralRapidityPion->SetTitle("DCMQGSM");
+  v1DCMQGSMCentralRapidityKaon->SetTitle("DCMQGSM");
+  v1DCMQGSMMidcentralRapidityKaon->SetTitle("DCMQGSM");
+  v1DCMQGSMPeripheralRapidityKaon->SetTitle("DCMQGSM");
+
+  v2DCMQGSMCentralPtProton->SetTitle("DCMQGSM");
+  v2DCMQGSMMidcentralPtProton->SetTitle("DCMQGSM");
+  v2DCMQGSMPeripheralPtProton->SetTitle("DCMQGSM");
+  v2DCMQGSMCentralPtPion->SetTitle("DCMQGSM");
+  v2DCMQGSMMidcentralPtPion->SetTitle("DCMQGSM");
+  v2DCMQGSMPeripheralPtPion->SetTitle("DCMQGSM");
+  v2DCMQGSMCentralPtKaon->SetTitle("DCMQGSM");
+  v2DCMQGSMMidcentralPtKaon->SetTitle("DCMQGSM");
+  v2DCMQGSMPeripheralPtKaon->SetTitle("DCMQGSM");
+
+  v3DCMQGSMCentralPtProton->SetTitle("DCMQGSM");
+  v3DCMQGSMMidcentralPtProton->SetTitle("DCMQGSM");
+  v3DCMQGSMPeripheralPtProton->SetTitle("DCMQGSM");
+  v3DCMQGSMCentralPtPion->SetTitle("DCMQGSM");
+  v3DCMQGSMMidcentralPtPion->SetTitle("DCMQGSM");
+  v3DCMQGSMPeripheralPtPion->SetTitle("DCMQGSM");
+  v3DCMQGSMCentralPtKaon->SetTitle("DCMQGSM");
+  v3DCMQGSMMidcentralPtKaon->SetTitle("DCMQGSM");
+  v3DCMQGSMPeripheralPtKaon->SetTitle("DCMQGSM");
+
+  v3DCMQGSMCentralRapidityProton->SetTitle("DCMQGSM");
+  v3DCMQGSMMidcentralRapidityProton->SetTitle("DCMQGSM");
+  v3DCMQGSMPeripheralRapidityProton->SetTitle("DCMQGSM");
+  v3DCMQGSMCentralRapidityPion->SetTitle("DCMQGSM");
+  v3DCMQGSMMidcentralRapidityPion->SetTitle("DCMQGSM");
+  v3DCMQGSMPeripheralRapidityPion->SetTitle("DCMQGSM");
+  v3DCMQGSMCentralRapidityKaon->SetTitle("DCMQGSM");
+  v3DCMQGSMMidcentralRapidityKaon->SetTitle("DCMQGSM");
+  v3DCMQGSMPeripheralRapidityKaon->SetTitle("DCMQGSM");
+
+  hPHSDKinematicsAllPtProton->SetTitle("Before selection");
+  hPHSDKinematicsAllEtaProton->SetTitle("Before selection");
+  hPHSDKinematicsAllRapidityProton->SetTitle("Before selection");
+  hPHSDKinematicsAllPtPion->SetTitle("Before selection");
+  hPHSDKinematicsAllEtaPion->SetTitle("Before selection");
+  hPHSDKinematicsAllRapidityPion->SetTitle("Before selection");
+
+  hPHSDCutsAllPtProton->SetTitle("After selection");
+  hPHSDCutsAllEtaProton->SetTitle("After selection");
+  hPHSDCutsAllRapidityProton->SetTitle("After selection");
+  hPHSDCutsAllPtPion->SetTitle("After selection");
+  hPHSDCutsAllEtaPion->SetTitle("After selection");
+  hPHSDCutsAllRapidityPion->SetTitle("After selection");
+
+  hURQMDKinematicsAllPtProton->SetTitle("Before selection");
+  hURQMDKinematicsAllEtaProton->SetTitle("Before selection");
+  hURQMDKinematicsAllRapidityProton->SetTitle("Before selection");
+  hURQMDKinematicsAllPtPion->SetTitle("Before selection");
+  hURQMDKinematicsAllEtaPion->SetTitle("Before selection");
+  hURQMDKinematicsAllRapidityPion->SetTitle("Before selection");
+
+  hURQMDCutsAllPtProton->SetTitle("After selection");
+  hURQMDCutsAllEtaProton->SetTitle("After selection");
+  hURQMDCutsAllRapidityProton->SetTitle("After selection");
+  hURQMDCutsAllPtPion->SetTitle("After selection");
+  hURQMDCutsAllEtaPion->SetTitle("After selection");
+  hURQMDCutsAllRapidityPion->SetTitle("After selection");
+
+  hLAQGSMKinematicsAllPtProton->SetTitle("Before selection");
+  hLAQGSMKinematicsAllEtaProton->SetTitle("Before selection");
+  hLAQGSMKinematicsAllRapidityProton->SetTitle("Before selection");
+  hLAQGSMKinematicsAllPtPion->SetTitle("Before selection");
+  hLAQGSMKinematicsAllEtaPion->SetTitle("Before selection");
+  hLAQGSMKinematicsAllRapidityPion->SetTitle("Before selection");
+
+  hLAQGSMCutsAllPtProton->SetTitle("After selection");
+  hLAQGSMCutsAllEtaProton->SetTitle("After selection");
+  hLAQGSMCutsAllRapidityProton->SetTitle("After selection");
+  hLAQGSMCutsAllPtPion->SetTitle("After selection");
+  hLAQGSMCutsAllEtaPion->SetTitle("After selection");
+  hLAQGSMCutsAllRapidityPion->SetTitle("After selection");
+
+  hPHQMDKinematicsAllPtProton->SetTitle("Before selection");
+  hPHQMDKinematicsAllEtaProton->SetTitle("Before selection");
+  hPHQMDKinematicsAllRapidityProton->SetTitle("Before selection");
+  hPHQMDKinematicsAllPtPion->SetTitle("Before selection");
+  hPHQMDKinematicsAllEtaPion->SetTitle("Before selection");
+  hPHQMDKinematicsAllRapidityPion->SetTitle("Before selection");
+
+  hPHQMDCutsAllPtProton->SetTitle("After selection");
+  hPHQMDCutsAllEtaProton->SetTitle("After selection");
+  hPHQMDCutsAllRapidityProton->SetTitle("After selection");
+  hPHQMDCutsAllPtPion->SetTitle("After selection");
+  hPHQMDCutsAllEtaPion->SetTitle("After selection");
+  hPHQMDCutsAllRapidityPion->SetTitle("After selection");
+
+  hDCMQGSMKinematicsAllPtProton->SetTitle("Before selection");
+  hDCMQGSMKinematicsAllEtaProton->SetTitle("Before selection");
+  hDCMQGSMKinematicsAllRapidityProton->SetTitle("Before selection");
+  hDCMQGSMKinematicsAllPtPion->SetTitle("Before selection");
+  hDCMQGSMKinematicsAllEtaPion->SetTitle("Before selection");
+  hDCMQGSMKinematicsAllRapidityPion->SetTitle("Before selection");
+
+  hDCMQGSMCutsAllPtProton->SetTitle("After selection");
+  hDCMQGSMCutsAllEtaProton->SetTitle("After selection");
+  hDCMQGSMCutsAllRapidityProton->SetTitle("After selection");
+  hDCMQGSMCutsAllPtPion->SetTitle("After selection");
+  hDCMQGSMCutsAllEtaPion->SetTitle("After selection");
+  hDCMQGSMCutsAllRapidityPion->SetTitle("After selection");
+
+  v1PHSDCentralPtProton->SetName("v1PHSDCentralPtProton");
+  v1PHSDMidcentralPtProton->SetName("v1PHSDMidcentralPtProton");
+  v1PHSDPeripheralPtProton->SetName("v1PHSDPeripheralPtProton");
+  v1PHSDCentralPtPion->SetName("v1PHSDCentralPtPion");
+  v1PHSDMidcentralPtPion->SetName("v1PHSDMidcentralPtPion");
+  v1PHSDPeripheralPtPion->SetName("v1PHSDPeripheralPtPion");
+  v1PHSDCentralPtKaon->SetName("v1PHSDCentralPtKaon");
+  v1PHSDMidcentralPtKaon->SetName("v1PHSDMidcentralPtKaon");
+  v1PHSDPeripheralPtKaon->SetName("v1PHSDPeripheralPtKaon");
+
+  v1PHSDCentralRapidityProton->SetName("v1PHSDCentralRapidityProton");
+  v1PHSDMidcentralRapidityProton->SetName("v1PHSDMidcentralRapidityProton");
+  v1PHSDPeripheralRapidityProton->SetName("v1PHSDPeripheralRapidityProton");
+  v1PHSDCentralRapidityPion->SetName("v1PHSDCentralRapidityPion");
+  v1PHSDMidcentralRapidityPion->SetName("v1PHSDMidcentralRapidityPion");
+  v1PHSDPeripheralRapidityPion->SetName("v1PHSDPeripheralRapidityPion");
+  v1PHSDCentralRapidityKaon->SetName("v1PHSDCentralRapidityKaon");
+  v1PHSDMidcentralRapidityKaon->SetName("v1PHSDMidcentralRapidityKaon");
+  v1PHSDPeripheralRapidityKaon->SetName("v1PHSDPeripheralRapidityKaon");
+
+  v2PHSDCentralPtProton->SetName("v2PHSDCentralPtProton");
+  v2PHSDMidcentralPtProton->SetName("v2PHSDMidcentralPtProton");
+  v2PHSDPeripheralPtProton->SetName("v2PHSDPeripheralPtProton");
+  v2PHSDCentralPtPion->SetName("v2PHSDCentralPtPion");
+  v2PHSDMidcentralPtPion->SetName("v2PHSDMidcentralPtPion");
+  v2PHSDPeripheralPtPion->SetName("v2PHSDPeripheralPtPion");
+  v2PHSDCentralPtKaon->SetName("v2PHSDCentralPtKaon");
+  v2PHSDMidcentralPtKaon->SetName("v2PHSDMidcentralPtKaon");
+  v2PHSDPeripheralPtKaon->SetName("v2PHSDPeripheralPtKaon");
+
+  v3PHSDCentralPtProton->SetName("v3PHSDCentralPtProton");
+  v3PHSDMidcentralPtProton->SetName("v3PHSDMidcentralPtProton");
+  v3PHSDPeripheralPtProton->SetName("v3PHSDPeripheralPtProton");
+  v3PHSDCentralPtPion->SetName("v3PHSDCentralPtPion");
+  v3PHSDMidcentralPtPion->SetName("v3PHSDMidcentralPtPion");
+  v3PHSDPeripheralPtPion->SetName("v3PHSDPeripheralPtPion");
+  v3PHSDCentralPtKaon->SetName("v3PHSDCentralPtKaon");
+  v3PHSDMidcentralPtKaon->SetName("v3PHSDMidcentralPtKaon");
+  v3PHSDPeripheralPtKaon->SetName("v3PHSDPeripheralPtKaon");
+
+  v3PHSDCentralRapidityProton->SetName("v3PHSDCentralRapidityProton");
+  v3PHSDMidcentralRapidityProton->SetName("v3PHSDMidcentralRapidityProton");
+  v3PHSDPeripheralRapidityProton->SetName("v3PHSDPeripheralRapidityProton");
+  v3PHSDCentralRapidityPion->SetName("v3PHSDCentralRapidityPion");
+  v3PHSDMidcentralRapidityPion->SetName("v3PHSDMidcentralRapidityPion");
+  v3PHSDPeripheralRapidityPion->SetName("v3PHSDPeripheralRapidityPion");
+  v3PHSDCentralRapidityKaon->SetName("v3PHSDCentralRapidityKaon");
+  v3PHSDMidcentralRapidityKaon->SetName("v3PHSDMidcentralRapidityKaon");
+  v3PHSDPeripheralRapidityKaon->SetName("v3PHSDPeripheralRapidityKaon");
+
+  v1URQMDCentralPtProton->SetName("v1URQMDCentralPtProton");
+  v1URQMDMidcentralPtProton->SetName("v1URQMDMidcentralPtProton");
+  v1URQMDPeripheralPtProton->SetName("v1URQMDPeripheralPtProton");
+  v1URQMDCentralPtPion->SetName("v1URQMDCentralPtPion");
+  v1URQMDMidcentralPtPion->SetName("v1URQMDMidcentralPtPion");
+  v1URQMDPeripheralPtPion->SetName("v1URQMDPeripheralPtPion");
+  v1URQMDCentralPtKaon->SetName("v1URQMDCentralPtKaon");
+  v1URQMDMidcentralPtKaon->SetName("v1URQMDMidcentralPtKaon");
+  v1URQMDPeripheralPtKaon->SetName("v1URQMDPeripheralPtKaon");
+
+  v1URQMDCentralRapidityProton->SetName("v1URQMDCentralRapidityProton");
+  v1URQMDMidcentralRapidityProton->SetName("v1URQMDMidcentralRapidityProton");
+  v1URQMDPeripheralRapidityProton->SetName("v1URQMDPeripheralRapidityProton");
+  v1URQMDCentralRapidityPion->SetName("v1URQMDCentralRapidityPion");
+  v1URQMDMidcentralRapidityPion->SetName("v1URQMDMidcentralRapidityPion");
+  v1URQMDPeripheralRapidityPion->SetName("v1URQMDPeripheralRapidityPion");
+  v1URQMDCentralRapidityKaon->SetName("v1URQMDCentralRapidityKaon");
+  v1URQMDMidcentralRapidityKaon->SetName("v1URQMDMidcentralRapidityKaon");
+  v1URQMDPeripheralRapidityKaon->SetName("v1URQMDPeripheralRapidityKaon");
+
+  v2URQMDCentralPtProton->SetName("v2URQMDCentralPtProton");
+  v2URQMDMidcentralPtProton->SetName("v2URQMDMidcentralPtProton");
+  v2URQMDPeripheralPtProton->SetName("v2URQMDPeripheralPtProton");
+  v2URQMDCentralPtPion->SetName("v2URQMDCentralPtPion");
+  v2URQMDMidcentralPtPion->SetName("v2URQMDMidcentralPtPion");
+  v2URQMDPeripheralPtPion->SetName("v2URQMDPeripheralPtPion");
+  v2URQMDCentralPtKaon->SetName("v2URQMDCentralPtKaon");
+  v2URQMDMidcentralPtKaon->SetName("v2URQMDMidcentralPtKaon");
+  v2URQMDPeripheralPtKaon->SetName("v2URQMDPeripheralPtKaon");
+
+  v3URQMDCentralPtProton->SetName("v3URQMDCentralPtProton");
+  v3URQMDMidcentralPtProton->SetName("v3URQMDMidcentralPtProton");
+  v3URQMDPeripheralPtProton->SetName("v3URQMDPeripheralPtProton");
+  v3URQMDCentralPtPion->SetName("v3URQMDCentralPtPion");
+  v3URQMDMidcentralPtPion->SetName("v3URQMDMidcentralPtPion");
+  v3URQMDPeripheralPtPion->SetName("v3URQMDPeripheralPtPion");
+  v3URQMDCentralPtKaon->SetName("v3URQMDCentralPtKaon");
+  v3URQMDMidcentralPtKaon->SetName("v3URQMDMidcentralPtKaon");
+  v3URQMDPeripheralPtKaon->SetName("v3URQMDPeripheralPtKaon");
+
+  v3URQMDCentralRapidityProton->SetName("v3URQMDCentralRapidityProton");
+  v3URQMDMidcentralRapidityProton->SetName("v3URQMDMidcentralRapidityProton");
+  v3URQMDPeripheralRapidityProton->SetName("v3URQMDPeripheralRapidityProton");
+  v3URQMDCentralRapidityPion->SetName("v3URQMDCentralRapidityPion");
+  v3URQMDMidcentralRapidityPion->SetName("v3URQMDMidcentralRapidityPion");
+  v3URQMDPeripheralRapidityPion->SetName("v3URQMDPeripheralRapidityPion");
+  v3URQMDCentralRapidityKaon->SetName("v3URQMDCentralRapidityKaon");
+  v3URQMDMidcentralRapidityKaon->SetName("v3URQMDMidcentralRapidityKaon");
+  v3URQMDPeripheralRapidityKaon->SetName("v3URQMDPeripheralRapidityKaon");
+
+  v1LAQGSMCentralPtProton->SetName("v1LAQGSMCentralPtProton");
+  v1LAQGSMMidcentralPtProton->SetName("v1LAQGSMMidcentralPtProton");
+  v1LAQGSMPeripheralPtProton->SetName("v1LAQGSMPeripheralPtProton");
+  v1LAQGSMCentralPtPion->SetName("v1LAQGSMCentralPtPion");
+  v1LAQGSMMidcentralPtPion->SetName("LAQv1LAQGSMMidcentralPtPionGSM");
+  v1LAQGSMPeripheralPtPion->SetName("v1LAQGSMPeripheralPtPion");
+  v1LAQGSMCentralPtKaon->SetName("v1LAQGSMCentralPtKaon");
+  v1LAQGSMMidcentralPtKaon->SetName("v1LAQGSMMidcentralPtKaon");
+  v1LAQGSMPeripheralPtKaon->SetName("v1LAQGSMPeripheralPtKaon");
+
+  v1LAQGSMCentralRapidityProton->SetName("v1LAQGSMCentralRapidityProton");
+  v1LAQGSMMidcentralRapidityProton->SetName("v1LAQGSMMidcentralRapidityProton");
+  v1LAQGSMPeripheralRapidityProton->SetName("v1LAQGSMPeripheralRapidityProton");
+  v1LAQGSMCentralRapidityPion->SetName("v1LAQGSMCentralRapidityPion");
+  v1LAQGSMMidcentralRapidityPion->SetName("v1LAQGSMMidcentralRapidityPion");
+  v1LAQGSMPeripheralRapidityPion->SetName("v1LAQGSMPeripheralRapidityPion");
+  v1LAQGSMCentralRapidityKaon->SetName("v1LAQGSMCentralRapidityKaon");
+  v1LAQGSMMidcentralRapidityKaon->SetName("v1LAQGSMMidcentralRapidityKaon");
+  v1LAQGSMPeripheralRapidityKaon->SetName("v1LAQGSMPeripheralRapidityKaon");
+
+  v2LAQGSMCentralPtProton->SetName("v2LAQGSMCentralPtProton");
+  v2LAQGSMMidcentralPtProton->SetName("v2LAQGSMMidcentralPtProton");
+  v2LAQGSMPeripheralPtProton->SetName("v2LAQGSMPeripheralPtProton");
+  v2LAQGSMCentralPtPion->SetName("v2LAQGSMCentralPtPion");
+  v2LAQGSMMidcentralPtPion->SetName("v2LAQGSMMidcentralPtPion");
+  v2LAQGSMPeripheralPtPion->SetName("v2LAQGSMPeripheralPtPion");
+  v2LAQGSMCentralPtKaon->SetName("v2LAQGSMCentralPtKaon");
+  v2LAQGSMMidcentralPtKaon->SetName("v2LAQGSMMidcentralPtKaon");
+  v2LAQGSMPeripheralPtKaon->SetName("v2LAQGSMPeripheralPtKaon");
+
+  v3LAQGSMCentralPtProton->SetName("v3LAQGSMCentralPtProton");
+  v3LAQGSMMidcentralPtProton->SetName("v3LAQGSMMidcentralPtProton");
+  v3LAQGSMPeripheralPtProton->SetName("v3LAQGSMPeripheralPtProton");
+  v3LAQGSMCentralPtPion->SetName("v3LAQGSMCentralPtPion");
+  v3LAQGSMMidcentralPtPion->SetName("LAQv3LAQGSMMidcentralPtPionGSM");
+  v3LAQGSMPeripheralPtPion->SetName("v3LAQGSMPeripheralPtPion");
+  v3LAQGSMCentralPtKaon->SetName("v3LAQGSMCentralPtKaon");
+  v3LAQGSMMidcentralPtKaon->SetName("v3LAQGSMMidcentralPtKaon");
+  v3LAQGSMPeripheralPtKaon->SetName("v3LAQGSMPeripheralPtKaon");
+
+  v3LAQGSMCentralRapidityProton->SetName("v3LAQGSMCentralRapidityProton");
+  v3LAQGSMMidcentralRapidityProton->SetName("v3LAQGSMMidcentralRapidityProton");
+  v3LAQGSMPeripheralRapidityProton->SetName("v3LAQGSMPeripheralRapidityProton");
+  v3LAQGSMCentralRapidityPion->SetName("v3LAQGSMCentralRapidityPion");
+  v3LAQGSMMidcentralRapidityPion->SetName("v3LAQGSMMidcentralRapidityPion");
+  v3LAQGSMPeripheralRapidityPion->SetName("v3LAQGSMPeripheralRapidityPion");
+  v3LAQGSMCentralRapidityKaon->SetName("v3LAQGSMCentralRapidityKaon");
+  v3LAQGSMMidcentralRapidityKaon->SetName("v3LAQGSMMidcentralRapidityKaon");
+  v3LAQGSMPeripheralRapidityKaon->SetName("v3LAQGSMPeripheralRapidityKaon");
+
+  v1PHQMDCentralPtProton->SetName("v1PHQMDCentralPtProton");
+  v1PHQMDMidcentralPtProton->SetName("v1PHQMDMidcentralPtProton");
+  v1PHQMDPeripheralPtProton->SetName("v1PHQMDPeripheralPtProton");
+  v1PHQMDCentralPtPion->SetName("v1PHQMDCentralPtPion");
+  v1PHQMDMidcentralPtPion->SetName("v1PHQMDMidcentralPtPion");
+  v1PHQMDPeripheralPtPion->SetName("v1PHQMDPeripheralPtPion");
+  v1PHQMDCentralPtKaon->SetName("v1PHQMDCentralPtKaon");
+  v1PHQMDMidcentralPtKaon->SetName("v1PHQMDMidcentralPtKaon");
+  v1PHQMDPeripheralPtKaon->SetName("v1PHQMDPeripheralPtKaon");
+
+  v1PHQMDCentralRapidityProton->SetName("v1PHQMDCentralRapidityProton");
+  v1PHQMDMidcentralRapidityProton->SetName("v1PHQMDMidcentralRapidityProton");
+  v1PHQMDPeripheralRapidityProton->SetName("v1PHQMDPeripheralRapidityProton");
+  v1PHQMDCentralRapidityPion->SetName("v1PHQMDCentralRapidityPion");
+  v1PHQMDMidcentralRapidityPion->SetName("v1PHQMDMidcentralRapidityPion");
+  v1PHQMDPeripheralRapidityPion->SetName("v1PHQMDPeripheralRapidityPion");
+  v1PHQMDCentralRapidityKaon->SetName("v1PHQMDCentralRapidityKaon");
+  v1PHQMDMidcentralRapidityKaon->SetName("v1PHQMDMidcentralRapidityKaon");
+  v1PHQMDPeripheralRapidityKaon->SetName("v1PHQMDPeripheralRapidityKaon");
+
+  v2PHQMDCentralPtProton->SetName("v2PHQMDCentralPtProton");
+  v2PHQMDMidcentralPtProton->SetName("v2PHQMDMidcentralPtProton");
+  v2PHQMDPeripheralPtProton->SetName("v2PHQMDPeripheralPtProton");
+  v2PHQMDCentralPtPion->SetName("v2PHQMDCentralPtPion");
+  v2PHQMDMidcentralPtPion->SetName("v2PHQMDMidcentralPtPion");
+  v2PHQMDPeripheralPtPion->SetName("v2PHQMDPeripheralPtPion");
+  v2PHQMDCentralPtKaon->SetName("v2PHQMDCentralPtKaon");
+  v2PHQMDMidcentralPtKaon->SetName("v2PHQMDMidcentralPtKaon");
+  v2PHQMDPeripheralPtKaon->SetName("v2PHQMDPeripheralPtKaon");
+
+  v3PHQMDCentralPtProton->SetName("v3PHQMDCentralPtProton");
+  v3PHQMDMidcentralPtProton->SetName("v3PHQMDMidcentralPtProton");
+  v3PHQMDPeripheralPtProton->SetName("v3PHQMDPeripheralPtProton");
+  v3PHQMDCentralPtPion->SetName("v3PHQMDCentralPtPion");
+  v3PHQMDMidcentralPtPion->SetName("v3PHQMDMidcentralPtPion");
+  v3PHQMDPeripheralPtPion->SetName("v3PHQMDPeripheralPtPion");
+  v3PHQMDCentralPtKaon->SetName("v3PHQMDCentralPtKaon");
+  v3PHQMDMidcentralPtKaon->SetName("v3PHQMDMidcentralPtKaon");
+  v3PHQMDPeripheralPtKaon->SetName("v3PHQMDPeripheralPtKaon");
+
+  v3PHQMDCentralRapidityProton->SetName("v3PHQMDCentralRapidityProton");
+  v3PHQMDMidcentralRapidityProton->SetName("v3PHQMDMidcentralRapidityProton");
+  v3PHQMDPeripheralRapidityProton->SetName("v3PHQMDPeripheralRapidityProton");
+  v3PHQMDCentralRapidityPion->SetName("v3PHQMDCentralRapidityPion");
+  v3PHQMDMidcentralRapidityPion->SetName("v3PHQMDMidcentralRapidityPion");
+  v3PHQMDPeripheralRapidityPion->SetName("v3PHQMDPeripheralRapidityPion");
+  v3PHQMDCentralRapidityKaon->SetName("v3PHQMDCentralRapidityKaon");
+  v3PHQMDMidcentralRapidityKaon->SetName("v3PHQMDMidcentralRapidityKaon");
+  v3PHQMDPeripheralRapidityKaon->SetName("v3PHQMDPeripheralRapidityKaon");
+
+  v1DCMQGSMCentralPtProton->SetName("v1DCMQGSMCentralPtProton");
+  v1DCMQGSMMidcentralPtProton->SetName("v1DCMQGSMMidcentralPtProton");
+  v1DCMQGSMPeripheralPtProton->SetName("v1DCMQGSMPeripheralPtProton");
+  v1DCMQGSMCentralPtPion->SetName("v1DCMQGSMCentralPtPion");
+  v1DCMQGSMMidcentralPtPion->SetName("LAQv1DCMQGSMMidcentralPtPionGSM");
+  v1DCMQGSMPeripheralPtPion->SetName("v1DCMQGSMPeripheralPtPion");
+  v1DCMQGSMCentralPtKaon->SetName("v1DCMQGSMCentralPtKaon");
+  v1DCMQGSMMidcentralPtKaon->SetName("v1DCMQGSMMidcentralPtKaon");
+  v1DCMQGSMPeripheralPtKaon->SetName("v1DCMQGSMPeripheralPtKaon");
+
+  v1DCMQGSMCentralRapidityProton->SetName("v1DCMQGSMCentralRapidityProton");
+  v1DCMQGSMMidcentralRapidityProton->SetName("v1DCMQGSMMidcentralRapidityProton");
+  v1DCMQGSMPeripheralRapidityProton->SetName("v1DCMQGSMPeripheralRapidityProton");
+  v1DCMQGSMCentralRapidityPion->SetName("v1DCMQGSMCentralRapidityPion");
+  v1DCMQGSMMidcentralRapidityPion->SetName("v1DCMQGSMMidcentralRapidityPion");
+  v1DCMQGSMPeripheralRapidityPion->SetName("v1DCMQGSMPeripheralRapidityPion");
+  v1DCMQGSMCentralRapidityKaon->SetName("v1DCMQGSMCentralRapidityKaon");
+  v1DCMQGSMMidcentralRapidityKaon->SetName("v1DCMQGSMMidcentralRapidityKaon");
+  v1DCMQGSMPeripheralRapidityKaon->SetName("v1DCMQGSMPeripheralRapidityKaon");
+
+  v2DCMQGSMCentralPtProton->SetName("v2DCMQGSMCentralPtProton");
+  v2DCMQGSMMidcentralPtProton->SetName("v2DCMQGSMMidcentralPtProton");
+  v2DCMQGSMPeripheralPtProton->SetName("v2DCMQGSMPeripheralPtProton");
+  v2DCMQGSMCentralPtPion->SetName("v2DCMQGSMCentralPtPion");
+  v2DCMQGSMMidcentralPtPion->SetName("v2DCMQGSMMidcentralPtPion");
+  v2DCMQGSMPeripheralPtPion->SetName("v2DCMQGSMPeripheralPtPion");
+  v2DCMQGSMCentralPtKaon->SetName("v2DCMQGSMCentralPtKaon");
+  v2DCMQGSMMidcentralPtKaon->SetName("v2DCMQGSMMidcentralPtKaon");
+  v2DCMQGSMPeripheralPtKaon->SetName("v2DCMQGSMPeripheralPtKaon");
+
+  v3DCMQGSMCentralPtProton->SetName("v3DCMQGSMCentralPtProton");
+  v3DCMQGSMMidcentralPtProton->SetName("v3DCMQGSMMidcentralPtProton");
+  v3DCMQGSMPeripheralPtProton->SetName("v3DCMQGSMPeripheralPtProton");
+  v3DCMQGSMCentralPtPion->SetName("v3DCMQGSMCentralPtPion");
+  v3DCMQGSMMidcentralPtPion->SetName("LAQv3DCMQGSMMidcentralPtPionGSM");
+  v3DCMQGSMPeripheralPtPion->SetName("v3DCMQGSMPeripheralPtPion");
+  v3DCMQGSMCentralPtKaon->SetName("v3DCMQGSMCentralPtKaon");
+  v3DCMQGSMMidcentralPtKaon->SetName("v3DCMQGSMMidcentralPtKaon");
+  v3DCMQGSMPeripheralPtKaon->SetName("v3DCMQGSMPeripheralPtKaon");
+
+  v3DCMQGSMCentralRapidityProton->SetName("v3DCMQGSMCentralRapidityProton");
+  v3DCMQGSMMidcentralRapidityProton->SetName("v3DCMQGSMMidcentralRapidityProton");
+  v3DCMQGSMPeripheralRapidityProton->SetName("v3DCMQGSMPeripheralRapidityProton");
+  v3DCMQGSMCentralRapidityPion->SetName("v3DCMQGSMCentralRapidityPion");
+  v3DCMQGSMMidcentralRapidityPion->SetName("v3DCMQGSMMidcentralRapidityPion");
+  v3DCMQGSMPeripheralRapidityPion->SetName("v3DCMQGSMPeripheralRapidityPion");
+  v3DCMQGSMCentralRapidityKaon->SetName("v3DCMQGSMCentralRapidityKaon");
+  v3DCMQGSMMidcentralRapidityKaon->SetName("v3DCMQGSMMidcentralRapidityKaon");
+  v3DCMQGSMPeripheralRapidityKaon->SetName("v3DCMQGSMPeripheralRapidityKaon");
+
+  hPHSDKinematicsAllPtProton->SetName("PHSD Before selection");
+  hPHSDKinematicsAllEtaProton->SetName("PHSD Before selection");
+  hPHSDKinematicsAllRapidityProton->SetName("PHSD Before selection");
+  hPHSDKinematicsAllPtPion->SetName("PHSD Before selection");
+  hPHSDKinematicsAllEtaPion->SetName("PHSD Before selection");
+  hPHSDKinematicsAllRapidityPion->SetName("PHSD Before selection");
+
+  hPHSDCutsAllPtProton->SetName("PHSD After selection");
+  hPHSDCutsAllEtaProton->SetName("PHSD After selection");
+  hPHSDCutsAllRapidityProton->SetName("PHSD After selection");
+  hPHSDCutsAllPtPion->SetName("PHSD After selection");
+  hPHSDCutsAllEtaPion->SetName("PHSD After selection");
+  hPHSDCutsAllRapidityPion->SetName("PHSD After selection");
+
+  hURQMDKinematicsAllPtProton7GeV->SetName("UrQMD Before selection");
+  hURQMDKinematicsAllEtaProton7GeV->SetName("UrQMD Before selection");
+  hURQMDKinematicsAllRapidityProton7GeV->SetName("UrQMD Before selection");
+  hURQMDKinematicsAllPtPion7GeV->SetName("UrQMD Before selection");
+  hURQMDKinematicsAllEtaPion7GeV->SetName("UrQMD Before selection");
+  hURQMDKinematicsAllRapidityPion7GeV->SetName("UrQMD Before selection");
+
+  hURQMDCutsAllPtProton7GeV->SetName("UrQMD After selection");
+  hURQMDCutsAllEtaProton7GeV->SetName("UrQMD After selection");
+  hURQMDCutsAllRapidityProton7GeV->SetName("UrQMD After selection");
+  hURQMDCutsAllPtPion7GeV->SetName("UrQMD After selection");
+  hURQMDCutsAllEtaPion7GeV->SetName("UrQMD After selection");
+  hURQMDCutsAllRapidityPion7GeV->SetName("UrQMD After selection");
+
+  hLAQGSMKinematicsAllPtProton7GeV->SetName("LAQGSM Before selection");
+  hLAQGSMKinematicsAllEtaProton7GeV->SetName("LAQGSM Before selection");
+  hLAQGSMKinematicsAllRapidityProton7GeV->SetName("LAQGSM Before selection");
+  hLAQGSMKinematicsAllPtPion7GeV->SetName("LAQGSM Before selection");
+  hLAQGSMKinematicsAllEtaPion7GeV->SetName("LAQGSM Before selection");
+  hLAQGSMKinematicsAllRapidityPion7GeV->SetName("LAQGSM Before selection");
+
+  hLAQGSMCutsAllPtProton7GeV->SetName("LAQGSM After selection");
+  hLAQGSMCutsAllEtaProton7GeV->SetName("LAQGSM After selection");
+  hLAQGSMCutsAllRapidityProton7GeV->SetName("LAQGSM After selection");
+  hLAQGSMCutsAllPtPion7GeV->SetName("LAQGSM After selection");
+  hLAQGSMCutsAllEtaPion7GeV->SetName("LAQGSM After selection");
+  hLAQGSMCutsAllRapidityPion7GeV->SetName("LAQGSM After selection");
+
+  hPHQMDKinematicsAllPtProton7GeV->SetName("PHQMD Before selection");
+  hPHQMDKinematicsAllEtaProton7GeV->SetName("PHQMD Before selection");
+  hPHQMDKinematicsAllRapidityProton7GeV->SetName("PHQMD Before selection");
+  hPHQMDKinematicsAllPtPion7GeV->SetName("PHQMD Before selection");
+  hPHQMDKinematicsAllEtaPion7GeV->SetName("PHQMD Before selection");
+  hPHQMDKinematicsAllRapidityPion7GeV->SetName("PHQMD Before selection");
+
+  hPHQMDCutsAllPtProton7GeV->SetName("PHQMD After selection");
+  hPHQMDCutsAllEtaProton7GeV->SetName("PHQMD After selection");
+  hPHQMDCutsAllRapidityProton7GeV->SetName("PHQMD After selection");
+  hPHQMDCutsAllPtPion7GeV->SetName("PHQMD After selection");
+  hPHQMDCutsAllEtaPion7GeV->SetName("PHQMD After selection");
+  hPHQMDCutsAllRapidityPion7GeV->SetName("PHQMD After selection");
+
+  hDCMQGSMKinematicsAllPtProton7GeV->SetName("DCMQGSM Before selection");
+  hDCMQGSMKinematicsAllEtaProton7GeV->SetName("DCMQGSM Before selection");
+  hDCMQGSMKinematicsAllRapidityProton7GeV->SetName("DCMQGSM Before selection");
+  hDCMQGSMKinematicsAllPtPion7GeV->SetName("DCMQGSM Before selection");
+  hDCMQGSMKinematicsAllEtaPion7GeV->SetName("DCMQGSM Before selection");
+  hDCMQGSMKinematicsAllRapidityPion7GeV->SetName("DCMQGSM Before selection");
+
+  hDCMQGSMCutsAllPtProton7GeV->SetName("DCMQGSM After selection");
+  hDCMQGSMCutsAllEtaProton7GeV->SetName("DCMQGSM After selection");
+  hDCMQGSMCutsAllRapidityProton7GeV->SetName("DCMQGSM After selection");
+  hDCMQGSMCutsAllPtPion7GeV->SetName("DCMQGSM After selection");
+  hDCMQGSMCutsAllEtaPion7GeV->SetName("DCMQGSM After selection");
+  hDCMQGSMCutsAllRapidityPion7GeV->SetName("DCMQGSM After selection");
+
+
+
+  v1PHSDCentralPtProton7GeV->SetTitle("PHSD");
+  v1PHSDMidcentralPtProton7GeV->SetTitle("PHSD");
+  v1PHSDPeripheralPtProton7GeV->SetTitle("PHSD");
+  v1PHSDCentralPtPion7GeV->SetTitle("PHSD");
+  v1PHSDMidcentralPtPion7GeV->SetTitle("PHSD");
+  v1PHSDPeripheralPtPion7GeV->SetTitle("PHSD");
+  v1PHSDCentralPtKaon7GeV->SetTitle("PHSD");
+  v1PHSDMidcentralPtKaon7GeV->SetTitle("PHSD");
+  v1PHSDPeripheralPtKaon7GeV->SetTitle("PHSD");
+
+  v1PHSDCentralRapidityProton7GeV->SetTitle("PHSD");
+  v1PHSDMidcentralRapidityProton7GeV->SetTitle("PHSD");
+  v1PHSDPeripheralRapidityProton7GeV->SetTitle("PHSD");
+  v1PHSDCentralRapidityPion7GeV->SetTitle("PHSD");
+  v1PHSDMidcentralRapidityPion7GeV->SetTitle("PHSD");
+  v1PHSDPeripheralRapidityPion7GeV->SetTitle("PHSD");
+  v1PHSDCentralRapidityKaon7GeV->SetTitle("PHSD");
+  v1PHSDMidcentralRapidityKaon7GeV->SetTitle("PHSD");
+  v1PHSDPeripheralRapidityKaon7GeV->SetTitle("PHSD");
+
+  v2PHSDCentralPtProton7GeV->SetTitle("PHSD");
+  v2PHSDMidcentralPtProton7GeV->SetTitle("PHSD");
+  v2PHSDPeripheralPtProton7GeV->SetTitle("PHSD");
+  v2PHSDCentralPtPion7GeV->SetTitle("PHSD");
+  v2PHSDMidcentralPtPion7GeV->SetTitle("PHSD");
+  v2PHSDPeripheralPtPion7GeV->SetTitle("PHSD");
+  v2PHSDCentralPtKaon7GeV->SetTitle("PHSD");
+  v2PHSDMidcentralPtKaon7GeV->SetTitle("PHSD");
+  v2PHSDPeripheralPtKaon7GeV->SetTitle("PHSD");
+
+  v3PHSDCentralPtProton7GeV->SetTitle("PHSD");
+  v3PHSDMidcentralPtProton7GeV->SetTitle("PHSD");
+  v3PHSDPeripheralPtProton7GeV->SetTitle("PHSD");
+  v3PHSDCentralPtPion7GeV->SetTitle("PHSD");
+  v3PHSDMidcentralPtPion7GeV->SetTitle("PHSD");
+  v3PHSDPeripheralPtPion7GeV->SetTitle("PHSD");
+  v3PHSDCentralPtKaon7GeV->SetTitle("PHSD");
+  v3PHSDMidcentralPtKaon7GeV->SetTitle("PHSD");
+  v3PHSDPeripheralPtKaon7GeV->SetTitle("PHSD");
+
+  v3PHSDCentralRapidityProton7GeV->SetTitle("PHSD");
+  v3PHSDMidcentralRapidityProton7GeV->SetTitle("PHSD");
+  v3PHSDPeripheralRapidityProton7GeV->SetTitle("PHSD");
+  v3PHSDCentralRapidityPion7GeV->SetTitle("PHSD");
+  v3PHSDMidcentralRapidityPion7GeV->SetTitle("PHSD");
+  v3PHSDPeripheralRapidityPion7GeV->SetTitle("PHSD");
+  v3PHSDCentralRapidityKaon7GeV->SetTitle("PHSD");
+  v3PHSDMidcentralRapidityKaon7GeV->SetTitle("PHSD");
+  v3PHSDPeripheralRapidityKaon7GeV->SetTitle("PHSD");
+
+  v1URQMDCentralPtProton7GeV->SetTitle("URQMD");
+  v1URQMDMidcentralPtProton7GeV->SetTitle("URQMD");
+  v1URQMDPeripheralPtProton7GeV->SetTitle("URQMD");
+  v1URQMDCentralPtPion7GeV->SetTitle("URQMD");
+  v1URQMDMidcentralPtPion7GeV->SetTitle("URQMD");
+  v1URQMDPeripheralPtPion7GeV->SetTitle("URQMD");
+  v1URQMDCentralPtKaon7GeV->SetTitle("URQMD");
+  v1URQMDMidcentralPtKaon7GeV->SetTitle("URQMD");
+  v1URQMDPeripheralPtKaon7GeV->SetTitle("URQMD");
+
+  v1URQMDCentralRapidityProton7GeV->SetTitle("URQMD");
+  v1URQMDMidcentralRapidityProton7GeV->SetTitle("URQMD");
+  v1URQMDPeripheralRapidityProton7GeV->SetTitle("URQMD");
+  v1URQMDCentralRapidityPion7GeV->SetTitle("URQMD");
+  v1URQMDMidcentralRapidityPion7GeV->SetTitle("URQMD");
+  v1URQMDPeripheralRapidityPion7GeV->SetTitle("URQMD");
+  v1URQMDCentralRapidityKaon7GeV->SetTitle("URQMD");
+  v1URQMDMidcentralRapidityKaon7GeV->SetTitle("URQMD");
+  v1URQMDPeripheralRapidityKaon7GeV->SetTitle("URQMD");
+
+  v2URQMDCentralPtProton7GeV->SetTitle("URQMD");
+  v2URQMDMidcentralPtProton7GeV->SetTitle("URQMD");
+  v2URQMDPeripheralPtProton7GeV->SetTitle("URQMD");
+  v2URQMDCentralPtPion7GeV->SetTitle("URQMD");
+  v2URQMDMidcentralPtPion7GeV->SetTitle("URQMD");
+  v2URQMDPeripheralPtPion7GeV->SetTitle("URQMD");
+  v2URQMDCentralPtKaon7GeV->SetTitle("URQMD");
+  v2URQMDMidcentralPtKaon7GeV->SetTitle("URQMD");
+  v2URQMDPeripheralPtKaon7GeV->SetTitle("URQMD");
+
+  v3URQMDCentralPtProton7GeV->SetTitle("URQMD");
+  v3URQMDMidcentralPtProton7GeV->SetTitle("URQMD");
+  v3URQMDPeripheralPtProton7GeV->SetTitle("URQMD");
+  v3URQMDCentralPtPion7GeV->SetTitle("URQMD");
+  v3URQMDMidcentralPtPion7GeV->SetTitle("URQMD");
+  v3URQMDPeripheralPtPion7GeV->SetTitle("URQMD");
+  v3URQMDCentralPtKaon7GeV->SetTitle("URQMD");
+  v3URQMDMidcentralPtKaon7GeV->SetTitle("URQMD");
+  v3URQMDPeripheralPtKaon7GeV->SetTitle("URQMD");
+
+  v3URQMDCentralRapidityProton7GeV->SetTitle("URQMD");
+  v3URQMDMidcentralRapidityProton7GeV->SetTitle("URQMD");
+  v3URQMDPeripheralRapidityProton7GeV->SetTitle("URQMD");
+  v3URQMDCentralRapidityPion7GeV->SetTitle("URQMD");
+  v3URQMDMidcentralRapidityPion7GeV->SetTitle("URQMD");
+  v3URQMDPeripheralRapidityPion7GeV->SetTitle("URQMD");
+  v3URQMDCentralRapidityKaon7GeV->SetTitle("URQMD");
+  v3URQMDMidcentralRapidityKaon7GeV->SetTitle("URQMD");
+  v3URQMDPeripheralRapidityKaon7GeV->SetTitle("URQMD");
+
+  v1LAQGSMCentralPtProton7GeV->SetTitle("LAQGSM");
+  v1LAQGSMMidcentralPtProton7GeV->SetTitle("LAQGSM");
+  v1LAQGSMPeripheralPtProton7GeV->SetTitle("LAQGSM");
+  v1LAQGSMCentralPtPion7GeV->SetTitle("LAQGSM");
+  v1LAQGSMMidcentralPtPion7GeV->SetTitle("LAQGSM");
+  v1LAQGSMPeripheralPtPion7GeV->SetTitle("LAQGSM");
+  v1LAQGSMCentralPtKaon7GeV->SetTitle("LAQGSM");
+  v1LAQGSMMidcentralPtKaon7GeV->SetTitle("LAQGSM");
+  v1LAQGSMPeripheralPtKaon7GeV->SetTitle("LAQGSM");
+
+  v1LAQGSMCentralRapidityProton7GeV->SetTitle("LAQGSM");
+  v1LAQGSMMidcentralRapidityProton7GeV->SetTitle("LAQGSM");
+  v1LAQGSMPeripheralRapidityProton7GeV->SetTitle("LAQGSM");
+  v1LAQGSMCentralRapidityPion7GeV->SetTitle("LAQGSM");
+  v1LAQGSMMidcentralRapidityPion7GeV->SetTitle("LAQGSM");
+  v1LAQGSMPeripheralRapidityPion7GeV->SetTitle("LAQGSM");
+  v1LAQGSMCentralRapidityKaon7GeV->SetTitle("LAQGSM");
+  v1LAQGSMMidcentralRapidityKaon7GeV->SetTitle("LAQGSM");
+  v1LAQGSMPeripheralRapidityKaon7GeV->SetTitle("LAQGSM");
+
+  v2LAQGSMCentralPtProton7GeV->SetTitle("LAQGSM");
+  v2LAQGSMMidcentralPtProton7GeV->SetTitle("LAQGSM");
+  v2LAQGSMPeripheralPtProton7GeV->SetTitle("LAQGSM");
+  v2LAQGSMCentralPtPion7GeV->SetTitle("LAQGSM");
+  v2LAQGSMMidcentralPtPion7GeV->SetTitle("LAQGSM");
+  v2LAQGSMPeripheralPtPion7GeV->SetTitle("LAQGSM");
+  v2LAQGSMCentralPtKaon7GeV->SetTitle("LAQGSM");
+  v2LAQGSMMidcentralPtKaon7GeV->SetTitle("LAQGSM");
+  v2LAQGSMPeripheralPtKaon7GeV->SetTitle("LAQGSM");
+
+  v3LAQGSMCentralPtProton7GeV->SetTitle("LAQGSM");
+  v3LAQGSMMidcentralPtProton7GeV->SetTitle("LAQGSM");
+  v3LAQGSMPeripheralPtProton7GeV->SetTitle("LAQGSM");
+  v3LAQGSMCentralPtPion7GeV->SetTitle("LAQGSM");
+  v3LAQGSMMidcentralPtPion7GeV->SetTitle("LAQGSM");
+  v3LAQGSMPeripheralPtPion7GeV->SetTitle("LAQGSM");
+  v3LAQGSMCentralPtKaon7GeV->SetTitle("LAQGSM");
+  v3LAQGSMMidcentralPtKaon7GeV->SetTitle("LAQGSM");
+  v3LAQGSMPeripheralPtKaon7GeV->SetTitle("LAQGSM");
+
+  v3LAQGSMCentralRapidityProton7GeV->SetTitle("LAQGSM");
+  v3LAQGSMMidcentralRapidityProton7GeV->SetTitle("LAQGSM");
+  v3LAQGSMPeripheralRapidityProton7GeV->SetTitle("LAQGSM");
+  v3LAQGSMCentralRapidityPion7GeV->SetTitle("LAQGSM");
+  v3LAQGSMMidcentralRapidityPion7GeV->SetTitle("LAQGSM");
+  v3LAQGSMPeripheralRapidityPion7GeV->SetTitle("LAQGSM");
+  v3LAQGSMCentralRapidityKaon7GeV->SetTitle("LAQGSM");
+  v3LAQGSMMidcentralRapidityKaon7GeV->SetTitle("LAQGSM");
+  v3LAQGSMPeripheralRapidityKaon7GeV->SetTitle("LAQGSM");
+
+  v1PHQMDCentralPtProton7GeV->SetTitle("PHQMD");
+  v1PHQMDMidcentralPtProton7GeV->SetTitle("PHQMD");
+  v1PHQMDPeripheralPtProton7GeV->SetTitle("PHQMD");
+  v1PHQMDCentralPtPion7GeV->SetTitle("PHQMD");
+  v1PHQMDMidcentralPtPion7GeV->SetTitle("PHQMD");
+  v1PHQMDPeripheralPtPion7GeV->SetTitle("PHQMD");
+  v1PHQMDCentralPtKaon7GeV->SetTitle("PHQMD");
+  v1PHQMDMidcentralPtKaon7GeV->SetTitle("PHQMD");
+  v1PHQMDPeripheralPtKaon7GeV->SetTitle("PHQMD");
+
+  v1PHQMDCentralRapidityProton7GeV->SetTitle("PHQMD");
+  v1PHQMDMidcentralRapidityProton7GeV->SetTitle("PHQMD");
+  v1PHQMDPeripheralRapidityProton7GeV->SetTitle("PHQMD");
+  v1PHQMDCentralRapidityPion7GeV->SetTitle("PHQMD");
+  v1PHQMDMidcentralRapidityPion7GeV->SetTitle("PHQMD");
+  v1PHQMDPeripheralRapidityPion7GeV->SetTitle("PHQMD");
+  v1PHQMDCentralRapidityKaon7GeV->SetTitle("PHQMD");
+  v1PHQMDMidcentralRapidityKaon7GeV->SetTitle("PHQMD");
+  v1PHQMDPeripheralRapidityKaon7GeV->SetTitle("PHQMD");
+
+  v2PHQMDCentralPtProton7GeV->SetTitle("PHQMD");
+  v2PHQMDMidcentralPtProton7GeV->SetTitle("PHQMD");
+  v2PHQMDPeripheralPtProton7GeV->SetTitle("PHQMD");
+  v2PHQMDCentralPtPion7GeV->SetTitle("PHQMD");
+  v2PHQMDMidcentralPtPion7GeV->SetTitle("PHQMD");
+  v2PHQMDPeripheralPtPion7GeV->SetTitle("PHQMD");
+  v2PHQMDCentralPtKaon7GeV->SetTitle("PHQMD");
+  v2PHQMDMidcentralPtKaon7GeV->SetTitle("PHQMD");
+  v2PHQMDPeripheralPtKaon7GeV->SetTitle("PHQMD");
+
+  v3PHQMDCentralPtProton7GeV->SetTitle("PHQMD");
+  v3PHQMDMidcentralPtProton7GeV->SetTitle("PHQMD");
+  v3PHQMDPeripheralPtProton7GeV->SetTitle("PHQMD");
+  v3PHQMDCentralPtPion7GeV->SetTitle("PHQMD");
+  v3PHQMDMidcentralPtPion7GeV->SetTitle("PHQMD");
+  v3PHQMDPeripheralPtPion7GeV->SetTitle("PHQMD");
+  v3PHQMDCentralPtKaon7GeV->SetTitle("PHQMD");
+  v3PHQMDMidcentralPtKaon7GeV->SetTitle("PHQMD");
+  v3PHQMDPeripheralPtKaon7GeV->SetTitle("PHQMD");
+
+  v3PHQMDCentralRapidityProton7GeV->SetTitle("PHQMD");
+  v3PHQMDMidcentralRapidityProton7GeV->SetTitle("PHQMD");
+  v3PHQMDPeripheralRapidityProton7GeV->SetTitle("PHQMD");
+  v3PHQMDCentralRapidityPion7GeV->SetTitle("PHQMD");
+  v3PHQMDMidcentralRapidityPion7GeV->SetTitle("PHQMD");
+  v3PHQMDPeripheralRapidityPion7GeV->SetTitle("PHQMD");
+  v3PHQMDCentralRapidityKaon7GeV->SetTitle("PHQMD");
+  v3PHQMDMidcentralRapidityKaon7GeV->SetTitle("PHQMD");
+  v3PHQMDPeripheralRapidityKaon7GeV->SetTitle("PHQMD");
+
+  v1DCMQGSMCentralPtProton7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMMidcentralPtProton7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMPeripheralPtProton7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMCentralPtPion7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMMidcentralPtPion7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMPeripheralPtPion7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMCentralPtKaon7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMMidcentralPtKaon7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMPeripheralPtKaon7GeV->SetTitle("DCMQGSM");
+
+  v1DCMQGSMCentralRapidityProton7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMMidcentralRapidityProton7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMPeripheralRapidityProton7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMCentralRapidityPion7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMMidcentralRapidityPion7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMPeripheralRapidityPion7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMCentralRapidityKaon7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMMidcentralRapidityKaon7GeV->SetTitle("DCMQGSM");
+  v1DCMQGSMPeripheralRapidityKaon7GeV->SetTitle("DCMQGSM");
+
+  v2DCMQGSMCentralPtProton7GeV->SetTitle("DCMQGSM");
+  v2DCMQGSMMidcentralPtProton7GeV->SetTitle("DCMQGSM");
+  v2DCMQGSMPeripheralPtProton7GeV->SetTitle("DCMQGSM");
+  v2DCMQGSMCentralPtPion7GeV->SetTitle("DCMQGSM");
+  v2DCMQGSMMidcentralPtPion7GeV->SetTitle("DCMQGSM");
+  v2DCMQGSMPeripheralPtPion7GeV->SetTitle("DCMQGSM");
+  v2DCMQGSMCentralPtKaon7GeV->SetTitle("DCMQGSM");
+  v2DCMQGSMMidcentralPtKaon7GeV->SetTitle("DCMQGSM");
+  v2DCMQGSMPeripheralPtKaon7GeV->SetTitle("DCMQGSM");
+
+  v3DCMQGSMCentralPtProton7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMMidcentralPtProton7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMPeripheralPtProton7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMCentralPtPion7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMMidcentralPtPion7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMPeripheralPtPion7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMCentralPtKaon7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMMidcentralPtKaon7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMPeripheralPtKaon7GeV->SetTitle("DCMQGSM");
+
+  v3DCMQGSMCentralRapidityProton7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMMidcentralRapidityProton7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMPeripheralRapidityProton7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMCentralRapidityPion7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMMidcentralRapidityPion7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMPeripheralRapidityPion7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMCentralRapidityKaon7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMMidcentralRapidityKaon7GeV->SetTitle("DCMQGSM");
+  v3DCMQGSMPeripheralRapidityKaon7GeV->SetTitle("DCMQGSM");
+
+  hPHSDKinematicsAllPtProton7GeV->SetTitle("Before selection");
+  hPHSDKinematicsAllEtaProton7GeV->SetTitle("Before selection");
+  hPHSDKinematicsAllRapidityProton7GeV->SetTitle("Before selection");
+  hPHSDKinematicsAllPtPion7GeV->SetTitle("Before selection");
+  hPHSDKinematicsAllEtaPion7GeV->SetTitle("Before selection");
+  hPHSDKinematicsAllRapidityPion7GeV->SetTitle("Before selection");
+
+  hPHSDCutsAllPtProton7GeV->SetTitle("After selection");
+  hPHSDCutsAllEtaProton7GeV->SetTitle("After selection");
+  hPHSDCutsAllRapidityProton7GeV->SetTitle("After selection");
+  hPHSDCutsAllPtPion7GeV->SetTitle("After selection");
+  hPHSDCutsAllEtaPion7GeV->SetTitle("After selection");
+  hPHSDCutsAllRapidityPion7GeV->SetTitle("After selection");
+
+  hURQMDKinematicsAllPtProton7GeV->SetTitle("Before selection");
+  hURQMDKinematicsAllEtaProton7GeV->SetTitle("Before selection");
+  hURQMDKinematicsAllRapidityProton7GeV->SetTitle("Before selection");
+  hURQMDKinematicsAllPtPion7GeV->SetTitle("Before selection");
+  hURQMDKinematicsAllEtaPion7GeV->SetTitle("Before selection");
+  hURQMDKinematicsAllRapidityPion7GeV->SetTitle("Before selection");
+
+  hURQMDCutsAllPtProton7GeV->SetTitle("After selection");
+  hURQMDCutsAllEtaProton7GeV->SetTitle("After selection");
+  hURQMDCutsAllRapidityProton7GeV->SetTitle("After selection");
+  hURQMDCutsAllPtPion7GeV->SetTitle("After selection");
+  hURQMDCutsAllEtaPion7GeV->SetTitle("After selection");
+  hURQMDCutsAllRapidityPion7GeV->SetTitle("After selection");
+
+  hLAQGSMKinematicsAllPtProton7GeV->SetTitle("Before selection");
+  hLAQGSMKinematicsAllEtaProton7GeV->SetTitle("Before selection");
+  hLAQGSMKinematicsAllRapidityProton7GeV->SetTitle("Before selection");
+  hLAQGSMKinematicsAllPtPion7GeV->SetTitle("Before selection");
+  hLAQGSMKinematicsAllEtaPion7GeV->SetTitle("Before selection");
+  hLAQGSMKinematicsAllRapidityPion7GeV->SetTitle("Before selection");
+
+  hLAQGSMCutsAllPtProton7GeV->SetTitle("After selection");
+  hLAQGSMCutsAllEtaProton7GeV->SetTitle("After selection");
+  hLAQGSMCutsAllRapidityProton7GeV->SetTitle("After selection");
+  hLAQGSMCutsAllPtPion7GeV->SetTitle("After selection");
+  hLAQGSMCutsAllEtaPion7GeV->SetTitle("After selection");
+  hLAQGSMCutsAllRapidityPion7GeV->SetTitle("After selection");
+
+  hPHQMDKinematicsAllPtProton7GeV->SetTitle("Before selection");
+  hPHQMDKinematicsAllEtaProton7GeV->SetTitle("Before selection");
+  hPHQMDKinematicsAllRapidityProton7GeV->SetTitle("Before selection");
+  hPHQMDKinematicsAllPtPion7GeV->SetTitle("Before selection");
+  hPHQMDKinematicsAllEtaPion7GeV->SetTitle("Before selection");
+  hPHQMDKinematicsAllRapidityPion7GeV->SetTitle("Before selection");
+
+  hPHQMDCutsAllPtProton7GeV->SetTitle("After selection");
+  hPHQMDCutsAllEtaProton7GeV->SetTitle("After selection");
+  hPHQMDCutsAllRapidityProton7GeV->SetTitle("After selection");
+  hPHQMDCutsAllPtPion7GeV->SetTitle("After selection");
+  hPHQMDCutsAllEtaPion7GeV->SetTitle("After selection");
+  hPHQMDCutsAllRapidityPion7GeV->SetTitle("After selection");
+
+  hDCMQGSMKinematicsAllPtProton7GeV->SetTitle("Before selection");
+  hDCMQGSMKinematicsAllEtaProton7GeV->SetTitle("Before selection");
+  hDCMQGSMKinematicsAllRapidityProton7GeV->SetTitle("Before selection");
+  hDCMQGSMKinematicsAllPtPion7GeV->SetTitle("Before selection");
+  hDCMQGSMKinematicsAllEtaPion7GeV->SetTitle("Before selection");
+  hDCMQGSMKinematicsAllRapidityPion7GeV->SetTitle("Before selection");
+
+  hDCMQGSMCutsAllPtProton7GeV->SetTitle("After selection");
+  hDCMQGSMCutsAllEtaProton7GeV->SetTitle("After selection");
+  hDCMQGSMCutsAllRapidityProton7GeV->SetTitle("After selection");
+  hDCMQGSMCutsAllPtPion7GeV->SetTitle("After selection");
+  hDCMQGSMCutsAllEtaPion7GeV->SetTitle("After selection");
+  hDCMQGSMCutsAllRapidityPion7GeV->SetTitle("After selection");
+
+  v1PHSDCentralPtProton7GeV->SetName("v1PHSDCentralPtProton");
+  v1PHSDMidcentralPtProton7GeV->SetName("v1PHSDMidcentralPtProton");
+  v1PHSDPeripheralPtProton7GeV->SetName("v1PHSDPeripheralPtProton");
+  v1PHSDCentralPtPion7GeV->SetName("v1PHSDCentralPtPion");
+  v1PHSDMidcentralPtPion7GeV->SetName("v1PHSDMidcentralPtPion");
+  v1PHSDPeripheralPtPion7GeV->SetName("v1PHSDPeripheralPtPion");
+  v1PHSDCentralPtKaon7GeV->SetName("v1PHSDCentralPtKaon");
+  v1PHSDMidcentralPtKaon7GeV->SetName("v1PHSDMidcentralPtKaon");
+  v1PHSDPeripheralPtKaon7GeV->SetName("v1PHSDPeripheralPtKaon");
+
+  v1PHSDCentralRapidityProton7GeV->SetName("v1PHSDCentralRapidityProton");
+  v1PHSDMidcentralRapidityProton7GeV->SetName("v1PHSDMidcentralRapidityProton");
+  v1PHSDPeripheralRapidityProton7GeV->SetName("v1PHSDPeripheralRapidityProton");
+  v1PHSDCentralRapidityPion7GeV->SetName("v1PHSDCentralRapidityPion");
+  v1PHSDMidcentralRapidityPion7GeV->SetName("v1PHSDMidcentralRapidityPion");
+  v1PHSDPeripheralRapidityPion7GeV->SetName("v1PHSDPeripheralRapidityPion");
+  v1PHSDCentralRapidityKaon7GeV->SetName("v1PHSDCentralRapidityKaon");
+  v1PHSDMidcentralRapidityKaon7GeV->SetName("v1PHSDMidcentralRapidityKaon");
+  v1PHSDPeripheralRapidityKaon7GeV->SetName("v1PHSDPeripheralRapidityKaon");
+
+  v2PHSDCentralPtProton7GeV->SetName("v2PHSDCentralPtProton");
+  v2PHSDMidcentralPtProton7GeV->SetName("v2PHSDMidcentralPtProton");
+  v2PHSDPeripheralPtProton7GeV->SetName("v2PHSDPeripheralPtProton");
+  v2PHSDCentralPtPion7GeV->SetName("v2PHSDCentralPtPion");
+  v2PHSDMidcentralPtPion7GeV->SetName("v2PHSDMidcentralPtPion");
+  v2PHSDPeripheralPtPion7GeV->SetName("v2PHSDPeripheralPtPion");
+  v2PHSDCentralPtKaon7GeV->SetName("v2PHSDCentralPtKaon");
+  v2PHSDMidcentralPtKaon7GeV->SetName("v2PHSDMidcentralPtKaon");
+  v2PHSDPeripheralPtKaon7GeV->SetName("v2PHSDPeripheralPtKaon");
+
+  v3PHSDCentralPtProton7GeV->SetName("v3PHSDCentralPtProton");
+  v3PHSDMidcentralPtProton7GeV->SetName("v3PHSDMidcentralPtProton");
+  v3PHSDPeripheralPtProton7GeV->SetName("v3PHSDPeripheralPtProton");
+  v3PHSDCentralPtPion7GeV->SetName("v3PHSDCentralPtPion");
+  v3PHSDMidcentralPtPion7GeV->SetName("v3PHSDMidcentralPtPion");
+  v3PHSDPeripheralPtPion7GeV->SetName("v3PHSDPeripheralPtPion");
+  v3PHSDCentralPtKaon7GeV->SetName("v3PHSDCentralPtKaon");
+  v3PHSDMidcentralPtKaon7GeV->SetName("v3PHSDMidcentralPtKaon");
+  v3PHSDPeripheralPtKaon7GeV->SetName("v3PHSDPeripheralPtKaon");
+
+  v3PHSDCentralRapidityProton7GeV->SetName("v3PHSDCentralRapidityProton");
+  v3PHSDMidcentralRapidityProton7GeV->SetName("v3PHSDMidcentralRapidityProton");
+  v3PHSDPeripheralRapidityProton7GeV->SetName("v3PHSDPeripheralRapidityProton");
+  v3PHSDCentralRapidityPion7GeV->SetName("v3PHSDCentralRapidityPion");
+  v3PHSDMidcentralRapidityPion7GeV->SetName("v3PHSDMidcentralRapidityPion");
+  v3PHSDPeripheralRapidityPion7GeV->SetName("v3PHSDPeripheralRapidityPion");
+  v3PHSDCentralRapidityKaon7GeV->SetName("v3PHSDCentralRapidityKaon");
+  v3PHSDMidcentralRapidityKaon7GeV->SetName("v3PHSDMidcentralRapidityKaon");
+  v3PHSDPeripheralRapidityKaon7GeV->SetName("v3PHSDPeripheralRapidityKaon");
+
+  v1URQMDCentralPtProton7GeV->SetName("v1URQMDCentralPtProton");
+  v1URQMDMidcentralPtProton7GeV->SetName("v1URQMDMidcentralPtProton");
+  v1URQMDPeripheralPtProton7GeV->SetName("v1URQMDPeripheralPtProton");
+  v1URQMDCentralPtPion7GeV->SetName("v1URQMDCentralPtPion");
+  v1URQMDMidcentralPtPion7GeV->SetName("v1URQMDMidcentralPtPion");
+  v1URQMDPeripheralPtPion7GeV->SetName("v1URQMDPeripheralPtPion");
+  v1URQMDCentralPtKaon7GeV->SetName("v1URQMDCentralPtKaon");
+  v1URQMDMidcentralPtKaon7GeV->SetName("v1URQMDMidcentralPtKaon");
+  v1URQMDPeripheralPtKaon7GeV->SetName("v1URQMDPeripheralPtKaon");
+
+  v1URQMDCentralRapidityProton7GeV->SetName("v1URQMDCentralRapidityProton");
+  v1URQMDMidcentralRapidityProton7GeV->SetName("v1URQMDMidcentralRapidityProton");
+  v1URQMDPeripheralRapidityProton7GeV->SetName("v1URQMDPeripheralRapidityProton");
+  v1URQMDCentralRapidityPion7GeV->SetName("v1URQMDCentralRapidityPion");
+  v1URQMDMidcentralRapidityPion7GeV->SetName("v1URQMDMidcentralRapidityPion");
+  v1URQMDPeripheralRapidityPion7GeV->SetName("v1URQMDPeripheralRapidityPion");
+  v1URQMDCentralRapidityKaon7GeV->SetName("v1URQMDCentralRapidityKaon");
+  v1URQMDMidcentralRapidityKaon7GeV->SetName("v1URQMDMidcentralRapidityKaon");
+  v1URQMDPeripheralRapidityKaon7GeV->SetName("v1URQMDPeripheralRapidityKaon");
+
+  v2URQMDCentralPtProton7GeV->SetName("v2URQMDCentralPtProton");
+  v2URQMDMidcentralPtProton7GeV->SetName("v2URQMDMidcentralPtProton");
+  v2URQMDPeripheralPtProton7GeV->SetName("v2URQMDPeripheralPtProton");
+  v2URQMDCentralPtPion7GeV->SetName("v2URQMDCentralPtPion");
+  v2URQMDMidcentralPtPion7GeV->SetName("v2URQMDMidcentralPtPion");
+  v2URQMDPeripheralPtPion7GeV->SetName("v2URQMDPeripheralPtPion");
+  v2URQMDCentralPtKaon7GeV->SetName("v2URQMDCentralPtKaon");
+  v2URQMDMidcentralPtKaon7GeV->SetName("v2URQMDMidcentralPtKaon");
+  v2URQMDPeripheralPtKaon7GeV->SetName("v2URQMDPeripheralPtKaon");
+
+  v3URQMDCentralPtProton7GeV->SetName("v3URQMDCentralPtProton");
+  v3URQMDMidcentralPtProton7GeV->SetName("v3URQMDMidcentralPtProton");
+  v3URQMDPeripheralPtProton7GeV->SetName("v3URQMDPeripheralPtProton");
+  v3URQMDCentralPtPion7GeV->SetName("v3URQMDCentralPtPion");
+  v3URQMDMidcentralPtPion7GeV->SetName("v3URQMDMidcentralPtPion");
+  v3URQMDPeripheralPtPion7GeV->SetName("v3URQMDPeripheralPtPion");
+  v3URQMDCentralPtKaon7GeV->SetName("v3URQMDCentralPtKaon");
+  v3URQMDMidcentralPtKaon7GeV->SetName("v3URQMDMidcentralPtKaon");
+  v3URQMDPeripheralPtKaon7GeV->SetName("v3URQMDPeripheralPtKaon");
+
+  v3URQMDCentralRapidityProton7GeV->SetName("v3URQMDCentralRapidityProton");
+  v3URQMDMidcentralRapidityProton7GeV->SetName("v3URQMDMidcentralRapidityProton");
+  v3URQMDPeripheralRapidityProton7GeV->SetName("v3URQMDPeripheralRapidityProton");
+  v3URQMDCentralRapidityPion7GeV->SetName("v3URQMDCentralRapidityPion");
+  v3URQMDMidcentralRapidityPion7GeV->SetName("v3URQMDMidcentralRapidityPion");
+  v3URQMDPeripheralRapidityPion7GeV->SetName("v3URQMDPeripheralRapidityPion");
+  v3URQMDCentralRapidityKaon7GeV->SetName("v3URQMDCentralRapidityKaon");
+  v3URQMDMidcentralRapidityKaon7GeV->SetName("v3URQMDMidcentralRapidityKaon");
+  v3URQMDPeripheralRapidityKaon7GeV->SetName("v3URQMDPeripheralRapidityKaon");
+
+  v1LAQGSMCentralPtProton7GeV->SetName("v1LAQGSMCentralPtProton");
+  v1LAQGSMMidcentralPtProton7GeV->SetName("v1LAQGSMMidcentralPtProton");
+  v1LAQGSMPeripheralPtProton7GeV->SetName("v1LAQGSMPeripheralPtProton");
+  v1LAQGSMCentralPtPion7GeV->SetName("v1LAQGSMCentralPtPion");
+  v1LAQGSMMidcentralPtPion7GeV->SetName("LAQv1LAQGSMMidcentralPtPionGSM");
+  v1LAQGSMPeripheralPtPion7GeV->SetName("v1LAQGSMPeripheralPtPion");
+  v1LAQGSMCentralPtKaon7GeV->SetName("v1LAQGSMCentralPtKaon");
+  v1LAQGSMMidcentralPtKaon7GeV->SetName("v1LAQGSMMidcentralPtKaon");
+  v1LAQGSMPeripheralPtKaon7GeV->SetName("v1LAQGSMPeripheralPtKaon");
+
+  v1LAQGSMCentralRapidityProton7GeV->SetName("v1LAQGSMCentralRapidityProton");
+  v1LAQGSMMidcentralRapidityProton7GeV->SetName("v1LAQGSMMidcentralRapidityProton");
+  v1LAQGSMPeripheralRapidityProton7GeV->SetName("v1LAQGSMPeripheralRapidityProton");
+  v1LAQGSMCentralRapidityPion7GeV->SetName("v1LAQGSMCentralRapidityPion");
+  v1LAQGSMMidcentralRapidityPion7GeV->SetName("v1LAQGSMMidcentralRapidityPion");
+  v1LAQGSMPeripheralRapidityPion7GeV->SetName("v1LAQGSMPeripheralRapidityPion");
+  v1LAQGSMCentralRapidityKaon7GeV->SetName("v1LAQGSMCentralRapidityKaon");
+  v1LAQGSMMidcentralRapidityKaon7GeV->SetName("v1LAQGSMMidcentralRapidityKaon");
+  v1LAQGSMPeripheralRapidityKaon7GeV->SetName("v1LAQGSMPeripheralRapidityKaon");
+
+  v2LAQGSMCentralPtProton7GeV->SetName("v2LAQGSMCentralPtProton");
+  v2LAQGSMMidcentralPtProton7GeV->SetName("v2LAQGSMMidcentralPtProton");
+  v2LAQGSMPeripheralPtProton7GeV->SetName("v2LAQGSMPeripheralPtProton");
+  v2LAQGSMCentralPtPion7GeV->SetName("v2LAQGSMCentralPtPion");
+  v2LAQGSMMidcentralPtPion7GeV->SetName("v2LAQGSMMidcentralPtPion");
+  v2LAQGSMPeripheralPtPion7GeV->SetName("v2LAQGSMPeripheralPtPion");
+  v2LAQGSMCentralPtKaon7GeV->SetName("v2LAQGSMCentralPtKaon");
+  v2LAQGSMMidcentralPtKaon7GeV->SetName("v2LAQGSMMidcentralPtKaon");
+  v2LAQGSMPeripheralPtKaon7GeV->SetName("v2LAQGSMPeripheralPtKaon");
+
+  v3LAQGSMCentralPtProton7GeV->SetName("v3LAQGSMCentralPtProton");
+  v3LAQGSMMidcentralPtProton7GeV->SetName("v3LAQGSMMidcentralPtProton");
+  v3LAQGSMPeripheralPtProton7GeV->SetName("v3LAQGSMPeripheralPtProton");
+  v3LAQGSMCentralPtPion7GeV->SetName("v3LAQGSMCentralPtPion");
+  v3LAQGSMMidcentralPtPion7GeV->SetName("LAQv3LAQGSMMidcentralPtPionGSM");
+  v3LAQGSMPeripheralPtPion7GeV->SetName("v3LAQGSMPeripheralPtPion");
+  v3LAQGSMCentralPtKaon7GeV->SetName("v3LAQGSMCentralPtKaon");
+  v3LAQGSMMidcentralPtKaon7GeV->SetName("v3LAQGSMMidcentralPtKaon");
+  v3LAQGSMPeripheralPtKaon7GeV->SetName("v3LAQGSMPeripheralPtKaon");
+
+  v3LAQGSMCentralRapidityProton7GeV->SetName("v3LAQGSMCentralRapidityProton");
+  v3LAQGSMMidcentralRapidityProton7GeV->SetName("v3LAQGSMMidcentralRapidityProton");
+  v3LAQGSMPeripheralRapidityProton7GeV->SetName("v3LAQGSMPeripheralRapidityProton");
+  v3LAQGSMCentralRapidityPion7GeV->SetName("v3LAQGSMCentralRapidityPion");
+  v3LAQGSMMidcentralRapidityPion7GeV->SetName("v3LAQGSMMidcentralRapidityPion");
+  v3LAQGSMPeripheralRapidityPion7GeV->SetName("v3LAQGSMPeripheralRapidityPion");
+  v3LAQGSMCentralRapidityKaon7GeV->SetName("v3LAQGSMCentralRapidityKaon");
+  v3LAQGSMMidcentralRapidityKaon7GeV->SetName("v3LAQGSMMidcentralRapidityKaon");
+  v3LAQGSMPeripheralRapidityKaon7GeV->SetName("v3LAQGSMPeripheralRapidityKaon");
+
+  v1PHQMDCentralPtProton7GeV->SetName("v1PHQMDCentralPtProton");
+  v1PHQMDMidcentralPtProton7GeV->SetName("v1PHQMDMidcentralPtProton");
+  v1PHQMDPeripheralPtProton7GeV->SetName("v1PHQMDPeripheralPtProton");
+  v1PHQMDCentralPtPion7GeV->SetName("v1PHQMDCentralPtPion");
+  v1PHQMDMidcentralPtPion7GeV->SetName("v1PHQMDMidcentralPtPion");
+  v1PHQMDPeripheralPtPion7GeV->SetName("v1PHQMDPeripheralPtPion");
+  v1PHQMDCentralPtKaon7GeV->SetName("v1PHQMDCentralPtKaon");
+  v1PHQMDMidcentralPtKaon7GeV->SetName("v1PHQMDMidcentralPtKaon");
+  v1PHQMDPeripheralPtKaon7GeV->SetName("v1PHQMDPeripheralPtKaon");
+
+  v1PHQMDCentralRapidityProton7GeV->SetName("v1PHQMDCentralRapidityProton");
+  v1PHQMDMidcentralRapidityProton7GeV->SetName("v1PHQMDMidcentralRapidityProton");
+  v1PHQMDPeripheralRapidityProton7GeV->SetName("v1PHQMDPeripheralRapidityProton");
+  v1PHQMDCentralRapidityPion7GeV->SetName("v1PHQMDCentralRapidityPion");
+  v1PHQMDMidcentralRapidityPion7GeV->SetName("v1PHQMDMidcentralRapidityPion");
+  v1PHQMDPeripheralRapidityPion7GeV->SetName("v1PHQMDPeripheralRapidityPion");
+  v1PHQMDCentralRapidityKaon7GeV->SetName("v1PHQMDCentralRapidityKaon");
+  v1PHQMDMidcentralRapidityKaon7GeV->SetName("v1PHQMDMidcentralRapidityKaon");
+  v1PHQMDPeripheralRapidityKaon7GeV->SetName("v1PHQMDPeripheralRapidityKaon");
+
+  v2PHQMDCentralPtProton7GeV->SetName("v2PHQMDCentralPtProton");
+  v2PHQMDMidcentralPtProton7GeV->SetName("v2PHQMDMidcentralPtProton");
+  v2PHQMDPeripheralPtProton7GeV->SetName("v2PHQMDPeripheralPtProton");
+  v2PHQMDCentralPtPion7GeV->SetName("v2PHQMDCentralPtPion");
+  v2PHQMDMidcentralPtPion7GeV->SetName("v2PHQMDMidcentralPtPion");
+  v2PHQMDPeripheralPtPion7GeV->SetName("v2PHQMDPeripheralPtPion");
+  v2PHQMDCentralPtKaon7GeV->SetName("v2PHQMDCentralPtKaon");
+  v2PHQMDMidcentralPtKaon7GeV->SetName("v2PHQMDMidcentralPtKaon");
+  v2PHQMDPeripheralPtKaon7GeV->SetName("v2PHQMDPeripheralPtKaon");
+
+  v3PHQMDCentralPtProton7GeV->SetName("v3PHQMDCentralPtProton");
+  v3PHQMDMidcentralPtProton7GeV->SetName("v3PHQMDMidcentralPtProton");
+  v3PHQMDPeripheralPtProton7GeV->SetName("v3PHQMDPeripheralPtProton");
+  v3PHQMDCentralPtPion7GeV->SetName("v3PHQMDCentralPtPion");
+  v3PHQMDMidcentralPtPion7GeV->SetName("v3PHQMDMidcentralPtPion");
+  v3PHQMDPeripheralPtPion7GeV->SetName("v3PHQMDPeripheralPtPion");
+  v3PHQMDCentralPtKaon7GeV->SetName("v3PHQMDCentralPtKaon");
+  v3PHQMDMidcentralPtKaon7GeV->SetName("v3PHQMDMidcentralPtKaon");
+  v3PHQMDPeripheralPtKaon7GeV->SetName("v3PHQMDPeripheralPtKaon");
+
+  v3PHQMDCentralRapidityProton7GeV->SetName("v3PHQMDCentralRapidityProton");
+  v3PHQMDMidcentralRapidityProton7GeV->SetName("v3PHQMDMidcentralRapidityProton");
+  v3PHQMDPeripheralRapidityProton7GeV->SetName("v3PHQMDPeripheralRapidityProton");
+  v3PHQMDCentralRapidityPion7GeV->SetName("v3PHQMDCentralRapidityPion");
+  v3PHQMDMidcentralRapidityPion7GeV->SetName("v3PHQMDMidcentralRapidityPion");
+  v3PHQMDPeripheralRapidityPion7GeV->SetName("v3PHQMDPeripheralRapidityPion");
+  v3PHQMDCentralRapidityKaon7GeV->SetName("v3PHQMDCentralRapidityKaon");
+  v3PHQMDMidcentralRapidityKaon7GeV->SetName("v3PHQMDMidcentralRapidityKaon");
+  v3PHQMDPeripheralRapidityKaon7GeV->SetName("v3PHQMDPeripheralRapidityKaon");
+
+  v1DCMQGSMCentralPtProton7GeV->SetName("v1DCMQGSMCentralPtProton");
+  v1DCMQGSMMidcentralPtProton7GeV->SetName("v1DCMQGSMMidcentralPtProton");
+  v1DCMQGSMPeripheralPtProton7GeV->SetName("v1DCMQGSMPeripheralPtProton");
+  v1DCMQGSMCentralPtPion7GeV->SetName("v1DCMQGSMCentralPtPion");
+  v1DCMQGSMMidcentralPtPion7GeV->SetName("LAQv1DCMQGSMMidcentralPtPionGSM");
+  v1DCMQGSMPeripheralPtPion7GeV->SetName("v1DCMQGSMPeripheralPtPion");
+  v1DCMQGSMCentralPtKaon7GeV->SetName("v1DCMQGSMCentralPtKaon");
+  v1DCMQGSMMidcentralPtKaon7GeV->SetName("v1DCMQGSMMidcentralPtKaon");
+  v1DCMQGSMPeripheralPtKaon7GeV->SetName("v1DCMQGSMPeripheralPtKaon");
+
+  v1DCMQGSMCentralRapidityProton7GeV->SetName("v1DCMQGSMCentralRapidityProton");
+  v1DCMQGSMMidcentralRapidityProton7GeV->SetName("v1DCMQGSMMidcentralRapidityProton");
+  v1DCMQGSMPeripheralRapidityProton7GeV->SetName("v1DCMQGSMPeripheralRapidityProton");
+  v1DCMQGSMCentralRapidityPion7GeV->SetName("v1DCMQGSMCentralRapidityPion");
+  v1DCMQGSMMidcentralRapidityPion7GeV->SetName("v1DCMQGSMMidcentralRapidityPion");
+  v1DCMQGSMPeripheralRapidityPion7GeV->SetName("v1DCMQGSMPeripheralRapidityPion");
+  v1DCMQGSMCentralRapidityKaon7GeV->SetName("v1DCMQGSMCentralRapidityKaon");
+  v1DCMQGSMMidcentralRapidityKaon7GeV->SetName("v1DCMQGSMMidcentralRapidityKaon");
+  v1DCMQGSMPeripheralRapidityKaon7GeV->SetName("v1DCMQGSMPeripheralRapidityKaon");
+
+  v2DCMQGSMCentralPtProton7GeV->SetName("v2DCMQGSMCentralPtProton");
+  v2DCMQGSMMidcentralPtProton7GeV->SetName("v2DCMQGSMMidcentralPtProton");
+  v2DCMQGSMPeripheralPtProton7GeV->SetName("v2DCMQGSMPeripheralPtProton");
+  v2DCMQGSMCentralPtPion7GeV->SetName("v2DCMQGSMCentralPtPion");
+  v2DCMQGSMMidcentralPtPion7GeV->SetName("v2DCMQGSMMidcentralPtPion");
+  v2DCMQGSMPeripheralPtPion7GeV->SetName("v2DCMQGSMPeripheralPtPion");
+  v2DCMQGSMCentralPtKaon7GeV->SetName("v2DCMQGSMCentralPtKaon");
+  v2DCMQGSMMidcentralPtKaon7GeV->SetName("v2DCMQGSMMidcentralPtKaon");
+  v2DCMQGSMPeripheralPtKaon7GeV->SetName("v2DCMQGSMPeripheralPtKaon");
+
+  v3DCMQGSMCentralPtProton7GeV->SetName("v3DCMQGSMCentralPtProton");
+  v3DCMQGSMMidcentralPtProton7GeV->SetName("v3DCMQGSMMidcentralPtProton");
+  v3DCMQGSMPeripheralPtProton7GeV->SetName("v3DCMQGSMPeripheralPtProton");
+  v3DCMQGSMCentralPtPion7GeV->SetName("v3DCMQGSMCentralPtPion");
+  v3DCMQGSMMidcentralPtPion7GeV->SetName("LAQv3DCMQGSMMidcentralPtPionGSM");
+  v3DCMQGSMPeripheralPtPion7GeV->SetName("v3DCMQGSMPeripheralPtPion");
+  v3DCMQGSMCentralPtKaon7GeV->SetName("v3DCMQGSMCentralPtKaon");
+  v3DCMQGSMMidcentralPtKaon7GeV->SetName("v3DCMQGSMMidcentralPtKaon");
+  v3DCMQGSMPeripheralPtKaon7GeV->SetName("v3DCMQGSMPeripheralPtKaon");
+
+  v3DCMQGSMCentralRapidityProton7GeV->SetName("v3DCMQGSMCentralRapidityProton");
+  v3DCMQGSMMidcentralRapidityProton7GeV->SetName("v3DCMQGSMMidcentralRapidityProton");
+  v3DCMQGSMPeripheralRapidityProton7GeV->SetName("v3DCMQGSMPeripheralRapidityProton");
+  v3DCMQGSMCentralRapidityPion7GeV->SetName("v3DCMQGSMCentralRapidityPion");
+  v3DCMQGSMMidcentralRapidityPion7GeV->SetName("v3DCMQGSMMidcentralRapidityPion");
+  v3DCMQGSMPeripheralRapidityPion7GeV->SetName("v3DCMQGSMPeripheralRapidityPion");
+  v3DCMQGSMCentralRapidityKaon7GeV->SetName("v3DCMQGSMCentralRapidityKaon");
+  v3DCMQGSMMidcentralRapidityKaon7GeV->SetName("v3DCMQGSMMidcentralRapidityKaon");
+  v3DCMQGSMPeripheralRapidityKaon7GeV->SetName("v3DCMQGSMPeripheralRapidityKaon");
+
+  hPHSDKinematicsAllPtProton7GeV->SetName("PHSD Before selection");
+  hPHSDKinematicsAllEtaProton7GeV->SetName("PHSD Before selection");
+  hPHSDKinematicsAllRapidityProton7GeV->SetName("PHSD Before selection");
+  hPHSDKinematicsAllPtPion7GeV->SetName("PHSD Before selection");
+  hPHSDKinematicsAllEtaPion7GeV->SetName("PHSD Before selection");
+  hPHSDKinematicsAllRapidityPion7GeV->SetName("PHSD Before selection");
+
+  hPHSDCutsAllPtProton7GeV->SetName("PHSD After selection");
+  hPHSDCutsAllEtaProton7GeV->SetName("PHSD After selection");
+  hPHSDCutsAllRapidityProton7GeV->SetName("PHSD After selection");
+  hPHSDCutsAllPtPion7GeV->SetName("PHSD After selection");
+  hPHSDCutsAllEtaPion7GeV->SetName("PHSD After selection");
+  hPHSDCutsAllRapidityPion7GeV->SetName("PHSD After selection");
+
+  hURQMDKinematicsAllPtProton7GeV->SetName("UrQMD Before selection");
+  hURQMDKinematicsAllEtaProton7GeV->SetName("UrQMD Before selection");
+  hURQMDKinematicsAllRapidityProton7GeV->SetName("UrQMD Before selection");
+  hURQMDKinematicsAllPtPion7GeV->SetName("UrQMD Before selection");
+  hURQMDKinematicsAllEtaPion7GeV->SetName("UrQMD Before selection");
+  hURQMDKinematicsAllRapidityPion7GeV->SetName("UrQMD Before selection");
+
+  hURQMDCutsAllPtProton7GeV->SetName("UrQMD After selection");
+  hURQMDCutsAllEtaProton7GeV->SetName("UrQMD After selection");
+  hURQMDCutsAllRapidityProton7GeV->SetName("UrQMD After selection");
+  hURQMDCutsAllPtPion7GeV->SetName("UrQMD After selection");
+  hURQMDCutsAllEtaPion7GeV->SetName("UrQMD After selection");
+  hURQMDCutsAllRapidityPion7GeV->SetName("UrQMD After selection");
+
+  hLAQGSMKinematicsAllPtProton7GeV->SetName("LAQGSM Before selection");
+  hLAQGSMKinematicsAllEtaProton7GeV->SetName("LAQGSM Before selection");
+  hLAQGSMKinematicsAllRapidityProton7GeV->SetName("LAQGSM Before selection");
+  hLAQGSMKinematicsAllPtPion7GeV->SetName("LAQGSM Before selection");
+  hLAQGSMKinematicsAllEtaPion7GeV->SetName("LAQGSM Before selection");
+  hLAQGSMKinematicsAllRapidityPion7GeV->SetName("LAQGSM Before selection");
+
+  hLAQGSMCutsAllPtProton7GeV->SetName("LAQGSM After selection");
+  hLAQGSMCutsAllEtaProton7GeV->SetName("LAQGSM After selection");
+  hLAQGSMCutsAllRapidityProton7GeV->SetName("LAQGSM After selection");
+  hLAQGSMCutsAllPtPion7GeV->SetName("LAQGSM After selection");
+  hLAQGSMCutsAllEtaPion7GeV->SetName("LAQGSM After selection");
+  hLAQGSMCutsAllRapidityPion7GeV->SetName("LAQGSM After selection");
+
+  hPHQMDKinematicsAllPtProton7GeV->SetName("PHQMD Before selection");
+  hPHQMDKinematicsAllEtaProton7GeV->SetName("PHQMD Before selection");
+  hPHQMDKinematicsAllRapidityProton7GeV->SetName("PHQMD Before selection");
+  hPHQMDKinematicsAllPtPion7GeV->SetName("PHQMD Before selection");
+  hPHQMDKinematicsAllEtaPion7GeV->SetName("PHQMD Before selection");
+  hPHQMDKinematicsAllRapidityPion7GeV->SetName("PHQMD Before selection");
+
+  hPHQMDCutsAllPtProton7GeV->SetName("PHQMD After selection");
+  hPHQMDCutsAllEtaProton7GeV->SetName("PHQMD After selection");
+  hPHQMDCutsAllRapidityProton7GeV->SetName("PHQMD After selection");
+  hPHQMDCutsAllPtPion7GeV->SetName("PHQMD After selection");
+  hPHQMDCutsAllEtaPion7GeV->SetName("PHQMD After selection");
+  hPHQMDCutsAllRapidityPion7GeV->SetName("PHQMD After selection");
+
+  hDCMQGSMKinematicsAllPtProton7GeV->SetName("DCMQGSM Before selection");
+  hDCMQGSMKinematicsAllEtaProton7GeV->SetName("DCMQGSM Before selection");
+  hDCMQGSMKinematicsAllRapidityProton7GeV->SetName("DCMQGSM Before selection");
+  hDCMQGSMKinematicsAllPtPion7GeV->SetName("DCMQGSM Before selection");
+  hDCMQGSMKinematicsAllEtaPion7GeV->SetName("DCMQGSM Before selection");
+  hDCMQGSMKinematicsAllRapidityPion7GeV->SetName("DCMQGSM Before selection");
+
+  hDCMQGSMCutsAllPtProton7GeV->SetName("DCMQGSM After selection");
+  hDCMQGSMCutsAllEtaProton7GeV->SetName("DCMQGSM After selection");
+  hDCMQGSMCutsAllRapidityProton7GeV->SetName("DCMQGSM After selection");
+  hDCMQGSMCutsAllPtPion7GeV->SetName("DCMQGSM After selection");
+  hDCMQGSMCutsAllEtaPion7GeV->SetName("DCMQGSM After selection");
+  hDCMQGSMCutsAllRapidityPion7GeV->SetName("DCMQGSM After selection");
 
   std::vector<TGraphAsymmErrors *> grv1CentralProton7GeV = GetSTARv1CentralProton7GeV();
   std::vector<TGraphAsymmErrors *> grv1MidcentralProton7GeV = GetSTARv1MidcentralProton7GeV();
@@ -650,247 +2886,2939 @@ void DrawModel()
   grv2MidcentralProton11GeV.at(2)->SetTitle("STAR BES-I");
   grv2PeripheralProton11GeV.at(2)->SetTitle("STAR BES-I");
 
-
   //--------------------------------------------------------------------------------------------------------------
   TCanvas *canv_v1CentralRapidityProton11GeV = new TCanvas("canv_v1CentralRapidityProton11GeV", "canv_v1CentralRapidityProton11GeV", 700, 500);
   canv_v1CentralRapidityProton11GeV->cd();
 
-  v1CentralRapidityProton->GetYaxis()->SetRangeUser(-0.05, 0.05);
-  v1CentralRapidityProton->SetLineColor(2);
-  v1CentralRapidityProton->SetMarkerColor(2);
-  v1CentralRapidityProton->SetMarkerStyle(20);
+  v1PHSDCentralRapidityProton->GetYaxis()->SetRangeUser(-0.05, 0.076);
+  // v1PHSDCentralRapidityProton->SetLineColor(2);
+  // v1PHSDCentralRapidityProton->SetMarkerColor(2);
+  v1PHSDCentralRapidityProton->SetMarkerStyle(kOpenTriangleUp);
+  // v1URQMDCentralRapidityProton->SetLineColor(3);
+  // v1URQMDCentralRapidityProton->SetMarkerColor(3);
+  v1URQMDCentralRapidityProton->SetMarkerStyle(kOpenCircle);
+  // v1LAQGSMCentralRapidityProton->SetLineColor(4);
+  // v1LAQGSMCentralRapidityProton->SetMarkerColor(4);
+  v1LAQGSMCentralRapidityProton->SetMarkerStyle(kOpenSquare);
+  v1PHQMDCentralRapidityProton->SetMarkerStyle(kOpenDiamond);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons");
   legend.at(0)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons", "C");
   header = (TLegendEntry *)legend.at(0)->GetListOfPrimitives()->First();
-  header->SetTextSize(.04);
-  legend.at(0)->AddEntry(v1CentralRapidityProton, v1CentralRapidityProton->GetTitle(), "p");
+  header->SetTextSize(.035);
+  legend.at(0)->SetNColumns(2);
+  legend.at(0)->AddEntry(v1PHSDCentralRapidityProton, v1PHSDCentralRapidityProton->GetTitle(), "p");
+  legend.at(0)->AddEntry(v1URQMDCentralRapidityProton, v1URQMDCentralRapidityProton->GetTitle(), "p");
+  legend.at(0)->AddEntry(v1LAQGSMCentralRapidityProton, v1LAQGSMCentralRapidityProton->GetTitle(), "p");
+  legend.at(0)->AddEntry(v1PHQMDCentralRapidityProton, v1PHQMDCentralRapidityProton->GetTitle(), "p");
   legend.at(0)->AddEntry(grv1CentralProton11GeV.at(0), grv1CentralProton11GeV.at(0)->GetTitle(), "p");
-  v1CentralRapidityProton->Draw();
+  v1PHSDCentralRapidityProton->Draw("");
   legend.at(0)->Draw();
-  v1CentralRapidityProton->Draw("same");
+  v1PHSDCentralRapidityProton->Draw("same PLC PMC");
+  v1URQMDCentralRapidityProton->Draw("same PLC PMC");
+  v1LAQGSMCentralRapidityProton->Draw("same PLC PMC");
+  v1PHQMDCentralRapidityProton->Draw("same PLC PMC");
   grv1CentralProton11GeV.at(0)->Draw("P");
-  line.DrawLine(v1CentralRapidityProton->GetXaxis()->GetXmin(),0.,v1CentralRapidityProton->GetXaxis()->GetXmax(),0.);
+  line.DrawLine(v1PHSDCentralRapidityProton->GetXaxis()->GetXmin(), 0., v1PHSDCentralRapidityProton->GetXaxis()->GetXmax(), 0.);
 
   //--------------------------------------------------------------------------------------------------------------
   TCanvas *canv_v1MidcentralRapidityProton11GeV = new TCanvas("canv_v1MidcentralRapidityProton11GeV", "canv_v1MidcentralRapidityProton11GeV", 700, 500);
   canv_v1MidcentralRapidityProton11GeV->cd();
 
-  v1MidcentralRapidityProton->GetYaxis()->SetRangeUser(-0.05, 0.05);
-  v1MidcentralRapidityProton->SetLineColor(2);
-  v1MidcentralRapidityProton->SetMarkerColor(2);
-  v1MidcentralRapidityProton->SetMarkerStyle(20);
+  v1PHSDMidcentralRapidityProton->GetYaxis()->SetRangeUser(-0.05, 0.15);
+  // v1PHSDMidcentralRapidityProton->SetLineColor(2);
+  // v1PHSDMidcentralRapidityProton->SetMarkerColor(2);
+  v1PHSDMidcentralRapidityProton->SetMarkerStyle(kOpenTriangleUp);
+  // v1URQMDMidcentralRapidityProton->SetLineColor(3);
+  // v1URQMDMidcentralRapidityProton->SetMarkerColor(3);
+  v1URQMDMidcentralRapidityProton->SetMarkerStyle(kOpenCircle);
+  // v1LAQGSMMidcentralRapidityProton->SetLineColor(4);
+  // v1LAQGSMMidcentralRapidityProton->SetMarkerColor(4);
+  v1LAQGSMMidcentralRapidityProton->SetMarkerStyle(kOpenSquare);
+  v1PHQMDMidcentralRapidityProton->SetMarkerStyle(kOpenDiamond);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons");
   legend.at(1)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Protons", "C");
   header = (TLegendEntry *)legend.at(1)->GetListOfPrimitives()->First();
-  header->SetTextSize(.04);
-  legend.at(1)->AddEntry(v1MidcentralRapidityProton, v1MidcentralRapidityProton->GetTitle(), "p");
+  header->SetTextSize(.035);
+  legend.at(1)->SetNColumns(2);
+  legend.at(1)->AddEntry(v1PHSDMidcentralRapidityProton, v1PHSDMidcentralRapidityProton->GetTitle(), "p");
+  legend.at(1)->AddEntry(v1URQMDMidcentralRapidityProton, v1URQMDMidcentralRapidityProton->GetTitle(), "p");
+  legend.at(1)->AddEntry(v1LAQGSMMidcentralRapidityProton, v1LAQGSMMidcentralRapidityProton->GetTitle(), "p");
+  legend.at(1)->AddEntry(v1PHQMDMidcentralRapidityProton, v1PHQMDMidcentralRapidityProton->GetTitle(), "p");
   legend.at(1)->AddEntry(grv1MidcentralProton11GeV.at(0), grv1MidcentralProton11GeV.at(0)->GetTitle(), "p");
-  v1MidcentralRapidityProton->Draw();
+  v1PHSDMidcentralRapidityProton->Draw("");
   legend.at(1)->Draw();
-  v1MidcentralRapidityProton->Draw("same");
+  v1PHSDMidcentralRapidityProton->Draw("same PLC PMC");
+  v1URQMDMidcentralRapidityProton->Draw("same PLC PMC");
+  v1LAQGSMMidcentralRapidityProton->Draw("same PLC PMC");
+  v1PHQMDMidcentralRapidityProton->Draw("same PLC PMC");
   grv1MidcentralProton11GeV.at(0)->Draw("P");
-  line.DrawLine(v1MidcentralRapidityProton->GetXaxis()->GetXmin(),0.,v1MidcentralRapidityProton->GetXaxis()->GetXmax(),0.);
+  line.DrawLine(v1PHSDMidcentralRapidityProton->GetXaxis()->GetXmin(), 0., v1PHSDMidcentralRapidityProton->GetXaxis()->GetXmax(), 0.);
 
   //--------------------------------------------------------------------------------------------------------------
   TCanvas *canv_v1PeripheralRapidityProton11GeV = new TCanvas("canv_v1PeripheralRapidityProton11GeV", "canv_v1PeripheralRapidityProton11GeV", 700, 500);
   canv_v1PeripheralRapidityProton11GeV->cd();
 
-  v1PeripheralRapidityProton->GetYaxis()->SetRangeUser(-0.09, 0.09);
-  v1PeripheralRapidityProton->SetLineColor(2);
-  v1PeripheralRapidityProton->SetMarkerColor(2);
-  v1PeripheralRapidityProton->SetMarkerStyle(20);
+  v1PHSDPeripheralRapidityProton->GetYaxis()->SetRangeUser(-0.05, 0.17);
+  // v1PHSDPeripheralRapidityProton->SetLineColor(2);
+  // v1PHSDPeripheralRapidityProton->SetMarkerColor(2);
+  v1PHSDPeripheralRapidityProton->SetMarkerStyle(kOpenTriangleUp);
+  // v1URQMDPeripheralRapidityProton->SetLineColor(3);
+  // v1URQMDPeripheralRapidityProton->SetMarkerColor(3);
+  v1URQMDPeripheralRapidityProton->SetMarkerStyle(kOpenCircle);
+  // v1LAQGSMPeripheralRapidityProton->SetLineColor(4);
+  // v1LAQGSMPeripheralRapidityProton->SetMarkerColor(4);
+  v1LAQGSMPeripheralRapidityProton->SetMarkerStyle(kOpenSquare);
+  v1PHQMDPeripheralRapidityProton->SetMarkerStyle(kOpenDiamond);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons");
   legend.at(2)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Protons", "C");
   header = (TLegendEntry *)legend.at(2)->GetListOfPrimitives()->First();
-  header->SetTextSize(.04);
-  legend.at(2)->AddEntry(v1PeripheralRapidityProton, v1PeripheralRapidityProton->GetTitle(), "p");
+  header->SetTextSize(.035);
+  legend.at(2)->SetNColumns(2);
+  legend.at(2)->AddEntry(v1PHSDPeripheralRapidityProton, v1PHSDPeripheralRapidityProton->GetTitle(), "p");
+  legend.at(2)->AddEntry(v1URQMDPeripheralRapidityProton, v1URQMDPeripheralRapidityProton->GetTitle(), "p");
+  legend.at(2)->AddEntry(v1LAQGSMPeripheralRapidityProton, v1LAQGSMPeripheralRapidityProton->GetTitle(), "p");
+  legend.at(2)->AddEntry(v1PHQMDPeripheralRapidityProton, v1PHQMDPeripheralRapidityProton->GetTitle(), "p");
   legend.at(2)->AddEntry(grv1PeripheralProton11GeV.at(0), grv1PeripheralProton11GeV.at(0)->GetTitle(), "p");
-  v1PeripheralRapidityProton->Draw();
+  v1PHSDPeripheralRapidityProton->Draw("");
   legend.at(2)->Draw();
-  v1PeripheralRapidityProton->Draw("same");
+  v1PHSDPeripheralRapidityProton->Draw("same PLC PMC");
+  v1URQMDPeripheralRapidityProton->Draw("same PLC PMC");
+  v1LAQGSMPeripheralRapidityProton->Draw("same PLC PMC");
+  v1PHQMDPeripheralRapidityProton->Draw("same PLC PMC");
   grv1PeripheralProton11GeV.at(0)->Draw("P");
-  line.DrawLine(v1PeripheralRapidityProton->GetXaxis()->GetXmin(),0.,v1PeripheralRapidityProton->GetXaxis()->GetXmax(),0.);
+  line.DrawLine(v1PHSDPeripheralRapidityProton->GetXaxis()->GetXmin(), 0., v1PHSDPeripheralRapidityProton->GetXaxis()->GetXmax(), 0.);
 
-
-//--------------------------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------------------------------
   TCanvas *canv_v1CentralRapidityPion11GeV = new TCanvas("canv_v1CentralRapidityPion11GeV", "canv_v1CentralRapidityPion11GeV", 700, 500);
   canv_v1CentralRapidityPion11GeV->cd();
 
-  v1CentralRapidityPion->GetYaxis()->SetRangeUser(-0.045, 0.045);
-  v1CentralRapidityPion->SetLineColor(2);
-  v1CentralRapidityPion->SetMarkerColor(2);
-  v1CentralRapidityPion->SetMarkerStyle(20);
+  v1PHSDCentralRapidityPion->GetYaxis()->SetRangeUser(-0.05, 0.05);
+  // v1PHSDCentralRapidityPion->SetLineColor(2);
+  // v1PHSDCentralRapidityPion->SetMarkerColor(2);
+  v1PHSDCentralRapidityPion->SetMarkerStyle(kOpenTriangleUp);
+  // v1URQMDCentralRapidityPion->SetLineColor(3);
+  // v1URQMDCentralRapidityPion->SetMarkerColor(3);
+  v1URQMDCentralRapidityPion->SetMarkerStyle(kOpenCircle);
+  // v1LAQGSMCentralRapidityPion->SetLineColor(4);
+  // v1LAQGSMCentralRapidityPion->SetMarkerColor(4);
+  v1LAQGSMCentralRapidityPion->SetMarkerStyle(kOpenSquare);
+  v1PHQMDCentralRapidityPion->SetMarkerStyle(kOpenDiamond);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions");
   legend.at(3)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions", "C");
   header = (TLegendEntry *)legend.at(3)->GetListOfPrimitives()->First();
-  header->SetTextSize(.04);
-  legend.at(3)->AddEntry(v1CentralRapidityPion, v1CentralRapidityPion->GetTitle(), "p");
+  header->SetTextSize(.035);
+  legend.at(3)->SetNColumns(2);
+  legend.at(3)->AddEntry(v1PHSDCentralRapidityPion, v1PHSDCentralRapidityPion->GetTitle(), "p");
+  legend.at(3)->AddEntry(v1URQMDCentralRapidityPion, v1URQMDCentralRapidityPion->GetTitle(), "p");
+  legend.at(3)->AddEntry(v1LAQGSMCentralRapidityPion, v1LAQGSMCentralRapidityPion->GetTitle(), "p");
+  legend.at(3)->AddEntry(v1PHQMDCentralRapidityPion, v1PHQMDCentralRapidityPion->GetTitle(), "p");
   legend.at(3)->AddEntry(grv1CentralPion11GeV.at(0), grv1CentralPion11GeV.at(0)->GetTitle(), "p");
-  v1CentralRapidityPion->Draw();
+  v1PHSDCentralRapidityPion->Draw("");
   legend.at(3)->Draw();
-  v1CentralRapidityPion->Draw("same");
+  v1PHSDCentralRapidityPion->Draw("same PLC PMC");
+  v1URQMDCentralRapidityPion->Draw("same PLC PMC");
+  v1LAQGSMCentralRapidityPion->Draw("same PLC PMC");
+  v1PHQMDCentralRapidityPion->Draw("same PLC PMC");
   grv1CentralPion11GeV.at(0)->Draw("P");
-  line.DrawLine(v1CentralRapidityPion->GetXaxis()->GetXmin(),0.,v1CentralRapidityPion->GetXaxis()->GetXmax(),0.);
+  line.DrawLine(v1PHSDCentralRapidityPion->GetXaxis()->GetXmin(), 0., v1PHSDCentralRapidityPion->GetXaxis()->GetXmax(), 0.);
 
   //--------------------------------------------------------------------------------------------------------------
   TCanvas *canv_v1MidcentralRapidityPion11GeV = new TCanvas("canv_v1MidcentralRapidityPion11GeV", "canv_v1MidcentralRapidityPion11GeV", 700, 500);
   canv_v1MidcentralRapidityPion11GeV->cd();
 
-  v1MidcentralRapidityPion->GetYaxis()->SetRangeUser(-0.08, 0.08);
-  v1MidcentralRapidityPion->SetLineColor(2);
-  v1MidcentralRapidityPion->SetMarkerColor(2);
-  v1MidcentralRapidityPion->SetMarkerStyle(20);
+  v1PHSDMidcentralRapidityPion->GetYaxis()->SetRangeUser(-0.09, 0.09);
+  // v1PHSDMidcentralRapidityPion->SetLineColor(2);
+  // v1PHSDMidcentralRapidityPion->SetMarkerColor(2);
+  v1PHSDMidcentralRapidityPion->SetMarkerStyle(kOpenTriangleUp);
+  // v1URQMDMidcentralRapidityPion->SetLineColor(3);
+  // v1URQMDMidcentralRapidityPion->SetMarkerColor(3);
+  v1URQMDMidcentralRapidityPion->SetMarkerStyle(kOpenCircle);
+  // v1LAQGSMMidcentralRapidityPion->SetLineColor(4);
+  // v1LAQGSMMidcentralRapidityPion->SetMarkerColor(4);
+  v1LAQGSMMidcentralRapidityPion->SetMarkerStyle(kOpenSquare);
+  v1PHQMDMidcentralRapidityPion->SetMarkerStyle(kOpenDiamond);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions");
   legend.at(4)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Pions", "C");
   header = (TLegendEntry *)legend.at(4)->GetListOfPrimitives()->First();
-  header->SetTextSize(.04);
-  legend.at(4)->AddEntry(v1MidcentralRapidityPion, v1MidcentralRapidityPion->GetTitle(), "p");
+  header->SetTextSize(.035);
+  legend.at(4)->SetNColumns(2);
+  legend.at(4)->AddEntry(v1PHSDMidcentralRapidityPion, v1PHSDMidcentralRapidityPion->GetTitle(), "p");
+  legend.at(4)->AddEntry(v1URQMDMidcentralRapidityPion, v1URQMDMidcentralRapidityPion->GetTitle(), "p");
+  legend.at(4)->AddEntry(v1LAQGSMMidcentralRapidityPion, v1LAQGSMMidcentralRapidityPion->GetTitle(), "p");
+  legend.at(4)->AddEntry(v1PHQMDMidcentralRapidityPion, v1PHQMDMidcentralRapidityPion->GetTitle(), "p");
   legend.at(4)->AddEntry(grv1MidcentralPion11GeV.at(0), grv1MidcentralPion11GeV.at(0)->GetTitle(), "p");
-  v1MidcentralRapidityPion->Draw();
+  v1PHSDMidcentralRapidityPion->Draw("");
   legend.at(4)->Draw();
-  v1MidcentralRapidityPion->Draw("same");
+  v1PHSDMidcentralRapidityPion->Draw("same PLC PMC");
+  v1URQMDMidcentralRapidityPion->Draw("same PLC PMC");
+  v1LAQGSMMidcentralRapidityPion->Draw("same PLC PMC");
+  v1PHQMDMidcentralRapidityPion->Draw("same PLC PMC");
   grv1MidcentralPion11GeV.at(0)->Draw("P");
-  line.DrawLine(v1MidcentralRapidityPion->GetXaxis()->GetXmin(),0.,v1MidcentralRapidityPion->GetXaxis()->GetXmax(),0.);
+  line.DrawLine(v1PHSDMidcentralRapidityPion->GetXaxis()->GetXmin(), 0., v1PHSDMidcentralRapidityPion->GetXaxis()->GetXmax(), 0.);
 
   //--------------------------------------------------------------------------------------------------------------
   TCanvas *canv_v1PeripheralRapidityPion11GeV = new TCanvas("canv_v1PeripheralRapidityPion11GeV", "canv_v1PeripheralRapidityPion11GeV", 700, 500);
   canv_v1PeripheralRapidityPion11GeV->cd();
 
-  v1PeripheralRapidityPion->GetYaxis()->SetRangeUser(-0.12, 0.12);
-  v1PeripheralRapidityPion->SetLineColor(2);
-  v1PeripheralRapidityPion->SetMarkerColor(2);
-  v1PeripheralRapidityPion->SetMarkerStyle(20);
+  v1PHSDPeripheralRapidityPion->GetYaxis()->SetRangeUser(-0.15, 0.15);
+  // v1PHSDPeripheralRapidityPion->SetLineColor(2);
+  // v1PHSDPeripheralRapidityPion->SetMarkerColor(2);
+  v1PHSDPeripheralRapidityPion->SetMarkerStyle(kOpenTriangleUp);
+  // v1URQMDPeripheralRapidityPion->SetLineColor(3);
+  // v1URQMDPeripheralRapidityPion->SetMarkerColor(3);
+  v1URQMDPeripheralRapidityPion->SetMarkerStyle(kOpenCircle);
+  // v1LAQGSMPeripheralRapidityPion->SetLineColor(4);
+  // v1LAQGSMPeripheralRapidityPion->SetMarkerColor(4);
+  v1LAQGSMPeripheralRapidityPion->SetMarkerStyle(kOpenSquare);
+  v1PHQMDPeripheralRapidityPion->SetMarkerStyle(kOpenDiamond);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions");
   legend.at(5)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Pions", "C");
   header = (TLegendEntry *)legend.at(5)->GetListOfPrimitives()->First();
-  header->SetTextSize(.04);
-  legend.at(5)->AddEntry(v1PeripheralRapidityPion, v1PeripheralRapidityPion->GetTitle(), "p");
+  header->SetTextSize(.035);
+  legend.at(5)->SetNColumns(2);
+  legend.at(5)->AddEntry(v1PHSDPeripheralRapidityPion, v1PHSDPeripheralRapidityPion->GetTitle(), "p");
+  legend.at(5)->AddEntry(v1URQMDPeripheralRapidityPion, v1URQMDPeripheralRapidityPion->GetTitle(), "p");
+  legend.at(5)->AddEntry(v1LAQGSMPeripheralRapidityPion, v1LAQGSMPeripheralRapidityPion->GetTitle(), "p");
+  legend.at(5)->AddEntry(v1PHQMDPeripheralRapidityPion, v1PHQMDPeripheralRapidityPion->GetTitle(), "p");
   legend.at(5)->AddEntry(grv1PeripheralPion11GeV.at(0), grv1PeripheralPion11GeV.at(0)->GetTitle(), "p");
-  v1PeripheralRapidityPion->Draw();
+  v1PHSDPeripheralRapidityPion->Draw("");
   legend.at(5)->Draw();
-  v1PeripheralRapidityPion->Draw("same");
+  v1PHSDPeripheralRapidityPion->Draw("same PLC PMC");
+  v1URQMDPeripheralRapidityPion->Draw("same PLC PMC");
+  v1LAQGSMPeripheralRapidityPion->Draw("same PLC PMC");
+  v1PHQMDPeripheralRapidityPion->Draw("same PLC PMC");
   grv1PeripheralPion11GeV.at(0)->Draw("P");
-  line.DrawLine(v1PeripheralRapidityPion->GetXaxis()->GetXmin(),0.,v1PeripheralRapidityProton->GetXaxis()->GetXmax(),0.);
+  line.DrawLine(v1PHSDPeripheralRapidityPion->GetXaxis()->GetXmin(), 0., v1PHSDPeripheralRapidityPion->GetXaxis()->GetXmax(), 0.);
 
   //--------------------------------------------------------------------------------------------------------------
   TCanvas *canv_v2CentralPtProton11GeV = new TCanvas("canv_v2CentralPtProton11GeV", "canv_v2CentralPtProton11GeV", 700, 500);
   canv_v2CentralPtProton11GeV->cd();
 
-  v2CentralPtProton->GetYaxis()->SetRangeUser(-0.049, 0.08);
-  v2CentralPtProton->SetLineColor(2);
-  v2CentralPtProton->SetMarkerColor(2);
-  v2CentralPtProton->SetMarkerStyle(20);
+  v2PHSDCentralPtProton->GetYaxis()->SetRangeUser(-0.049, 0.08);
+  // v2PHSDCentralPtProton->SetLineColor(2);
+  // v2PHSDCentralPtProton->SetMarkerColor(2);
+  v2PHSDCentralPtProton->SetMarkerStyle(kOpenTriangleUp);
+  // v2URQMDCentralPtProton->SetLineColor(3);
+  // v2URQMDCentralPtProton->SetMarkerColor(3);
+  v2URQMDCentralPtProton->SetMarkerStyle(kOpenCircle);
+  // v2LAQGSMCentralPtProton->SetLineColor(4);
+  // v2LAQGSMCentralPtProton->SetMarkerColor(4);
+  v2LAQGSMCentralPtProton->SetMarkerStyle(kOpenSquare);
+  v2PHQMDCentralPtProton->SetMarkerStyle(kOpenDiamond);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons");
   legend.at(6)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons", "C");
   header = (TLegendEntry *)legend.at(6)->GetListOfPrimitives()->First();
-  header->SetTextSize(.04);
-  legend.at(6)->AddEntry(v2CentralPtProton, v2CentralPtProton->GetTitle(), "p");
+  header->SetTextSize(.035);
+  legend.at(6)->SetNColumns(2);
+  legend.at(6)->AddEntry(v2PHSDCentralPtProton, v2PHSDCentralPtProton->GetTitle(), "p");
+  legend.at(6)->AddEntry(v2URQMDCentralPtProton, v2URQMDCentralPtProton->GetTitle(), "p");
+  legend.at(6)->AddEntry(v2LAQGSMCentralPtProton, v2LAQGSMCentralPtProton->GetTitle(), "p");
+  legend.at(6)->AddEntry(v2PHQMDCentralPtProton, v2PHQMDCentralPtProton->GetTitle(), "p");
   legend.at(6)->AddEntry(grv2CentralProton11GeV.at(2), grv2CentralProton11GeV.at(2)->GetTitle(), "p");
-  v2CentralPtProton->Draw();
+  v2PHSDCentralPtProton->Draw("");
   legend.at(6)->Draw();
-  v2CentralPtProton->Draw("same");
+  v2PHSDCentralPtProton->Draw("same PLC PMC");
+  v2URQMDCentralPtProton->Draw("same PLC PMC");
+  v2LAQGSMCentralPtProton->Draw("same PLC PMC");
+  v2PHQMDCentralPtProton->Draw("same PLC PMC");
   grv2CentralProton11GeV.at(0)->Draw("P");
   grv2CentralProton11GeV.at(1)->Draw("P2");
   grv2CentralProton11GeV.at(2)->Draw("P3");
-
 
   //--------------------------------------------------------------------------------------------------------------
   TCanvas *canv_v2MidcentralPtProton11GeV = new TCanvas("canv_v2MidcentralPtProton11GeV", "canv_v2MidcentralPtProton11GeV", 700, 500);
   canv_v2MidcentralPtProton11GeV->cd();
 
-  v2MidcentralPtProton->GetYaxis()->SetRangeUser(-0.025, 0.169);
-  v2MidcentralPtProton->SetLineColor(2);
-  v2MidcentralPtProton->SetMarkerColor(2);
-  v2MidcentralPtProton->SetMarkerStyle(20);
+  v2PHSDMidcentralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.18);
+  // v2PHSDMidcentralPtProton->SetLineColor(2);
+  // v2PHSDMidcentralPtProton->SetMarkerColor(2);
+  v2PHSDMidcentralPtProton->SetMarkerStyle(kOpenTriangleUp);
+  // v2URQMDMidcentralPtProton->SetLineColor(3);
+  // v2URQMDMidcentralPtProton->SetMarkerColor(3);
+  v2URQMDMidcentralPtProton->SetMarkerStyle(kOpenCircle);
+  // v2LAQGSMMidcentralPtProton->SetLineColor(4);
+  // v2LAQGSMMidcentralPtProton->SetMarkerColor(4);
+  v2LAQGSMMidcentralPtProton->SetMarkerStyle(kOpenSquare);
+  v2PHQMDMidcentralPtProton->SetMarkerStyle(kOpenDiamond);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons");
   legend.at(7)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Protons", "C");
   header = (TLegendEntry *)legend.at(7)->GetListOfPrimitives()->First();
-  header->SetTextSize(.04);
-  legend.at(7)->AddEntry(v2MidcentralPtProton, v2MidcentralPtProton->GetTitle(), "p");
+  header->SetTextSize(.035);
+  legend.at(7)->SetNColumns(2);
+  legend.at(7)->AddEntry(v2PHSDMidcentralPtProton, v2PHSDMidcentralPtProton->GetTitle(), "p");
+  legend.at(7)->AddEntry(v2URQMDMidcentralPtProton, v2URQMDMidcentralPtProton->GetTitle(), "p");
+  legend.at(7)->AddEntry(v2LAQGSMMidcentralPtProton, v2LAQGSMMidcentralPtProton->GetTitle(), "p");
+  legend.at(7)->AddEntry(v2PHQMDMidcentralPtProton, v2PHQMDMidcentralPtProton->GetTitle(), "p");
   legend.at(7)->AddEntry(grv2MidcentralProton11GeV.at(2), grv2MidcentralProton11GeV.at(2)->GetTitle(), "p");
-  v2MidcentralPtProton->Draw();
+  v2PHSDMidcentralPtProton->Draw("");
   legend.at(7)->Draw();
-  v2MidcentralPtProton->Draw("same");
+  v2PHSDMidcentralPtProton->Draw("same PLC PMC");
+  v2URQMDMidcentralPtProton->Draw("same PLC PMC");
+  v2LAQGSMMidcentralPtProton->Draw("same PLC PMC");
+  v2PHQMDMidcentralPtProton->Draw("same PLC PMC");
   grv2MidcentralProton11GeV.at(0)->Draw("P");
   grv2MidcentralProton11GeV.at(1)->Draw("P2");
   grv2MidcentralProton11GeV.at(2)->Draw("P3");
-
 
   //--------------------------------------------------------------------------------------------------------------
   TCanvas *canv_v2PeripheralPtProton11GeV = new TCanvas("canv_v2PeripheralPtProton11GeV", "canv_v2PeripheralPtProton11GeV", 700, 500);
   canv_v2PeripheralPtProton11GeV->cd();
 
-  v2PeripheralPtProton->GetYaxis()->SetRangeUser(-0.017, 0.25);
-  v2PeripheralPtProton->SetLineColor(2);
-  v2PeripheralPtProton->SetMarkerColor(2);
-  v2PeripheralPtProton->SetMarkerStyle(20);
+  v2PHSDPeripheralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.25);
+  // v2PHSDPeripheralPtProton->SetLineColor(2);
+  // v2PHSDPeripheralPtProton->SetMarkerColor(2);
+  v2PHSDPeripheralPtProton->SetMarkerStyle(kOpenTriangleUp);
+  // v2URQMDPeripheralPtProton->SetLineColor(3);
+  // v2URQMDPeripheralPtProton->SetMarkerColor(3);
+  v2URQMDPeripheralPtProton->SetMarkerStyle(kOpenCircle);
+  // v2LAQGSMPeripheralPtProton->SetLineColor(4);
+  // v2LAQGSMPeripheralPtProton->SetMarkerColor(4);
+  v2LAQGSMPeripheralPtProton->SetMarkerStyle(kOpenSquare);
+  v2PHQMDPeripheralPtProton->SetMarkerStyle(kOpenDiamond);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons");
   legend.at(8)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Protons", "C");
   header = (TLegendEntry *)legend.at(8)->GetListOfPrimitives()->First();
-  header->SetTextSize(.04);
-  legend.at(8)->AddEntry(v2PeripheralPtProton, v2PeripheralPtProton->GetTitle(), "p");
+  header->SetTextSize(.035);
+  legend.at(8)->SetNColumns(2);
+  legend.at(8)->AddEntry(v2PHSDPeripheralPtProton, v2PHSDPeripheralPtProton->GetTitle(), "p");
+  legend.at(8)->AddEntry(v2URQMDPeripheralPtProton, v2URQMDPeripheralPtProton->GetTitle(), "p");
+  legend.at(8)->AddEntry(v2LAQGSMPeripheralPtProton, v2LAQGSMPeripheralPtProton->GetTitle(), "p");
+  legend.at(8)->AddEntry(v2PHQMDPeripheralPtProton, v2PHQMDPeripheralPtProton->GetTitle(), "p");
   legend.at(8)->AddEntry(grv2PeripheralProton11GeV.at(2), grv2PeripheralProton11GeV.at(2)->GetTitle(), "p");
-  v2PeripheralPtProton->Draw();
+  v2PHSDPeripheralPtProton->Draw("");
   legend.at(8)->Draw();
-  v2PeripheralPtProton->Draw("same");
+  v2PHSDPeripheralPtProton->Draw("same PLC PMC");
+  v2URQMDPeripheralPtProton->Draw("same PLC PMC");
+  v2LAQGSMPeripheralPtProton->Draw("same PLC PMC");
+  v2PHQMDPeripheralPtProton->Draw("same PLC PMC");
   grv2PeripheralProton11GeV.at(0)->Draw("P");
   grv2PeripheralProton11GeV.at(1)->Draw("P2");
   grv2PeripheralProton11GeV.at(2)->Draw("P3");
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  Int_t iC = 8;
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3CentralPtProton11GeV = new TCanvas("canv_v3CentralPtProton11GeV", "canv_v3CentralPtProton11GeV", 700, 500);
+  canv_v3CentralPtProton11GeV->cd();
+
+  v3PHSDCentralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.055);
+  v3PHSDCentralPtProton->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDCentralPtProton->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMCentralPtProton->SetMarkerStyle(kOpenSquare);
+  v3PHQMDCentralPtProton->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3PHSDCentralPtProton, v3PHSDCentralPtProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDCentralPtProton, v3URQMDCentralPtProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMCentralPtProton, v3LAQGSMCentralPtProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3PHQMDCentralPtProton, v3PHQMDCentralPtProton->GetTitle(), "p");
+  v3PHSDCentralPtProton->Draw("");
+  legend.at(iC)->Draw();
+  v3PHSDCentralPtProton->Draw("same PLC PMC");
+  v3URQMDCentralPtProton->Draw("same PLC PMC");
+  v3LAQGSMCentralPtProton->Draw("same PLC PMC");
+  v3PHQMDCentralPtProton->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3MidcentralPtProton11GeV = new TCanvas("canv_v3MidcentralPtProton11GeV", "canv_v3MidcentralPtProton11GeV", 700, 500);
+  canv_v3MidcentralPtProton11GeV->cd();
+
+  v3PHSDMidcentralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.085);
+  v3PHSDMidcentralPtProton->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDMidcentralPtProton->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMMidcentralPtProton->SetMarkerStyle(kOpenSquare);
+  v3PHQMDMidcentralPtProton->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3PHSDMidcentralPtProton, v3PHSDMidcentralPtProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDMidcentralPtProton, v3URQMDMidcentralPtProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMMidcentralPtProton, v3LAQGSMMidcentralPtProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3PHQMDMidcentralPtProton, v3PHQMDMidcentralPtProton->GetTitle(), "p");
+  v3PHSDMidcentralPtProton->Draw("");
+  legend.at(iC)->Draw();
+  v3PHSDMidcentralPtProton->Draw("same PLC PMC");
+  v3URQMDMidcentralPtProton->Draw("same PLC PMC");
+  v3LAQGSMMidcentralPtProton->Draw("same PLC PMC");
+  v3PHQMDMidcentralPtProton->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3PeripheralPtProton11GeV = new TCanvas("canv_v3PeripheralPtProton11GeV", "canv_v3PeripheralPtProton11GeV", 700, 500);
+  canv_v3PeripheralPtProton11GeV->cd();
+
+  v3PHSDPeripheralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.25);
+  v3PHSDPeripheralPtProton->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDPeripheralPtProton->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMPeripheralPtProton->SetMarkerStyle(kOpenSquare);
+  v3PHQMDPeripheralPtProton->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3PHSDPeripheralPtProton, v3PHSDPeripheralPtProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDPeripheralPtProton, v3URQMDPeripheralPtProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMPeripheralPtProton, v3LAQGSMPeripheralPtProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3PHQMDPeripheralPtProton, v3PHQMDPeripheralPtProton->GetTitle(), "p");
+  v3PHSDPeripheralPtProton->Draw("");
+  legend.at(iC)->Draw();
+  v3PHSDPeripheralPtProton->Draw("same PLC PMC");
+  v3URQMDPeripheralPtProton->Draw("same PLC PMC");
+  v3LAQGSMPeripheralPtProton->Draw("same PLC PMC");
+  v3PHQMDPeripheralPtProton->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3CentralRapidityProton11GeV = new TCanvas("canv_v3CentralRapidityProton11GeV", "canv_v3CentralRapidityProton11GeV", 700, 500);
+  canv_v3CentralRapidityProton11GeV->cd();
+
+  v3PHSDCentralRapidityProton->GetYaxis()->SetRangeUser(-0.032, 0.028);
+  v3PHSDCentralRapidityProton->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDCentralRapidityProton->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMCentralRapidityProton->SetMarkerStyle(kOpenSquare);
+  v3PHQMDCentralRapidityProton->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3PHSDCentralRapidityProton, v3PHSDCentralRapidityProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDCentralRapidityProton, v3URQMDCentralRapidityProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMCentralRapidityProton, v3LAQGSMCentralRapidityProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3PHQMDCentralRapidityProton, v3PHQMDCentralRapidityProton->GetTitle(), "p");
+  v3PHSDCentralRapidityProton->Draw("");
+  legend.at(iC)->Draw();
+  v3PHSDCentralRapidityProton->Draw("same PLC PMC");
+  v3URQMDCentralRapidityProton->Draw("same PLC PMC");
+  v3LAQGSMCentralRapidityProton->Draw("same PLC PMC");
+  v3PHQMDCentralRapidityProton->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3MidcentralRapidityProton11GeV = new TCanvas("canv_v3MidcentralRapidityProton11GeV", "canv_v3MidcentralRapidityProton11GeV", 700, 500);
+  canv_v3MidcentralRapidityProton11GeV->cd();
+
+  v3PHSDMidcentralRapidityProton->GetYaxis()->SetRangeUser(-0.022, 0.035);
+  v3PHSDMidcentralRapidityProton->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDMidcentralRapidityProton->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMMidcentralRapidityProton->SetMarkerStyle(kOpenSquare);
+  v3PHQMDMidcentralRapidityProton->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3PHSDMidcentralRapidityProton, v3PHSDMidcentralRapidityProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDMidcentralRapidityProton, v3URQMDMidcentralRapidityProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMMidcentralRapidityProton, v3LAQGSMMidcentralRapidityProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3PHQMDMidcentralRapidityProton, v3PHQMDMidcentralRapidityProton->GetTitle(), "p");
+  v3PHSDMidcentralRapidityProton->Draw("");
+  legend.at(iC)->Draw();
+  v3PHSDMidcentralRapidityProton->Draw("same PLC PMC");
+  v3URQMDMidcentralRapidityProton->Draw("same PLC PMC");
+  v3LAQGSMMidcentralRapidityProton->Draw("same PLC PMC");
+  v3PHQMDMidcentralRapidityProton->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3PeripheralRapidityProton11GeV = new TCanvas("canv_v3PeripheralRapidityProton11GeV", "canv_v3PeripheralRapidityProton11GeV", 700, 500);
+  canv_v3PeripheralRapidityProton11GeV->cd();
+
+  v3PHSDPeripheralRapidityProton->GetYaxis()->SetRangeUser(-0.032, 0.055);
+  v3PHSDPeripheralRapidityProton->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDPeripheralRapidityProton->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMPeripheralRapidityProton->SetMarkerStyle(kOpenSquare);
+  v3PHQMDPeripheralRapidityProton->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3PHSDPeripheralRapidityProton, v3PHSDPeripheralRapidityProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDPeripheralRapidityProton, v3URQMDPeripheralRapidityProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMPeripheralRapidityProton, v3LAQGSMPeripheralRapidityProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3PHQMDPeripheralRapidityProton, v3PHQMDPeripheralRapidityProton->GetTitle(), "p");
+  v3PHSDPeripheralRapidityProton->Draw("");
+  legend.at(iC)->Draw();
+  v3PHSDPeripheralRapidityProton->Draw("same PLC PMC");
+  v3URQMDPeripheralRapidityProton->Draw("same PLC PMC");
+  v3LAQGSMPeripheralRapidityProton->Draw("same PLC PMC");
+  v3PHQMDPeripheralRapidityProton->Draw("same PLC PMC");
+
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3CentralPtPion11GeV = new TCanvas("canv_v3CentralPtPion11GeV", "canv_v3CentralPtPion11GeV", 700, 500);
+  canv_v3CentralPtPion11GeV->cd();
+
+  v3PHSDCentralPtPion->GetYaxis()->SetRangeUser(-0.022, 0.055);
+  v3PHSDCentralPtPion->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDCentralPtPion->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMCentralPtPion->SetMarkerStyle(kOpenSquare);
+  v3PHQMDCentralPtPion->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3PHSDCentralPtPion, v3PHSDCentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDCentralPtPion, v3URQMDCentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMCentralPtPion, v3LAQGSMCentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3PHQMDCentralPtPion, v3PHQMDCentralPtPion->GetTitle(), "p");
+  v3PHSDCentralPtPion->Draw("");
+  legend.at(iC)->Draw();
+  v3PHSDCentralPtPion->Draw("same PLC PMC");
+  v3URQMDCentralPtPion->Draw("same PLC PMC");
+  v3LAQGSMCentralPtPion->Draw("same PLC PMC");
+  v3PHQMDCentralPtPion->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3MidcentralPtPion11GeV = new TCanvas("canv_v3MidcentralPtPion11GeV", "canv_v3MidcentralPtPion11GeV", 700, 500);
+  canv_v3MidcentralPtPion11GeV->cd();
+
+  v3PHSDMidcentralPtPion->GetYaxis()->SetRangeUser(-0.022, 0.055);
+  v3PHSDMidcentralPtPion->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDMidcentralPtPion->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMMidcentralPtPion->SetMarkerStyle(kOpenSquare);
+  v3PHQMDMidcentralPtPion->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3PHSDMidcentralPtPion, v3PHSDMidcentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDMidcentralPtPion, v3URQMDMidcentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMMidcentralPtPion, v3LAQGSMMidcentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3PHQMDMidcentralPtPion, v3PHQMDMidcentralPtPion->GetTitle(), "p");
+  v3PHSDMidcentralPtPion->Draw("");
+  legend.at(iC)->Draw();
+  v3PHSDMidcentralPtPion->Draw("same PLC PMC");
+  v3URQMDMidcentralPtPion->Draw("same PLC PMC");
+  v3LAQGSMMidcentralPtPion->Draw("same PLC PMC");
+  v3PHQMDMidcentralPtPion->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3PeripheralPtPion11GeV = new TCanvas("canv_v3PeripheralPtPion11GeV", "canv_v3PeripheralPtPion11GeV", 700, 500);
+  canv_v3PeripheralPtPion11GeV->cd();
+
+  v3PHSDPeripheralPtPion->GetYaxis()->SetRangeUser(-0.025, 0.027);
+  v3PHSDPeripheralPtPion->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDPeripheralPtPion->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMPeripheralPtPion->SetMarkerStyle(kOpenSquare);
+  v3PHQMDPeripheralPtPion->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3PHSDPeripheralPtPion, v3PHSDPeripheralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDPeripheralPtPion, v3URQMDPeripheralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMPeripheralPtPion, v3LAQGSMPeripheralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3PHQMDPeripheralPtPion, v3PHQMDPeripheralPtPion->GetTitle(), "p");
+  v3PHSDPeripheralPtPion->Draw("");
+  legend.at(iC)->Draw();
+  v3PHSDPeripheralPtPion->Draw("same PLC PMC");
+  v3URQMDPeripheralPtPion->Draw("same PLC PMC");
+  v3LAQGSMPeripheralPtPion->Draw("same PLC PMC");
+  v3PHQMDPeripheralPtPion->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3CentralRapidityPion11GeV = new TCanvas("canv_v3CentralRapidityPion11GeV", "canv_v3CentralRapidityPion11GeV", 700, 500);
+  canv_v3CentralRapidityPion11GeV->cd();
+
+  v3PHSDCentralRapidityPion->GetYaxis()->SetRangeUser(-0.015, 0.022);
+  v3PHSDCentralRapidityPion->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDCentralRapidityPion->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMCentralRapidityPion->SetMarkerStyle(kOpenSquare);
+  v3PHQMDCentralRapidityPion->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3PHSDCentralRapidityPion, v3PHSDCentralRapidityPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDCentralRapidityPion, v3URQMDCentralRapidityPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMCentralRapidityPion, v3LAQGSMCentralRapidityPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3PHQMDCentralRapidityPion, v3PHQMDCentralRapidityPion->GetTitle(), "p");
+  v3PHSDCentralRapidityPion->Draw("");
+  legend.at(iC)->Draw();
+  v3PHSDCentralRapidityPion->Draw("same PLC PMC");
+  v3URQMDCentralRapidityPion->Draw("same PLC PMC");
+  v3LAQGSMCentralRapidityPion->Draw("same PLC PMC");
+  v3PHQMDCentralRapidityPion->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3MidcentralRapidityPion11GeV = new TCanvas("canv_v3MidcentralRapidityPion11GeV", "canv_v3MidcentralRapidityPion11GeV", 700, 500);
+  canv_v3MidcentralRapidityPion11GeV->cd();
+
+  v3PHSDMidcentralRapidityPion->GetYaxis()->SetRangeUser(-0.008, 0.015);
+  v3PHSDMidcentralRapidityPion->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDMidcentralRapidityPion->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMMidcentralRapidityPion->SetMarkerStyle(kOpenSquare);
+  v3PHQMDMidcentralRapidityPion->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3PHSDMidcentralRapidityPion, v3PHSDMidcentralRapidityPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDMidcentralRapidityPion, v3URQMDMidcentralRapidityPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMMidcentralRapidityPion, v3LAQGSMMidcentralRapidityPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3PHQMDMidcentralRapidityPion, v3PHQMDMidcentralRapidityPion->GetTitle(), "p");
+  v3PHSDMidcentralRapidityPion->Draw("");
+  legend.at(iC)->Draw();
+  v3PHSDMidcentralRapidityPion->Draw("same PLC PMC");
+  v3URQMDMidcentralRapidityPion->Draw("same PLC PMC");
+  v3LAQGSMMidcentralRapidityPion->Draw("same PLC PMC");
+  v3PHQMDMidcentralRapidityPion->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3PeripheralRapidityPion11GeV = new TCanvas("canv_v3PeripheralRapidityPion11GeV", "canv_v3PeripheralRapidityPion11GeV", 700, 500);
+  canv_v3PeripheralRapidityPion11GeV->cd();
+
+  v3PHSDPeripheralRapidityPion->GetYaxis()->SetRangeUser(-0.011, 0.025);
+  v3PHSDPeripheralRapidityPion->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDPeripheralRapidityPion->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMPeripheralRapidityPion->SetMarkerStyle(kOpenSquare);
+  v3PHQMDPeripheralRapidityPion->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3PHSDPeripheralRapidityPion, v3PHSDPeripheralRapidityPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDPeripheralRapidityPion, v3URQMDPeripheralRapidityPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMPeripheralRapidityPion, v3LAQGSMPeripheralRapidityPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3PHQMDPeripheralRapidityPion, v3PHQMDPeripheralRapidityPion->GetTitle(), "p");
+  v3PHSDPeripheralRapidityPion->Draw("");
+  legend.at(iC)->Draw();
+  v3PHSDPeripheralRapidityPion->Draw("same PLC PMC");
+  v3URQMDPeripheralRapidityPion->Draw("same PLC PMC");
+  v3LAQGSMPeripheralRapidityPion->Draw("same PLC PMC");
+  v3PHQMDPeripheralRapidityPion->Draw("same PLC PMC");
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtProton11GeVPHSD = new TCanvas("canv_KinematicsAllPtProton11GeVPHSD", "canv_KinematicsAllPtProton11GeVPHSD", 700, 500);
+  canv_KinematicsAllPtProton11GeVPHSD->cd();
+  canv_KinematicsAllPtProton11GeVPHSD->SetLogy();
+  hPHSDKinematicsAllPtProton->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllPtProton, hPHSDKinematicsAllPtProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHSDCutsAllPtProton, hPHSDCutsAllPtProton->GetTitle(), "l");
+  hPHSDKinematicsAllPtProton->Draw("hist PLC PMC");
+  hPHSDCutsAllPtProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaProton11GeVPHSD = new TCanvas("canv_KinematicsAllEtaProton11GeVPHSD", "canv_KinematicsAllEtaProton11GeVPHSD", 700, 500);
+  canv_KinematicsAllEtaProton11GeVPHSD->cd();
+  canv_KinematicsAllEtaProton11GeVPHSD->SetLogy();
+  hPHSDKinematicsAllEtaProton->GetYaxis()->SetRangeUser(0.9e5, 5e8);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllEtaProton, hPHSDKinematicsAllEtaProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHSDCutsAllEtaProton, hPHSDCutsAllEtaProton->GetTitle(), "l");
+  hPHSDKinematicsAllEtaProton->Draw("hist PLC PMC");
+  hPHSDCutsAllEtaProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityProton11GeVPHSD = new TCanvas("canv_KinematicsAllRapidityProton11GeVPHSD", "canv_KinematicsAllRapidityProton11GeVPHSD", 700, 500);
+  canv_KinematicsAllRapidityProton11GeVPHSD->cd();
+  canv_KinematicsAllRapidityProton11GeVPHSD->SetLogy();
+  hPHSDKinematicsAllRapidityProton->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllRapidityProton, hPHSDKinematicsAllRapidityProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHSDCutsAllRapidityProton, hPHSDCutsAllRapidityProton->GetTitle(), "l");
+  hPHSDKinematicsAllRapidityProton->Draw("hist PLC PMC");
+  hPHSDCutsAllRapidityProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtPion11GeVPHSD = new TCanvas("canv_KinematicsAllPtPion11GeVPHSD", "canv_KinematicsAllPtPion11GeVPHSD", 700, 500);
+  canv_KinematicsAllPtPion11GeVPHSD->cd();
+  canv_KinematicsAllPtPion11GeVPHSD->SetLogy();
+  hPHSDKinematicsAllPtPion->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllPtPion, hPHSDKinematicsAllPtPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHSDCutsAllPtPion, hPHSDCutsAllPtPion->GetTitle(), "l");
+  hPHSDKinematicsAllPtPion->Draw("hist PLC PMC");
+  hPHSDCutsAllPtPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaPion11GeVPHSD = new TCanvas("canv_KinematicsAllEtaPion11GeVPHSD", "canv_KinematicsAllEtaPion11GeVPHSD", 700, 500);
+  canv_KinematicsAllEtaPion11GeVPHSD->cd();
+  canv_KinematicsAllEtaPion11GeVPHSD->SetLogy();
+  hPHSDKinematicsAllEtaPion->GetYaxis()->SetRangeUser(0.9e5, 5e8);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllEtaPion, hPHSDKinematicsAllEtaPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHSDCutsAllEtaPion, hPHSDCutsAllEtaPion->GetTitle(), "l");
+  hPHSDKinematicsAllEtaPion->Draw("hist PLC PMC");
+  hPHSDCutsAllEtaPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityPion11GeVPHSD = new TCanvas("canv_KinematicsAllRapidityPion11GeVPHSD", "canv_KinematicsAllRapidityPion11GeVPHSD", 700, 500);
+  canv_KinematicsAllRapidityPion11GeVPHSD->cd();
+  canv_KinematicsAllRapidityPion11GeVPHSD->SetLogy();
+  hPHSDKinematicsAllRapidityPion->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllRapidityPion, hPHSDKinematicsAllRapidityPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHSDCutsAllRapidityPion, hPHSDCutsAllRapidityPion->GetTitle(), "l");
+  hPHSDKinematicsAllRapidityPion->Draw("hist PLC PMC");
+  hPHSDCutsAllRapidityPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
 
-  canv_v1CentralRapidityProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton11GeV.pdf");
-  canv_v1CentralRapidityProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton11GeV.png");
-  canv_v1CentralRapidityProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton11GeV.C");
-  canv_v1CentralRapidityProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton11GeV.eps");
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtProton11GeVURQMD = new TCanvas("canv_KinematicsAllPtProton11GeVURQMD", "canv_KinematicsAllPtProton11GeVURQMD", 700, 500);
+  canv_KinematicsAllPtProton11GeVURQMD->cd();
+  canv_KinematicsAllPtProton11GeVURQMD->SetLogy();
+  hURQMDKinematicsAllPtProton->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllPtProton, hURQMDKinematicsAllPtProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hURQMDCutsAllPtProton, hURQMDCutsAllPtProton->GetTitle(), "l");
+  hURQMDKinematicsAllPtProton->Draw("hist PLC PMC");
+  hURQMDCutsAllPtProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaProton11GeVURQMD = new TCanvas("canv_KinematicsAllEtaProton11GeVURQMD", "canv_KinematicsAllEtaProton11GeVURQMD", 700, 500);
+  canv_KinematicsAllEtaProton11GeVURQMD->cd();
+  canv_KinematicsAllEtaProton11GeVURQMD->SetLogy();
+  hURQMDKinematicsAllEtaProton->GetYaxis()->SetRangeUser(0.9e5, 5e8);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllEtaProton, hURQMDKinematicsAllEtaProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hURQMDCutsAllEtaProton, hURQMDCutsAllEtaProton->GetTitle(), "l");
+  hURQMDKinematicsAllEtaProton->Draw("hist PLC PMC");
+  hURQMDCutsAllEtaProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityProton11GeVURQMD = new TCanvas("canv_KinematicsAllRapidityProton11GeVURQMD", "canv_KinematicsAllRapidityProton11GeVURQMD", 700, 500);
+  canv_KinematicsAllRapidityProton11GeVURQMD->cd();
+  canv_KinematicsAllRapidityProton11GeVURQMD->SetLogy();
+  hURQMDKinematicsAllRapidityProton->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllRapidityProton, hURQMDKinematicsAllRapidityProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hURQMDCutsAllRapidityProton, hURQMDCutsAllRapidityProton->GetTitle(), "l");
+  hURQMDKinematicsAllRapidityProton->Draw("hist PLC PMC");
+  hURQMDCutsAllRapidityProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtPion11GeVURQMD = new TCanvas("canv_KinematicsAllPtPion11GeVURQMD", "canv_KinematicsAllPtPion11GeVURQMD", 700, 500);
+  canv_KinematicsAllPtPion11GeVURQMD->cd();
+  canv_KinematicsAllPtPion11GeVURQMD->SetLogy();
+  hURQMDKinematicsAllPtPion->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllPtPion, hURQMDKinematicsAllPtPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hURQMDCutsAllPtPion, hURQMDCutsAllPtPion->GetTitle(), "l");
+  hURQMDKinematicsAllPtPion->Draw("hist PLC PMC");
+  hURQMDCutsAllPtPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaPion11GeVURQMD = new TCanvas("canv_KinematicsAllEtaPion11GeVURQMD", "canv_KinematicsAllEtaPion11GeVURQMD", 700, 500);
+  canv_KinematicsAllEtaPion11GeVURQMD->cd();
+  canv_KinematicsAllEtaPion11GeVURQMD->SetLogy();
+  hURQMDKinematicsAllEtaPion->GetYaxis()->SetRangeUser(0.9e5, 5e8);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllEtaPion, hURQMDKinematicsAllEtaPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hURQMDCutsAllEtaPion, hURQMDCutsAllEtaPion->GetTitle(), "l");
+  hURQMDKinematicsAllEtaPion->Draw("hist PLC PMC");
+  hURQMDCutsAllEtaPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityPion11GeVURQMD = new TCanvas("canv_KinematicsAllRapidityPion11GeVURQMD", "canv_KinematicsAllRapidityPion11GeVURQMD", 700, 500);
+  canv_KinematicsAllRapidityPion11GeVURQMD->cd();
+  canv_KinematicsAllRapidityPion11GeVURQMD->SetLogy();
+  hURQMDKinematicsAllRapidityPion->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllRapidityPion, hURQMDKinematicsAllRapidityPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hURQMDCutsAllRapidityPion, hURQMDCutsAllRapidityPion->GetTitle(), "l");
+  hURQMDKinematicsAllRapidityPion->Draw("hist PLC PMC");
+  hURQMDCutsAllRapidityPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
 
-  canv_v1MidcentralRapidityProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityProton11GeV.pdf");
-  canv_v1MidcentralRapidityProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityProton11GeV.png");
-  canv_v1MidcentralRapidityProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityProton11GeV.C");
-  canv_v1MidcentralRapidityProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityProton11GeV.eps");
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtProton11GeVLAQGSM = new TCanvas("canv_KinematicsAllPtProton11GeVLAQGSM", "canv_KinematicsAllPtProton11GeVLAQGSM", 700, 500);
+  canv_KinematicsAllPtProton11GeVLAQGSM->cd();
+  canv_KinematicsAllPtProton11GeVLAQGSM->SetLogy();
+  hLAQGSMKinematicsAllPtProton->GetYaxis()->SetRangeUser(0.9e2, 5e7);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllPtProton, hLAQGSMKinematicsAllPtProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hLAQGSMCutsAllPtProton, hLAQGSMCutsAllPtProton->GetTitle(), "l");
+  hLAQGSMKinematicsAllPtProton->Draw("hist PLC PMC");
+  hLAQGSMCutsAllPtProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaProton11GeVLAQGSM = new TCanvas("canv_KinematicsAllEtaProton11GeVLAQGSM", "canv_KinematicsAllEtaProton11GeVLAQGSM", 700, 500);
+  canv_KinematicsAllEtaProton11GeVLAQGSM->cd();
+  canv_KinematicsAllEtaProton11GeVLAQGSM->SetLogy();
+  hLAQGSMKinematicsAllEtaProton->GetYaxis()->SetRangeUser(0.9e3, 5e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllEtaProton, hLAQGSMKinematicsAllEtaProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hLAQGSMCutsAllEtaProton, hLAQGSMCutsAllEtaProton->GetTitle(), "l");
+  hLAQGSMKinematicsAllEtaProton->Draw("hist PLC PMC");
+  hLAQGSMCutsAllEtaProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityProton11GeVLAQGSM = new TCanvas("canv_KinematicsAllRapidityProton11GeVLAQGSM", "canv_KinematicsAllRapidityProton11GeVLAQGSM", 700, 500);
+  canv_KinematicsAllRapidityProton11GeVLAQGSM->cd();
+  canv_KinematicsAllRapidityProton11GeVLAQGSM->SetLogy();
+  hLAQGSMKinematicsAllRapidityProton->GetYaxis()->SetRangeUser(0.9e2, 9e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllRapidityProton, hLAQGSMKinematicsAllRapidityProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hLAQGSMCutsAllRapidityProton, hLAQGSMCutsAllRapidityProton->GetTitle(), "l");
+  hLAQGSMKinematicsAllRapidityProton->Draw("hist PLC PMC");
+  hLAQGSMCutsAllRapidityProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtPion11GeVLAQGSM = new TCanvas("canv_KinematicsAllPtPion11GeVLAQGSM", "canv_KinematicsAllPtPion11GeVLAQGSM", 700, 500);
+  canv_KinematicsAllPtPion11GeVLAQGSM->cd();
+  canv_KinematicsAllPtPion11GeVLAQGSM->SetLogy();
+  hLAQGSMKinematicsAllPtPion->GetYaxis()->SetRangeUser(0.9e2, 5e7);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllPtPion, hLAQGSMKinematicsAllPtPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hLAQGSMCutsAllPtPion, hLAQGSMCutsAllPtPion->GetTitle(), "l");
+  hLAQGSMKinematicsAllPtPion->Draw("hist PLC PMC");
+  hLAQGSMCutsAllPtPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaPion11GeVLAQGSM = new TCanvas("canv_KinematicsAllEtaPion11GeVLAQGSM", "canv_KinematicsAllEtaPion11GeVLAQGSM", 700, 500);
+  canv_KinematicsAllEtaPion11GeVLAQGSM->cd();
+  canv_KinematicsAllEtaPion11GeVLAQGSM->SetLogy();
+  hLAQGSMKinematicsAllEtaPion->GetYaxis()->SetRangeUser(0.9e3, 5e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllEtaPion, hLAQGSMKinematicsAllEtaPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hLAQGSMCutsAllEtaPion, hLAQGSMCutsAllEtaPion->GetTitle(), "l");
+  hLAQGSMKinematicsAllEtaPion->Draw("hist PLC PMC");
+  hLAQGSMCutsAllEtaPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityPion11GeVLAQGSM = new TCanvas("canv_KinematicsAllRapidityPion11GeVLAQGSM", "canv_KinematicsAllRapidityPion11GeVLAQGSM", 700, 500);
+  canv_KinematicsAllRapidityPion11GeVLAQGSM->cd();
+  canv_KinematicsAllRapidityPion11GeVLAQGSM->SetLogy();
+  hLAQGSMKinematicsAllRapidityPion->GetYaxis()->SetRangeUser(0.9e2, 9e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllRapidityPion, hLAQGSMKinematicsAllRapidityPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hLAQGSMCutsAllRapidityPion, hLAQGSMCutsAllRapidityPion->GetTitle(), "l");
+  hLAQGSMKinematicsAllRapidityPion->Draw("hist PLC PMC");
+  hLAQGSMCutsAllRapidityPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
 
-  canv_v1PeripheralRapidityProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityProton11GeV.pdf");
-  canv_v1PeripheralRapidityProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityProton11GeV.png");
-  canv_v1PeripheralRapidityProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityProton11GeV.C");
-  canv_v1PeripheralRapidityProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityProton11GeV.eps");
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtProton11GeVPHQMD = new TCanvas("canv_KinematicsAllPtProton11GeVPHQMD", "canv_KinematicsAllPtProton11GeVPHQMD", 700, 500);
+  canv_KinematicsAllPtProton11GeVPHQMD->cd();
+  canv_KinematicsAllPtProton11GeVPHQMD->SetLogy();
+  hPHQMDKinematicsAllPtProton->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllPtProton, hPHQMDKinematicsAllPtProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHQMDCutsAllPtProton, hPHQMDCutsAllPtProton->GetTitle(), "l");
+  hPHQMDKinematicsAllPtProton->Draw("hist PLC PMC");
+  hPHQMDCutsAllPtProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaProton11GeVPHQMD = new TCanvas("canv_KinematicsAllEtaProton11GeVPHQMD", "canv_KinematicsAllEtaProton11GeVPHQMD", 700, 500);
+  canv_KinematicsAllEtaProton11GeVPHQMD->cd();
+  canv_KinematicsAllEtaProton11GeVPHQMD->SetLogy();
+  hPHQMDKinematicsAllEtaProton->GetYaxis()->SetRangeUser(0.9e5, 5e8);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllEtaProton, hPHQMDKinematicsAllEtaProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHQMDCutsAllEtaProton, hPHQMDCutsAllEtaProton->GetTitle(), "l");
+  hPHQMDKinematicsAllEtaProton->Draw("hist PLC PMC");
+  hPHQMDCutsAllEtaProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityProton11GeVPHQMD = new TCanvas("canv_KinematicsAllRapidityProton11GeVPHQMD", "canv_KinematicsAllRapidityProton11GeVPHQMD", 700, 500);
+  canv_KinematicsAllRapidityProton11GeVPHQMD->cd();
+  canv_KinematicsAllRapidityProton11GeVPHQMD->SetLogy();
+  hPHQMDKinematicsAllRapidityProton->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllRapidityProton, hPHQMDKinematicsAllRapidityProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHQMDCutsAllRapidityProton, hPHQMDCutsAllRapidityProton->GetTitle(), "l");
+  hPHQMDKinematicsAllRapidityProton->Draw("hist PLC PMC");
+  hPHQMDCutsAllRapidityProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtPion11GeVPHQMD = new TCanvas("canv_KinematicsAllPtPion11GeVPHQMD", "canv_KinematicsAllPtPion11GeVPHQMD", 700, 500);
+  canv_KinematicsAllPtPion11GeVPHQMD->cd();
+  canv_KinematicsAllPtPion11GeVPHQMD->SetLogy();
+  hPHQMDKinematicsAllPtPion->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllPtPion, hPHQMDKinematicsAllPtPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHQMDCutsAllPtPion, hPHQMDCutsAllPtPion->GetTitle(), "l");
+  hPHQMDKinematicsAllPtPion->Draw("hist PLC PMC");
+  hPHQMDCutsAllPtPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaPion11GeVPHQMD = new TCanvas("canv_KinematicsAllEtaPion11GeVPHQMD", "canv_KinematicsAllEtaPion11GeVPHQMD", 700, 500);
+  canv_KinematicsAllEtaPion11GeVPHQMD->cd();
+  canv_KinematicsAllEtaPion11GeVPHQMD->SetLogy();
+  hPHQMDKinematicsAllEtaPion->GetYaxis()->SetRangeUser(0.9e5, 5e8);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllEtaPion, hPHQMDKinematicsAllEtaPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHQMDCutsAllEtaPion, hPHQMDCutsAllEtaPion->GetTitle(), "l");
+  hPHQMDKinematicsAllEtaPion->Draw("hist PLC PMC");
+  hPHQMDCutsAllEtaPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityPion11GeVPHQMD = new TCanvas("canv_KinematicsAllRapidityPion11GeVPHQMD", "canv_KinematicsAllRapidityPion11GeVPHQMD", 700, 500);
+  canv_KinematicsAllRapidityPion11GeVPHQMD->cd();
+  canv_KinematicsAllRapidityPion11GeVPHQMD->SetLogy();
+  hPHQMDKinematicsAllRapidityPion->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllRapidityPion, hPHQMDKinematicsAllRapidityPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHQMDCutsAllRapidityPion, hPHQMDCutsAllRapidityPion->GetTitle(), "l");
+  hPHQMDKinematicsAllRapidityPion->Draw("hist PLC PMC");
+  hPHQMDCutsAllRapidityPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
 
-  canv_v1CentralRapidityPion11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityPion11GeV.pdf");
-  canv_v1CentralRapidityPion11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityPion11GeV.png");
-  canv_v1CentralRapidityPion11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityPion11GeV.C");
-  canv_v1CentralRapidityPion11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityPion11GeV.eps");
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsRegionsBPHSD = new TCanvas("canv_KinematicsRegionsBPHSD", "canv_KinematicsRegionsBPHSD", 700, 500);
+  canv_KinematicsRegionsBPHSD->cd();
+  hPHSDKinematicsAllB->GetYaxis()->SetRangeUser(0., 1.15e5);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllB, "All", "l");
+  legend.at(iC)->AddEntry(hPHSDKinematicsCentralB, "Central", "l");
+  legend.at(iC)->AddEntry(hPHSDKinematicsMidcentralB, "Midcentral", "l");
+  legend.at(iC)->AddEntry(hPHSDKinematicsPeripheralB, "Peripheral", "l");
+  hPHSDKinematicsAllB->Draw("hist PLC PMC");
+  hPHSDKinematicsCentralB->Draw("same hist PLC PMC");
+  hPHSDKinematicsMidcentralB->Draw("same hist PLC PMC");
+  hPHSDKinematicsPeripheralB->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsRegionsBURQMD = new TCanvas("canv_KinematicsRegionsBURQMD", "canv_KinematicsRegionsBURQMD", 700, 500);
+  canv_KinematicsRegionsBURQMD->cd();
+  hURQMDKinematicsAllB->GetYaxis()->SetRangeUser(0., 2.8e4);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllB, "All", "l");
+  legend.at(iC)->AddEntry(hURQMDKinematicsCentralB, "Central", "l");
+  legend.at(iC)->AddEntry(hURQMDKinematicsMidcentralB, "Midcentral", "l");
+  legend.at(iC)->AddEntry(hURQMDKinematicsPeripheralB, "Peripheral", "l");
+  hURQMDKinematicsAllB->Draw("hist PLC PMC");
+  hURQMDKinematicsCentralB->Draw("same hist PLC PMC");
+  hURQMDKinematicsMidcentralB->Draw("same hist PLC PMC");
+  hURQMDKinematicsPeripheralB->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsRegionsBLAQGSM = new TCanvas("canv_KinematicsRegionsBLAQGSM", "canv_KinematicsRegionsBLAQGSM", 700, 500);
+  canv_KinematicsRegionsBLAQGSM->cd();
+  hLAQGSMKinematicsAllB->GetYaxis()->SetRangeUser(0., 2.8e3);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllB, "All", "l");
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsCentralB, "Central", "l");
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsMidcentralB, "Midcentral", "l");
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hLAQGSMKinematicsAllB->Draw("hist PLC PMC");
+  hLAQGSMKinematicsCentralB->Draw("same hist PLC PMC");
+  hLAQGSMKinematicsMidcentralB->Draw("same hist PLC PMC");
+  hLAQGSMKinematicsPeripheralB->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsRegionsBPHQMD = new TCanvas("canv_KinematicsRegionsBPHQMD", "canv_KinematicsRegionsBPHQMD", 700, 500);
+  canv_KinematicsRegionsBPHQMD->cd();
+  hPHQMDKinematicsAllB->GetYaxis()->SetRangeUser(0., 1.5e5);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllB, "All", "l");
+  legend.at(iC)->AddEntry(hPHQMDKinematicsCentralB, "Central", "l");
+  legend.at(iC)->AddEntry(hPHQMDKinematicsMidcentralB, "Midcentral", "l");
+  legend.at(iC)->AddEntry(hPHQMDKinematicsPeripheralB, "Peripheral", "l");
+  hPHQMDKinematicsAllB->Rebin(4);
+  hPHQMDKinematicsCentralB->Rebin(4);
+  hPHQMDKinematicsMidcentralB->Rebin(4);
+  hPHQMDKinematicsPeripheralB->Rebin(4);
+  hPHQMDKinematicsAllB->Draw("hist PLC PMC");
+  hPHQMDKinematicsCentralB->Draw("same hist PLC PMC");
+  hPHQMDKinematicsMidcentralB->Draw("same hist PLC PMC");
+  hPHQMDKinematicsPeripheralB->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
 
-  canv_v1MidcentralRapidityPion11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityPion11GeV.pdf");
-  canv_v1MidcentralRapidityPion11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityPion11GeV.png");
-  canv_v1MidcentralRapidityPion11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityPion11GeV.C");
-  canv_v1MidcentralRapidityPion11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityPion11GeV.eps");
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBMultPHSD = new TCanvas("canv_KinematicsBMultPHSD", "canv_KinematicsBMultPHSD", 700, 500);
+  canv_KinematicsBMultPHSD->cd();
+  canv_KinematicsBMultPHSD->SetLogz();
+  // hPHSDKinematicsAllBMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hPHSDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsPeripheralB, "Peripheral", "l");
+  hPHSDKinematicsAllBMULT->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBMultURQMD = new TCanvas("canv_KinematicsBMultURQMD", "canv_KinematicsBMultURQMD", 700, 500);
+  canv_KinematicsBMultURQMD->cd();
+  canv_KinematicsBMultURQMD->SetLogz();
+  // hURQMDKinematicsAllBMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hURQMDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsPeripheralB, "Peripheral", "l");
+  hURQMDKinematicsAllBMULT->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBMultLAQGSM = new TCanvas("canv_KinematicsBMultLAQGSM", "canv_KinematicsBMultLAQGSM", 700, 500);
+  canv_KinematicsBMultLAQGSM->cd();
+  canv_KinematicsBMultLAQGSM->SetLogz();
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hLAQGSMKinematicsAllBMULT->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBMultPHQMD = new TCanvas("canv_KinematicsBMultPHQMD", "canv_KinematicsBMultPHQMD", 700, 500);
+  canv_KinematicsBMultPHQMD->cd();
+  canv_KinematicsBMultPHQMD->SetLogz();
+  // hPHQMDKinematicsAllBMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsPeripheralB, "Peripheral", "l");
+  hPHQMDKinematicsAllBMULT->Draw("colz");
+  legend.at(iC)->Draw();
 
-  canv_v1PeripheralRapidityPion11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityPion11GeV.pdf");
-  canv_v1PeripheralRapidityPion11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityPion11GeV.png");
-  canv_v1PeripheralRapidityPion11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityPion11GeV.C");
-  canv_v1PeripheralRapidityPion11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityPion11GeV.eps");
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsEMultPHSD = new TCanvas("canv_KinematicsEMultPHSD", "canv_KinematicsEMultPHSD", 700, 500);
+  canv_KinematicsEMultPHSD->cd();
+  canv_KinematicsEMultPHSD->SetLogz();
+  // hPHSDKinematicsAllEMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hPHSDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsPeripheralB, "Peripheral", "l");
+  hPHSDKinematicsAllEMULT->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsEMultURQMD = new TCanvas("canv_KinematicsEMultURQMD", "canv_KinematicsEMultURQMD", 700, 500);
+  canv_KinematicsEMultURQMD->cd();
+  canv_KinematicsEMultURQMD->SetLogz();
+  // hURQMDKinematicsAllEMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hURQMDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsPeripheralB, "Peripheral", "l");
+  hURQMDKinematicsAllEMULT->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsEMultLAQGSM = new TCanvas("canv_KinematicsEMultLAQGSM", "canv_KinematicsEMultLAQGSM", 700, 500);
+  canv_KinematicsEMultLAQGSM->cd();
+  canv_KinematicsEMultLAQGSM->SetLogz();
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hLAQGSMKinematicsAllEMULT->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsEMultPHQMD = new TCanvas("canv_KinematicsEMultPHQMD", "canv_KinematicsEMultPHQMD", 700, 500);
+  canv_KinematicsEMultPHQMD->cd();
+  canv_KinematicsEMultPHQMD->SetLogz();
+  // hPHQMDKinematicsAllEMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsPeripheralB, "Peripheral", "l");
+  hPHQMDKinematicsAllEMULT->Draw("colz");
+  legend.at(iC)->Draw();
 
-  canv_v2CentralPtProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtProton11GeV.pdf");
-  canv_v2CentralPtProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtProton11GeV.png");
-  canv_v2CentralPtProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtProton11GeV.C");
-  canv_v2CentralPtProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtProton11GeV.eps");
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBEPHSD = new TCanvas("canv_KinematicsBEPHSD", "canv_KinematicsBEPHSD", 700, 500);
+  canv_KinematicsBEPHSD->cd();
+  canv_KinematicsBEPHSD->SetLogz();
+  // hPHSDKinematicsAllBE->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hPHSDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsPeripheralB, "Peripheral", "l");
+  hPHSDKinematicsAllBE->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBEURQMD = new TCanvas("canv_KinematicsBEURQMD", "canv_KinematicsBEURQMD", 700, 500);
+  canv_KinematicsBEURQMD->cd();
+  canv_KinematicsBEURQMD->SetLogz();
+  // hURQMDKinematicsAllBE->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hURQMDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsPeripheralB, "Peripheral", "l");
+  hURQMDKinematicsAllBE->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBELAQGSM = new TCanvas("canv_KinematicsBELAQGSM", "canv_KinematicsBELAQGSM", 700, 500);
+  canv_KinematicsBELAQGSM->cd();
+  canv_KinematicsBELAQGSM->SetLogz();
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hLAQGSMKinematicsAllBE->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBEPHQMD = new TCanvas("canv_KinematicsBEPHQMD", "canv_KinematicsBEPHQMD", 700, 500);
+  canv_KinematicsBEPHQMD->cd();
+  canv_KinematicsBEPHQMD->SetLogz();
+  // hPHQMDKinematicsAllBE->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsPeripheralB, "Peripheral", "l");
+  hPHQMDKinematicsAllBE->Draw("colz");
+  legend.at(iC)->Draw();
 
-  canv_v2MidcentralPtProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtProton11GeV.pdf");
-  canv_v2MidcentralPtProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtProton11GeV.png");
-  canv_v2MidcentralPtProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtProton11GeV.C");
-  canv_v2MidcentralPtProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtProton11GeV.eps");
 
-  canv_v2PeripheralPtProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton11GeV.pdf");
-  canv_v2PeripheralPtProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton11GeV.png");
-  canv_v2PeripheralPtProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton11GeV.C");
-  canv_v2PeripheralPtProton11GeV -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton11GeV.eps");
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v1CentralRapidityProton7GeV = new TCanvas("canv_v1CentralRapidityProton7GeV", "canv_v1CentralRapidityProton7GeV", 700, 500);
+  canv_v1CentralRapidityProton7GeV->cd();
+
+  v1DCMQGSMCentralRapidityProton7GeV->GetYaxis()->SetRangeUser(2*-0.05, 0.076*2);
+  // v1DCMQGSMCentralRapidityProton7GeV->SetLineColor(2);
+  // v1DCMQGSMCentralRapidityProton7GeV->SetMarkerColor(2);
+  v1DCMQGSMCentralRapidityProton7GeV->SetMarkerStyle(kOpenTriangleUp);
+  // v1URQMDCentralRapidityProton7GeV->SetLineColor(3);
+  // v1URQMDCentralRapidityProton7GeV->SetMarkerColor(3);
+  v1URQMDCentralRapidityProton7GeV->SetMarkerStyle(kOpenCircle);
+  // v1LAQGSMCentralRapidityProton7GeV->SetLineColor(4);
+  // v1LAQGSMCentralRapidityProton7GeV->SetMarkerColor(4);
+  v1LAQGSMCentralRapidityProton7GeV->SetMarkerStyle(kOpenSquare);
+  // v1PHQMDCentralRapidityProton7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Protons");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v1DCMQGSMCentralRapidityProton7GeV, v1DCMQGSMCentralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v1URQMDCentralRapidityProton7GeV, v1URQMDCentralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v1LAQGSMCentralRapidityProton7GeV, v1LAQGSMCentralRapidityProton7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v1PHQMDCentralRapidityProton7GeV, v1PHQMDCentralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv1CentralProton7GeV.at(0), grv1CentralProton7GeV.at(0)->GetTitle(), "p");
+  v1DCMQGSMCentralRapidityProton7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v1DCMQGSMCentralRapidityProton7GeV->Draw("same PLC PMC");
+  v1URQMDCentralRapidityProton7GeV->Draw("same PLC PMC");
+  v1LAQGSMCentralRapidityProton7GeV->Draw("same PLC PMC");
+  // v1PHQMDCentralRapidityProton7GeV->Draw("same PLC PMC");
+  grv1CentralProton7GeV.at(0)->Draw("P");
+  line.DrawLine(v1DCMQGSMCentralRapidityProton7GeV->GetXaxis()->GetXmin(), 0., v1DCMQGSMCentralRapidityProton7GeV->GetXaxis()->GetXmax(), 0.);
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v1MidcentralRapidityProton7GeV = new TCanvas("canv_v1MidcentralRapidityProton7GeV", "canv_v1MidcentralRapidityProton7GeV", 700, 500);
+  canv_v1MidcentralRapidityProton7GeV->cd();
+
+  v1DCMQGSMMidcentralRapidityProton7GeV->GetYaxis()->SetRangeUser(2*-0.05, 0.15*2);
+  // v1DCMQGSMMidcentralRapidityProton7GeV->SetLineColor(2);
+  // v1DCMQGSMMidcentralRapidityProton7GeV->SetMarkerColor(2);
+  v1DCMQGSMMidcentralRapidityProton7GeV->SetMarkerStyle(kOpenTriangleUp);
+  // v1URQMDMidcentralRapidityProton7GeV->SetLineColor(3);
+  // v1URQMDMidcentralRapidityProton7GeV->SetMarkerColor(3);
+  v1URQMDMidcentralRapidityProton7GeV->SetMarkerStyle(kOpenCircle);
+  // v1LAQGSMMidcentralRapidityProton7GeV->SetLineColor(4);
+  // v1LAQGSMMidcentralRapidityProton7GeV->SetMarkerColor(4);
+  v1LAQGSMMidcentralRapidityProton7GeV->SetMarkerStyle(kOpenSquare);
+  // v1PHQMDMidcentralRapidityProton7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Protons");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 5<b<9 fm (10-40%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v1DCMQGSMMidcentralRapidityProton7GeV, v1DCMQGSMMidcentralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v1URQMDMidcentralRapidityProton7GeV, v1URQMDMidcentralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v1LAQGSMMidcentralRapidityProton7GeV, v1LAQGSMMidcentralRapidityProton7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v1PHQMDMidcentralRapidityProton7GeV, v1PHQMDMidcentralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv1MidcentralProton7GeV.at(0), grv1MidcentralProton7GeV.at(0)->GetTitle(), "p");
+  v1DCMQGSMMidcentralRapidityProton7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v1DCMQGSMMidcentralRapidityProton7GeV->Draw("same PLC PMC");
+  v1URQMDMidcentralRapidityProton7GeV->Draw("same PLC PMC");
+  v1LAQGSMMidcentralRapidityProton7GeV->Draw("same PLC PMC");
+  // v1PHQMDMidcentralRapidityProton7GeV->Draw("same PLC PMC");
+  grv1MidcentralProton7GeV.at(0)->Draw("P");
+  line.DrawLine(v1DCMQGSMMidcentralRapidityProton7GeV->GetXaxis()->GetXmin(), 0., v1DCMQGSMMidcentralRapidityProton7GeV->GetXaxis()->GetXmax(), 0.);
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v1PeripheralRapidityProton7GeV = new TCanvas("canv_v1PeripheralRapidityProton7GeV", "canv_v1PeripheralRapidityProton7GeV", 700, 500);
+  canv_v1PeripheralRapidityProton7GeV->cd();
+
+  v1DCMQGSMPeripheralRapidityProton7GeV->GetYaxis()->SetRangeUser(2*-0.05, 0.17*2);
+  // v1DCMQGSMPeripheralRapidityProton7GeV->SetLineColor(2);
+  // v1DCMQGSMPeripheralRapidityProton7GeV->SetMarkerColor(2);
+  v1DCMQGSMPeripheralRapidityProton7GeV->SetMarkerStyle(kOpenTriangleUp);
+  // v1URQMDPeripheralRapidityProton7GeV->SetLineColor(3);
+  // v1URQMDPeripheralRapidityProton7GeV->SetMarkerColor(3);
+  v1URQMDPeripheralRapidityProton7GeV->SetMarkerStyle(kOpenCircle);
+  // v1LAQGSMPeripheralRapidityProton7GeV->SetLineColor(4);
+  // v1LAQGSMPeripheralRapidityProton7GeV->SetMarkerColor(4);
+  v1LAQGSMPeripheralRapidityProton7GeV->SetMarkerStyle(kOpenSquare);
+  // v1PHQMDPeripheralRapidityProton7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Protons");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 9<b<15 fm (40-80%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v1DCMQGSMPeripheralRapidityProton7GeV, v1DCMQGSMPeripheralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v1URQMDPeripheralRapidityProton7GeV, v1URQMDPeripheralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v1LAQGSMPeripheralRapidityProton7GeV, v1LAQGSMPeripheralRapidityProton7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v1PHQMDPeripheralRapidityProton7GeV, v1PHQMDPeripheralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv1PeripheralProton7GeV.at(0), grv1PeripheralProton7GeV.at(0)->GetTitle(), "p");
+  v1DCMQGSMPeripheralRapidityProton7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v1DCMQGSMPeripheralRapidityProton7GeV->Draw("same PLC PMC");
+  v1URQMDPeripheralRapidityProton7GeV->Draw("same PLC PMC");
+  v1LAQGSMPeripheralRapidityProton7GeV->Draw("same PLC PMC");
+  // v1PHQMDPeripheralRapidityProton7GeV->Draw("same PLC PMC");
+  grv1PeripheralProton7GeV.at(0)->Draw("P");
+  line.DrawLine(v1DCMQGSMPeripheralRapidityProton7GeV->GetXaxis()->GetXmin(), 0., v1DCMQGSMPeripheralRapidityProton7GeV->GetXaxis()->GetXmax(), 0.);
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v1CentralRapidityPion7GeV = new TCanvas("canv_v1CentralRapidityPion7GeV", "canv_v1CentralRapidityPion7GeV", 700, 500);
+  canv_v1CentralRapidityPion7GeV->cd();
+
+  v1DCMQGSMCentralRapidityPion7GeV->GetYaxis()->SetRangeUser(2*-0.05, 0.05*2);
+  // v1DCMQGSMCentralRapidityPion7GeV->SetLineColor(2);
+  // v1DCMQGSMCentralRapidityPion7GeV->SetMarkerColor(2);
+  v1DCMQGSMCentralRapidityPion7GeV->SetMarkerStyle(kOpenTriangleUp);
+  // v1URQMDCentralRapidityPion7GeV->SetLineColor(3);
+  // v1URQMDCentralRapidityPion7GeV->SetMarkerColor(3);
+  v1URQMDCentralRapidityPion7GeV->SetMarkerStyle(kOpenCircle);
+  // v1LAQGSMCentralRapidityPion7GeV->SetLineColor(4);
+  // v1LAQGSMCentralRapidityPion7GeV->SetMarkerColor(4);
+  v1LAQGSMCentralRapidityPion7GeV->SetMarkerStyle(kOpenSquare);
+  // v1PHQMDCentralRapidityPion7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Pions");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v1DCMQGSMCentralRapidityPion7GeV, v1DCMQGSMCentralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v1URQMDCentralRapidityPion7GeV, v1URQMDCentralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v1LAQGSMCentralRapidityPion7GeV, v1LAQGSMCentralRapidityPion7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v1PHQMDCentralRapidityPion7GeV, v1PHQMDCentralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv1CentralPion7GeV.at(0), grv1CentralPion7GeV.at(0)->GetTitle(), "p");
+  v1DCMQGSMCentralRapidityPion7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v1DCMQGSMCentralRapidityPion7GeV->Draw("same PLC PMC");
+  v1URQMDCentralRapidityPion7GeV->Draw("same PLC PMC");
+  v1LAQGSMCentralRapidityPion7GeV->Draw("same PLC PMC");
+  // v1PHQMDCentralRapidityPion7GeV->Draw("same PLC PMC");
+  grv1CentralPion7GeV.at(0)->Draw("P");
+  line.DrawLine(v1DCMQGSMCentralRapidityPion7GeV->GetXaxis()->GetXmin(), 0., v1DCMQGSMCentralRapidityPion7GeV->GetXaxis()->GetXmax(), 0.);
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v1MidcentralRapidityPion7GeV = new TCanvas("canv_v1MidcentralRapidityPion7GeV", "canv_v1MidcentralRapidityPion7GeV", 700, 500);
+  canv_v1MidcentralRapidityPion7GeV->cd();
+
+  v1DCMQGSMMidcentralRapidityPion7GeV->GetYaxis()->SetRangeUser(2*-0.09, 0.09*2);
+  // v1DCMQGSMMidcentralRapidityPion7GeV->SetLineColor(2);
+  // v1DCMQGSMMidcentralRapidityPion7GeV->SetMarkerColor(2);
+  v1DCMQGSMMidcentralRapidityPion7GeV->SetMarkerStyle(kOpenTriangleUp);
+  // v1URQMDMidcentralRapidityPion7GeV->SetLineColor(3);
+  // v1URQMDMidcentralRapidityPion7GeV->SetMarkerColor(3);
+  v1URQMDMidcentralRapidityPion7GeV->SetMarkerStyle(kOpenCircle);
+  // v1LAQGSMMidcentralRapidityPion7GeV->SetLineColor(4);
+  // v1LAQGSMMidcentralRapidityPion7GeV->SetMarkerColor(4);
+  v1LAQGSMMidcentralRapidityPion7GeV->SetMarkerStyle(kOpenSquare);
+  // v1PHQMDMidcentralRapidityPion7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Pions");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 5<b<9 fm (10-40%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v1DCMQGSMMidcentralRapidityPion7GeV, v1DCMQGSMMidcentralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v1URQMDMidcentralRapidityPion7GeV, v1URQMDMidcentralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v1LAQGSMMidcentralRapidityPion7GeV, v1LAQGSMMidcentralRapidityPion7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v1PHQMDMidcentralRapidityPion7GeV, v1PHQMDMidcentralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv1MidcentralPion7GeV.at(0), grv1MidcentralPion7GeV.at(0)->GetTitle(), "p");
+  v1DCMQGSMMidcentralRapidityPion7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v1DCMQGSMMidcentralRapidityPion7GeV->Draw("same PLC PMC");
+  v1URQMDMidcentralRapidityPion7GeV->Draw("same PLC PMC");
+  v1LAQGSMMidcentralRapidityPion7GeV->Draw("same PLC PMC");
+  // v1PHQMDMidcentralRapidityPion7GeV->Draw("same PLC PMC");
+  grv1MidcentralPion7GeV.at(0)->Draw("P");
+  line.DrawLine(v1DCMQGSMMidcentralRapidityPion7GeV->GetXaxis()->GetXmin(), 0., v1DCMQGSMMidcentralRapidityPion7GeV->GetXaxis()->GetXmax(), 0.);
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v1PeripheralRapidityPion7GeV = new TCanvas("canv_v1PeripheralRapidityPion7GeV", "canv_v1PeripheralRapidityPion7GeV", 700, 500);
+  canv_v1PeripheralRapidityPion7GeV->cd();
+
+  v1DCMQGSMPeripheralRapidityPion7GeV->GetYaxis()->SetRangeUser(2*-0.15, 0.15*2);
+  // v1DCMQGSMPeripheralRapidityPion7GeV->SetLineColor(2);
+  // v1DCMQGSMPeripheralRapidityPion7GeV->SetMarkerColor(2);
+  v1DCMQGSMPeripheralRapidityPion7GeV->SetMarkerStyle(kOpenTriangleUp);
+  // v1URQMDPeripheralRapidityPion7GeV->SetLineColor(3);
+  // v1URQMDPeripheralRapidityPion7GeV->SetMarkerColor(3);
+  v1URQMDPeripheralRapidityPion7GeV->SetMarkerStyle(kOpenCircle);
+  // v1LAQGSMPeripheralRapidityPion7GeV->SetLineColor(4);
+  // v1LAQGSMPeripheralRapidityPion7GeV->SetMarkerColor(4);
+  v1LAQGSMPeripheralRapidityPion7GeV->SetMarkerStyle(kOpenSquare);
+  // v1PHQMDPeripheralRapidityPion7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Pions");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 9<b<15 fm (40-80%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v1DCMQGSMPeripheralRapidityPion7GeV, v1DCMQGSMPeripheralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v1URQMDPeripheralRapidityPion7GeV, v1URQMDPeripheralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v1LAQGSMPeripheralRapidityPion7GeV, v1LAQGSMPeripheralRapidityPion7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v1PHQMDPeripheralRapidityPion7GeV, v1PHQMDPeripheralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv1PeripheralPion7GeV.at(0), grv1PeripheralPion7GeV.at(0)->GetTitle(), "p");
+  v1DCMQGSMPeripheralRapidityPion7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v1DCMQGSMPeripheralRapidityPion7GeV->Draw("same PLC PMC");
+  v1URQMDPeripheralRapidityPion7GeV->Draw("same PLC PMC");
+  v1LAQGSMPeripheralRapidityPion7GeV->Draw("same PLC PMC");
+  // v1PHQMDPeripheralRapidityPion7GeV->Draw("same PLC PMC");
+  grv1PeripheralPion7GeV.at(0)->Draw("P");
+  line.DrawLine(v1DCMQGSMPeripheralRapidityPion7GeV->GetXaxis()->GetXmin(), 0., v1DCMQGSMPeripheralRapidityPion7GeV->GetXaxis()->GetXmax(), 0.);
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v2CentralPtProton7GeV = new TCanvas("canv_v2CentralPtProton7GeV", "canv_v2CentralPtProton7GeV", 700, 500);
+  canv_v2CentralPtProton7GeV->cd();
+
+  v2DCMQGSMCentralPtProton7GeV->GetYaxis()->SetRangeUser(-0.039, 0.08);
+  v2DCMQGSMCentralPtProton7GeV->GetXaxis()->SetRangeUser(0.21, 2.);
+  // v2DCMQGSMCentralPtProton7GeV->SetLineColor(2);
+  // v2DCMQGSMCentralPtProton7GeV->SetMarkerColor(2);
+  v2DCMQGSMCentralPtProton7GeV->SetMarkerStyle(kOpenTriangleUp);
+  // v2URQMDCentralPtProton7GeV->SetLineColor(3);
+  // v2URQMDCentralPtProton7GeV->SetMarkerColor(3);
+  v2URQMDCentralPtProton7GeV->SetMarkerStyle(kOpenCircle);
+  // v2LAQGSMCentralPtProton7GeV->SetLineColor(4);
+  // v2LAQGSMCentralPtProton7GeV->SetMarkerColor(4);
+  v2LAQGSMCentralPtProton7GeV->SetMarkerStyle(kOpenSquare);
+  // v2PHQMDCentralPtProton7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Protons");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v2DCMQGSMCentralPtProton7GeV, v2DCMQGSMCentralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2URQMDCentralPtProton7GeV, v2URQMDCentralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2LAQGSMCentralPtProton7GeV, v2LAQGSMCentralPtProton7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v2PHQMDCentralPtProton7GeV, v2PHQMDCentralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv2CentralProton7GeV.at(2), grv2CentralProton7GeV.at(2)->GetTitle(), "p");
+  v2DCMQGSMCentralPtProton7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v2DCMQGSMCentralPtProton7GeV->Draw("same PLC PMC");
+  v2URQMDCentralPtProton7GeV->Draw("same PLC PMC");
+  v2LAQGSMCentralPtProton7GeV->Draw("same PLC PMC");
+  // v2PHQMDCentralPtProton7GeV->Draw("same PLC PMC");
+  grv2CentralProton7GeV.at(0)->Draw("P");
+  grv2CentralProton7GeV.at(1)->Draw("P2");
+  grv2CentralProton7GeV.at(2)->Draw("P3");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v2MidcentralPtProton7GeV = new TCanvas("canv_v2MidcentralPtProton7GeV", "canv_v2MidcentralPtProton7GeV", 700, 500);
+  canv_v2MidcentralPtProton7GeV->cd();
+
+  v2DCMQGSMMidcentralPtProton7GeV->GetYaxis()->SetRangeUser(-0.049, 0.18);
+  v2DCMQGSMMidcentralPtProton7GeV->GetXaxis()->SetRangeUser(0.21, 2.);
+  // v2DCMQGSMMidcentralPtProton7GeV->SetLineColor(2);
+  // v2DCMQGSMMidcentralPtProton7GeV->SetMarkerColor(2);
+  v2DCMQGSMMidcentralPtProton7GeV->SetMarkerStyle(kOpenTriangleUp);
+  // v2URQMDMidcentralPtProton7GeV->SetLineColor(3);
+  // v2URQMDMidcentralPtProton7GeV->SetMarkerColor(3);
+  v2URQMDMidcentralPtProton7GeV->SetMarkerStyle(kOpenCircle);
+  // v2LAQGSMMidcentralPtProton7GeV->SetLineColor(4);
+  // v2LAQGSMMidcentralPtProton7GeV->SetMarkerColor(4);
+  v2LAQGSMMidcentralPtProton7GeV->SetMarkerStyle(kOpenSquare);
+  // v2PHQMDMidcentralPtProton7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Protons");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 5<b<9 fm (10-40%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v2DCMQGSMMidcentralPtProton7GeV, v2DCMQGSMMidcentralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2URQMDMidcentralPtProton7GeV, v2URQMDMidcentralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2LAQGSMMidcentralPtProton7GeV, v2LAQGSMMidcentralPtProton7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v2PHQMDMidcentralPtProton7GeV, v2PHQMDMidcentralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv2MidcentralProton7GeV.at(2), grv2MidcentralProton7GeV.at(2)->GetTitle(), "p");
+  v2DCMQGSMMidcentralPtProton7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v2DCMQGSMMidcentralPtProton7GeV->Draw("same PLC PMC");
+  v2URQMDMidcentralPtProton7GeV->Draw("same PLC PMC");
+  v2LAQGSMMidcentralPtProton7GeV->Draw("same PLC PMC");
+  // v2PHQMDMidcentralPtProton7GeV->Draw("same PLC PMC");
+  grv2MidcentralProton7GeV.at(0)->Draw("P");
+  grv2MidcentralProton7GeV.at(1)->Draw("P2");
+  grv2MidcentralProton7GeV.at(2)->Draw("P3");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v2PeripheralPtProton7GeV = new TCanvas("canv_v2PeripheralPtProton7GeV", "canv_v2PeripheralPtProton7GeV", 700, 500);
+  canv_v2PeripheralPtProton7GeV->cd();
+
+  v2DCMQGSMPeripheralPtProton7GeV->GetYaxis()->SetRangeUser(-0.049, 0.25);
+  v2DCMQGSMPeripheralPtProton7GeV->GetXaxis()->SetRangeUser(0.21, 2.);
+  // v2DCMQGSMPeripheralPtProton7GeV->SetLineColor(2);
+  // v2DCMQGSMPeripheralPtProton7GeV->SetMarkerColor(2);
+  v2DCMQGSMPeripheralPtProton7GeV->SetMarkerStyle(kOpenTriangleUp);
+  // v2URQMDPeripheralPtProton7GeV->SetLineColor(3);
+  // v2URQMDPeripheralPtProton7GeV->SetMarkerColor(3);
+  v2URQMDPeripheralPtProton7GeV->SetMarkerStyle(kOpenCircle);
+  // v2LAQGSMPeripheralPtProton7GeV->SetLineColor(4);
+  // v2LAQGSMPeripheralPtProton7GeV->SetMarkerColor(4);
+  v2LAQGSMPeripheralPtProton7GeV->SetMarkerStyle(kOpenSquare);
+  // v2PHQMDPeripheralPtProton7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Protons");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 9<b<15 fm (40-80%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v2DCMQGSMPeripheralPtProton7GeV, v2DCMQGSMPeripheralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2URQMDPeripheralPtProton7GeV, v2URQMDPeripheralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2LAQGSMPeripheralPtProton7GeV, v2LAQGSMPeripheralPtProton7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v2PHQMDPeripheralPtProton7GeV, v2PHQMDPeripheralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv2PeripheralProton7GeV.at(2), grv2PeripheralProton7GeV.at(2)->GetTitle(), "p");
+  v2DCMQGSMPeripheralPtProton7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v2DCMQGSMPeripheralPtProton7GeV->Draw("same PLC PMC");
+  v2URQMDPeripheralPtProton7GeV->Draw("same PLC PMC");
+  v2LAQGSMPeripheralPtProton7GeV->Draw("same PLC PMC");
+  // v2PHQMDPeripheralPtProton7GeV->Draw("same PLC PMC");
+  grv2PeripheralProton7GeV.at(0)->Draw("P");
+  grv2PeripheralProton7GeV.at(1)->Draw("P2");
+  grv2PeripheralProton7GeV.at(2)->Draw("P3");
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // iC = 8;
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3CentralPtProton7GeV = new TCanvas("canv_v3CentralPtProton7GeV", "canv_v3CentralPtProton7GeV", 700, 500);
+  canv_v3CentralPtProton7GeV->cd();
+
+  v3DCMQGSMCentralPtProton7GeV->GetYaxis()->SetRangeUser(2*-0.022, 0.055*2);
+  v3DCMQGSMCentralPtProton7GeV->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDCentralPtProton7GeV->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMCentralPtProton7GeV->SetMarkerStyle(kOpenSquare);
+  // v3PHQMDCentralPtProton7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3DCMQGSMCentralPtProton7GeV, v3DCMQGSMCentralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDCentralPtProton7GeV, v3URQMDCentralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMCentralPtProton7GeV, v3LAQGSMCentralPtProton7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDCentralPtProton7GeV, v3PHQMDCentralPtProton7GeV->GetTitle(), "p");
+  v3DCMQGSMCentralPtProton7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v3DCMQGSMCentralPtProton7GeV->Draw("same PLC PMC");
+  v3URQMDCentralPtProton7GeV->Draw("same PLC PMC");
+  v3LAQGSMCentralPtProton7GeV->Draw("same PLC PMC");
+  // v3PHQMDCentralPtProton7GeV->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3MidcentralPtProton7GeV = new TCanvas("canv_v3MidcentralPtProton7GeV", "canv_v3MidcentralPtProton7GeV", 700, 500);
+  canv_v3MidcentralPtProton7GeV->cd();
+
+  v3DCMQGSMMidcentralPtProton7GeV->GetYaxis()->SetRangeUser(2*-0.022, 0.085*2);
+  v3DCMQGSMMidcentralPtProton7GeV->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDMidcentralPtProton7GeV->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMMidcentralPtProton7GeV->SetMarkerStyle(kOpenSquare);
+  // v3PHQMDMidcentralPtProton7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 5<b<9 fm (10-40%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3DCMQGSMMidcentralPtProton7GeV, v3DCMQGSMMidcentralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDMidcentralPtProton7GeV, v3URQMDMidcentralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMMidcentralPtProton7GeV, v3LAQGSMMidcentralPtProton7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDMidcentralPtProton7GeV, v3PHQMDMidcentralPtProton7GeV->GetTitle(), "p");
+  v3DCMQGSMMidcentralPtProton7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v3DCMQGSMMidcentralPtProton7GeV->Draw("same PLC PMC");
+  v3URQMDMidcentralPtProton7GeV->Draw("same PLC PMC");
+  v3LAQGSMMidcentralPtProton7GeV->Draw("same PLC PMC");
+  // v3PHQMDMidcentralPtProton7GeV->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3PeripheralPtProton7GeV = new TCanvas("canv_v3PeripheralPtProton7GeV", "canv_v3PeripheralPtProton7GeV", 700, 500);
+  canv_v3PeripheralPtProton7GeV->cd();
+
+  v3DCMQGSMPeripheralPtProton7GeV->GetYaxis()->SetRangeUser(2*-0.022, 0.25*2);
+  v3DCMQGSMPeripheralPtProton7GeV->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDPeripheralPtProton7GeV->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMPeripheralPtProton7GeV->SetMarkerStyle(kOpenSquare);
+  // v3PHQMDPeripheralPtProton7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 9<b<15 fm (40-80%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3DCMQGSMPeripheralPtProton7GeV, v3DCMQGSMPeripheralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDPeripheralPtProton7GeV, v3URQMDPeripheralPtProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMPeripheralPtProton7GeV, v3LAQGSMPeripheralPtProton7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDPeripheralPtProton7GeV, v3PHQMDPeripheralPtProton7GeV->GetTitle(), "p");
+  v3DCMQGSMPeripheralPtProton7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v3DCMQGSMPeripheralPtProton7GeV->Draw("same PLC PMC");
+  v3URQMDPeripheralPtProton7GeV->Draw("same PLC PMC");
+  v3LAQGSMPeripheralPtProton7GeV->Draw("same PLC PMC");
+  // v3PHQMDPeripheralPtProton7GeV->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3CentralRapidityProton7GeV = new TCanvas("canv_v3CentralRapidityProton7GeV", "canv_v3CentralRapidityProton7GeV", 700, 500);
+  canv_v3CentralRapidityProton7GeV->cd();
+
+  v3DCMQGSMCentralRapidityProton7GeV->GetYaxis()->SetRangeUser(2*-0.032, 0.028*2);
+  v3DCMQGSMCentralRapidityProton7GeV->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDCentralRapidityProton7GeV->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMCentralRapidityProton7GeV->SetMarkerStyle(kOpenSquare);
+  // v3PHQMDCentralRapidityProton7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3DCMQGSMCentralRapidityProton7GeV, v3DCMQGSMCentralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDCentralRapidityProton7GeV, v3URQMDCentralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMCentralRapidityProton7GeV, v3LAQGSMCentralRapidityProton7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDCentralRapidityProton7GeV, v3PHQMDCentralRapidityProton7GeV->GetTitle(), "p");
+  v3DCMQGSMCentralRapidityProton7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v3DCMQGSMCentralRapidityProton7GeV->Draw("same PLC PMC");
+  v3URQMDCentralRapidityProton7GeV->Draw("same PLC PMC");
+  v3LAQGSMCentralRapidityProton7GeV->Draw("same PLC PMC");
+  // v3PHQMDCentralRapidityProton7GeV->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3MidcentralRapidityProton7GeV = new TCanvas("canv_v3MidcentralRapidityProton7GeV", "canv_v3MidcentralRapidityProton7GeV", 700, 500);
+  canv_v3MidcentralRapidityProton7GeV->cd();
+
+  v3DCMQGSMMidcentralRapidityProton7GeV->GetYaxis()->SetRangeUser(2*-0.022, 0.035*2);
+  v3DCMQGSMMidcentralRapidityProton7GeV->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDMidcentralRapidityProton7GeV->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMMidcentralRapidityProton7GeV->SetMarkerStyle(kOpenSquare);
+  // v3PHQMDMidcentralRapidityProton7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 5<b<9 fm (10-40%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3DCMQGSMMidcentralRapidityProton7GeV, v3DCMQGSMMidcentralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDMidcentralRapidityProton7GeV, v3URQMDMidcentralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMMidcentralRapidityProton7GeV, v3LAQGSMMidcentralRapidityProton7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDMidcentralRapidityProton7GeV, v3PHQMDMidcentralRapidityProton7GeV->GetTitle(), "p");
+  v3DCMQGSMMidcentralRapidityProton7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v3DCMQGSMMidcentralRapidityProton7GeV->Draw("same PLC PMC");
+  v3URQMDMidcentralRapidityProton7GeV->Draw("same PLC PMC");
+  v3LAQGSMMidcentralRapidityProton7GeV->Draw("same PLC PMC");
+  // v3PHQMDMidcentralRapidityProton7GeV->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3PeripheralRapidityProton7GeV = new TCanvas("canv_v3PeripheralRapidityProton7GeV", "canv_v3PeripheralRapidityProton7GeV", 700, 500);
+  canv_v3PeripheralRapidityProton7GeV->cd();
+
+  v3DCMQGSMPeripheralRapidityProton7GeV->GetYaxis()->SetRangeUser(2*-0.032, 0.055*2);
+  v3DCMQGSMPeripheralRapidityProton7GeV->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDPeripheralRapidityProton7GeV->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMPeripheralRapidityProton7GeV->SetMarkerStyle(kOpenSquare);
+  // v3PHQMDPeripheralRapidityProton7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 9<b<15 fm (40-80%) Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3DCMQGSMPeripheralRapidityProton7GeV, v3DCMQGSMPeripheralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDPeripheralRapidityProton7GeV, v3URQMDPeripheralRapidityProton7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMPeripheralRapidityProton7GeV, v3LAQGSMPeripheralRapidityProton7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDPeripheralRapidityProton7GeV, v3PHQMDPeripheralRapidityProton7GeV->GetTitle(), "p");
+  v3DCMQGSMPeripheralRapidityProton7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v3DCMQGSMPeripheralRapidityProton7GeV->Draw("same PLC PMC");
+  v3URQMDPeripheralRapidityProton7GeV->Draw("same PLC PMC");
+  v3LAQGSMPeripheralRapidityProton7GeV->Draw("same PLC PMC");
+  // v3PHQMDPeripheralRapidityProton7GeV->Draw("same PLC PMC");
+
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3CentralPtPion7GeV = new TCanvas("canv_v3CentralPtPion7GeV", "canv_v3CentralPtPion7GeV", 700, 500);
+  canv_v3CentralPtPion7GeV->cd();
+
+  v3DCMQGSMCentralPtPion7GeV->GetYaxis()->SetRangeUser(2*-0.022, 0.055*2);
+  v3DCMQGSMCentralPtPion7GeV->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDCentralPtPion7GeV->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMCentralPtPion7GeV->SetMarkerStyle(kOpenSquare);
+  // v3PHQMDCentralPtPion7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3DCMQGSMCentralPtPion7GeV, v3DCMQGSMCentralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDCentralPtPion7GeV, v3URQMDCentralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMCentralPtPion7GeV, v3LAQGSMCentralPtPion7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDCentralPtPion7GeV, v3PHQMDCentralPtPion7GeV->GetTitle(), "p");
+  v3DCMQGSMCentralPtPion7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v3DCMQGSMCentralPtPion7GeV->Draw("same PLC PMC");
+  v3URQMDCentralPtPion7GeV->Draw("same PLC PMC");
+  v3LAQGSMCentralPtPion7GeV->Draw("same PLC PMC");
+  // v3PHQMDCentralPtPion7GeV->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3MidcentralPtPion7GeV = new TCanvas("canv_v3MidcentralPtPion7GeV", "canv_v3MidcentralPtPion7GeV", 700, 500);
+  canv_v3MidcentralPtPion7GeV->cd();
+
+  v3DCMQGSMMidcentralPtPion7GeV->GetYaxis()->SetRangeUser(2*-0.022, 0.055*2);
+  v3DCMQGSMMidcentralPtPion7GeV->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDMidcentralPtPion7GeV->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMMidcentralPtPion7GeV->SetMarkerStyle(kOpenSquare);
+  // v3PHQMDMidcentralPtPion7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 5<b<9 fm (10-40%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3DCMQGSMMidcentralPtPion7GeV, v3DCMQGSMMidcentralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDMidcentralPtPion7GeV, v3URQMDMidcentralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMMidcentralPtPion7GeV, v3LAQGSMMidcentralPtPion7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDMidcentralPtPion7GeV, v3PHQMDMidcentralPtPion7GeV->GetTitle(), "p");
+  v3DCMQGSMMidcentralPtPion7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v3DCMQGSMMidcentralPtPion7GeV->Draw("same PLC PMC");
+  v3URQMDMidcentralPtPion7GeV->Draw("same PLC PMC");
+  v3LAQGSMMidcentralPtPion7GeV->Draw("same PLC PMC");
+  // v3PHQMDMidcentralPtPion7GeV->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3PeripheralPtPion7GeV = new TCanvas("canv_v3PeripheralPtPion7GeV", "canv_v3PeripheralPtPion7GeV", 700, 500);
+  canv_v3PeripheralPtPion7GeV->cd();
+
+  v3DCMQGSMPeripheralPtPion7GeV->GetYaxis()->SetRangeUser(2*-0.025, 0.027*2);
+  v3DCMQGSMPeripheralPtPion7GeV->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDPeripheralPtPion7GeV->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMPeripheralPtPion7GeV->SetMarkerStyle(kOpenSquare);
+  // v3PHQMDPeripheralPtPion7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 9<b<15 fm (40-80%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3DCMQGSMPeripheralPtPion7GeV, v3DCMQGSMPeripheralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDPeripheralPtPion7GeV, v3URQMDPeripheralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMPeripheralPtPion7GeV, v3LAQGSMPeripheralPtPion7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDPeripheralPtPion7GeV, v3PHQMDPeripheralPtPion7GeV->GetTitle(), "p");
+  v3DCMQGSMPeripheralPtPion7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v3DCMQGSMPeripheralPtPion7GeV->Draw("same PLC PMC");
+  v3URQMDPeripheralPtPion7GeV->Draw("same PLC PMC");
+  v3LAQGSMPeripheralPtPion7GeV->Draw("same PLC PMC");
+  // v3PHQMDPeripheralPtPion7GeV->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3CentralRapidityPion7GeV = new TCanvas("canv_v3CentralRapidityPion7GeV", "canv_v3CentralRapidityPion7GeV", 700, 500);
+  canv_v3CentralRapidityPion7GeV->cd();
+
+  v3DCMQGSMCentralRapidityPion7GeV->GetYaxis()->SetRangeUser(2*-0.015, 0.022*2);
+  v3DCMQGSMCentralRapidityPion7GeV->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDCentralRapidityPion7GeV->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMCentralRapidityPion7GeV->SetMarkerStyle(kOpenSquare);
+  // v3PHQMDCentralRapidityPion7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3DCMQGSMCentralRapidityPion7GeV, v3DCMQGSMCentralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDCentralRapidityPion7GeV, v3URQMDCentralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMCentralRapidityPion7GeV, v3LAQGSMCentralRapidityPion7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDCentralRapidityPion7GeV, v3PHQMDCentralRapidityPion7GeV->GetTitle(), "p");
+  v3DCMQGSMCentralRapidityPion7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v3DCMQGSMCentralRapidityPion7GeV->Draw("same PLC PMC");
+  v3URQMDCentralRapidityPion7GeV->Draw("same PLC PMC");
+  v3LAQGSMCentralRapidityPion7GeV->Draw("same PLC PMC");
+  // v3PHQMDCentralRapidityPion7GeV->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3MidcentralRapidityPion7GeV = new TCanvas("canv_v3MidcentralRapidityPion7GeV", "canv_v3MidcentralRapidityPion7GeV", 700, 500);
+  canv_v3MidcentralRapidityPion7GeV->cd();
+
+  v3DCMQGSMMidcentralRapidityPion7GeV->GetYaxis()->SetRangeUser(2*-0.008, 0.015*2);
+  v3DCMQGSMMidcentralRapidityPion7GeV->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDMidcentralRapidityPion7GeV->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMMidcentralRapidityPion7GeV->SetMarkerStyle(kOpenSquare);
+  // v3PHQMDMidcentralRapidityPion7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 5<b<9 fm (10-40%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3DCMQGSMMidcentralRapidityPion7GeV, v3DCMQGSMMidcentralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDMidcentralRapidityPion7GeV, v3URQMDMidcentralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMMidcentralRapidityPion7GeV, v3LAQGSMMidcentralRapidityPion7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDMidcentralRapidityPion7GeV, v3PHQMDMidcentralRapidityPion7GeV->GetTitle(), "p");
+  v3DCMQGSMMidcentralRapidityPion7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v3DCMQGSMMidcentralRapidityPion7GeV->Draw("same PLC PMC");
+  v3URQMDMidcentralRapidityPion7GeV->Draw("same PLC PMC");
+  v3LAQGSMMidcentralRapidityPion7GeV->Draw("same PLC PMC");
+  // v3PHQMDMidcentralRapidityPion7GeV->Draw("same PLC PMC");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v3PeripheralRapidityPion7GeV = new TCanvas("canv_v3PeripheralRapidityPion7GeV", "canv_v3PeripheralRapidityPion7GeV", 700, 500);
+  canv_v3PeripheralRapidityPion7GeV->cd();
+
+  v3DCMQGSMPeripheralRapidityPion7GeV->GetYaxis()->SetRangeUser(2*-0.07, 0.025*2);
+  v3DCMQGSMPeripheralRapidityPion7GeV->SetMarkerStyle(kOpenTriangleUp);
+  v3URQMDPeripheralRapidityPion7GeV->SetMarkerStyle(kOpenCircle);
+  v3LAQGSMPeripheralRapidityPion7GeV->SetMarkerStyle(kOpenSquare);
+  // v3PHQMDPeripheralRapidityPion7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 9<b<15 fm (40-80%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v3DCMQGSMPeripheralRapidityPion7GeV, v3DCMQGSMPeripheralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3URQMDPeripheralRapidityPion7GeV, v3URQMDPeripheralRapidityPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMPeripheralRapidityPion7GeV, v3LAQGSMPeripheralRapidityPion7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDPeripheralRapidityPion7GeV, v3PHQMDPeripheralRapidityPion7GeV->GetTitle(), "p");
+  v3DCMQGSMPeripheralRapidityPion7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v3DCMQGSMPeripheralRapidityPion7GeV->Draw("same PLC PMC");
+  v3URQMDPeripheralRapidityPion7GeV->Draw("same PLC PMC");
+  v3LAQGSMPeripheralRapidityPion7GeV->Draw("same PLC PMC");
+  // v3PHQMDPeripheralRapidityPion7GeV->Draw("same PLC PMC");
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtProton7GeVPHSD = new TCanvas("canv_KinematicsAllPtProton7GeVPHSD", "canv_KinematicsAllPtProton7GeVPHSD", 700, 500);
+  canv_KinematicsAllPtProton7GeVPHSD->cd();
+  canv_KinematicsAllPtProton7GeVPHSD->SetLogy();
+  hPHSDKinematicsAllPtProton7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllPtProton7GeV, hPHSDKinematicsAllPtProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHSDCutsAllPtProton7GeV, hPHSDCutsAllPtProton7GeV->GetTitle(), "l");
+  hPHSDKinematicsAllPtProton7GeV->Draw("hist PLC PMC");
+  hPHSDCutsAllPtProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaProton7GeVPHSD = new TCanvas("canv_KinematicsAllEtaProton7GeVPHSD", "canv_KinematicsAllEtaProton7GeVPHSD", 700, 500);
+  canv_KinematicsAllEtaProton7GeVPHSD->cd();
+  canv_KinematicsAllEtaProton7GeVPHSD->SetLogy();
+  hPHSDKinematicsAllEtaProton7GeV->GetYaxis()->SetRangeUser(0.9e5, 5e8);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllEtaProton7GeV, hPHSDKinematicsAllEtaProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHSDCutsAllEtaProton7GeV, hPHSDCutsAllEtaProton7GeV->GetTitle(), "l");
+  hPHSDKinematicsAllEtaProton7GeV->Draw("hist PLC PMC");
+  hPHSDCutsAllEtaProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityProton7GeVPHSD = new TCanvas("canv_KinematicsAllRapidityProton7GeVPHSD", "canv_KinematicsAllRapidityProton7GeVPHSD", 700, 500);
+  canv_KinematicsAllRapidityProton7GeVPHSD->cd();
+  canv_KinematicsAllRapidityProton7GeVPHSD->SetLogy();
+  hPHSDKinematicsAllRapidityProton7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllRapidityProton7GeV, hPHSDKinematicsAllRapidityProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHSDCutsAllRapidityProton7GeV, hPHSDCutsAllRapidityProton7GeV->GetTitle(), "l");
+  hPHSDKinematicsAllRapidityProton7GeV->Draw("hist PLC PMC");
+  hPHSDCutsAllRapidityProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtPion7GeVPHSD = new TCanvas("canv_KinematicsAllPtPion7GeVPHSD", "canv_KinematicsAllPtPion7GeVPHSD", 700, 500);
+  canv_KinematicsAllPtPion7GeVPHSD->cd();
+  canv_KinematicsAllPtPion7GeVPHSD->SetLogy();
+  hPHSDKinematicsAllPtPion7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllPtPion7GeV, hPHSDKinematicsAllPtPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHSDCutsAllPtPion7GeV, hPHSDCutsAllPtPion7GeV->GetTitle(), "l");
+  hPHSDKinematicsAllPtPion7GeV->Draw("hist PLC PMC");
+  hPHSDCutsAllPtPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaPion7GeVPHSD = new TCanvas("canv_KinematicsAllEtaPion7GeVPHSD", "canv_KinematicsAllEtaPion7GeVPHSD", 700, 500);
+  canv_KinematicsAllEtaPion7GeVPHSD->cd();
+  canv_KinematicsAllEtaPion7GeVPHSD->SetLogy();
+  hPHSDKinematicsAllEtaPion7GeV->GetYaxis()->SetRangeUser(0.9e5, 5e8);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllEtaPion7GeV, hPHSDKinematicsAllEtaPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHSDCutsAllEtaPion7GeV, hPHSDCutsAllEtaPion7GeV->GetTitle(), "l");
+  hPHSDKinematicsAllEtaPion7GeV->Draw("hist PLC PMC");
+  hPHSDCutsAllEtaPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityPion7GeVPHSD = new TCanvas("canv_KinematicsAllRapidityPion7GeVPHSD", "canv_KinematicsAllRapidityPion7GeVPHSD", 700, 500);
+  canv_KinematicsAllRapidityPion7GeVPHSD->cd();
+  canv_KinematicsAllRapidityPion7GeVPHSD->SetLogy();
+  hPHSDKinematicsAllRapidityPion7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllRapidityPion7GeV, hPHSDKinematicsAllRapidityPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHSDCutsAllRapidityPion7GeV, hPHSDCutsAllRapidityPion7GeV->GetTitle(), "l");
+  hPHSDKinematicsAllRapidityPion7GeV->Draw("hist PLC PMC");
+  hPHSDCutsAllRapidityPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtProton7GeVURQMD = new TCanvas("canv_KinematicsAllPtProton7GeVURQMD", "canv_KinematicsAllPtProton7GeVURQMD", 700, 500);
+  canv_KinematicsAllPtProton7GeVURQMD->cd();
+  canv_KinematicsAllPtProton7GeVURQMD->SetLogy();
+  hURQMDKinematicsAllPtProton7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllPtProton7GeV, hURQMDKinematicsAllPtProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hURQMDCutsAllPtProton7GeV, hURQMDCutsAllPtProton7GeV->GetTitle(), "l");
+  hURQMDKinematicsAllPtProton7GeV->Draw("hist PLC PMC");
+  hURQMDCutsAllPtProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaProton7GeVURQMD = new TCanvas("canv_KinematicsAllEtaProton7GeVURQMD", "canv_KinematicsAllEtaProton7GeVURQMD", 700, 500);
+  canv_KinematicsAllEtaProton7GeVURQMD->cd();
+  canv_KinematicsAllEtaProton7GeVURQMD->SetLogy();
+  hURQMDKinematicsAllEtaProton7GeV->GetYaxis()->SetRangeUser(0.9e5, 5e8);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllEtaProton7GeV, hURQMDKinematicsAllEtaProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hURQMDCutsAllEtaProton7GeV, hURQMDCutsAllEtaProton7GeV->GetTitle(), "l");
+  hURQMDKinematicsAllEtaProton7GeV->Draw("hist PLC PMC");
+  hURQMDCutsAllEtaProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityProton7GeVURQMD = new TCanvas("canv_KinematicsAllRapidityProton7GeVURQMD", "canv_KinematicsAllRapidityProton7GeVURQMD", 700, 500);
+  canv_KinematicsAllRapidityProton7GeVURQMD->cd();
+  canv_KinematicsAllRapidityProton7GeVURQMD->SetLogy();
+  hURQMDKinematicsAllRapidityProton7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllRapidityProton7GeV, hURQMDKinematicsAllRapidityProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hURQMDCutsAllRapidityProton7GeV, hURQMDCutsAllRapidityProton7GeV->GetTitle(), "l");
+  hURQMDKinematicsAllRapidityProton7GeV->Draw("hist PLC PMC");
+  hURQMDCutsAllRapidityProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtPion7GeVURQMD = new TCanvas("canv_KinematicsAllPtPion7GeVURQMD", "canv_KinematicsAllPtPion7GeVURQMD", 700, 500);
+  canv_KinematicsAllPtPion7GeVURQMD->cd();
+  canv_KinematicsAllPtPion7GeVURQMD->SetLogy();
+  hURQMDKinematicsAllPtPion7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllPtPion7GeV, hURQMDKinematicsAllPtPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hURQMDCutsAllPtPion7GeV, hURQMDCutsAllPtPion7GeV->GetTitle(), "l");
+  hURQMDKinematicsAllPtPion7GeV->Draw("hist PLC PMC");
+  hURQMDCutsAllPtPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaPion7GeVURQMD = new TCanvas("canv_KinematicsAllEtaPion7GeVURQMD", "canv_KinematicsAllEtaPion7GeVURQMD", 700, 500);
+  canv_KinematicsAllEtaPion7GeVURQMD->cd();
+  canv_KinematicsAllEtaPion7GeVURQMD->SetLogy();
+  hURQMDKinematicsAllEtaPion7GeV->GetYaxis()->SetRangeUser(0.9e5, 5e8);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllEtaPion7GeV, hURQMDKinematicsAllEtaPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hURQMDCutsAllEtaPion7GeV, hURQMDCutsAllEtaPion7GeV->GetTitle(), "l");
+  hURQMDKinematicsAllEtaPion7GeV->Draw("hist PLC PMC");
+  hURQMDCutsAllEtaPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityPion7GeVURQMD = new TCanvas("canv_KinematicsAllRapidityPion7GeVURQMD", "canv_KinematicsAllRapidityPion7GeVURQMD", 700, 500);
+  canv_KinematicsAllRapidityPion7GeVURQMD->cd();
+  canv_KinematicsAllRapidityPion7GeVURQMD->SetLogy();
+  hURQMDKinematicsAllRapidityPion7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllRapidityPion7GeV, hURQMDKinematicsAllRapidityPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hURQMDCutsAllRapidityPion7GeV, hURQMDCutsAllRapidityPion7GeV->GetTitle(), "l");
+  hURQMDKinematicsAllRapidityPion7GeV->Draw("hist PLC PMC");
+  hURQMDCutsAllRapidityPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtProton7GeVLAQGSM = new TCanvas("canv_KinematicsAllPtProton7GeVLAQGSM", "canv_KinematicsAllPtProton7GeVLAQGSM", 700, 500);
+  canv_KinematicsAllPtProton7GeVLAQGSM->cd();
+  canv_KinematicsAllPtProton7GeVLAQGSM->SetLogy();
+  hLAQGSMKinematicsAllPtProton7GeV->GetYaxis()->SetRangeUser(0.9e2, 5e7);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllPtProton7GeV, hLAQGSMKinematicsAllPtProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hLAQGSMCutsAllPtProton7GeV, hLAQGSMCutsAllPtProton7GeV->GetTitle(), "l");
+  hLAQGSMKinematicsAllPtProton7GeV->Draw("hist PLC PMC");
+  hLAQGSMCutsAllPtProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaProton7GeVLAQGSM = new TCanvas("canv_KinematicsAllEtaProton7GeVLAQGSM", "canv_KinematicsAllEtaProton7GeVLAQGSM", 700, 500);
+  canv_KinematicsAllEtaProton7GeVLAQGSM->cd();
+  canv_KinematicsAllEtaProton7GeVLAQGSM->SetLogy();
+  hLAQGSMKinematicsAllEtaProton7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllEtaProton7GeV, hLAQGSMKinematicsAllEtaProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hLAQGSMCutsAllEtaProton7GeV, hLAQGSMCutsAllEtaProton7GeV->GetTitle(), "l");
+  hLAQGSMKinematicsAllEtaProton7GeV->Draw("hist PLC PMC");
+  hLAQGSMCutsAllEtaProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityProton7GeVLAQGSM = new TCanvas("canv_KinematicsAllRapidityProton7GeVLAQGSM", "canv_KinematicsAllRapidityProton7GeVLAQGSM", 700, 500);
+  canv_KinematicsAllRapidityProton7GeVLAQGSM->cd();
+  canv_KinematicsAllRapidityProton7GeVLAQGSM->SetLogy();
+  hLAQGSMKinematicsAllRapidityProton7GeV->GetYaxis()->SetRangeUser(0.9e2, 9e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllRapidityProton7GeV, hLAQGSMKinematicsAllRapidityProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hLAQGSMCutsAllRapidityProton7GeV, hLAQGSMCutsAllRapidityProton7GeV->GetTitle(), "l");
+  hLAQGSMKinematicsAllRapidityProton7GeV->Draw("hist PLC PMC");
+  hLAQGSMCutsAllRapidityProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtPion7GeVLAQGSM = new TCanvas("canv_KinematicsAllPtPion7GeVLAQGSM", "canv_KinematicsAllPtPion7GeVLAQGSM", 700, 500);
+  canv_KinematicsAllPtPion7GeVLAQGSM->cd();
+  canv_KinematicsAllPtPion7GeVLAQGSM->SetLogy();
+  hLAQGSMKinematicsAllPtPion7GeV->GetYaxis()->SetRangeUser(0.9e2, 5e7);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllPtPion7GeV, hLAQGSMKinematicsAllPtPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hLAQGSMCutsAllPtPion7GeV, hLAQGSMCutsAllPtPion7GeV->GetTitle(), "l");
+  hLAQGSMKinematicsAllPtPion7GeV->Draw("hist PLC PMC");
+  hLAQGSMCutsAllPtPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaPion7GeVLAQGSM = new TCanvas("canv_KinematicsAllEtaPion7GeVLAQGSM", "canv_KinematicsAllEtaPion7GeVLAQGSM", 700, 500);
+  canv_KinematicsAllEtaPion7GeVLAQGSM->cd();
+  canv_KinematicsAllEtaPion7GeVLAQGSM->SetLogy();
+  hLAQGSMKinematicsAllEtaPion7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllEtaPion7GeV, hLAQGSMKinematicsAllEtaPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hLAQGSMCutsAllEtaPion7GeV, hLAQGSMCutsAllEtaPion7GeV->GetTitle(), "l");
+  hLAQGSMKinematicsAllEtaPion7GeV->Draw("hist PLC PMC");
+  hLAQGSMCutsAllEtaPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityPion7GeVLAQGSM = new TCanvas("canv_KinematicsAllRapidityPion7GeVLAQGSM", "canv_KinematicsAllRapidityPion7GeVLAQGSM", 700, 500);
+  canv_KinematicsAllRapidityPion7GeVLAQGSM->cd();
+  canv_KinematicsAllRapidityPion7GeVLAQGSM->SetLogy();
+  hLAQGSMKinematicsAllRapidityPion7GeV->GetYaxis()->SetRangeUser(0.9e2, 9e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllRapidityPion7GeV, hLAQGSMKinematicsAllRapidityPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hLAQGSMCutsAllRapidityPion7GeV, hLAQGSMCutsAllRapidityPion7GeV->GetTitle(), "l");
+  hLAQGSMKinematicsAllRapidityPion7GeV->Draw("hist PLC PMC");
+  hLAQGSMCutsAllRapidityPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtProton7GeVPHQMD = new TCanvas("canv_KinematicsAllPtProton7GeVPHQMD", "canv_KinematicsAllPtProton7GeVPHQMD", 700, 500);
+  canv_KinematicsAllPtProton7GeVPHQMD->cd();
+  canv_KinematicsAllPtProton7GeVPHQMD->SetLogy();
+  hPHQMDKinematicsAllPtProton7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllPtProton7GeV, hPHQMDKinematicsAllPtProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHQMDCutsAllPtProton7GeV, hPHQMDCutsAllPtProton7GeV->GetTitle(), "l");
+  hPHQMDKinematicsAllPtProton7GeV->Draw("hist PLC PMC");
+  hPHQMDCutsAllPtProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaProton7GeVPHQMD = new TCanvas("canv_KinematicsAllEtaProton7GeVPHQMD", "canv_KinematicsAllEtaProton7GeVPHQMD", 700, 500);
+  canv_KinematicsAllEtaProton7GeVPHQMD->cd();
+  canv_KinematicsAllEtaProton7GeVPHQMD->SetLogy();
+  hPHQMDKinematicsAllEtaProton7GeV->GetYaxis()->SetRangeUser(0.9e5, 5e8);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllEtaProton7GeV, hPHQMDKinematicsAllEtaProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHQMDCutsAllEtaProton7GeV, hPHQMDCutsAllEtaProton7GeV->GetTitle(), "l");
+  hPHQMDKinematicsAllEtaProton7GeV->Draw("hist PLC PMC");
+  hPHQMDCutsAllEtaProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityProton7GeVPHQMD = new TCanvas("canv_KinematicsAllRapidityProton7GeVPHQMD", "canv_KinematicsAllRapidityProton7GeVPHQMD", 700, 500);
+  canv_KinematicsAllRapidityProton7GeVPHQMD->cd();
+  canv_KinematicsAllRapidityProton7GeVPHQMD->SetLogy();
+  hPHQMDKinematicsAllRapidityProton7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllRapidityProton7GeV, hPHQMDKinematicsAllRapidityProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHQMDCutsAllRapidityProton7GeV, hPHQMDCutsAllRapidityProton7GeV->GetTitle(), "l");
+  hPHQMDKinematicsAllRapidityProton7GeV->Draw("hist PLC PMC");
+  hPHQMDCutsAllRapidityProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtPion7GeVPHQMD = new TCanvas("canv_KinematicsAllPtPion7GeVPHQMD", "canv_KinematicsAllPtPion7GeVPHQMD", 700, 500);
+  canv_KinematicsAllPtPion7GeVPHQMD->cd();
+  canv_KinematicsAllPtPion7GeVPHQMD->SetLogy();
+  hPHQMDKinematicsAllPtPion7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllPtPion7GeV, hPHQMDKinematicsAllPtPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHQMDCutsAllPtPion7GeV, hPHQMDCutsAllPtPion7GeV->GetTitle(), "l");
+  hPHQMDKinematicsAllPtPion7GeV->Draw("hist PLC PMC");
+  hPHQMDCutsAllPtPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaPion7GeVPHQMD = new TCanvas("canv_KinematicsAllEtaPion7GeVPHQMD", "canv_KinematicsAllEtaPion7GeVPHQMD", 700, 500);
+  canv_KinematicsAllEtaPion7GeVPHQMD->cd();
+  canv_KinematicsAllEtaPion7GeVPHQMD->SetLogy();
+  hPHQMDKinematicsAllEtaPion7GeV->GetYaxis()->SetRangeUser(0.9e5, 5e8);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllEtaPion7GeV, hPHQMDKinematicsAllEtaPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHQMDCutsAllEtaPion7GeV, hPHQMDCutsAllEtaPion7GeV->GetTitle(), "l");
+  hPHQMDKinematicsAllEtaPion7GeV->Draw("hist PLC PMC");
+  hPHQMDCutsAllEtaPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityPion7GeVPHQMD = new TCanvas("canv_KinematicsAllRapidityPion7GeVPHQMD", "canv_KinematicsAllRapidityPion7GeVPHQMD", 700, 500);
+  canv_KinematicsAllRapidityPion7GeVPHQMD->cd();
+  canv_KinematicsAllRapidityPion7GeVPHQMD->SetLogy();
+  hPHQMDKinematicsAllRapidityPion7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e9);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllRapidityPion7GeV, hPHQMDKinematicsAllRapidityPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hPHQMDCutsAllRapidityPion7GeV, hPHQMDCutsAllRapidityPion7GeV->GetTitle(), "l");
+  hPHQMDKinematicsAllRapidityPion7GeV->Draw("hist PLC PMC");
+  hPHQMDCutsAllRapidityPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtProton7GeVDCMQGSM = new TCanvas("canv_KinematicsAllPtProton7GeVDCMQGSM", "canv_KinematicsAllPtProton7GeVDCMQGSM", 700, 500);
+  canv_KinematicsAllPtProton7GeVDCMQGSM->cd();
+  canv_KinematicsAllPtProton7GeVDCMQGSM->SetLogy();
+  hDCMQGSMKinematicsAllPtProton7GeV->GetYaxis()->SetRangeUser(0.9e2, 5e7);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllPtProton7GeV, hDCMQGSMKinematicsAllPtProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hDCMQGSMCutsAllPtProton7GeV, hDCMQGSMCutsAllPtProton7GeV->GetTitle(), "l");
+  hDCMQGSMKinematicsAllPtProton7GeV->Draw("hist PLC PMC");
+  hDCMQGSMCutsAllPtProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaProton7GeVDCMQGSM = new TCanvas("canv_KinematicsAllEtaProton7GeVDCMQGSM", "canv_KinematicsAllEtaProton7GeVDCMQGSM", 700, 500);
+  canv_KinematicsAllEtaProton7GeVDCMQGSM->cd();
+  canv_KinematicsAllEtaProton7GeVDCMQGSM->SetLogy();
+  hDCMQGSMKinematicsAllEtaProton7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllEtaProton7GeV, hDCMQGSMKinematicsAllEtaProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hDCMQGSMCutsAllEtaProton7GeV, hDCMQGSMCutsAllEtaProton7GeV->GetTitle(), "l");
+  hDCMQGSMKinematicsAllEtaProton7GeV->Draw("hist PLC PMC");
+  hDCMQGSMCutsAllEtaProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityProton7GeVDCMQGSM = new TCanvas("canv_KinematicsAllRapidityProton7GeVDCMQGSM", "canv_KinematicsAllRapidityProton7GeVDCMQGSM", 700, 500);
+  canv_KinematicsAllRapidityProton7GeVDCMQGSM->cd();
+  canv_KinematicsAllRapidityProton7GeVDCMQGSM->SetLogy();
+  hDCMQGSMKinematicsAllRapidityProton7GeV->GetYaxis()->SetRangeUser(0.9e2, 5e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllRapidityProton7GeV, hDCMQGSMKinematicsAllRapidityProton7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hDCMQGSMCutsAllRapidityProton7GeV, hDCMQGSMCutsAllRapidityProton7GeV->GetTitle(), "l");
+  hDCMQGSMKinematicsAllRapidityProton7GeV->Draw("hist PLC PMC");
+  hDCMQGSMCutsAllRapidityProton7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtPion7GeVDCMQGSM = new TCanvas("canv_KinematicsAllPtPion7GeVDCMQGSM", "canv_KinematicsAllPtPion7GeVDCMQGSM", 700, 500);
+  canv_KinematicsAllPtPion7GeVDCMQGSM->cd();
+  canv_KinematicsAllPtPion7GeVDCMQGSM->SetLogy();
+  hDCMQGSMKinematicsAllPtPion7GeV->GetYaxis()->SetRangeUser(0.9e2, 5e7);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllPtPion7GeV, hDCMQGSMKinematicsAllPtPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hDCMQGSMCutsAllPtPion7GeV, hDCMQGSMCutsAllPtPion7GeV->GetTitle(), "l");
+  hDCMQGSMKinematicsAllPtPion7GeV->Draw("hist PLC PMC");
+  hDCMQGSMCutsAllPtPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaPion7GeVDCMQGSM = new TCanvas("canv_KinematicsAllEtaPion7GeVDCMQGSM", "canv_KinematicsAllEtaPion7GeVDCMQGSM", 700, 500);
+  canv_KinematicsAllEtaPion7GeVDCMQGSM->cd();
+  canv_KinematicsAllEtaPion7GeVDCMQGSM->SetLogy();
+  hDCMQGSMKinematicsAllEtaPion7GeV->GetYaxis()->SetRangeUser(0.9e3, 5e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllEtaPion7GeV, hDCMQGSMKinematicsAllEtaPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hDCMQGSMCutsAllEtaPion7GeV, hDCMQGSMCutsAllEtaPion7GeV->GetTitle(), "l");
+  hDCMQGSMKinematicsAllEtaPion7GeV->Draw("hist PLC PMC");
+  hDCMQGSMCutsAllEtaPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityPion7GeVDCMQGSM = new TCanvas("canv_KinematicsAllRapidityPion7GeVDCMQGSM", "canv_KinematicsAllRapidityPion7GeVDCMQGSM", 700, 500);
+  canv_KinematicsAllRapidityPion7GeVDCMQGSM->cd();
+  canv_KinematicsAllRapidityPion7GeVDCMQGSM->SetLogy();
+  hDCMQGSMKinematicsAllRapidityPion7GeV->GetYaxis()->SetRangeUser(0.9e2, 5e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=7 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllRapidityPion7GeV, hDCMQGSMKinematicsAllRapidityPion7GeV->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hDCMQGSMCutsAllRapidityPion7GeV, hDCMQGSMCutsAllRapidityPion7GeV->GetTitle(), "l");
+  hDCMQGSMKinematicsAllRapidityPion7GeV->Draw("hist PLC PMC");
+  hDCMQGSMCutsAllRapidityPion7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsRegionsBPHSD7GeV = new TCanvas("canv_KinematicsRegionsBPHSD7GeV", "canv_KinematicsRegionsBPHSD7GeV", 700, 500);
+  canv_KinematicsRegionsBPHSD7GeV->cd();
+  hPHSDKinematicsAllB7GeV->GetYaxis()->SetRangeUser(0., 1.15e5);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHSDKinematicsAllB7GeV, "All", "l");
+  legend.at(iC)->AddEntry(hPHSDKinematicsCentralB7GeV, "Central", "l");
+  legend.at(iC)->AddEntry(hPHSDKinematicsMidcentralB7GeV, "Midcentral", "l");
+  legend.at(iC)->AddEntry(hPHSDKinematicsPeripheralB7GeV, "Peripheral", "l");
+  hPHSDKinematicsAllB7GeV->Draw("hist PLC PMC");
+  hPHSDKinematicsCentralB7GeV->Draw("same hist PLC PMC");
+  hPHSDKinematicsMidcentralB7GeV->Draw("same hist PLC PMC");
+  hPHSDKinematicsPeripheralB7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsRegionsBURQMD7GeV = new TCanvas("canv_KinematicsRegionsBURQMD7GeV", "canv_KinematicsRegionsBURQMD7GeV", 700, 500);
+  canv_KinematicsRegionsBURQMD7GeV->cd();
+  hURQMDKinematicsAllB7GeV->GetYaxis()->SetRangeUser(0., 2.8e4);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hURQMDKinematicsAllB7GeV, "All", "l");
+  legend.at(iC)->AddEntry(hURQMDKinematicsCentralB7GeV, "Central", "l");
+  legend.at(iC)->AddEntry(hURQMDKinematicsMidcentralB7GeV, "Midcentral", "l");
+  legend.at(iC)->AddEntry(hURQMDKinematicsPeripheralB7GeV, "Peripheral", "l");
+  hURQMDKinematicsAllB7GeV->Draw("hist PLC PMC");
+  hURQMDKinematicsCentralB7GeV->Draw("same hist PLC PMC");
+  hURQMDKinematicsMidcentralB7GeV->Draw("same hist PLC PMC");
+  hURQMDKinematicsPeripheralB7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsRegionsBLAQGSM7GeV = new TCanvas("canv_KinematicsRegionsBLAQGSM7GeV", "canv_KinematicsRegionsBLAQGSM7GeV", 700, 500);
+  canv_KinematicsRegionsBLAQGSM7GeV->cd();
+  hLAQGSMKinematicsAllB7GeV->GetYaxis()->SetRangeUser(0., 2.8e3);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsAllB7GeV, "All", "l");
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsCentralB7GeV, "Central", "l");
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsMidcentralB7GeV, "Midcentral", "l");
+  legend.at(iC)->AddEntry(hLAQGSMKinematicsPeripheralB7GeV, "Peripheral", "l");
+  hLAQGSMKinematicsAllB7GeV->Draw("hist PLC PMC");
+  hLAQGSMKinematicsCentralB7GeV->Draw("same hist PLC PMC");
+  hLAQGSMKinematicsMidcentralB7GeV->Draw("same hist PLC PMC");
+  hLAQGSMKinematicsPeripheralB7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsRegionsBPHQMD7GeV = new TCanvas("canv_KinematicsRegionsBPHQMD7GeV", "canv_KinematicsRegionsBPHQMD7GeV", 700, 500);
+  canv_KinematicsRegionsBPHQMD7GeV->cd();
+  hPHQMDKinematicsAllB7GeV->GetYaxis()->SetRangeUser(0., 1.5e5);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hPHQMDKinematicsAllB7GeV, "All", "l");
+  legend.at(iC)->AddEntry(hPHQMDKinematicsCentralB7GeV, "Central", "l");
+  legend.at(iC)->AddEntry(hPHQMDKinematicsMidcentralB7GeV, "Midcentral", "l");
+  legend.at(iC)->AddEntry(hPHQMDKinematicsPeripheralB7GeV, "Peripheral", "l");
+  hPHQMDKinematicsAllB7GeV->Rebin(4);
+  hPHQMDKinematicsCentralB7GeV->Rebin(4);
+  hPHQMDKinematicsMidcentralB7GeV->Rebin(4);
+  hPHQMDKinematicsPeripheralB7GeV->Rebin(4);
+  hPHQMDKinematicsAllB7GeV->Draw("hist PLC PMC");
+  hPHQMDKinematicsCentralB7GeV->Draw("same hist PLC PMC");
+  hPHQMDKinematicsMidcentralB7GeV->Draw("same hist PLC PMC");
+  hPHQMDKinematicsPeripheralB7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsRegionsBDCMQGSM7GeV = new TCanvas("canv_KinematicsRegionsBDCMQGSM7GeV", "canv_KinematicsRegionsBDCMQGSM7GeV", 700, 500);
+  canv_KinematicsRegionsBDCMQGSM7GeV->cd();
+  hDCMQGSMKinematicsAllB7GeV->GetYaxis()->SetRangeUser(0., 5.1e3);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllB7GeV, "All", "l");
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsCentralB7GeV, "Central", "l");
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsMidcentralB7GeV, "Midcentral", "l");
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsPeripheralB7GeV, "Peripheral", "l");
+  hDCMQGSMKinematicsAllB7GeV->Draw("hist PLC PMC");
+  hDCMQGSMKinematicsCentralB7GeV->Draw("same hist PLC PMC");
+  hDCMQGSMKinematicsMidcentralB7GeV->Draw("same hist PLC PMC");
+  hDCMQGSMKinematicsPeripheralB7GeV->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBMultPHSD7GeV = new TCanvas("canv_KinematicsBMultPHSD7GeV", "canv_KinematicsBMultPHSD7GeV", 700, 500);
+  canv_KinematicsBMultPHSD7GeV->cd();
+  canv_KinematicsBMultPHSD7GeV->SetLogz();
+  // hPHSDKinematicsAllBMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hPHSDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsPeripheralB, "Peripheral", "l");
+  hPHSDKinematicsAllBMULT7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBMultURQMD7GeV = new TCanvas("canv_KinematicsBMultURQMD7GeV", "canv_KinematicsBMultURQMD7GeV", 700, 500);
+  canv_KinematicsBMultURQMD7GeV->cd();
+  canv_KinematicsBMultURQMD7GeV->SetLogz();
+  // hURQMDKinematicsAllBMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hURQMDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsPeripheralB, "Peripheral", "l");
+  hURQMDKinematicsAllBMULT7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBMultLAQGSM7GeV = new TCanvas("canv_KinematicsBMultLAQGSM7GeV", "canv_KinematicsBMultLAQGSM7GeV", 700, 500);
+  canv_KinematicsBMultLAQGSM7GeV->cd();
+  canv_KinematicsBMultLAQGSM7GeV->SetLogz();
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hLAQGSMKinematicsAllBMULT7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBMultPHQMD7GeV = new TCanvas("canv_KinematicsBMultPHQMD7GeV", "canv_KinematicsBMultPHQMD7GeV", 700, 500);
+  canv_KinematicsBMultPHQMD7GeV->cd();
+  canv_KinematicsBMultPHQMD7GeV->SetLogz();
+  // hPHQMDKinematicsAllBMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsPeripheralB, "Peripheral", "l");
+  hPHQMDKinematicsAllBMULT7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBMultDCMQGSM7GeV = new TCanvas("canv_KinematicsBMultDCMQGSM7GeV", "canv_KinematicsBMultDCMQGSM7GeV", 700, 500);
+  canv_KinematicsBMultDCMQGSM7GeV->cd();
+  canv_KinematicsBMultDCMQGSM7GeV->SetLogz();
+  // hDCMQGSMKinematicsAllBMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hDCMQGSMKinematicsAllBMULT7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsEMultPHSD7GeV = new TCanvas("canv_KinematicsEMultPHSD7GeV", "canv_KinematicsEMultPHSD7GeV", 700, 500);
+  canv_KinematicsEMultPHSD7GeV->cd();
+  canv_KinematicsEMultPHSD7GeV->SetLogz();
+  // hPHSDKinematicsAllEMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hPHSDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsPeripheralB, "Peripheral", "l");
+  hPHSDKinematicsAllEMULT7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsEMultURQMD7GeV = new TCanvas("canv_KinematicsEMultURQMD7GeV", "canv_KinematicsEMultURQMD7GeV", 700, 500);
+  canv_KinematicsEMultURQMD7GeV->cd();
+  canv_KinematicsEMultURQMD7GeV->SetLogz();
+  // hURQMDKinematicsAllEMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hURQMDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsPeripheralB, "Peripheral", "l");
+  hURQMDKinematicsAllEMULT7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsEMultLAQGSM7GeV = new TCanvas("canv_KinematicsEMultLAQGSM7GeV", "canv_KinematicsEMultLAQGSM7GeV", 700, 500);
+  canv_KinematicsEMultLAQGSM7GeV->cd();
+  canv_KinematicsEMultLAQGSM7GeV->SetLogz();
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hLAQGSMKinematicsAllEMULT7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsEMultPHQMD7GeV = new TCanvas("canv_KinematicsEMultPHQMD7GeV", "canv_KinematicsEMultPHQMD7GeV", 700, 500);
+  canv_KinematicsEMultPHQMD7GeV->cd();
+  canv_KinematicsEMultPHQMD7GeV->SetLogz();
+  // hPHQMDKinematicsAllEMULT->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsPeripheralB, "Peripheral", "l");
+  hPHQMDKinematicsAllEMULT7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsEMultDCMQGSM7GeV = new TCanvas("canv_KinematicsEMultDCMQGSM7GeV", "canv_KinematicsEMultDCMQGSM7GeV", 700, 500);
+  canv_KinematicsEMultDCMQGSM7GeV->cd();
+  canv_KinematicsEMultDCMQGSM7GeV->SetLogz();
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hDCMQGSMKinematicsAllEMULT7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBEPHSD7GeV = new TCanvas("canv_KinematicsBEPHSD7GeV", "canv_KinematicsBEPHSD7GeV", 700, 500);
+  canv_KinematicsBEPHSD7GeV->cd();
+  canv_KinematicsBEPHSD7GeV->SetLogz();
+  // hPHSDKinematicsAllBE->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHSD, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hPHSDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hPHSDKinematicsPeripheralB, "Peripheral", "l");
+  hPHSDKinematicsAllBE7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBEURQMD7GeV = new TCanvas("canv_KinematicsBEURQMD7GeV", "canv_KinematicsBEURQMD7GeV", 700, 500);
+  canv_KinematicsBEURQMD7GeV->cd();
+  canv_KinematicsBEURQMD7GeV->SetLogz();
+  // hURQMDKinematicsAllBE->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, UrQMD, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hURQMDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hURQMDKinematicsPeripheralB, "Peripheral", "l");
+  hURQMDKinematicsAllBE7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBELAQGSM7GeV = new TCanvas("canv_KinematicsBELAQGSM7GeV", "canv_KinematicsBELAQGSM7GeV", 700, 500);
+  canv_KinematicsBELAQGSM7GeV->cd();
+  canv_KinematicsBELAQGSM7GeV->SetLogz();
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, LAQGSM, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hLAQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hLAQGSMKinematicsAllBE7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBEPHQMD7GeV = new TCanvas("canv_KinematicsBEPHQMD7GeV", "canv_KinematicsBEPHQMD7GeV", 700, 500);
+  canv_KinematicsBEPHQMD7GeV->cd();
+  canv_KinematicsBEPHQMD7GeV->SetLogz();
+  // hPHQMDKinematicsAllBE->GetYaxis()->SetRangeUser(375, 2500);
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, PHQMD, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hPHQMDKinematicsPeripheralB, "Peripheral", "l");
+  hPHQMDKinematicsAllBE7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBEDCMQGSM7GeV = new TCanvas("canv_KinematicsBEDCMQGSM7GeV", "canv_KinematicsBEDCMQGSM7GeV", 700, 500);
+  canv_KinematicsBEDCMQGSM7GeV->cd();
+  canv_KinematicsBEDCMQGSM7GeV->SetLogz();
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hDCMQGSMKinematicsAllBE7GeV->Draw("colz");
+  legend.at(iC)->Draw();
+
+
+
+  canv_v1CentralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton11GeV.pdf");
+  canv_v1CentralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton11GeV.png");
+  canv_v1CentralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton11GeV.C");
+  canv_v1CentralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton11GeV.eps");
+
+  canv_v1MidcentralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityProton11GeV.pdf");
+  canv_v1MidcentralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityProton11GeV.png");
+  canv_v1MidcentralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityProton11GeV.C");
+  canv_v1MidcentralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityProton11GeV.eps");
+
+  canv_v1PeripheralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityProton11GeV.pdf");
+  canv_v1PeripheralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityProton11GeV.png");
+  canv_v1PeripheralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityProton11GeV.C");
+  canv_v1PeripheralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityProton11GeV.eps");
+
+  canv_v1CentralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityPion11GeV.pdf");
+  canv_v1CentralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityPion11GeV.png");
+  canv_v1CentralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityPion11GeV.C");
+  canv_v1CentralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityPion11GeV.eps");
+
+  canv_v1MidcentralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityPion11GeV.pdf");
+  canv_v1MidcentralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityPion11GeV.png");
+  canv_v1MidcentralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityPion11GeV.C");
+  canv_v1MidcentralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityPion11GeV.eps");
+
+  canv_v1PeripheralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityPion11GeV.pdf");
+  canv_v1PeripheralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityPion11GeV.png");
+  canv_v1PeripheralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityPion11GeV.C");
+  canv_v1PeripheralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityPion11GeV.eps");
+
+  canv_v2CentralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtProton11GeV.pdf");
+  canv_v2CentralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtProton11GeV.png");
+  canv_v2CentralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtProton11GeV.C");
+  canv_v2CentralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtProton11GeV.eps");
+
+  canv_v2MidcentralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtProton11GeV.pdf");
+  canv_v2MidcentralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtProton11GeV.png");
+  canv_v2MidcentralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtProton11GeV.C");
+  canv_v2MidcentralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtProton11GeV.eps");
+
+  canv_v2PeripheralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton11GeV.pdf");
+  canv_v2PeripheralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton11GeV.png");
+  canv_v2PeripheralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton11GeV.C");
+  canv_v2PeripheralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton11GeV.eps");
+
+
+  canv_v3CentralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3CentralRapidityProton11GeV.png");
+  canv_v3MidcentralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3MidcentralRapidityProton11GeV.png");
+  canv_v3PeripheralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3PeripheralRapidityProton11GeV.png");
+  canv_v3CentralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3CentralPtProton11GeV.png");
+  canv_v3MidcentralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3MidcentralPtProton11GeV.png");
+  canv_v3PeripheralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3PeripheralPtProton11GeV.png");
+  canv_v3CentralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3CentralRapidityPion11GeV.png");
+  canv_v3MidcentralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3MidcentralRapidityPion11GeV.png");
+  canv_v3PeripheralRapidityPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3PeripheralRapidityPion11GeV.png");
+  canv_v3CentralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3CentralPtPion11GeV.png");
+  canv_v3MidcentralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3MidcentralPtPion11GeV.png");
+  canv_v3PeripheralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3PeripheralPtPion11GeV.png");
+
+
+  canv_KinematicsAllPtProton11GeVPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtProton11GeVPHSD.png");
+  canv_KinematicsAllEtaProton11GeVPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaProton11GeVPHSD.png");
+  canv_KinematicsAllRapidityProton11GeVPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityProton11GeVPHSD.png");
+  canv_KinematicsAllPtPion11GeVPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtPion11GeVPHSD.png");
+  canv_KinematicsAllEtaPion11GeVPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaPion11GeVPHSD.png");
+  canv_KinematicsAllRapidityPion11GeVPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityPion11GeVPHSD.png");
+
+  canv_KinematicsAllPtProton11GeVURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtProton11GeVURQMD.png");
+  canv_KinematicsAllEtaProton11GeVURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaProton11GeVURQMD.png");
+  canv_KinematicsAllRapidityProton11GeVURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityProton11GeVURQMD.png");
+  canv_KinematicsAllPtPion11GeVURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtPion11GeVURQMD.png");
+  canv_KinematicsAllEtaPion11GeVURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaPion11GeVURQMD.png");
+  canv_KinematicsAllRapidityPion11GeVURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityPion11GeVURQMD.png");
+
+  canv_KinematicsAllPtProton11GeVLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtProton11GeVLAQGSM.png");
+  canv_KinematicsAllEtaProton11GeVLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaProton11GeVLAQGSM.png");
+  canv_KinematicsAllRapidityProton11GeVLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityProton11GeVLAQGSM.png");
+  canv_KinematicsAllPtPion11GeVLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtPion11GeVLAQGSM.png");
+  canv_KinematicsAllEtaPion11GeVLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaPion11GeVLAQGSM.png");
+  canv_KinematicsAllRapidityPion11GeVLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityPion11GeVLAQGSM.png");
+
+  canv_KinematicsAllPtProton11GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtProton11GeVPHQMD.png");
+  canv_KinematicsAllEtaProton11GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaProton11GeVPHQMD.png");
+  canv_KinematicsAllRapidityProton11GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityProton11GeVPHQMD.png");
+  canv_KinematicsAllPtPion11GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtPion11GeVPHQMD.png");
+  canv_KinematicsAllEtaPion11GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaPion11GeVPHQMD.png");
+  canv_KinematicsAllRapidityPion11GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityPion11GeVPHQMD.png");
+
+  canv_KinematicsRegionsBPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBPHSD.png");
+  canv_KinematicsRegionsBURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBURQMD.png");
+  canv_KinematicsRegionsBLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBLAQGSM.png");
+  canv_KinematicsRegionsBPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBPHQMD.png");
+
+  canv_KinematicsBMultPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultPHSD.png");
+  canv_KinematicsBMultURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultURQMD.png");
+  canv_KinematicsBMultLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultLAQGSM.png");
+  canv_KinematicsBMultPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultPHQMD.png");
+
+  canv_KinematicsEMultPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultPHSD.png");
+  canv_KinematicsEMultURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultURQMD.png");
+  canv_KinematicsEMultLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultLAQGSM.png");
+  canv_KinematicsEMultPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultPHQMD.png");
+
+  canv_KinematicsBEPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBEPHSD.png");
+  canv_KinematicsBEURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBEURQMD.png");
+  canv_KinematicsBELAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBELAQGSM.png");
+  canv_KinematicsBEPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBEPHQMD.png");
+
+  canv_v1CentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton7GeV.pdf");
+  canv_v1CentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton7GeV.png");
+  canv_v1CentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton7GeV.C");
+  canv_v1CentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton7GeV.eps");
+
+  canv_v1MidcentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityProton7GeV.pdf");
+  canv_v1MidcentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityProton7GeV.png");
+  canv_v1MidcentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityProton7GeV.C");
+  canv_v1MidcentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityProton7GeV.eps");
+
+  canv_v1PeripheralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityProton7GeV.pdf");
+  canv_v1PeripheralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityProton7GeV.png");
+  canv_v1PeripheralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityProton7GeV.C");
+  canv_v1PeripheralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityProton7GeV.eps");
+
+  canv_v1CentralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityPion7GeV.pdf");
+  canv_v1CentralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityPion7GeV.png");
+  canv_v1CentralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityPion7GeV.C");
+  canv_v1CentralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityPion7GeV.eps");
+
+  canv_v1MidcentralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityPion7GeV.pdf");
+  canv_v1MidcentralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityPion7GeV.png");
+  canv_v1MidcentralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityPion7GeV.C");
+  canv_v1MidcentralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1MidcentralRapidityPion7GeV.eps");
+
+  canv_v1PeripheralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityPion7GeV.pdf");
+  canv_v1PeripheralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityPion7GeV.png");
+  canv_v1PeripheralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityPion7GeV.C");
+  canv_v1PeripheralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1PeripheralRapidityPion7GeV.eps");
+
+  canv_v2CentralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtProton7GeV.pdf");
+  canv_v2CentralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtProton7GeV.png");
+  canv_v2CentralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtProton7GeV.C");
+  canv_v2CentralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtProton7GeV.eps");
+
+  canv_v2MidcentralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtProton7GeV.pdf");
+  canv_v2MidcentralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtProton7GeV.png");
+  canv_v2MidcentralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtProton7GeV.C");
+  canv_v2MidcentralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtProton7GeV.eps");
+
+  canv_v2PeripheralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton7GeV.pdf");
+  canv_v2PeripheralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton7GeV.png");
+  canv_v2PeripheralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton7GeV.C");
+  canv_v2PeripheralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton7GeV.eps");
+
+
+  canv_v3CentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3CentralRapidityProton7GeV.png");
+  canv_v3MidcentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3MidcentralRapidityProton7GeV.png");
+  canv_v3PeripheralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3PeripheralRapidityProton7GeV.png");
+  canv_v3CentralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3CentralPtProton7GeV.png");
+  canv_v3MidcentralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3MidcentralPtProton7GeV.png");
+  canv_v3PeripheralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3PeripheralPtProton7GeV.png");
+  canv_v3CentralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3CentralRapidityPion7GeV.png");
+  canv_v3MidcentralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3MidcentralRapidityPion7GeV.png");
+  canv_v3PeripheralRapidityPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3PeripheralRapidityPion7GeV.png");
+  canv_v3CentralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3CentralPtPion7GeV.png");
+  canv_v3MidcentralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3MidcentralPtPion7GeV.png");
+  canv_v3PeripheralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3PeripheralPtPion7GeV.png");
+
+
+  canv_KinematicsAllPtProton7GeVPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtProton7GeVPHSD.png");
+  canv_KinematicsAllEtaProton7GeVPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaProton7GeVPHSD.png");
+  canv_KinematicsAllRapidityProton7GeVPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityProton7GeVPHSD.png");
+  canv_KinematicsAllPtPion7GeVPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtPion7GeVPHSD.png");
+  canv_KinematicsAllEtaPion7GeVPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaPion7GeVPHSD.png");
+  canv_KinematicsAllRapidityPion7GeVPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityPion7GeVPHSD.png");
+
+  canv_KinematicsAllPtProton7GeVURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtProton7GeVURQMD.png");
+  canv_KinematicsAllEtaProton7GeVURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaProton7GeVURQMD.png");
+  canv_KinematicsAllRapidityProton7GeVURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityProton7GeVURQMD.png");
+  canv_KinematicsAllPtPion7GeVURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtPion7GeVURQMD.png");
+  canv_KinematicsAllEtaPion7GeVURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaPion7GeVURQMD.png");
+  canv_KinematicsAllRapidityPion7GeVURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityPion7GeVURQMD.png");
+
+  canv_KinematicsAllPtProton7GeVLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtProton7GeVLAQGSM.png");
+  canv_KinematicsAllEtaProton7GeVLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaProton7GeVLAQGSM.png");
+  canv_KinematicsAllRapidityProton7GeVLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityProton7GeVLAQGSM.png");
+  canv_KinematicsAllPtPion7GeVLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtPion7GeVLAQGSM.png");
+  canv_KinematicsAllEtaPion7GeVLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaPion7GeVLAQGSM.png");
+  canv_KinematicsAllRapidityPion7GeVLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityPion7GeVLAQGSM.png");
+
+  canv_KinematicsAllPtProton7GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtProton7GeVPHQMD.png");
+  canv_KinematicsAllEtaProton7GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaProton7GeVPHQMD.png");
+  canv_KinematicsAllRapidityProton7GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityProton7GeVPHQMD.png");
+  canv_KinematicsAllPtPion7GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtPion7GeVPHQMD.png");
+  canv_KinematicsAllEtaPion7GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaPion7GeVPHQMD.png");
+  canv_KinematicsAllRapidityPion7GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityPion7GeVPHQMD.png");
+
+  canv_KinematicsAllPtProton7GeVDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtProton7GeVDCMQGSM.png");
+  canv_KinematicsAllEtaProton7GeVDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaProton7GeVDCMQGSM.png");
+  canv_KinematicsAllRapidityProton7GeVDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityProton7GeVDCMQGSM.png");
+  canv_KinematicsAllPtPion7GeVDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtPion7GeVDCMQGSM.png");
+  canv_KinematicsAllEtaPion7GeVDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaPion7GeVDCMQGSM.png");
+  canv_KinematicsAllRapidityPion7GeVDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityPion7GeVDCMQGSM.png");
+
+  canv_KinematicsRegionsBPHSD7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBPHSD7GeV.png");
+  canv_KinematicsRegionsBURQMD7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBURQMD7GeV.png");
+  canv_KinematicsRegionsBLAQGSM7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBLAQGSM7GeV.png");
+  canv_KinematicsRegionsBPHQMD7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBPHQMD7GeV.png");
+  canv_KinematicsRegionsBDCMQGSM7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBDCMQGSM7GeV.png");
+
+  canv_KinematicsBMultPHSD7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultPHSD7GeV.png");
+  canv_KinematicsBMultURQMD7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultURQMD7GeV.png");
+  canv_KinematicsBMultLAQGSM7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultLAQGSM7GeV.png");
+  canv_KinematicsBMultPHQMD7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultPHQMD7GeV.png");
+  canv_KinematicsBMultDCMQGSM7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultDCMQGSM7GeV.png");
+
+  canv_KinematicsEMultPHSD7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultPHSD7GeV.png");
+  canv_KinematicsEMultURQMD7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultURQMD7GeV.png");
+  canv_KinematicsEMultLAQGSM7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultLAQGSM7GeV.png");
+  canv_KinematicsEMultPHQMD7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultPHQMD7GeV.png");
+  canv_KinematicsEMultDCMQGSM7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultDCMQGSM7GeV.png");
+
+  canv_KinematicsBEPHSD7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBEPHSD7GeV.png");
+  canv_KinematicsBEURQMD7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBEURQMD7GeV.png");
+  canv_KinematicsBELAQGSM7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBELAQGSM7GeV.png");
+  canv_KinematicsBEPHQMD7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBEPHQMD7GeV.png");
+  canv_KinematicsBEDCMQGSM7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBEDCMQGSM7GeV.png");
 }
