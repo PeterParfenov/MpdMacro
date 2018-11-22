@@ -107,7 +107,8 @@ void DrawLAQGSMres()
 		for (int i_harm=0;i_harm<2;i_harm++){
 			p_true[i][i_harm] = (TProfile*) fRes_true[i] -> Get(Form("p_true_Res_vs_b[%i][%i][%i]",i_harm,0,1));
 			p_true[i][i_harm] -> GetXaxis() -> SetTitle("Centrality (TPC), %");
-			p_true[i][i_harm] -> GetYaxis() -> SetTitle(Form("<cos[%i(#Psi_{1} - #Psi_{RP})]>",i_harm+1));
+      //<cos[%i(#Psi_{1} - #Psi_{RP})]>
+			p_true[i][i_harm] -> GetYaxis() -> SetTitle(Form("R_{%i}{#Psi_{1}}",i_harm+1));
 			p_true[i][i_harm] -> SetTitle("");
 			p_true[i][i_harm] -> GetXaxis() -> SetNdivisions(505);
 			p_true[i][i_harm] -> GetYaxis() -> SetNdivisions(505);
@@ -119,7 +120,7 @@ void DrawLAQGSMres()
 			
 			p_reco[i][i_harm] = (TProfile*) fRes_reco[i] -> Get(Form("p_ResPsi_vs_b[%i][%i][%i]",i_harm,0,1));
 			p_reco[i][i_harm] -> GetXaxis() -> SetTitle("Centrality (TPC), %");
-			p_reco[i][i_harm] -> GetYaxis() -> SetTitle(Form("<cos[%i(#Psi_{1} - #Psi_{RP})]>",i_harm+1));
+			p_reco[i][i_harm] -> GetYaxis() -> SetTitle(Form("R_{%i}{#Psi_{1}}",i_harm+1));
 			p_reco[i][i_harm] -> SetTitle("");
 			p_reco[i][i_harm] -> GetXaxis() -> SetNdivisions(505);
 			p_reco[i][i_harm] -> GetYaxis() -> SetNdivisions(505);
@@ -146,6 +147,7 @@ void DrawLAQGSMres()
 	l_res_total[0] -> AddEntry(p_true[1][0],"true, GEANT4","p");
 	l_res_total[0] -> AddEntry(p_reco[0][0],"reco, GEANT3","p");
 	l_res_total[0] -> AddEntry(p_reco[1][0],"reco, GEANT4","p");
+  p_true[0][0] -> GetYaxis() -> SetTitleOffset(1.);
 	p_true[0][0] -> Draw();
 	l_res_total[0] -> Draw();
 	p_true[0][0] -> Draw("SAME");
@@ -160,6 +162,7 @@ void DrawLAQGSMres()
 	l_res_total[1] -> AddEntry(p_true[1][1],"true, GEANT4","p");
 	l_res_total[1] -> AddEntry(p_reco[0][1],"reco, GEANT3","p");
 	l_res_total[1] -> AddEntry(p_reco[1][1],"reco, GEANT4","p");
+  p_true[0][1] -> GetYaxis() -> SetTitleOffset(1.);
 	p_true[0][1] -> Draw();
 	l_res_total[1] -> Draw();
 	p_true[0][1] -> Draw("SAME");

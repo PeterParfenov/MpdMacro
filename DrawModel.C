@@ -503,6 +503,208 @@
 
     return vect;
   }
+
+  // ---------------- Particle species: Pion ----------------
+  std::vector<TGraphAsymmErrors *> GetSTARv2CentralPion7GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const Int_t N = 4;
+    const Double_t pt_bin = 0.02;
+    Double_t pt_bin_center[N] = {0.375,0.735,1.125,1.545};
+    Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin};
+    Double_t v2_values[N] = {0.0154442,0.0269776,0.0283281,0.037249};
+    Double_t v2_stat_error[N] = {0.000900857,0.00169369,0.00371201,0.00835521};
+    Double_t v2_syst_low_error[N] = {9.63062e-05,1.31224e-05,6.64417e-06,0.000158885};
+    Double_t v2_syst_high_error[N] = {4.81092e-05,2.62369e-05,3.74047e-06,9.60868e-05};
+    Double_t v2_syst_global_error[N] = {0.,0.,0.,0.};
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
+    TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
+    TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
+
+    gr3->SetMarkerStyle(29);
+    gr3->SetMarkerSize(2.2);
+    gr2->SetFillColor(1);
+    gr2->SetFillStyle(3001);
+    gr3->SetFillColor(4);
+    gr3->SetFillStyle(3002);
+
+    vect.push_back(gr1);
+    vect.push_back(gr2);
+    vect.push_back(gr3);
+
+    return vect;
+  }
+
+  // beam energy: 11.5 GeV
+  // Event plane method: eta-sub
+  // ---------------- Particle species: Pion ----------------
+  std::vector<TGraphAsymmErrors *> GetSTARv2CentralPion11GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const Int_t N = 8;
+    const Double_t pt_bin = 0.02;
+    Double_t pt_bin_center[N] = {0.285,0.495,0.675,0.885,1.155,1.545,1.935,2.355};
+    Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
+    Double_t v2_values[N] = {0.0123074,0.0221415,0.0293689,0.0332695,0.0383741,0.0452447,0.0500749,0.0426986};
+    Double_t v2_stat_error[N] = {0.000444405,0.000549625,0.000766495,0.00110815,0.00134295,0.00288218,0.00638391,0.013107};
+    Double_t v2_syst_low_error[N] = {9.03499e-11,1.29112e-05,0.00056083,3.39057e-07,4.21356e-06,0.000503515,0.000451271,0.00492305};
+    Double_t v2_syst_high_error[N] = {1.52994e-10,6.62106e-06,0.000276685,3.76681e-07,8.3909e-06,0.000253548,0.000369251,0.00249095};
+    Double_t v2_syst_global_error[N] = {0.,0.,0.,0.,0.,0.,0.,0.};
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
+    TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
+    TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
+
+    gr3->SetMarkerStyle(29);
+    gr3->SetMarkerSize(2.2);
+    gr2->SetFillColor(1);
+    gr2->SetFillStyle(3001);
+    gr3->SetFillColor(4);
+    gr3->SetFillStyle(3002);
+
+    vect.push_back(gr1);
+    vect.push_back(gr2);
+    vect.push_back(gr3);
+
+    return vect;
+  }
+
+  //-----------------------------------------------------------------------------------------
+  // centrality: 10-40%
+
+  // beam energy: 7.7 GeV
+  // Event plane method: eta-sub
+  // ---------------- Particle species: Pion ----------------
+  std::vector<TGraphAsymmErrors *> GetSTARv2MidcentralPion7GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const Int_t N = 7;
+    const Double_t pt_bin = 0.02;
+    Double_t pt_bin_center[N] = {0.285,0.495,0.675,0.885,1.155,1.545,1.935};
+    Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
+    Double_t v2_values[N] = {0.0225062,0.0415791,0.0560643,0.0678896,0.0819491,0.100776,0.120508};
+    Double_t v2_stat_error[N] = {0.000479722,0.000616763,0.000883004,0.00131197,0.00165343,0.00380281,0.00915605};
+    Double_t v2_syst_low_error[N] = {3.61284e-10,1.42286e-05,0.000107432,2.12591e-06,1.33104e-05,0.000353813,0.00177874};
+    Double_t v2_syst_high_error[N] = {4.7195e-11,2.84574e-05,0.000217747,4.25174e-06,6.65502e-06,0.000186354,0.00513822};
+    Double_t v2_syst_global_error[N] = {0.,0.,0.,0.,0.,0.};
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
+    TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
+    TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
+
+    gr3->SetMarkerStyle(29);
+    gr3->SetMarkerSize(2.2);
+    gr2->SetFillColor(1);
+    gr2->SetFillStyle(3001);
+    gr3->SetFillColor(4);
+    gr3->SetFillStyle(3002);
+
+    vect.push_back(gr1);
+    vect.push_back(gr2);
+    vect.push_back(gr3);
+
+    return vect;
+  }
+
+  // beam energy: 11.5 GeV
+  // Event plane method: eta-sub
+  // ---------------- Particle species: Pion ----------------
+  std::vector<TGraphAsymmErrors *> GetSTARv2MidcentralPion11GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const Int_t N = 10;
+    const Double_t pt_bin = 0.02;
+    Double_t pt_bin_center[N] = {0.285,0.495,0.675,0.885,1.065,1.275,1.485,1.665,1.935,2.355};
+    Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
+    Double_t v2_values[N] = {0.0234571,0.0439218,0.0621634,0.0784782,0.0918088,0.103063,0.110708,0.120155,0.125528,0.127156};
+    Double_t v2_stat_error[N] = {0.000223011,0.000280047,0.000393929,0.00057453,0.000847508,0.00124706,0.0018493,0.0027647,0.00341252,0.006978};
+    Double_t v2_syst_low_error[N] = {5.46478e-11,1.72768e-05,9.27984e-05,7.15537e-07,0.00017347,3.2058e-06,1.16634e-05,0.000168384,0.000280535,0.000453225};
+    Double_t v2_syst_high_error[N] = {2.07846e-11,3.45558e-05,0.000180783,1.43107e-06,8.81597e-05,6.39427e-06,6.31075e-06,7.76824e-05,0.000504474,0.000479085};
+    Double_t v2_syst_global_error[N] = {0.,0.,0.,0.,0.,0.,0.,0.,0.,0.};
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
+    TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
+    TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
+
+    gr3->SetMarkerStyle(29);
+    gr3->SetMarkerSize(2.2);
+    gr2->SetFillColor(1);
+    gr2->SetFillStyle(3001);
+    gr3->SetFillColor(4);
+    gr3->SetFillStyle(3002);
+
+    vect.push_back(gr1);
+    vect.push_back(gr2);
+    vect.push_back(gr3);
+
+    return vect;
+  }
+
+  //-----------------------------------------------------------------------------------------
+  // centrality: 40-80%
+
+  // beam energy: 7.7 GeV
+  // Event plane method: eta-sub
+  // ---------------- Particle species: Pion ----------------
+  std::vector<TGraphAsymmErrors *> GetSTARv2PeripheralPion7GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const Int_t N = 6;
+    const Double_t pt_bin = 0.02;
+    Double_t pt_bin_center[N] = {0.285,0.495,0.675,0.885,1.125,1.545};
+    Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
+    Double_t v2_values[N] = {0.0224911,0.0479004,0.0653419,0.0906055,0.104877,0.142921};
+    Double_t v2_stat_error[N] = {0.00184114,0.00242319,0.00353726,0.00542294,0.00715068,0.0176374};
+    Double_t v2_syst_low_error[N] = {5.70124e-10,8.73346e-05,0.00100347,0.000464861,2.00993e-06,0.000307695};
+    Double_t v2_syst_high_error[N] = {5.57698e-10,0.000174646,0.000504737,0.000823932,1.34749e-06,0.000213692};
+    Double_t v2_syst_global_error[N] = {0.,0.,0.,0.,0.,0.};
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
+    TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
+    TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
+
+    gr3->SetMarkerStyle(29);
+    gr3->SetMarkerSize(2.2);
+    gr2->SetFillColor(1);
+    gr2->SetFillStyle(3001);
+    gr3->SetFillColor(4);
+    gr3->SetFillStyle(3002);
+
+    vect.push_back(gr1);
+    vect.push_back(gr2);
+    vect.push_back(gr3);
+
+    return vect;
+  }
+
+  // beam energy: 11.5 GeV
+  // Event plane method: eta-sub
+  // ---------------- Particle species: Pion ----------------
+  std::vector<TGraphAsymmErrors *> GetSTARv2PeripheralPion11GeV()
+  {
+    std::vector<TGraphAsymmErrors *> vect;
+    const Int_t N = 8;
+    const Double_t pt_bin = 0.02;
+    Double_t pt_bin_center[N] = {0.285,0.495,0.675,0.885,1.065,1.275,1.545,1.935};
+    Double_t pt_bin_error[N] = {pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin, pt_bin};
+    Double_t v2_values[N] = {0.0254122,0.0525961,0.0706521,0.0983145,0.10694,0.135477,0.139412,0.196748};
+    Double_t v2_stat_error[N] = {0.000811388,0.00104739,0.00150464,0.00225616,0.00341003,0.00514678,0.00651868,0.0149829};
+    Double_t v2_syst_low_error[N] = {1.70562e-09,4.04072e-05,0.000278691,6.28011e-06,0.000959699,0.000354623,0.00159947,0.000306716};
+    Double_t v2_syst_high_error[N] = {3.64173e-10,8.08082e-05,0.000553968,1.23332e-05,0.00186381,0.000705247,0.000936076,0.000260424};
+    Double_t v2_syst_global_error[N] = {0.,0.,0.,0.,0.,0.,0.,0.};
+    TGraphAsymmErrors *gr1 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_stat_error, v2_stat_error);
+    TGraphAsymmErrors *gr2 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_low_error, v2_syst_high_error);
+    TGraphAsymmErrors *gr3 = new TGraphAsymmErrors(N, pt_bin_center, v2_values, pt_bin_error, pt_bin_error, v2_syst_global_error, v2_syst_global_error);
+
+    gr3->SetMarkerStyle(29);
+    gr3->SetMarkerSize(2.2);
+    gr2->SetFillColor(1);
+    gr2->SetFillStyle(3001);
+    gr3->SetFillColor(4);
+    gr3->SetFillStyle(3002);
+
+    vect.push_back(gr1);
+    vect.push_back(gr2);
+    vect.push_back(gr3);
+
+    return vect;
+  }
 //--------------------------------------------------------------------------------------------------------------
 
 void DrawModel()
@@ -516,12 +718,14 @@ void DrawModel()
   TFile *modelFileURQMD7GeV = new TFile("~/Documents/Dataset/modelQA_UrQMD_7.7GeV_1M_hist.root", "read");
   TFile *modelFileURQMD11GeV = new TFile("~/Documents/Dataset/modelQA_UrQMD_11GeV_1M_hist.root", "read");
   TFile *modelFileLAQGSM11GeV = new TFile("~/Documents/Dataset/modelQA_LAQGSM_11GeV_100k_hist.root", "read");
+  // TFile *modelFileLAQGSM11GeV = new TFile("~/Documents/WorkLocal/MPD/Projects/DataReader/build/test_hist.root", "read");
   TFile *modelFileLAQGSM7GeV = new TFile("~/Documents/Dataset/modelQA_LAQGSM_7GeV_100k_hist.root", "read");
   TFile *modelFilePHSD11GeV = new TFile("~/Documents/Dataset/modelQA_PHSD_11GeV_5M_hist.root", "read");
   TFile *modelFilePHSD7GeV = new TFile("~/Documents/Dataset/modelQA_PHSD_11GeV_5M_hist.root", "read");
   TFile *modelFilePHQMD11GeV = new TFile("~/Documents/Dataset/modelQA_PHQMD_11GeV_1M_hist.root", "read");
   TFile *modelFilePHQMD7GeV = new TFile("~/Documents/Dataset/modelQA_PHQMD_11GeV_1M_hist.root", "read");
-  TFile *modelFileDCMQGSM11GeV = new TFile("~/Documents/Dataset/modelQA_DCQMD_7GeV_100k_hist.root", "read");
+  TFile *modelFileDCMQGSM11GeV = new TFile("~/Documents/Dataset/modelQA_DCQMD_11GeV_100k_hist.root", "read");
+  // TFile *modelFileDCMQGSM11GeV = new TFile("~/Documents/WorkLocal/MPD/Projects/DataReader/build/test1_hist.root", "read");
   TFile *modelFileDCMQGSM7GeV = new TFile("~/Documents/Dataset/modelQA_DCQMD_7GeV_100k_hist.root", "read");
 
   std::vector<TLegend *> legend;
@@ -2866,6 +3070,13 @@ void DrawModel()
   std::vector<TGraphAsymmErrors *> grv2MidcentralProton11GeV = GetSTARv2MidcentralProton11GeV();
   std::vector<TGraphAsymmErrors *> grv2PeripheralProton11GeV = GetSTARv2PeripheralProton11GeV();
 
+  std::vector<TGraphAsymmErrors *> grv2CentralPion7GeV = GetSTARv2CentralPion7GeV();
+  std::vector<TGraphAsymmErrors *> grv2MidcentralPion7GeV = GetSTARv2MidcentralPion7GeV();
+  std::vector<TGraphAsymmErrors *> grv2PeripheralPion7GeV = GetSTARv2PeripheralPion7GeV();
+  std::vector<TGraphAsymmErrors *> grv2CentralPion11GeV = GetSTARv2CentralPion11GeV();
+  std::vector<TGraphAsymmErrors *> grv2MidcentralPion11GeV = GetSTARv2MidcentralPion11GeV();
+  std::vector<TGraphAsymmErrors *> grv2PeripheralPion11GeV = GetSTARv2PeripheralPion11GeV();
+
   grv1CentralProton7GeV.at(0)->SetTitle("STAR BES-I");
   grv1MidcentralProton7GeV.at(0)->SetTitle("STAR BES-I");
   grv1PeripheralProton7GeV.at(0)->SetTitle("STAR BES-I");
@@ -2885,12 +3096,18 @@ void DrawModel()
   grv2CentralProton11GeV.at(2)->SetTitle("STAR BES-I");
   grv2MidcentralProton11GeV.at(2)->SetTitle("STAR BES-I");
   grv2PeripheralProton11GeV.at(2)->SetTitle("STAR BES-I");
+  grv2CentralPion7GeV.at(2)->SetTitle("STAR BES-I");
+  grv2MidcentralPion7GeV.at(2)->SetTitle("STAR BES-I");
+  grv2PeripheralPion7GeV.at(2)->SetTitle("STAR BES-I");
+  grv2CentralPion11GeV.at(2)->SetTitle("STAR BES-I");
+  grv2MidcentralPion11GeV.at(2)->SetTitle("STAR BES-I");
+  grv2PeripheralPion11GeV.at(2)->SetTitle("STAR BES-I");
 
   //--------------------------------------------------------------------------------------------------------------
   TCanvas *canv_v1CentralRapidityProton11GeV = new TCanvas("canv_v1CentralRapidityProton11GeV", "canv_v1CentralRapidityProton11GeV", 700, 500);
   canv_v1CentralRapidityProton11GeV->cd();
 
-  v1PHSDCentralRapidityProton->GetYaxis()->SetRangeUser(-0.05, 0.076);
+  v1URQMDCentralRapidityProton->GetYaxis()->SetRangeUser(-0.05, 0.076);
   // v1PHSDCentralRapidityProton->SetLineColor(2);
   // v1PHSDCentralRapidityProton->SetMarkerColor(2);
   v1PHSDCentralRapidityProton->SetMarkerStyle(kOpenTriangleUp);
@@ -2901,23 +3118,26 @@ void DrawModel()
   // v1LAQGSMCentralRapidityProton->SetMarkerColor(4);
   v1LAQGSMCentralRapidityProton->SetMarkerStyle(kOpenSquare);
   v1PHQMDCentralRapidityProton->SetMarkerStyle(kOpenDiamond);
+  v1DCMQGSMCentralRapidityProton->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons");
   legend.at(0)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons", "C");
   header = (TLegendEntry *)legend.at(0)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(0)->SetNColumns(2);
-  legend.at(0)->AddEntry(v1PHSDCentralRapidityProton, v1PHSDCentralRapidityProton->GetTitle(), "p");
+  // legend.at(0)->AddEntry(v1PHSDCentralRapidityProton, v1PHSDCentralRapidityProton->GetTitle(), "p");
   legend.at(0)->AddEntry(v1URQMDCentralRapidityProton, v1URQMDCentralRapidityProton->GetTitle(), "p");
   legend.at(0)->AddEntry(v1LAQGSMCentralRapidityProton, v1LAQGSMCentralRapidityProton->GetTitle(), "p");
-  legend.at(0)->AddEntry(v1PHQMDCentralRapidityProton, v1PHQMDCentralRapidityProton->GetTitle(), "p");
+  // legend.at(0)->AddEntry(v1PHQMDCentralRapidityProton, v1PHQMDCentralRapidityProton->GetTitle(), "p");
+  legend.at(0)->AddEntry(v1DCMQGSMCentralRapidityProton, v1DCMQGSMCentralRapidityProton->GetTitle(), "p");
   legend.at(0)->AddEntry(grv1CentralProton11GeV.at(0), grv1CentralProton11GeV.at(0)->GetTitle(), "p");
-  v1PHSDCentralRapidityProton->Draw("");
+  v1URQMDCentralRapidityProton->Draw("");
   legend.at(0)->Draw();
-  v1PHSDCentralRapidityProton->Draw("same PLC PMC");
+  // v1PHSDCentralRapidityProton->Draw("same PLC PMC");
   v1URQMDCentralRapidityProton->Draw("same PLC PMC");
   v1LAQGSMCentralRapidityProton->Draw("same PLC PMC");
-  v1PHQMDCentralRapidityProton->Draw("same PLC PMC");
+  // v1PHQMDCentralRapidityProton->Draw("same PLC PMC");
+  v1DCMQGSMCentralRapidityProton->Draw("same PLC PMC");
   grv1CentralProton11GeV.at(0)->Draw("P");
   line.DrawLine(v1PHSDCentralRapidityProton->GetXaxis()->GetXmin(), 0., v1PHSDCentralRapidityProton->GetXaxis()->GetXmax(), 0.);
 
@@ -2925,7 +3145,7 @@ void DrawModel()
   TCanvas *canv_v1MidcentralRapidityProton11GeV = new TCanvas("canv_v1MidcentralRapidityProton11GeV", "canv_v1MidcentralRapidityProton11GeV", 700, 500);
   canv_v1MidcentralRapidityProton11GeV->cd();
 
-  v1PHSDMidcentralRapidityProton->GetYaxis()->SetRangeUser(-0.05, 0.15);
+  v1URQMDMidcentralRapidityProton->GetYaxis()->SetRangeUser(-0.09, 0.12);
   // v1PHSDMidcentralRapidityProton->SetLineColor(2);
   // v1PHSDMidcentralRapidityProton->SetMarkerColor(2);
   v1PHSDMidcentralRapidityProton->SetMarkerStyle(kOpenTriangleUp);
@@ -2936,23 +3156,26 @@ void DrawModel()
   // v1LAQGSMMidcentralRapidityProton->SetMarkerColor(4);
   v1LAQGSMMidcentralRapidityProton->SetMarkerStyle(kOpenSquare);
   v1PHQMDMidcentralRapidityProton->SetMarkerStyle(kOpenDiamond);
+  v1DCMQGSMMidcentralRapidityProton->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons");
   legend.at(1)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Protons", "C");
   header = (TLegendEntry *)legend.at(1)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(1)->SetNColumns(2);
-  legend.at(1)->AddEntry(v1PHSDMidcentralRapidityProton, v1PHSDMidcentralRapidityProton->GetTitle(), "p");
+  // legend.at(1)->AddEntry(v1PHSDMidcentralRapidityProton, v1PHSDMidcentralRapidityProton->GetTitle(), "p");
   legend.at(1)->AddEntry(v1URQMDMidcentralRapidityProton, v1URQMDMidcentralRapidityProton->GetTitle(), "p");
   legend.at(1)->AddEntry(v1LAQGSMMidcentralRapidityProton, v1LAQGSMMidcentralRapidityProton->GetTitle(), "p");
-  legend.at(1)->AddEntry(v1PHQMDMidcentralRapidityProton, v1PHQMDMidcentralRapidityProton->GetTitle(), "p");
+  // legend.at(1)->AddEntry(v1PHQMDMidcentralRapidityProton, v1PHQMDMidcentralRapidityProton->GetTitle(), "p");
+  legend.at(1)->AddEntry(v1DCMQGSMMidcentralRapidityProton, v1DCMQGSMMidcentralRapidityProton->GetTitle(), "p");
   legend.at(1)->AddEntry(grv1MidcentralProton11GeV.at(0), grv1MidcentralProton11GeV.at(0)->GetTitle(), "p");
-  v1PHSDMidcentralRapidityProton->Draw("");
+  v1URQMDMidcentralRapidityProton->Draw("");
   legend.at(1)->Draw();
-  v1PHSDMidcentralRapidityProton->Draw("same PLC PMC");
+  // v1PHSDMidcentralRapidityProton->Draw("same PLC PMC");
   v1URQMDMidcentralRapidityProton->Draw("same PLC PMC");
   v1LAQGSMMidcentralRapidityProton->Draw("same PLC PMC");
-  v1PHQMDMidcentralRapidityProton->Draw("same PLC PMC");
+  // v1PHQMDMidcentralRapidityProton->Draw("same PLC PMC");
+  v1DCMQGSMMidcentralRapidityProton->Draw("same PLC PMC");
   grv1MidcentralProton11GeV.at(0)->Draw("P");
   line.DrawLine(v1PHSDMidcentralRapidityProton->GetXaxis()->GetXmin(), 0., v1PHSDMidcentralRapidityProton->GetXaxis()->GetXmax(), 0.);
 
@@ -2960,7 +3183,7 @@ void DrawModel()
   TCanvas *canv_v1PeripheralRapidityProton11GeV = new TCanvas("canv_v1PeripheralRapidityProton11GeV", "canv_v1PeripheralRapidityProton11GeV", 700, 500);
   canv_v1PeripheralRapidityProton11GeV->cd();
 
-  v1PHSDPeripheralRapidityProton->GetYaxis()->SetRangeUser(-0.05, 0.17);
+  v1URQMDPeripheralRapidityProton->GetYaxis()->SetRangeUser(-0.12, 0.17);
   // v1PHSDPeripheralRapidityProton->SetLineColor(2);
   // v1PHSDPeripheralRapidityProton->SetMarkerColor(2);
   v1PHSDPeripheralRapidityProton->SetMarkerStyle(kOpenTriangleUp);
@@ -2971,23 +3194,26 @@ void DrawModel()
   // v1LAQGSMPeripheralRapidityProton->SetMarkerColor(4);
   v1LAQGSMPeripheralRapidityProton->SetMarkerStyle(kOpenSquare);
   v1PHQMDPeripheralRapidityProton->SetMarkerStyle(kOpenDiamond);
+  v1DCMQGSMPeripheralRapidityProton->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons");
   legend.at(2)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Protons", "C");
   header = (TLegendEntry *)legend.at(2)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(2)->SetNColumns(2);
-  legend.at(2)->AddEntry(v1PHSDPeripheralRapidityProton, v1PHSDPeripheralRapidityProton->GetTitle(), "p");
+  // legend.at(2)->AddEntry(v1PHSDPeripheralRapidityProton, v1PHSDPeripheralRapidityProton->GetTitle(), "p");
   legend.at(2)->AddEntry(v1URQMDPeripheralRapidityProton, v1URQMDPeripheralRapidityProton->GetTitle(), "p");
   legend.at(2)->AddEntry(v1LAQGSMPeripheralRapidityProton, v1LAQGSMPeripheralRapidityProton->GetTitle(), "p");
-  legend.at(2)->AddEntry(v1PHQMDPeripheralRapidityProton, v1PHQMDPeripheralRapidityProton->GetTitle(), "p");
+  // legend.at(2)->AddEntry(v1PHQMDPeripheralRapidityProton, v1PHQMDPeripheralRapidityProton->GetTitle(), "p");
+  legend.at(2)->AddEntry(v1DCMQGSMPeripheralRapidityProton, v1DCMQGSMPeripheralRapidityProton->GetTitle(), "p");
   legend.at(2)->AddEntry(grv1PeripheralProton11GeV.at(0), grv1PeripheralProton11GeV.at(0)->GetTitle(), "p");
-  v1PHSDPeripheralRapidityProton->Draw("");
+  v1URQMDPeripheralRapidityProton->Draw("");
   legend.at(2)->Draw();
-  v1PHSDPeripheralRapidityProton->Draw("same PLC PMC");
+  // v1PHSDPeripheralRapidityProton->Draw("same PLC PMC");
   v1URQMDPeripheralRapidityProton->Draw("same PLC PMC");
   v1LAQGSMPeripheralRapidityProton->Draw("same PLC PMC");
-  v1PHQMDPeripheralRapidityProton->Draw("same PLC PMC");
+  // v1PHQMDPeripheralRapidityProton->Draw("same PLC PMC");
+  v1DCMQGSMPeripheralRapidityProton->Draw("same PLC PMC");
   grv1PeripheralProton11GeV.at(0)->Draw("P");
   line.DrawLine(v1PHSDPeripheralRapidityProton->GetXaxis()->GetXmin(), 0., v1PHSDPeripheralRapidityProton->GetXaxis()->GetXmax(), 0.);
 
@@ -2995,7 +3221,7 @@ void DrawModel()
   TCanvas *canv_v1CentralRapidityPion11GeV = new TCanvas("canv_v1CentralRapidityPion11GeV", "canv_v1CentralRapidityPion11GeV", 700, 500);
   canv_v1CentralRapidityPion11GeV->cd();
 
-  v1PHSDCentralRapidityPion->GetYaxis()->SetRangeUser(-0.05, 0.05);
+  v1URQMDCentralRapidityPion->GetYaxis()->SetRangeUser(-0.05, 0.05);
   // v1PHSDCentralRapidityPion->SetLineColor(2);
   // v1PHSDCentralRapidityPion->SetMarkerColor(2);
   v1PHSDCentralRapidityPion->SetMarkerStyle(kOpenTriangleUp);
@@ -3006,23 +3232,26 @@ void DrawModel()
   // v1LAQGSMCentralRapidityPion->SetMarkerColor(4);
   v1LAQGSMCentralRapidityPion->SetMarkerStyle(kOpenSquare);
   v1PHQMDCentralRapidityPion->SetMarkerStyle(kOpenDiamond);
+  v1DCMQGSMCentralRapidityPion->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions");
   legend.at(3)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions", "C");
   header = (TLegendEntry *)legend.at(3)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(3)->SetNColumns(2);
-  legend.at(3)->AddEntry(v1PHSDCentralRapidityPion, v1PHSDCentralRapidityPion->GetTitle(), "p");
+  // legend.at(3)->AddEntry(v1PHSDCentralRapidityPion, v1PHSDCentralRapidityPion->GetTitle(), "p");
   legend.at(3)->AddEntry(v1URQMDCentralRapidityPion, v1URQMDCentralRapidityPion->GetTitle(), "p");
   legend.at(3)->AddEntry(v1LAQGSMCentralRapidityPion, v1LAQGSMCentralRapidityPion->GetTitle(), "p");
-  legend.at(3)->AddEntry(v1PHQMDCentralRapidityPion, v1PHQMDCentralRapidityPion->GetTitle(), "p");
+  // legend.at(3)->AddEntry(v1PHQMDCentralRapidityPion, v1PHQMDCentralRapidityPion->GetTitle(), "p");
+  legend.at(3)->AddEntry(v1DCMQGSMCentralRapidityPion, v1DCMQGSMCentralRapidityPion->GetTitle(), "p");
   legend.at(3)->AddEntry(grv1CentralPion11GeV.at(0), grv1CentralPion11GeV.at(0)->GetTitle(), "p");
-  v1PHSDCentralRapidityPion->Draw("");
+  v1URQMDCentralRapidityPion->Draw("");
   legend.at(3)->Draw();
-  v1PHSDCentralRapidityPion->Draw("same PLC PMC");
+  // v1PHSDCentralRapidityPion->Draw("same PLC PMC");
   v1URQMDCentralRapidityPion->Draw("same PLC PMC");
   v1LAQGSMCentralRapidityPion->Draw("same PLC PMC");
-  v1PHQMDCentralRapidityPion->Draw("same PLC PMC");
+  // v1PHQMDCentralRapidityPion->Draw("same PLC PMC");
+  v1DCMQGSMCentralRapidityPion->Draw("same PLC PMC");
   grv1CentralPion11GeV.at(0)->Draw("P");
   line.DrawLine(v1PHSDCentralRapidityPion->GetXaxis()->GetXmin(), 0., v1PHSDCentralRapidityPion->GetXaxis()->GetXmax(), 0.);
 
@@ -3030,7 +3259,7 @@ void DrawModel()
   TCanvas *canv_v1MidcentralRapidityPion11GeV = new TCanvas("canv_v1MidcentralRapidityPion11GeV", "canv_v1MidcentralRapidityPion11GeV", 700, 500);
   canv_v1MidcentralRapidityPion11GeV->cd();
 
-  v1PHSDMidcentralRapidityPion->GetYaxis()->SetRangeUser(-0.09, 0.09);
+  v1URQMDMidcentralRapidityPion->GetYaxis()->SetRangeUser(-0.09, 0.09);
   // v1PHSDMidcentralRapidityPion->SetLineColor(2);
   // v1PHSDMidcentralRapidityPion->SetMarkerColor(2);
   v1PHSDMidcentralRapidityPion->SetMarkerStyle(kOpenTriangleUp);
@@ -3041,23 +3270,26 @@ void DrawModel()
   // v1LAQGSMMidcentralRapidityPion->SetMarkerColor(4);
   v1LAQGSMMidcentralRapidityPion->SetMarkerStyle(kOpenSquare);
   v1PHQMDMidcentralRapidityPion->SetMarkerStyle(kOpenDiamond);
+  v1DCMQGSMMidcentralRapidityPion->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions");
   legend.at(4)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Pions", "C");
   header = (TLegendEntry *)legend.at(4)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(4)->SetNColumns(2);
-  legend.at(4)->AddEntry(v1PHSDMidcentralRapidityPion, v1PHSDMidcentralRapidityPion->GetTitle(), "p");
+  // legend.at(4)->AddEntry(v1PHSDMidcentralRapidityPion, v1PHSDMidcentralRapidityPion->GetTitle(), "p");
   legend.at(4)->AddEntry(v1URQMDMidcentralRapidityPion, v1URQMDMidcentralRapidityPion->GetTitle(), "p");
   legend.at(4)->AddEntry(v1LAQGSMMidcentralRapidityPion, v1LAQGSMMidcentralRapidityPion->GetTitle(), "p");
-  legend.at(4)->AddEntry(v1PHQMDMidcentralRapidityPion, v1PHQMDMidcentralRapidityPion->GetTitle(), "p");
+  // legend.at(4)->AddEntry(v1PHQMDMidcentralRapidityPion, v1PHQMDMidcentralRapidityPion->GetTitle(), "p");
+  legend.at(4)->AddEntry(v1DCMQGSMMidcentralRapidityPion, v1DCMQGSMMidcentralRapidityPion->GetTitle(), "p");
   legend.at(4)->AddEntry(grv1MidcentralPion11GeV.at(0), grv1MidcentralPion11GeV.at(0)->GetTitle(), "p");
-  v1PHSDMidcentralRapidityPion->Draw("");
+  v1URQMDMidcentralRapidityPion->Draw("");
   legend.at(4)->Draw();
-  v1PHSDMidcentralRapidityPion->Draw("same PLC PMC");
+  // v1PHSDMidcentralRapidityPion->Draw("same PLC PMC");
   v1URQMDMidcentralRapidityPion->Draw("same PLC PMC");
   v1LAQGSMMidcentralRapidityPion->Draw("same PLC PMC");
-  v1PHQMDMidcentralRapidityPion->Draw("same PLC PMC");
+  // v1PHQMDMidcentralRapidityPion->Draw("same PLC PMC");
+  v1DCMQGSMMidcentralRapidityPion->Draw("same PLC PMC");
   grv1MidcentralPion11GeV.at(0)->Draw("P");
   line.DrawLine(v1PHSDMidcentralRapidityPion->GetXaxis()->GetXmin(), 0., v1PHSDMidcentralRapidityPion->GetXaxis()->GetXmax(), 0.);
 
@@ -3065,7 +3297,7 @@ void DrawModel()
   TCanvas *canv_v1PeripheralRapidityPion11GeV = new TCanvas("canv_v1PeripheralRapidityPion11GeV", "canv_v1PeripheralRapidityPion11GeV", 700, 500);
   canv_v1PeripheralRapidityPion11GeV->cd();
 
-  v1PHSDPeripheralRapidityPion->GetYaxis()->SetRangeUser(-0.15, 0.15);
+  v1URQMDPeripheralRapidityPion->GetYaxis()->SetRangeUser(-0.15, 0.15);
   // v1PHSDPeripheralRapidityPion->SetLineColor(2);
   // v1PHSDPeripheralRapidityPion->SetMarkerColor(2);
   v1PHSDPeripheralRapidityPion->SetMarkerStyle(kOpenTriangleUp);
@@ -3076,23 +3308,26 @@ void DrawModel()
   // v1LAQGSMPeripheralRapidityPion->SetMarkerColor(4);
   v1LAQGSMPeripheralRapidityPion->SetMarkerStyle(kOpenSquare);
   v1PHQMDPeripheralRapidityPion->SetMarkerStyle(kOpenDiamond);
+  v1DCMQGSMPeripheralRapidityPion->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions");
   legend.at(5)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Pions", "C");
   header = (TLegendEntry *)legend.at(5)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(5)->SetNColumns(2);
-  legend.at(5)->AddEntry(v1PHSDPeripheralRapidityPion, v1PHSDPeripheralRapidityPion->GetTitle(), "p");
+  // legend.at(5)->AddEntry(v1PHSDPeripheralRapidityPion, v1PHSDPeripheralRapidityPion->GetTitle(), "p");
   legend.at(5)->AddEntry(v1URQMDPeripheralRapidityPion, v1URQMDPeripheralRapidityPion->GetTitle(), "p");
   legend.at(5)->AddEntry(v1LAQGSMPeripheralRapidityPion, v1LAQGSMPeripheralRapidityPion->GetTitle(), "p");
-  legend.at(5)->AddEntry(v1PHQMDPeripheralRapidityPion, v1PHQMDPeripheralRapidityPion->GetTitle(), "p");
+  // legend.at(5)->AddEntry(v1PHQMDPeripheralRapidityPion, v1PHQMDPeripheralRapidityPion->GetTitle(), "p");
+  legend.at(5)->AddEntry(v1DCMQGSMPeripheralRapidityPion, v1DCMQGSMPeripheralRapidityPion->GetTitle(), "p");
   legend.at(5)->AddEntry(grv1PeripheralPion11GeV.at(0), grv1PeripheralPion11GeV.at(0)->GetTitle(), "p");
-  v1PHSDPeripheralRapidityPion->Draw("");
+  v1URQMDPeripheralRapidityPion->Draw("");
   legend.at(5)->Draw();
-  v1PHSDPeripheralRapidityPion->Draw("same PLC PMC");
+  // v1PHSDPeripheralRapidityPion->Draw("same PLC PMC");
   v1URQMDPeripheralRapidityPion->Draw("same PLC PMC");
   v1LAQGSMPeripheralRapidityPion->Draw("same PLC PMC");
-  v1PHQMDPeripheralRapidityPion->Draw("same PLC PMC");
+  // v1PHQMDPeripheralRapidityPion->Draw("same PLC PMC");
+  v1DCMQGSMPeripheralRapidityPion->Draw("same PLC PMC");
   grv1PeripheralPion11GeV.at(0)->Draw("P");
   line.DrawLine(v1PHSDPeripheralRapidityPion->GetXaxis()->GetXmin(), 0., v1PHSDPeripheralRapidityPion->GetXaxis()->GetXmax(), 0.);
 
@@ -3100,7 +3335,7 @@ void DrawModel()
   TCanvas *canv_v2CentralPtProton11GeV = new TCanvas("canv_v2CentralPtProton11GeV", "canv_v2CentralPtProton11GeV", 700, 500);
   canv_v2CentralPtProton11GeV->cd();
 
-  v2PHSDCentralPtProton->GetYaxis()->SetRangeUser(-0.049, 0.08);
+  v2URQMDCentralPtProton->GetYaxis()->SetRangeUser(-0.019, 0.12);
   // v2PHSDCentralPtProton->SetLineColor(2);
   // v2PHSDCentralPtProton->SetMarkerColor(2);
   v2PHSDCentralPtProton->SetMarkerStyle(kOpenTriangleUp);
@@ -3111,23 +3346,26 @@ void DrawModel()
   // v2LAQGSMCentralPtProton->SetMarkerColor(4);
   v2LAQGSMCentralPtProton->SetMarkerStyle(kOpenSquare);
   v2PHQMDCentralPtProton->SetMarkerStyle(kOpenDiamond);
+  v2DCMQGSMCentralPtProton->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons");
   legend.at(6)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons", "C");
   header = (TLegendEntry *)legend.at(6)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(6)->SetNColumns(2);
-  legend.at(6)->AddEntry(v2PHSDCentralPtProton, v2PHSDCentralPtProton->GetTitle(), "p");
+  // legend.at(6)->AddEntry(v2PHSDCentralPtProton, v2PHSDCentralPtProton->GetTitle(), "p");
   legend.at(6)->AddEntry(v2URQMDCentralPtProton, v2URQMDCentralPtProton->GetTitle(), "p");
   legend.at(6)->AddEntry(v2LAQGSMCentralPtProton, v2LAQGSMCentralPtProton->GetTitle(), "p");
-  legend.at(6)->AddEntry(v2PHQMDCentralPtProton, v2PHQMDCentralPtProton->GetTitle(), "p");
+  // legend.at(6)->AddEntry(v2PHQMDCentralPtProton, v2PHQMDCentralPtProton->GetTitle(), "p");
+  legend.at(6)->AddEntry(v2DCMQGSMCentralPtProton, v2DCMQGSMCentralPtProton->GetTitle(), "p");
   legend.at(6)->AddEntry(grv2CentralProton11GeV.at(2), grv2CentralProton11GeV.at(2)->GetTitle(), "p");
-  v2PHSDCentralPtProton->Draw("");
+  v2URQMDCentralPtProton->Draw("");
   legend.at(6)->Draw();
-  v2PHSDCentralPtProton->Draw("same PLC PMC");
+  // v2PHSDCentralPtProton->Draw("same PLC PMC");
   v2URQMDCentralPtProton->Draw("same PLC PMC");
   v2LAQGSMCentralPtProton->Draw("same PLC PMC");
-  v2PHQMDCentralPtProton->Draw("same PLC PMC");
+  // v2PHQMDCentralPtProton->Draw("same PLC PMC");
+  v2DCMQGSMCentralPtProton->Draw("same PLC PMC");
   grv2CentralProton11GeV.at(0)->Draw("P");
   grv2CentralProton11GeV.at(1)->Draw("P2");
   grv2CentralProton11GeV.at(2)->Draw("P3");
@@ -3136,7 +3374,7 @@ void DrawModel()
   TCanvas *canv_v2MidcentralPtProton11GeV = new TCanvas("canv_v2MidcentralPtProton11GeV", "canv_v2MidcentralPtProton11GeV", 700, 500);
   canv_v2MidcentralPtProton11GeV->cd();
 
-  v2PHSDMidcentralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.18);
+  v2URQMDMidcentralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.18);
   // v2PHSDMidcentralPtProton->SetLineColor(2);
   // v2PHSDMidcentralPtProton->SetMarkerColor(2);
   v2PHSDMidcentralPtProton->SetMarkerStyle(kOpenTriangleUp);
@@ -3147,23 +3385,26 @@ void DrawModel()
   // v2LAQGSMMidcentralPtProton->SetMarkerColor(4);
   v2LAQGSMMidcentralPtProton->SetMarkerStyle(kOpenSquare);
   v2PHQMDMidcentralPtProton->SetMarkerStyle(kOpenDiamond);
+  v2DCMQGSMMidcentralPtProton->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons");
   legend.at(7)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Protons", "C");
   header = (TLegendEntry *)legend.at(7)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(7)->SetNColumns(2);
-  legend.at(7)->AddEntry(v2PHSDMidcentralPtProton, v2PHSDMidcentralPtProton->GetTitle(), "p");
+  // legend.at(7)->AddEntry(v2PHSDMidcentralPtProton, v2PHSDMidcentralPtProton->GetTitle(), "p");
   legend.at(7)->AddEntry(v2URQMDMidcentralPtProton, v2URQMDMidcentralPtProton->GetTitle(), "p");
   legend.at(7)->AddEntry(v2LAQGSMMidcentralPtProton, v2LAQGSMMidcentralPtProton->GetTitle(), "p");
-  legend.at(7)->AddEntry(v2PHQMDMidcentralPtProton, v2PHQMDMidcentralPtProton->GetTitle(), "p");
+  // legend.at(7)->AddEntry(v2PHQMDMidcentralPtProton, v2PHQMDMidcentralPtProton->GetTitle(), "p");
+  legend.at(7)->AddEntry(v2DCMQGSMMidcentralPtProton, v2DCMQGSMMidcentralPtProton->GetTitle(), "p");
   legend.at(7)->AddEntry(grv2MidcentralProton11GeV.at(2), grv2MidcentralProton11GeV.at(2)->GetTitle(), "p");
-  v2PHSDMidcentralPtProton->Draw("");
+  v2URQMDMidcentralPtProton->Draw("");
   legend.at(7)->Draw();
-  v2PHSDMidcentralPtProton->Draw("same PLC PMC");
+  // v2PHSDMidcentralPtProton->Draw("same PLC PMC");
   v2URQMDMidcentralPtProton->Draw("same PLC PMC");
   v2LAQGSMMidcentralPtProton->Draw("same PLC PMC");
-  v2PHQMDMidcentralPtProton->Draw("same PLC PMC");
+  // v2PHQMDMidcentralPtProton->Draw("same PLC PMC");
+  v2DCMQGSMMidcentralPtProton->Draw("same PLC PMC");
   grv2MidcentralProton11GeV.at(0)->Draw("P");
   grv2MidcentralProton11GeV.at(1)->Draw("P2");
   grv2MidcentralProton11GeV.at(2)->Draw("P3");
@@ -3172,7 +3413,7 @@ void DrawModel()
   TCanvas *canv_v2PeripheralPtProton11GeV = new TCanvas("canv_v2PeripheralPtProton11GeV", "canv_v2PeripheralPtProton11GeV", 700, 500);
   canv_v2PeripheralPtProton11GeV->cd();
 
-  v2PHSDPeripheralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.25);
+  v2URQMDPeripheralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.25);
   // v2PHSDPeripheralPtProton->SetLineColor(2);
   // v2PHSDPeripheralPtProton->SetMarkerColor(2);
   v2PHSDPeripheralPtProton->SetMarkerStyle(kOpenTriangleUp);
@@ -3183,184 +3424,328 @@ void DrawModel()
   // v2LAQGSMPeripheralPtProton->SetMarkerColor(4);
   v2LAQGSMPeripheralPtProton->SetMarkerStyle(kOpenSquare);
   v2PHQMDPeripheralPtProton->SetMarkerStyle(kOpenDiamond);
+  v2DCMQGSMPeripheralPtProton->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons");
   legend.at(8)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Protons", "C");
   header = (TLegendEntry *)legend.at(8)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(8)->SetNColumns(2);
-  legend.at(8)->AddEntry(v2PHSDPeripheralPtProton, v2PHSDPeripheralPtProton->GetTitle(), "p");
+  // legend.at(8)->AddEntry(v2PHSDPeripheralPtProton, v2PHSDPeripheralPtProton->GetTitle(), "p");
   legend.at(8)->AddEntry(v2URQMDPeripheralPtProton, v2URQMDPeripheralPtProton->GetTitle(), "p");
   legend.at(8)->AddEntry(v2LAQGSMPeripheralPtProton, v2LAQGSMPeripheralPtProton->GetTitle(), "p");
-  legend.at(8)->AddEntry(v2PHQMDPeripheralPtProton, v2PHQMDPeripheralPtProton->GetTitle(), "p");
+  // legend.at(8)->AddEntry(v2PHQMDPeripheralPtProton, v2PHQMDPeripheralPtProton->GetTitle(), "p");
+  legend.at(8)->AddEntry(v2DCMQGSMPeripheralPtProton, v2DCMQGSMPeripheralPtProton->GetTitle(), "p");
   legend.at(8)->AddEntry(grv2PeripheralProton11GeV.at(2), grv2PeripheralProton11GeV.at(2)->GetTitle(), "p");
-  v2PHSDPeripheralPtProton->Draw("");
+  v2URQMDPeripheralPtProton->Draw("");
   legend.at(8)->Draw();
-  v2PHSDPeripheralPtProton->Draw("same PLC PMC");
+  // v2PHSDPeripheralPtProton->Draw("same PLC PMC");
   v2URQMDPeripheralPtProton->Draw("same PLC PMC");
   v2LAQGSMPeripheralPtProton->Draw("same PLC PMC");
-  v2PHQMDPeripheralPtProton->Draw("same PLC PMC");
+  // v2PHQMDPeripheralPtProton->Draw("same PLC PMC");
+  v2DCMQGSMPeripheralPtProton->Draw("same PLC PMC");
   grv2PeripheralProton11GeV.at(0)->Draw("P");
   grv2PeripheralProton11GeV.at(1)->Draw("P2");
   grv2PeripheralProton11GeV.at(2)->Draw("P3");
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   Int_t iC = 8;
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v2CentralPtPion11GeV = new TCanvas("canv_v2CentralPtPion11GeV", "canv_v2CentralPtPion11GeV", 700, 500);
+  canv_v2CentralPtPion11GeV->cd();
+
+  v2URQMDCentralPtPion->GetYaxis()->SetRangeUser(-0.019, 0.12);
+  // v2PHSDCentralPtPion->SetLineColor(2);
+  // v2PHSDCentralPtPion->SetMarkerColor(2);
+  v2PHSDCentralPtPion->SetMarkerStyle(kOpenTriangleUp);
+  // v2URQMDCentralPtPion->SetLineColor(3);
+  // v2URQMDCentralPtPion->SetMarkerColor(3);
+  v2URQMDCentralPtPion->SetMarkerStyle(kOpenCircle);
+  // v2LAQGSMCentralPtPion->SetLineColor(4);
+  // v2LAQGSMCentralPtPion->SetMarkerColor(4);
+  v2LAQGSMCentralPtPion->SetMarkerStyle(kOpenSquare);
+  v2PHQMDCentralPtPion->SetMarkerStyle(kOpenDiamond);
+  v2DCMQGSMCentralPtPion->SetMarkerStyle(kOpenCross);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  // legend.at(iC)->AddEntry(v2PHSDCentralPtPion, v2PHSDCentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2URQMDCentralPtPion, v2URQMDCentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2LAQGSMCentralPtPion, v2LAQGSMCentralPtPion->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v2PHQMDCentralPtPion, v2PHQMDCentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2DCMQGSMCentralPtPion, v2DCMQGSMCentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv2CentralPion11GeV.at(2), grv2CentralPion11GeV.at(2)->GetTitle(), "p");
+  v2URQMDCentralPtPion->Draw("");
+  legend.at(iC)->Draw();
+  // v2PHSDCentralPtPion->Draw("same PLC PMC");
+  v2URQMDCentralPtPion->Draw("same PLC PMC");
+  v2LAQGSMCentralPtPion->Draw("same PLC PMC");
+  // v2PHQMDCentralPtPion->Draw("same PLC PMC");
+  v2DCMQGSMCentralPtPion->Draw("same PLC PMC");
+  grv2CentralPion11GeV.at(0)->Draw("P");
+  grv2CentralPion11GeV.at(1)->Draw("P2");
+  grv2CentralPion11GeV.at(2)->Draw("P3");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v2MidcentralPtPion11GeV = new TCanvas("canv_v2MidcentralPtPion11GeV", "canv_v2MidcentralPtPion11GeV", 700, 500);
+  canv_v2MidcentralPtPion11GeV->cd();
+
+  v2URQMDMidcentralPtPion->GetYaxis()->SetRangeUser(-0.022, 0.18);
+  // v2PHSDMidcentralPtPion->SetLineColor(2);
+  // v2PHSDMidcentralPtPion->SetMarkerColor(2);
+  v2PHSDMidcentralPtPion->SetMarkerStyle(kOpenTriangleUp);
+  // v2URQMDMidcentralPtPion->SetLineColor(3);
+  // v2URQMDMidcentralPtPion->SetMarkerColor(3);
+  v2URQMDMidcentralPtPion->SetMarkerStyle(kOpenCircle);
+  // v2LAQGSMMidcentralPtPion->SetLineColor(4);
+  // v2LAQGSMMidcentralPtPion->SetMarkerColor(4);
+  v2LAQGSMMidcentralPtPion->SetMarkerStyle(kOpenSquare);
+  v2PHQMDMidcentralPtPion->SetMarkerStyle(kOpenDiamond);
+  v2DCMQGSMMidcentralPtPion->SetMarkerStyle(kOpenCross);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  // legend.at(iC)->AddEntry(v2PHSDMidcentralPtPion, v2PHSDMidcentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2URQMDMidcentralPtPion, v2URQMDMidcentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2LAQGSMMidcentralPtPion, v2LAQGSMMidcentralPtPion->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v2PHQMDMidcentralPtPion, v2PHQMDMidcentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2DCMQGSMMidcentralPtPion, v2DCMQGSMMidcentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv2MidcentralPion11GeV.at(2), grv2MidcentralPion11GeV.at(2)->GetTitle(), "p");
+  v2URQMDMidcentralPtPion->Draw("");
+  legend.at(iC)->Draw();
+  // v2PHSDMidcentralPtPion->Draw("same PLC PMC");
+  v2URQMDMidcentralPtPion->Draw("same PLC PMC");
+  v2LAQGSMMidcentralPtPion->Draw("same PLC PMC");
+  // v2PHQMDMidcentralPtPion->Draw("same PLC PMC");
+  v2DCMQGSMMidcentralPtPion->Draw("same PLC PMC");
+  grv2MidcentralPion11GeV.at(0)->Draw("P");
+  grv2MidcentralPion11GeV.at(1)->Draw("P2");
+  grv2MidcentralPion11GeV.at(2)->Draw("P3");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v2PeripheralPtPion11GeV = new TCanvas("canv_v2PeripheralPtPion11GeV", "canv_v2PeripheralPtPion11GeV", 700, 500);
+  canv_v2PeripheralPtPion11GeV->cd();
+
+  v2URQMDPeripheralPtPion->GetYaxis()->SetRangeUser(-0.022, 0.25);
+  // v2PHSDPeripheralPtPion->SetLineColor(2);
+  // v2PHSDPeripheralPtPion->SetMarkerColor(2);
+  v2PHSDPeripheralPtPion->SetMarkerStyle(kOpenTriangleUp);
+  // v2URQMDPeripheralPtPion->SetLineColor(3);
+  // v2URQMDPeripheralPtPion->SetMarkerColor(3);
+  v2URQMDPeripheralPtPion->SetMarkerStyle(kOpenCircle);
+  // v2LAQGSMPeripheralPtPion->SetLineColor(4);
+  // v2LAQGSMPeripheralPtPion->SetMarkerColor(4);
+  v2LAQGSMPeripheralPtPion->SetMarkerStyle(kOpenSquare);
+  v2PHQMDPeripheralPtPion->SetMarkerStyle(kOpenDiamond);
+  v2DCMQGSMPeripheralPtPion->SetMarkerStyle(kOpenCross);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  // legend.at(iC)->AddEntry(v2PHSDPeripheralPtPion, v2PHSDPeripheralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2URQMDPeripheralPtPion, v2URQMDPeripheralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2LAQGSMPeripheralPtPion, v2LAQGSMPeripheralPtPion->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v2PHQMDPeripheralPtPion, v2PHQMDPeripheralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2DCMQGSMPeripheralPtPion, v2DCMQGSMPeripheralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv2PeripheralPion11GeV.at(2), grv2PeripheralPion11GeV.at(2)->GetTitle(), "p");
+  v2URQMDPeripheralPtPion->Draw("");
+  legend.at(iC)->Draw();
+  // v2PHSDPeripheralPtPion->Draw("same PLC PMC");
+  v2URQMDPeripheralPtPion->Draw("same PLC PMC");
+  v2LAQGSMPeripheralPtPion->Draw("same PLC PMC");
+  // v2PHQMDPeripheralPtPion->Draw("same PLC PMC");
+  v2DCMQGSMPeripheralPtPion->Draw("same PLC PMC");
+  grv2PeripheralPion11GeV.at(0)->Draw("P");
+  grv2PeripheralPion11GeV.at(1)->Draw("P2");
+  grv2PeripheralPion11GeV.at(2)->Draw("P3");
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
   //--------------------------------------------------------------------------------------------------------------
   iC++;
   TCanvas *canv_v3CentralPtProton11GeV = new TCanvas("canv_v3CentralPtProton11GeV", "canv_v3CentralPtProton11GeV", 700, 500);
   canv_v3CentralPtProton11GeV->cd();
 
-  v3PHSDCentralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.055);
+  v3URQMDCentralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.055);
   v3PHSDCentralPtProton->SetMarkerStyle(kOpenTriangleUp);
   v3URQMDCentralPtProton->SetMarkerStyle(kOpenCircle);
   v3LAQGSMCentralPtProton->SetMarkerStyle(kOpenSquare);
   v3PHQMDCentralPtProton->SetMarkerStyle(kOpenDiamond);
+  v3DCMQGSMCentralPtProton->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(iC)->SetNColumns(2);
-  legend.at(iC)->AddEntry(v3PHSDCentralPtProton, v3PHSDCentralPtProton->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHSDCentralPtProton, v3PHSDCentralPtProton->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3URQMDCentralPtProton, v3URQMDCentralPtProton->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3LAQGSMCentralPtProton, v3LAQGSMCentralPtProton->GetTitle(), "p");
-  legend.at(iC)->AddEntry(v3PHQMDCentralPtProton, v3PHQMDCentralPtProton->GetTitle(), "p");
-  v3PHSDCentralPtProton->Draw("");
+  legend.at(iC)->AddEntry(v3DCMQGSMCentralPtProton, v3DCMQGSMCentralPtProton->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHQMDCentralPtProton, v3PHQMDCentralPtProton->GetTitle(), "p");
+  v3URQMDCentralPtProton->Draw("");
   legend.at(iC)->Draw();
-  v3PHSDCentralPtProton->Draw("same PLC PMC");
+  // v3PHSDCentralPtProton->Draw("same PLC PMC");
   v3URQMDCentralPtProton->Draw("same PLC PMC");
   v3LAQGSMCentralPtProton->Draw("same PLC PMC");
-  v3PHQMDCentralPtProton->Draw("same PLC PMC");
+  // v3PHQMDCentralPtProton->Draw("same PLC PMC");
+  v3DCMQGSMCentralPtProton->Draw("same PLC PMC");
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
   TCanvas *canv_v3MidcentralPtProton11GeV = new TCanvas("canv_v3MidcentralPtProton11GeV", "canv_v3MidcentralPtProton11GeV", 700, 500);
   canv_v3MidcentralPtProton11GeV->cd();
 
-  v3PHSDMidcentralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.085);
+  v3URQMDMidcentralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.085);
   v3PHSDMidcentralPtProton->SetMarkerStyle(kOpenTriangleUp);
   v3URQMDMidcentralPtProton->SetMarkerStyle(kOpenCircle);
   v3LAQGSMMidcentralPtProton->SetMarkerStyle(kOpenSquare);
   v3PHQMDMidcentralPtProton->SetMarkerStyle(kOpenDiamond);
+  v3DCMQGSMMidcentralPtProton->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Protons", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(iC)->SetNColumns(2);
-  legend.at(iC)->AddEntry(v3PHSDMidcentralPtProton, v3PHSDMidcentralPtProton->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHSDMidcentralPtProton, v3PHSDMidcentralPtProton->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3URQMDMidcentralPtProton, v3URQMDMidcentralPtProton->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3LAQGSMMidcentralPtProton, v3LAQGSMMidcentralPtProton->GetTitle(), "p");
-  legend.at(iC)->AddEntry(v3PHQMDMidcentralPtProton, v3PHQMDMidcentralPtProton->GetTitle(), "p");
-  v3PHSDMidcentralPtProton->Draw("");
+  // legend.at(iC)->AddEntry(v3PHQMDMidcentralPtProton, v3PHQMDMidcentralPtProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3DCMQGSMMidcentralPtProton, v3DCMQGSMMidcentralPtProton->GetTitle(), "p");
+  v3URQMDMidcentralPtProton->Draw("");
   legend.at(iC)->Draw();
-  v3PHSDMidcentralPtProton->Draw("same PLC PMC");
+  // v3PHSDMidcentralPtProton->Draw("same PLC PMC");
   v3URQMDMidcentralPtProton->Draw("same PLC PMC");
   v3LAQGSMMidcentralPtProton->Draw("same PLC PMC");
-  v3PHQMDMidcentralPtProton->Draw("same PLC PMC");
+  // v3PHQMDMidcentralPtProton->Draw("same PLC PMC");
+  v3DCMQGSMMidcentralPtProton->Draw("same PLC PMC");
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
   TCanvas *canv_v3PeripheralPtProton11GeV = new TCanvas("canv_v3PeripheralPtProton11GeV", "canv_v3PeripheralPtProton11GeV", 700, 500);
   canv_v3PeripheralPtProton11GeV->cd();
 
-  v3PHSDPeripheralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.25);
+  v3URQMDPeripheralPtProton->GetYaxis()->SetRangeUser(-0.022, 0.25);
   v3PHSDPeripheralPtProton->SetMarkerStyle(kOpenTriangleUp);
   v3URQMDPeripheralPtProton->SetMarkerStyle(kOpenCircle);
   v3LAQGSMPeripheralPtProton->SetMarkerStyle(kOpenSquare);
   v3PHQMDPeripheralPtProton->SetMarkerStyle(kOpenDiamond);
+  v3DCMQGSMPeripheralPtProton->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Protons", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(iC)->SetNColumns(2);
-  legend.at(iC)->AddEntry(v3PHSDPeripheralPtProton, v3PHSDPeripheralPtProton->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHSDPeripheralPtProton, v3PHSDPeripheralPtProton->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3URQMDPeripheralPtProton, v3URQMDPeripheralPtProton->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3LAQGSMPeripheralPtProton, v3LAQGSMPeripheralPtProton->GetTitle(), "p");
-  legend.at(iC)->AddEntry(v3PHQMDPeripheralPtProton, v3PHQMDPeripheralPtProton->GetTitle(), "p");
-  v3PHSDPeripheralPtProton->Draw("");
+  // legend.at(iC)->AddEntry(v3PHQMDPeripheralPtProton, v3PHQMDPeripheralPtProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3DCMQGSMPeripheralPtProton, v3DCMQGSMPeripheralPtProton->GetTitle(), "p");
+  v3URQMDPeripheralPtProton->Draw("");
   legend.at(iC)->Draw();
-  v3PHSDPeripheralPtProton->Draw("same PLC PMC");
+  // v3PHSDPeripheralPtProton->Draw("same PLC PMC");
   v3URQMDPeripheralPtProton->Draw("same PLC PMC");
   v3LAQGSMPeripheralPtProton->Draw("same PLC PMC");
-  v3PHQMDPeripheralPtProton->Draw("same PLC PMC");
+  // v3PHQMDPeripheralPtProton->Draw("same PLC PMC");
+  v3DCMQGSMPeripheralPtProton->Draw("same PLC PMC");
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
   TCanvas *canv_v3CentralRapidityProton11GeV = new TCanvas("canv_v3CentralRapidityProton11GeV", "canv_v3CentralRapidityProton11GeV", 700, 500);
   canv_v3CentralRapidityProton11GeV->cd();
 
-  v3PHSDCentralRapidityProton->GetYaxis()->SetRangeUser(-0.032, 0.028);
+  v3URQMDCentralRapidityProton->GetYaxis()->SetRangeUser(-0.032, 0.028);
   v3PHSDCentralRapidityProton->SetMarkerStyle(kOpenTriangleUp);
   v3URQMDCentralRapidityProton->SetMarkerStyle(kOpenCircle);
   v3LAQGSMCentralRapidityProton->SetMarkerStyle(kOpenSquare);
   v3PHQMDCentralRapidityProton->SetMarkerStyle(kOpenDiamond);
+  v3DCMQGSMCentralRapidityProton->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Protons", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(iC)->SetNColumns(2);
-  legend.at(iC)->AddEntry(v3PHSDCentralRapidityProton, v3PHSDCentralRapidityProton->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHSDCentralRapidityProton, v3PHSDCentralRapidityProton->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3URQMDCentralRapidityProton, v3URQMDCentralRapidityProton->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3LAQGSMCentralRapidityProton, v3LAQGSMCentralRapidityProton->GetTitle(), "p");
-  legend.at(iC)->AddEntry(v3PHQMDCentralRapidityProton, v3PHQMDCentralRapidityProton->GetTitle(), "p");
-  v3PHSDCentralRapidityProton->Draw("");
+  // legend.at(iC)->AddEntry(v3PHQMDCentralRapidityProton, v3PHQMDCentralRapidityProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3LAQGSMCentralRapidityProton, v3LAQGSMCentralRapidityProton->GetTitle(), "p");
+  v3URQMDCentralRapidityProton->Draw("");
   legend.at(iC)->Draw();
-  v3PHSDCentralRapidityProton->Draw("same PLC PMC");
+  // v3PHSDCentralRapidityProton->Draw("same PLC PMC");
   v3URQMDCentralRapidityProton->Draw("same PLC PMC");
   v3LAQGSMCentralRapidityProton->Draw("same PLC PMC");
-  v3PHQMDCentralRapidityProton->Draw("same PLC PMC");
+  // v3PHQMDCentralRapidityProton->Draw("same PLC PMC");
+  v3DCMQGSMCentralRapidityProton->Draw("same PLC PMC");
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
   TCanvas *canv_v3MidcentralRapidityProton11GeV = new TCanvas("canv_v3MidcentralRapidityProton11GeV", "canv_v3MidcentralRapidityProton11GeV", 700, 500);
   canv_v3MidcentralRapidityProton11GeV->cd();
 
-  v3PHSDMidcentralRapidityProton->GetYaxis()->SetRangeUser(-0.022, 0.035);
+  v3URQMDMidcentralRapidityProton->GetYaxis()->SetRangeUser(-0.022, 0.035);
   v3PHSDMidcentralRapidityProton->SetMarkerStyle(kOpenTriangleUp);
   v3URQMDMidcentralRapidityProton->SetMarkerStyle(kOpenCircle);
   v3LAQGSMMidcentralRapidityProton->SetMarkerStyle(kOpenSquare);
   v3PHQMDMidcentralRapidityProton->SetMarkerStyle(kOpenDiamond);
+  v3DCMQGSMMidcentralRapidityProton->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Protons", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(iC)->SetNColumns(2);
-  legend.at(iC)->AddEntry(v3PHSDMidcentralRapidityProton, v3PHSDMidcentralRapidityProton->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHSDMidcentralRapidityProton, v3PHSDMidcentralRapidityProton->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3URQMDMidcentralRapidityProton, v3URQMDMidcentralRapidityProton->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3LAQGSMMidcentralRapidityProton, v3LAQGSMMidcentralRapidityProton->GetTitle(), "p");
-  legend.at(iC)->AddEntry(v3PHQMDMidcentralRapidityProton, v3PHQMDMidcentralRapidityProton->GetTitle(), "p");
-  v3PHSDMidcentralRapidityProton->Draw("");
+  // legend.at(iC)->AddEntry(v3PHQMDMidcentralRapidityProton, v3PHQMDMidcentralRapidityProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3DCMQGSMMidcentralRapidityProton, v3DCMQGSMMidcentralRapidityProton->GetTitle(), "p");
+  v3URQMDMidcentralRapidityProton->Draw("");
   legend.at(iC)->Draw();
-  v3PHSDMidcentralRapidityProton->Draw("same PLC PMC");
+  // v3PHSDMidcentralRapidityProton->Draw("same PLC PMC");
   v3URQMDMidcentralRapidityProton->Draw("same PLC PMC");
   v3LAQGSMMidcentralRapidityProton->Draw("same PLC PMC");
-  v3PHQMDMidcentralRapidityProton->Draw("same PLC PMC");
+  // v3PHQMDMidcentralRapidityProton->Draw("same PLC PMC");
+  v3DCMQGSMMidcentralRapidityProton->Draw("same PLC PMC");
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
   TCanvas *canv_v3PeripheralRapidityProton11GeV = new TCanvas("canv_v3PeripheralRapidityProton11GeV", "canv_v3PeripheralRapidityProton11GeV", 700, 500);
   canv_v3PeripheralRapidityProton11GeV->cd();
 
-  v3PHSDPeripheralRapidityProton->GetYaxis()->SetRangeUser(-0.032, 0.055);
+  v3URQMDPeripheralRapidityProton->GetYaxis()->SetRangeUser(-0.032, 0.055);
   v3PHSDPeripheralRapidityProton->SetMarkerStyle(kOpenTriangleUp);
   v3URQMDPeripheralRapidityProton->SetMarkerStyle(kOpenCircle);
   v3LAQGSMPeripheralRapidityProton->SetMarkerStyle(kOpenSquare);
   v3PHQMDPeripheralRapidityProton->SetMarkerStyle(kOpenDiamond);
+  v3DCMQGSMPeripheralRapidityProton->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Protons", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(iC)->SetNColumns(2);
-  legend.at(iC)->AddEntry(v3PHSDPeripheralRapidityProton, v3PHSDPeripheralRapidityProton->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHSDPeripheralRapidityProton, v3PHSDPeripheralRapidityProton->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3URQMDPeripheralRapidityProton, v3URQMDPeripheralRapidityProton->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3LAQGSMPeripheralRapidityProton, v3LAQGSMPeripheralRapidityProton->GetTitle(), "p");
-  legend.at(iC)->AddEntry(v3PHQMDPeripheralRapidityProton, v3PHQMDPeripheralRapidityProton->GetTitle(), "p");
-  v3PHSDPeripheralRapidityProton->Draw("");
+  // legend.at(iC)->AddEntry(v3PHQMDPeripheralRapidityProton, v3PHQMDPeripheralRapidityProton->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3DCMQGSMPeripheralRapidityProton, v3DCMQGSMPeripheralRapidityProton->GetTitle(), "p");
+  v3URQMDPeripheralRapidityProton->Draw("");
   legend.at(iC)->Draw();
-  v3PHSDPeripheralRapidityProton->Draw("same PLC PMC");
+  // v3PHSDPeripheralRapidityProton->Draw("same PLC PMC");
   v3URQMDPeripheralRapidityProton->Draw("same PLC PMC");
   v3LAQGSMPeripheralRapidityProton->Draw("same PLC PMC");
-  v3PHQMDPeripheralRapidityProton->Draw("same PLC PMC");
+  // v3PHQMDPeripheralRapidityProton->Draw("same PLC PMC");
+  v3DCMQGSMPeripheralRapidityProton->Draw("same PLC PMC");
 
 
   //--------------------------------------------------------------------------------------------------------------
@@ -3368,156 +3753,174 @@ void DrawModel()
   TCanvas *canv_v3CentralPtPion11GeV = new TCanvas("canv_v3CentralPtPion11GeV", "canv_v3CentralPtPion11GeV", 700, 500);
   canv_v3CentralPtPion11GeV->cd();
 
-  v3PHSDCentralPtPion->GetYaxis()->SetRangeUser(-0.022, 0.055);
+  v3URQMDCentralPtPion->GetYaxis()->SetRangeUser(-0.022, 0.055);
   v3PHSDCentralPtPion->SetMarkerStyle(kOpenTriangleUp);
   v3URQMDCentralPtPion->SetMarkerStyle(kOpenCircle);
   v3LAQGSMCentralPtPion->SetMarkerStyle(kOpenSquare);
   v3PHQMDCentralPtPion->SetMarkerStyle(kOpenDiamond);
+  v3DCMQGSMCentralPtPion->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(iC)->SetNColumns(2);
-  legend.at(iC)->AddEntry(v3PHSDCentralPtPion, v3PHSDCentralPtPion->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHSDCentralPtPion, v3PHSDCentralPtPion->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3URQMDCentralPtPion, v3URQMDCentralPtPion->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3LAQGSMCentralPtPion, v3LAQGSMCentralPtPion->GetTitle(), "p");
-  legend.at(iC)->AddEntry(v3PHQMDCentralPtPion, v3PHQMDCentralPtPion->GetTitle(), "p");
-  v3PHSDCentralPtPion->Draw("");
+  // legend.at(iC)->AddEntry(v3PHQMDCentralPtPion, v3PHQMDCentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3DCMQGSMCentralPtPion, v3DCMQGSMCentralPtPion->GetTitle(), "p");
+  v3URQMDCentralPtPion->Draw("");
   legend.at(iC)->Draw();
-  v3PHSDCentralPtPion->Draw("same PLC PMC");
+  // v3PHSDCentralPtPion->Draw("same PLC PMC");
   v3URQMDCentralPtPion->Draw("same PLC PMC");
   v3LAQGSMCentralPtPion->Draw("same PLC PMC");
-  v3PHQMDCentralPtPion->Draw("same PLC PMC");
+  // v3PHQMDCentralPtPion->Draw("same PLC PMC");
+  v3DCMQGSMCentralPtPion->Draw("same PLC PMC");
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
   TCanvas *canv_v3MidcentralPtPion11GeV = new TCanvas("canv_v3MidcentralPtPion11GeV", "canv_v3MidcentralPtPion11GeV", 700, 500);
   canv_v3MidcentralPtPion11GeV->cd();
 
-  v3PHSDMidcentralPtPion->GetYaxis()->SetRangeUser(-0.022, 0.055);
+  v3URQMDMidcentralPtPion->GetYaxis()->SetRangeUser(-0.022, 0.055);
   v3PHSDMidcentralPtPion->SetMarkerStyle(kOpenTriangleUp);
   v3URQMDMidcentralPtPion->SetMarkerStyle(kOpenCircle);
   v3LAQGSMMidcentralPtPion->SetMarkerStyle(kOpenSquare);
   v3PHQMDMidcentralPtPion->SetMarkerStyle(kOpenDiamond);
+  v3DCMQGSMMidcentralPtPion->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Pions", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(iC)->SetNColumns(2);
-  legend.at(iC)->AddEntry(v3PHSDMidcentralPtPion, v3PHSDMidcentralPtPion->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHSDMidcentralPtPion, v3PHSDMidcentralPtPion->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3URQMDMidcentralPtPion, v3URQMDMidcentralPtPion->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3LAQGSMMidcentralPtPion, v3LAQGSMMidcentralPtPion->GetTitle(), "p");
-  legend.at(iC)->AddEntry(v3PHQMDMidcentralPtPion, v3PHQMDMidcentralPtPion->GetTitle(), "p");
-  v3PHSDMidcentralPtPion->Draw("");
+  // legend.at(iC)->AddEntry(v3PHQMDMidcentralPtPion, v3PHQMDMidcentralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3DCMQGSMMidcentralPtPion, v3DCMQGSMMidcentralPtPion->GetTitle(), "p");
+  v3URQMDMidcentralPtPion->Draw("");
   legend.at(iC)->Draw();
-  v3PHSDMidcentralPtPion->Draw("same PLC PMC");
+  // v3PHSDMidcentralPtPion->Draw("same PLC PMC");
   v3URQMDMidcentralPtPion->Draw("same PLC PMC");
   v3LAQGSMMidcentralPtPion->Draw("same PLC PMC");
-  v3PHQMDMidcentralPtPion->Draw("same PLC PMC");
+  // v3PHQMDMidcentralPtPion->Draw("same PLC PMC");
+  v3DCMQGSMMidcentralPtPion->Draw("same PLC PMC");
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
   TCanvas *canv_v3PeripheralPtPion11GeV = new TCanvas("canv_v3PeripheralPtPion11GeV", "canv_v3PeripheralPtPion11GeV", 700, 500);
   canv_v3PeripheralPtPion11GeV->cd();
 
-  v3PHSDPeripheralPtPion->GetYaxis()->SetRangeUser(-0.025, 0.027);
+  v3URQMDPeripheralPtPion->GetYaxis()->SetRangeUser(-0.025, 0.027);
   v3PHSDPeripheralPtPion->SetMarkerStyle(kOpenTriangleUp);
   v3URQMDPeripheralPtPion->SetMarkerStyle(kOpenCircle);
   v3LAQGSMPeripheralPtPion->SetMarkerStyle(kOpenSquare);
   v3PHQMDPeripheralPtPion->SetMarkerStyle(kOpenDiamond);
+  v3DCMQGSMPeripheralPtPion->SetMarkerStyle(kOpenSquare);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Pions", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(iC)->SetNColumns(2);
-  legend.at(iC)->AddEntry(v3PHSDPeripheralPtPion, v3PHSDPeripheralPtPion->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHSDPeripheralPtPion, v3PHSDPeripheralPtPion->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3URQMDPeripheralPtPion, v3URQMDPeripheralPtPion->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3LAQGSMPeripheralPtPion, v3LAQGSMPeripheralPtPion->GetTitle(), "p");
-  legend.at(iC)->AddEntry(v3PHQMDPeripheralPtPion, v3PHQMDPeripheralPtPion->GetTitle(), "p");
-  v3PHSDPeripheralPtPion->Draw("");
+  // legend.at(iC)->AddEntry(v3PHQMDPeripheralPtPion, v3PHQMDPeripheralPtPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3DCMQGSMPeripheralPtPion, v3DCMQGSMPeripheralPtPion->GetTitle(), "p");
+  v3URQMDPeripheralPtPion->Draw("");
   legend.at(iC)->Draw();
-  v3PHSDPeripheralPtPion->Draw("same PLC PMC");
+  // v3PHSDPeripheralPtPion->Draw("same PLC PMC");
   v3URQMDPeripheralPtPion->Draw("same PLC PMC");
   v3LAQGSMPeripheralPtPion->Draw("same PLC PMC");
-  v3PHQMDPeripheralPtPion->Draw("same PLC PMC");
+  // v3PHQMDPeripheralPtPion->Draw("same PLC PMC");
+  v3DCMQGSMPeripheralPtPion->Draw("same PLC PMC");
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
   TCanvas *canv_v3CentralRapidityPion11GeV = new TCanvas("canv_v3CentralRapidityPion11GeV", "canv_v3CentralRapidityPion11GeV", 700, 500);
   canv_v3CentralRapidityPion11GeV->cd();
 
-  v3PHSDCentralRapidityPion->GetYaxis()->SetRangeUser(-0.015, 0.022);
+  v3URQMDCentralRapidityPion->GetYaxis()->SetRangeUser(-0.015, 0.022);
   v3PHSDCentralRapidityPion->SetMarkerStyle(kOpenTriangleUp);
   v3URQMDCentralRapidityPion->SetMarkerStyle(kOpenCircle);
   v3LAQGSMCentralRapidityPion->SetMarkerStyle(kOpenSquare);
   v3PHQMDCentralRapidityPion->SetMarkerStyle(kOpenDiamond);
+  v3DCMQGSMCentralRapidityPion->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 0<b<3.4 fm (0-10%) Pions", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(iC)->SetNColumns(2);
-  legend.at(iC)->AddEntry(v3PHSDCentralRapidityPion, v3PHSDCentralRapidityPion->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHSDCentralRapidityPion, v3PHSDCentralRapidityPion->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3URQMDCentralRapidityPion, v3URQMDCentralRapidityPion->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3LAQGSMCentralRapidityPion, v3LAQGSMCentralRapidityPion->GetTitle(), "p");
-  legend.at(iC)->AddEntry(v3PHQMDCentralRapidityPion, v3PHQMDCentralRapidityPion->GetTitle(), "p");
-  v3PHSDCentralRapidityPion->Draw("");
+  // legend.at(iC)->AddEntry(v3PHQMDCentralRapidityPion, v3PHQMDCentralRapidityPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3DCMQGSMCentralRapidityPion, v3DCMQGSMCentralRapidityPion->GetTitle(), "p");
+  v3URQMDCentralRapidityPion->Draw("");
   legend.at(iC)->Draw();
-  v3PHSDCentralRapidityPion->Draw("same PLC PMC");
+  // v3PHSDCentralRapidityPion->Draw("same PLC PMC");
   v3URQMDCentralRapidityPion->Draw("same PLC PMC");
   v3LAQGSMCentralRapidityPion->Draw("same PLC PMC");
-  v3PHQMDCentralRapidityPion->Draw("same PLC PMC");
+  // v3PHQMDCentralRapidityPion->Draw("same PLC PMC");
+  v3DCMQGSMCentralRapidityPion->Draw("same PLC PMC");
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
   TCanvas *canv_v3MidcentralRapidityPion11GeV = new TCanvas("canv_v3MidcentralRapidityPion11GeV", "canv_v3MidcentralRapidityPion11GeV", 700, 500);
   canv_v3MidcentralRapidityPion11GeV->cd();
 
-  v3PHSDMidcentralRapidityPion->GetYaxis()->SetRangeUser(-0.008, 0.015);
+  v3URQMDMidcentralRapidityPion->GetYaxis()->SetRangeUser(-0.008, 0.015);
   v3PHSDMidcentralRapidityPion->SetMarkerStyle(kOpenTriangleUp);
   v3URQMDMidcentralRapidityPion->SetMarkerStyle(kOpenCircle);
   v3LAQGSMMidcentralRapidityPion->SetMarkerStyle(kOpenSquare);
   v3PHQMDMidcentralRapidityPion->SetMarkerStyle(kOpenDiamond);
+  v3DCMQGSMMidcentralRapidityPion->SetMarkerStyle(kOpenCross);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 5<b<9 fm (10-40%) Pions", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(iC)->SetNColumns(2);
-  legend.at(iC)->AddEntry(v3PHSDMidcentralRapidityPion, v3PHSDMidcentralRapidityPion->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHSDMidcentralRapidityPion, v3PHSDMidcentralRapidityPion->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3URQMDMidcentralRapidityPion, v3URQMDMidcentralRapidityPion->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3LAQGSMMidcentralRapidityPion, v3LAQGSMMidcentralRapidityPion->GetTitle(), "p");
-  legend.at(iC)->AddEntry(v3PHQMDMidcentralRapidityPion, v3PHQMDMidcentralRapidityPion->GetTitle(), "p");
-  v3PHSDMidcentralRapidityPion->Draw("");
+  // legend.at(iC)->AddEntry(v3PHQMDMidcentralRapidityPion, v3PHQMDMidcentralRapidityPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3DCMQGSMMidcentralRapidityPion, v3DCMQGSMMidcentralRapidityPion->GetTitle(), "p");
+  v3URQMDMidcentralRapidityPion->Draw("");
   legend.at(iC)->Draw();
-  v3PHSDMidcentralRapidityPion->Draw("same PLC PMC");
+  // v3PHSDMidcentralRapidityPion->Draw("same PLC PMC");
   v3URQMDMidcentralRapidityPion->Draw("same PLC PMC");
   v3LAQGSMMidcentralRapidityPion->Draw("same PLC PMC");
-  v3PHQMDMidcentralRapidityPion->Draw("same PLC PMC");
+  // v3PHQMDMidcentralRapidityPion->Draw("same PLC PMC");
+  v3DCMQGSMMidcentralRapidityPion->Draw("same PLC PMC");
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
   TCanvas *canv_v3PeripheralRapidityPion11GeV = new TCanvas("canv_v3PeripheralRapidityPion11GeV", "canv_v3PeripheralRapidityPion11GeV", 700, 500);
   canv_v3PeripheralRapidityPion11GeV->cd();
 
-  v3PHSDPeripheralRapidityPion->GetYaxis()->SetRangeUser(-0.011, 0.025);
+  v3URQMDPeripheralRapidityPion->GetYaxis()->SetRangeUser(-0.011, 0.025);
   v3PHSDPeripheralRapidityPion->SetMarkerStyle(kOpenTriangleUp);
   v3URQMDPeripheralRapidityPion->SetMarkerStyle(kOpenCircle);
   v3LAQGSMPeripheralRapidityPion->SetMarkerStyle(kOpenSquare);
   v3PHQMDPeripheralRapidityPion->SetMarkerStyle(kOpenDiamond);
+  v3DCMQGSMPeripheralRapidityPion->SetMarkerStyle(kOpenSquare);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=11 GeV, 9<b<15 fm (40-80%) Pions", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
   header->SetTextSize(.035);
   legend.at(iC)->SetNColumns(2);
-  legend.at(iC)->AddEntry(v3PHSDPeripheralRapidityPion, v3PHSDPeripheralRapidityPion->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v3PHSDPeripheralRapidityPion, v3PHSDPeripheralRapidityPion->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3URQMDPeripheralRapidityPion, v3URQMDPeripheralRapidityPion->GetTitle(), "p");
   legend.at(iC)->AddEntry(v3LAQGSMPeripheralRapidityPion, v3LAQGSMPeripheralRapidityPion->GetTitle(), "p");
-  legend.at(iC)->AddEntry(v3PHQMDPeripheralRapidityPion, v3PHQMDPeripheralRapidityPion->GetTitle(), "p");
-  v3PHSDPeripheralRapidityPion->Draw("");
+  // legend.at(iC)->AddEntry(v3PHQMDPeripheralRapidityPion, v3PHQMDPeripheralRapidityPion->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v3DCMQGSMPeripheralRapidityPion, v3DCMQGSMPeripheralRapidityPion->GetTitle(), "p");
+  v3URQMDPeripheralRapidityPion->Draw("");
   legend.at(iC)->Draw();
-  v3PHSDPeripheralRapidityPion->Draw("same PLC PMC");
+  // v3PHSDPeripheralRapidityPion->Draw("same PLC PMC");
   v3URQMDPeripheralRapidityPion->Draw("same PLC PMC");
   v3LAQGSMPeripheralRapidityPion->Draw("same PLC PMC");
-  v3PHQMDPeripheralRapidityPion->Draw("same PLC PMC");
+  // v3PHQMDPeripheralRapidityPion->Draw("same PLC PMC");
+  v3LAQGSMPeripheralRapidityPion->Draw("same PLC PMC");
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -3888,6 +4291,97 @@ void DrawModel()
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
+  TCanvas *canv_KinematicsAllPtProton11GeVDCMQGSM = new TCanvas("canv_KinematicsAllPtProton11GeVDCMQGSM", "canv_KinematicsAllPtProton11GeVDCMQGSM", 700, 500);
+  canv_KinematicsAllPtProton11GeVDCMQGSM->cd();
+  canv_KinematicsAllPtProton11GeVDCMQGSM->SetLogy();
+  hDCMQGSMKinematicsAllPtProton->GetYaxis()->SetRangeUser(0.9e2, 5e7);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllPtProton, hDCMQGSMKinematicsAllPtProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hDCMQGSMCutsAllPtProton, hDCMQGSMCutsAllPtProton->GetTitle(), "l");
+  hDCMQGSMKinematicsAllPtProton->Draw("hist PLC PMC");
+  hDCMQGSMCutsAllPtProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaProton11GeVDCMQGSM = new TCanvas("canv_KinematicsAllEtaProton11GeVDCMQGSM", "canv_KinematicsAllEtaProton11GeVDCMQGSM", 700, 500);
+  canv_KinematicsAllEtaProton11GeVDCMQGSM->cd();
+  canv_KinematicsAllEtaProton11GeVDCMQGSM->SetLogy();
+  hDCMQGSMKinematicsAllEtaProton->GetYaxis()->SetRangeUser(0.9e3, 5e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllEtaProton, hDCMQGSMKinematicsAllEtaProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hDCMQGSMCutsAllEtaProton, hDCMQGSMCutsAllEtaProton->GetTitle(), "l");
+  hDCMQGSMKinematicsAllEtaProton->Draw("hist PLC PMC");
+  hDCMQGSMCutsAllEtaProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityProton11GeVDCMQGSM = new TCanvas("canv_KinematicsAllRapidityProton11GeVDCMQGSM", "canv_KinematicsAllRapidityProton11GeVDCMQGSM", 700, 500);
+  canv_KinematicsAllRapidityProton11GeVDCMQGSM->cd();
+  canv_KinematicsAllRapidityProton11GeVDCMQGSM->SetLogy();
+  hDCMQGSMKinematicsAllRapidityProton->GetYaxis()->SetRangeUser(0.9e2, 5e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Protons", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllRapidityProton, hDCMQGSMKinematicsAllRapidityProton->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hDCMQGSMCutsAllRapidityProton, hDCMQGSMCutsAllRapidityProton->GetTitle(), "l");
+  hDCMQGSMKinematicsAllRapidityProton->Draw("hist PLC PMC");
+  hDCMQGSMCutsAllRapidityProton->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllPtPion11GeVDCMQGSM = new TCanvas("canv_KinematicsAllPtPion11GeVDCMQGSM", "canv_KinematicsAllPtPion11GeVDCMQGSM", 700, 500);
+  canv_KinematicsAllPtPion11GeVDCMQGSM->cd();
+  canv_KinematicsAllPtPion11GeVDCMQGSM->SetLogy();
+  hDCMQGSMKinematicsAllPtPion->GetYaxis()->SetRangeUser(0.9e2, 5e7);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllPtPion, hDCMQGSMKinematicsAllPtPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hDCMQGSMCutsAllPtPion, hDCMQGSMCutsAllPtPion->GetTitle(), "l");
+  hDCMQGSMKinematicsAllPtPion->Draw("hist PLC PMC");
+  hDCMQGSMCutsAllPtPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllEtaPion11GeVDCMQGSM = new TCanvas("canv_KinematicsAllEtaPion11GeVDCMQGSM", "canv_KinematicsAllEtaPion11GeVDCMQGSM", 700, 500);
+  canv_KinematicsAllEtaPion11GeVDCMQGSM->cd();
+  canv_KinematicsAllEtaPion11GeVDCMQGSM->SetLogy();
+  hDCMQGSMKinematicsAllEtaPion->GetYaxis()->SetRangeUser(0.9e3, 5e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllEtaPion, hDCMQGSMKinematicsAllEtaPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hDCMQGSMCutsAllEtaPion, hDCMQGSMCutsAllEtaPion->GetTitle(), "l");
+  hDCMQGSMKinematicsAllEtaPion->Draw("hist PLC PMC");
+  hDCMQGSMCutsAllEtaPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsAllRapidityPion11GeVDCMQGSM = new TCanvas("canv_KinematicsAllRapidityPion11GeVDCMQGSM", "canv_KinematicsAllRapidityPion11GeVDCMQGSM", 700, 500);
+  canv_KinematicsAllRapidityPion11GeVDCMQGSM->cd();
+  canv_KinematicsAllRapidityPion11GeVDCMQGSM->SetLogy();
+  hDCMQGSMKinematicsAllRapidityPion->GetYaxis()->SetRangeUser(0.9e2, 5e6);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm, Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllRapidityPion, hDCMQGSMKinematicsAllRapidityPion->GetTitle(), "l");
+  legend.at(iC)->AddEntry(hDCMQGSMCutsAllRapidityPion, hDCMQGSMCutsAllRapidityPion->GetTitle(), "l");
+  hDCMQGSMKinematicsAllRapidityPion->Draw("hist PLC PMC");
+  hDCMQGSMCutsAllRapidityPion->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
   TCanvas *canv_KinematicsRegionsBPHSD = new TCanvas("canv_KinematicsRegionsBPHSD", "canv_KinematicsRegionsBPHSD", 700, 500);
   canv_KinematicsRegionsBPHSD->cd();
   hPHSDKinematicsAllB->GetYaxis()->SetRangeUser(0., 1.15e5);
@@ -3962,6 +4456,24 @@ void DrawModel()
   hPHQMDKinematicsMidcentralB->Draw("same hist PLC PMC");
   hPHQMDKinematicsPeripheralB->Draw("same hist PLC PMC");
   legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsRegionsBDCMQGSM = new TCanvas("canv_KinematicsRegionsBDCMQGSM", "canv_KinematicsRegionsBDCMQGSM", 700, 500);
+  canv_KinematicsRegionsBDCMQGSM->cd();
+  hDCMQGSMKinematicsAllB->GetYaxis()->SetRangeUser(0., 2.8e3);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllB, "All", "l");
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsCentralB, "Central", "l");
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsMidcentralB, "Midcentral", "l");
+  legend.at(iC)->AddEntry(hDCMQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hDCMQGSMKinematicsAllB->Draw("hist PLC PMC");
+  hDCMQGSMKinematicsCentralB->Draw("same hist PLC PMC");
+  hDCMQGSMKinematicsMidcentralB->Draw("same hist PLC PMC");
+  hDCMQGSMKinematicsPeripheralB->Draw("same hist PLC PMC");
+  legend.at(iC)->Draw();
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
@@ -4025,6 +4537,21 @@ void DrawModel()
   // legend.at(iC)->AddEntry(hPHQMDKinematicsMidcentralB, "Midcentral", "l");
   // legend.at(iC)->AddEntry(hPHQMDKinematicsPeripheralB, "Peripheral", "l");
   hPHQMDKinematicsAllBMULT->Draw("colz");
+  legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBMultDCMQGSM = new TCanvas("canv_KinematicsBMultDCMQGSM", "canv_KinematicsBMultDCMQGSM", 700, 500);
+  canv_KinematicsBMultDCMQGSM->cd();
+  canv_KinematicsBMultDCMQGSM->SetLogz();
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hDCMQGSMKinematicsAllBMULT->Draw("colz");
   legend.at(iC)->Draw();
 
   //--------------------------------------------------------------------------------------------------------------
@@ -4090,6 +4617,21 @@ void DrawModel()
   // legend.at(iC)->AddEntry(hPHQMDKinematicsPeripheralB, "Peripheral", "l");
   hPHQMDKinematicsAllEMULT->Draw("colz");
   legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsEMultDCMQGSM = new TCanvas("canv_KinematicsEMultDCMQGSM", "canv_KinematicsEMultDCMQGSM", 700, 500);
+  canv_KinematicsEMultDCMQGSM->cd();
+  canv_KinematicsEMultDCMQGSM->SetLogz();
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hDCMQGSMKinematicsAllEMULT->Draw("colz");
+  legend.at(iC)->Draw();
 
   //--------------------------------------------------------------------------------------------------------------
   iC++;
@@ -4154,6 +4696,21 @@ void DrawModel()
   // legend.at(iC)->AddEntry(hPHQMDKinematicsPeripheralB, "Peripheral", "l");
   hPHQMDKinematicsAllBE->Draw("colz");
   legend.at(iC)->Draw();
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_KinematicsBEDCMQGSM = new TCanvas("canv_KinematicsBEDCMQGSM", "canv_KinematicsBEDCMQGSM", 700, 500);
+  canv_KinematicsBEDCMQGSM->cd();
+  canv_KinematicsBEDCMQGSM->SetLogz();
+  legend.push_back(new TLegend(legCoordX.first * 2, legCoordY.first + 0.05, legCoordX.second, legCoordY.second));
+  legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=11 GeV, 0 < b < 17 fm", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsAllB, "All", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsCentralB, "Central", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsMidcentralB, "Midcentral", "l");
+  // legend.at(iC)->AddEntry(hDCMQGSMKinematicsPeripheralB, "Peripheral", "l");
+  hDCMQGSMKinematicsAllBE->Draw("colz");
+  legend.at(iC)->Draw();
 
 
   //--------------------------------------------------------------------------------------------------------------
@@ -4161,7 +4718,7 @@ void DrawModel()
   TCanvas *canv_v1CentralRapidityProton7GeV = new TCanvas("canv_v1CentralRapidityProton7GeV", "canv_v1CentralRapidityProton7GeV", 700, 500);
   canv_v1CentralRapidityProton7GeV->cd();
 
-  v1DCMQGSMCentralRapidityProton7GeV->GetYaxis()->SetRangeUser(2*-0.05, 0.076*2);
+  v1DCMQGSMCentralRapidityProton7GeV->GetYaxis()->SetRangeUser(2*-0.06, 0.076*2);
   // v1DCMQGSMCentralRapidityProton7GeV->SetLineColor(2);
   // v1DCMQGSMCentralRapidityProton7GeV->SetMarkerColor(2);
   v1DCMQGSMCentralRapidityProton7GeV->SetMarkerStyle(kOpenTriangleUp);
@@ -4197,7 +4754,7 @@ void DrawModel()
   TCanvas *canv_v1MidcentralRapidityProton7GeV = new TCanvas("canv_v1MidcentralRapidityProton7GeV", "canv_v1MidcentralRapidityProton7GeV", 700, 500);
   canv_v1MidcentralRapidityProton7GeV->cd();
 
-  v1DCMQGSMMidcentralRapidityProton7GeV->GetYaxis()->SetRangeUser(2*-0.05, 0.15*2);
+  v1DCMQGSMMidcentralRapidityProton7GeV->GetYaxis()->SetRangeUser(2*-0.06, 0.12*2);
   // v1DCMQGSMMidcentralRapidityProton7GeV->SetLineColor(2);
   // v1DCMQGSMMidcentralRapidityProton7GeV->SetMarkerColor(2);
   v1DCMQGSMMidcentralRapidityProton7GeV->SetMarkerStyle(kOpenTriangleUp);
@@ -4233,7 +4790,7 @@ void DrawModel()
   TCanvas *canv_v1PeripheralRapidityProton7GeV = new TCanvas("canv_v1PeripheralRapidityProton7GeV", "canv_v1PeripheralRapidityProton7GeV", 700, 500);
   canv_v1PeripheralRapidityProton7GeV->cd();
 
-  v1DCMQGSMPeripheralRapidityProton7GeV->GetYaxis()->SetRangeUser(2*-0.05, 0.17*2);
+  v1DCMQGSMPeripheralRapidityProton7GeV->GetYaxis()->SetRangeUser(2*-0.07, 0.1*2);
   // v1DCMQGSMPeripheralRapidityProton7GeV->SetLineColor(2);
   // v1DCMQGSMPeripheralRapidityProton7GeV->SetMarkerColor(2);
   v1DCMQGSMPeripheralRapidityProton7GeV->SetMarkerStyle(kOpenTriangleUp);
@@ -4377,7 +4934,7 @@ void DrawModel()
   TCanvas *canv_v2CentralPtProton7GeV = new TCanvas("canv_v2CentralPtProton7GeV", "canv_v2CentralPtProton7GeV", 700, 500);
   canv_v2CentralPtProton7GeV->cd();
 
-  v2DCMQGSMCentralPtProton7GeV->GetYaxis()->SetRangeUser(-0.039, 0.08);
+  v2DCMQGSMCentralPtProton7GeV->GetYaxis()->SetRangeUser(-0.01, 0.08);
   v2DCMQGSMCentralPtProton7GeV->GetXaxis()->SetRangeUser(0.21, 2.);
   // v2DCMQGSMCentralPtProton7GeV->SetLineColor(2);
   // v2DCMQGSMCentralPtProton7GeV->SetMarkerColor(2);
@@ -4415,7 +4972,7 @@ void DrawModel()
   TCanvas *canv_v2MidcentralPtProton7GeV = new TCanvas("canv_v2MidcentralPtProton7GeV", "canv_v2MidcentralPtProton7GeV", 700, 500);
   canv_v2MidcentralPtProton7GeV->cd();
 
-  v2DCMQGSMMidcentralPtProton7GeV->GetYaxis()->SetRangeUser(-0.049, 0.18);
+  v2DCMQGSMMidcentralPtProton7GeV->GetYaxis()->SetRangeUser(-0.01, 0.18);
   v2DCMQGSMMidcentralPtProton7GeV->GetXaxis()->SetRangeUser(0.21, 2.);
   // v2DCMQGSMMidcentralPtProton7GeV->SetLineColor(2);
   // v2DCMQGSMMidcentralPtProton7GeV->SetMarkerColor(2);
@@ -4453,7 +5010,7 @@ void DrawModel()
   TCanvas *canv_v2PeripheralPtProton7GeV = new TCanvas("canv_v2PeripheralPtProton7GeV", "canv_v2PeripheralPtProton7GeV", 700, 500);
   canv_v2PeripheralPtProton7GeV->cd();
 
-  v2DCMQGSMPeripheralPtProton7GeV->GetYaxis()->SetRangeUser(-0.049, 0.25);
+  v2DCMQGSMPeripheralPtProton7GeV->GetYaxis()->SetRangeUser(-0.025, 0.25);
   v2DCMQGSMPeripheralPtProton7GeV->GetXaxis()->SetRangeUser(0.21, 2.);
   // v2DCMQGSMPeripheralPtProton7GeV->SetLineColor(2);
   // v2DCMQGSMPeripheralPtProton7GeV->SetMarkerColor(2);
@@ -4485,6 +5042,121 @@ void DrawModel()
   grv2PeripheralProton7GeV.at(0)->Draw("P");
   grv2PeripheralProton7GeV.at(1)->Draw("P2");
   grv2PeripheralProton7GeV.at(2)->Draw("P3");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v2CentralPtPion7GeV = new TCanvas("canv_v2CentralPtPion7GeV", "canv_v2CentralPtPion7GeV", 700, 500);
+  canv_v2CentralPtPion7GeV->cd();
+
+  v2DCMQGSMCentralPtPion7GeV->GetYaxis()->SetRangeUser(-0.039, 0.08);
+  v2DCMQGSMCentralPtPion7GeV->GetXaxis()->SetRangeUser(0.21, 2.);
+  // v2DCMQGSMCentralPtPion7GeV->SetLineColor(2);
+  // v2DCMQGSMCentralPtPion7GeV->SetMarkerColor(2);
+  v2DCMQGSMCentralPtPion7GeV->SetMarkerStyle(kOpenTriangleUp);
+  // v2URQMDCentralPtPion7GeV->SetLineColor(3);
+  // v2URQMDCentralPtPion7GeV->SetMarkerColor(3);
+  v2URQMDCentralPtPion7GeV->SetMarkerStyle(kOpenCircle);
+  // v2LAQGSMCentralPtPion7GeV->SetLineColor(4);
+  // v2LAQGSMCentralPtPion7GeV->SetMarkerColor(4);
+  v2LAQGSMCentralPtPion7GeV->SetMarkerStyle(kOpenSquare);
+  // v2PHQMDCentralPtPion7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Pions");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v2DCMQGSMCentralPtPion7GeV, v2DCMQGSMCentralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2URQMDCentralPtPion7GeV, v2URQMDCentralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2LAQGSMCentralPtPion7GeV, v2LAQGSMCentralPtPion7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v2PHQMDCentralPtPion7GeV, v2PHQMDCentralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv2CentralPion7GeV.at(2), grv2CentralPion7GeV.at(2)->GetTitle(), "p");
+  v2DCMQGSMCentralPtPion7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v2DCMQGSMCentralPtPion7GeV->Draw("same PLC PMC");
+  v2URQMDCentralPtPion7GeV->Draw("same PLC PMC");
+  v2LAQGSMCentralPtPion7GeV->Draw("same PLC PMC");
+  // v2PHQMDCentralPtPion7GeV->Draw("same PLC PMC");
+  grv2CentralPion7GeV.at(0)->Draw("P");
+  grv2CentralPion7GeV.at(1)->Draw("P2");
+  grv2CentralPion7GeV.at(2)->Draw("P3");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v2MidcentralPtPion7GeV = new TCanvas("canv_v2MidcentralPtPion7GeV", "canv_v2MidcentralPtPion7GeV", 700, 500);
+  canv_v2MidcentralPtPion7GeV->cd();
+
+  v2DCMQGSMMidcentralPtPion7GeV->GetYaxis()->SetRangeUser(-0.049, 0.18);
+  v2DCMQGSMMidcentralPtPion7GeV->GetXaxis()->SetRangeUser(0.21, 2.);
+  // v2DCMQGSMMidcentralPtPion7GeV->SetLineColor(2);
+  // v2DCMQGSMMidcentralPtPion7GeV->SetMarkerColor(2);
+  v2DCMQGSMMidcentralPtPion7GeV->SetMarkerStyle(kOpenTriangleUp);
+  // v2URQMDMidcentralPtPion7GeV->SetLineColor(3);
+  // v2URQMDMidcentralPtPion7GeV->SetMarkerColor(3);
+  v2URQMDMidcentralPtPion7GeV->SetMarkerStyle(kOpenCircle);
+  // v2LAQGSMMidcentralPtPion7GeV->SetLineColor(4);
+  // v2LAQGSMMidcentralPtPion7GeV->SetMarkerColor(4);
+  v2LAQGSMMidcentralPtPion7GeV->SetMarkerStyle(kOpenSquare);
+  // v2PHQMDMidcentralPtPion7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Pions");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 5<b<9 fm (10-40%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v2DCMQGSMMidcentralPtPion7GeV, v2DCMQGSMMidcentralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2URQMDMidcentralPtPion7GeV, v2URQMDMidcentralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2LAQGSMMidcentralPtPion7GeV, v2LAQGSMMidcentralPtPion7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v2PHQMDMidcentralPtPion7GeV, v2PHQMDMidcentralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv2MidcentralPion7GeV.at(2), grv2MidcentralPion7GeV.at(2)->GetTitle(), "p");
+  v2DCMQGSMMidcentralPtPion7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v2DCMQGSMMidcentralPtPion7GeV->Draw("same PLC PMC");
+  v2URQMDMidcentralPtPion7GeV->Draw("same PLC PMC");
+  v2LAQGSMMidcentralPtPion7GeV->Draw("same PLC PMC");
+  // v2PHQMDMidcentralPtPion7GeV->Draw("same PLC PMC");
+  grv2MidcentralPion7GeV.at(0)->Draw("P");
+  grv2MidcentralPion7GeV.at(1)->Draw("P2");
+  grv2MidcentralPion7GeV.at(2)->Draw("P3");
+
+  //--------------------------------------------------------------------------------------------------------------
+  iC++;
+  TCanvas *canv_v2PeripheralPtPion7GeV = new TCanvas("canv_v2PeripheralPtPion7GeV", "canv_v2PeripheralPtPion7GeV", 700, 500);
+  canv_v2PeripheralPtPion7GeV->cd();
+
+  v2DCMQGSMPeripheralPtPion7GeV->GetYaxis()->SetRangeUser(-0.049, 0.25);
+  v2DCMQGSMPeripheralPtPion7GeV->GetXaxis()->SetRangeUser(0.21, 2.);
+  // v2DCMQGSMPeripheralPtPion7GeV->SetLineColor(2);
+  // v2DCMQGSMPeripheralPtPion7GeV->SetMarkerColor(2);
+  v2DCMQGSMPeripheralPtPion7GeV->SetMarkerStyle(kOpenTriangleUp);
+  // v2URQMDPeripheralPtPion7GeV->SetLineColor(3);
+  // v2URQMDPeripheralPtPion7GeV->SetMarkerColor(3);
+  v2URQMDPeripheralPtPion7GeV->SetMarkerStyle(kOpenCircle);
+  // v2LAQGSMPeripheralPtPion7GeV->SetLineColor(4);
+  // v2LAQGSMPeripheralPtPion7GeV->SetMarkerColor(4);
+  v2LAQGSMPeripheralPtPion7GeV->SetMarkerStyle(kOpenSquare);
+  // v2PHQMDPeripheralPtPion7GeV->SetMarkerStyle(kOpenDiamond);
+  legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
+  // ltitle.DrawLatex(legCoordX.first, legCoordY.second + 0.05, "Au+Au, #sqrt{s_{NN}}=7 GeV, 0<b<3.4 fm (0-10%) Pions");
+  legend.at(iC)->SetHeader("Au+Au, #sqrt{s_{NN}}=7 GeV, 9<b<15 fm (40-80%) Pions", "C");
+  header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
+  header->SetTextSize(.035);
+  legend.at(iC)->SetNColumns(2);
+  legend.at(iC)->AddEntry(v2DCMQGSMPeripheralPtPion7GeV, v2DCMQGSMPeripheralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2URQMDPeripheralPtPion7GeV, v2URQMDPeripheralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(v2LAQGSMPeripheralPtPion7GeV, v2LAQGSMPeripheralPtPion7GeV->GetTitle(), "p");
+  // legend.at(iC)->AddEntry(v2PHQMDPeripheralPtPion7GeV, v2PHQMDPeripheralPtPion7GeV->GetTitle(), "p");
+  legend.at(iC)->AddEntry(grv2PeripheralPion7GeV.at(2), grv2PeripheralPion7GeV.at(2)->GetTitle(), "p");
+  v2DCMQGSMPeripheralPtPion7GeV->Draw("");
+  legend.at(iC)->Draw();
+  v2DCMQGSMPeripheralPtPion7GeV->Draw("same PLC PMC");
+  v2URQMDPeripheralPtPion7GeV->Draw("same PLC PMC");
+  v2LAQGSMPeripheralPtPion7GeV->Draw("same PLC PMC");
+  // v2PHQMDPeripheralPtPion7GeV->Draw("same PLC PMC");
+  grv2PeripheralPion7GeV.at(0)->Draw("P");
+  grv2PeripheralPion7GeV.at(1)->Draw("P2");
+  grv2PeripheralPion7GeV.at(2)->Draw("P3");
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   // iC = 8;
@@ -5340,7 +6012,7 @@ void DrawModel()
   iC++;
   TCanvas *canv_KinematicsRegionsBDCMQGSM7GeV = new TCanvas("canv_KinematicsRegionsBDCMQGSM7GeV", "canv_KinematicsRegionsBDCMQGSM7GeV", 700, 500);
   canv_KinematicsRegionsBDCMQGSM7GeV->cd();
-  hDCMQGSMKinematicsAllB7GeV->GetYaxis()->SetRangeUser(0., 5.1e3);
+  hDCMQGSMKinematicsAllB7GeV->GetYaxis()->SetRangeUser(0., 2.8e3);
   legend.push_back(new TLegend(legCoordX.first, legCoordY.first, legCoordX.second, legCoordY.second));
   legend.at(iC)->SetHeader("Au+Au, DCMQGSM, #sqrt{s_{NN}}=7.7 GeV, 0 < b < 17 fm", "C");
   header = (TLegendEntry *)legend.at(iC)->GetListOfPrimitives()->First();
@@ -5640,6 +6312,21 @@ void DrawModel()
   canv_v2PeripheralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton11GeV.C");
   canv_v2PeripheralPtProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton11GeV.eps");
 
+  canv_v2CentralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtPion11GeV.pdf");
+  canv_v2CentralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtPion11GeV.png");
+  canv_v2CentralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtPion11GeV.C");
+  canv_v2CentralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtPion11GeV.eps");
+
+  canv_v2MidcentralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtPion11GeV.pdf");
+  canv_v2MidcentralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtPion11GeV.png");
+  canv_v2MidcentralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtPion11GeV.C");
+  canv_v2MidcentralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtPion11GeV.eps");
+
+  canv_v2PeripheralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtPion11GeV.pdf");
+  canv_v2PeripheralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtPion11GeV.png");
+  canv_v2PeripheralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtPion11GeV.C");
+  canv_v2PeripheralPtPion11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtPion11GeV.eps");
+
 
   canv_v3CentralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3CentralRapidityProton11GeV.png");
   canv_v3MidcentralRapidityProton11GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3MidcentralRapidityProton11GeV.png");
@@ -5683,25 +6370,36 @@ void DrawModel()
   canv_KinematicsAllEtaPion11GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaPion11GeVPHQMD.png");
   canv_KinematicsAllRapidityPion11GeVPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityPion11GeVPHQMD.png");
 
+  canv_KinematicsAllPtProton11GeVDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtProton11GeVDCMQGSM.png");
+  canv_KinematicsAllEtaProton11GeVDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaProton11GeVDCMQGSM.png");
+  canv_KinematicsAllRapidityProton11GeVDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityProton11GeVDCMQGSM.png");
+  canv_KinematicsAllPtPion11GeVDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllPtPion11GeVDCMQGSM.png");
+  canv_KinematicsAllEtaPion11GeVDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllEtaPion11GeVDCMQGSM.png");
+  canv_KinematicsAllRapidityPion11GeVDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinAllRapidityPion11GeVDCMQGSM.png");
+
   canv_KinematicsRegionsBPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBPHSD.png");
   canv_KinematicsRegionsBURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBURQMD.png");
   canv_KinematicsRegionsBLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBLAQGSM.png");
   canv_KinematicsRegionsBPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBPHQMD.png");
+  canv_KinematicsRegionsBDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinRegionsBDCMQGSM.png");
 
   canv_KinematicsBMultPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultPHSD.png");
   canv_KinematicsBMultURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultURQMD.png");
   canv_KinematicsBMultLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultLAQGSM.png");
   canv_KinematicsBMultPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultPHQMD.png");
+  canv_KinematicsBMultDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBMultDCMQGSM.png");
 
   canv_KinematicsEMultPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultPHSD.png");
   canv_KinematicsEMultURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultURQMD.png");
   canv_KinematicsEMultLAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultLAQGSM.png");
   canv_KinematicsEMultPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultPHQMD.png");
+  canv_KinematicsEMultDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinEMultDCMQGSM.png");
 
   canv_KinematicsBEPHSD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBEPHSD.png");
   canv_KinematicsBEURQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBEURQMD.png");
   canv_KinematicsBELAQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBELAQGSM.png");
   canv_KinematicsBEPHQMD->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBEPHQMD.png");
+  canv_KinematicsBEDCMQGSM->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/KinBEDCMQGSM.png");
 
   canv_v1CentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton7GeV.pdf");
   canv_v1CentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v1CentralRapidityProton7GeV.png");
@@ -5747,6 +6445,21 @@ void DrawModel()
   canv_v2PeripheralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton7GeV.png");
   canv_v2PeripheralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton7GeV.C");
   canv_v2PeripheralPtProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtProton7GeV.eps");
+
+  canv_v2CentralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtPion7GeV.pdf");
+  canv_v2CentralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtPion7GeV.png");
+  canv_v2CentralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtPion7GeV.C");
+  canv_v2CentralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2CentralPtPion7GeV.eps");
+
+  canv_v2MidcentralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtPion7GeV.pdf");
+  canv_v2MidcentralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtPion7GeV.png");
+  canv_v2MidcentralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtPion7GeV.C");
+  canv_v2MidcentralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2MidcentralPtPion7GeV.eps");
+
+  canv_v2PeripheralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtPion7GeV.pdf");
+  canv_v2PeripheralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtPion7GeV.png");
+  canv_v2PeripheralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtPion7GeV.C");
+  canv_v2PeripheralPtPion7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v2PeripheralPtPion7GeV.eps");
 
 
   canv_v3CentralRapidityProton7GeV->SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/ModelFlow/v3CentralRapidityProton7GeV.png");

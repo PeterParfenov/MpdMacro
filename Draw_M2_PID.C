@@ -128,11 +128,14 @@ void Draw_M2_PID(TString inFileName)
   
   TCanvas* c_TOF_eff = new TCanvas("c_TOF_eff", "TOF flag efficiency", 500, 500);
   c_TOF_eff -> cd();
-  TLegend* l_TOF_eff = new TLegend(0.25,0.8,0.88,0.89);
-  l_TOF_eff -> SetHeader("Au-Au, UrQMD","C");
+  TLegend* l_TOF_eff = new TLegend(0.25,0.85,0.97,0.89);
+  l_TOF_eff -> SetHeader("Au-Au #sqrt{s_{NN}} = 11 GeV, UrQMD, GEANT3, 4M events","C");
   l_TOF_eff -> SetNColumns(2);
   l_TOF_eff -> AddEntry(hptTOFeff,"11 GeV","p");
   if (is2Files) l_TOF_eff -> AddEntry(hptTOF5Geveff,"5 GeV","p");
+  TLatex* mc_vn_text = new TLatex();
+  mc_vn_text->SetTextSize(0.035);
+  mc_vn_text->SetTextAlign(13);
   hptTOFeff -> SetMarkerStyle(20);
   hptTOFeff -> SetMarkerSize(1.);
   hptTOF5Geveff -> SetMarkerStyle(24);
@@ -147,9 +150,10 @@ void Draw_M2_PID(TString inFileName)
   hptTOFeff -> GetXaxis() -> SetNdivisions(505);
   hptTOFeff -> GetYaxis() -> SetNdivisions(505);
   hptTOFeff -> Draw();
-  l_TOF_eff -> Draw();
-  hptTOFeff -> Draw("SAME");
-  hptTOF5Geveff -> Draw("SAME");
+  // l_TOF_eff -> Draw();
+  // hptTOFeff -> Draw("SAME");
+  if (is2Files) hptTOF5Geveff -> Draw("SAME");
+  mc_vn_text->DrawLatexNDC(0.2,0.95,"Au-Au #sqrt{s_{NN}} = 11 GeV, UrQMD, GEANT3, 4M events");
   c_TOF_eff -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/PID/TOF_eff_pt.png","recreate");
   c_TOF_eff -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/PID/TOF_eff_pt.pdf","recreate");
   c_TOF_eff -> SaveAs("/home/peter/Documents/WorkLocal/MPD/Pics/PID/TOF_eff_pt.eps","recreate");
